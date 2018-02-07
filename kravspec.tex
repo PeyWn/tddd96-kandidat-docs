@@ -1,0 +1,169 @@
+
+% A template for an IEEE 830-1998 SRS.
+% 1/11/2000 jhrg
+%
+% $Id$
+
+\documentclass{article}
+
+\usepackage{changebar}
+\usepackage{acronym}
+\usepackage{gloss}
+\usepackage{xspace}
+\usepackage{epsfig}
+\usepackage[swedish]{babel}
+\usepackage[utf8]{inputenc}
+
+% Use these on place of epsfig for regular PS figures.
+% \usepackage{psfig}
+% \psfigurepath{my-figs}
+
+\newcommand{\na}{{\sc N/A}\xspace}
+\newcommand{\Cpp}{\rm {\small C}\raise.5ex\hbox{\footnotesize ++}\xspace}
+\newcommand{\dap}{\rm {\small DAP}\raise.5ex\hbox{\footnotesize ++}\xspace}
+\newcommand{\maewesturl}{http://maewest.gso.uri.edu/\-cgi-bin/\-nph-dsp/\-htn\_sst\_decloud/\-1992/\-i92098065016.htn\_d.Z\xspace}
+
+% Note: to get the gloosary to work, run bibtex in the *.gls.aux file,
+% then latex registry, then bibtex *.gls, then latex. Also, make sure to set
+% your BST and BIBINPUTS environment variables so that the BST and BIB files
+% will be found.
+\makegloss
+
+% Change paragraph typesetting; eliminate indenting and add more space between
+% paragraphs. 2/15/2000 jhrg
+\setlength{\parindent}{0em}     % Amount of indentation
+\addtolength{\parskip}{1ex}     % Vertical separation
+
+\begin{document}
+
+\title{Kravspecifikation för schemaläggningsstöd för kirurgi}
+\author{Grupp 6}
+\date{\today \\ $Revision$ }
+
+\bibliographystyle{plain}
+
+\maketitle
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Introdunction  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduktion}
+\emph{[What is this document about, in very general terms.]}
+
+This document conforms to the IEEE~830-1998 \ac{SRS} recommended practice.
+Since the recommended practice covers a wide range of possible projects, some
+of the information in it is not appropriate for this part of \acs{DODS}.
+Where that is the case, or I think it is the case, I have marked the section
+N/A.
+
+\textbf{Bold face} type is used to indicate a word or phrase that may be
+found in the glossary.
+
+\emph{Emphasized} text contained in square brackets ([]) is used to indicate
+an editorial comment about the information that should be provided in a part
+of the \ac{SRS}.
+
+\subsection{Syfte}
+\emph{[Who is this document for?]}
+
+\subsection{Område}
+\emph{[What part of the project does this SRS cover.]}
+
+\subsection{Översikt}
+
+The remainder of this document is organized as follows:
+\begin{enumerate}
+\item Section~\ref{sec:overall} provides background for the specific
+requirements and relates those requirements to the rest of DODS.
+\item Section~\ref{sec:specific} lists the specific requirements for the
+  Cache.
+\item Following Section~\ref{sec:specific} are a list of acronyms and
+  abbreviations, a change log, a glossary and references.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%  Overall Description  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Övergripande beskrivning}
+\label{sec:overall}
+
+\emph{[This section of the SRS should describe the general factors that
+  affect the product and its requirements. This section should not state
+  specific requirements. Instead, it provides a background for those
+  requirements, which should be defined in Section 3.]}
+
+\subsection{Produktperspektiv}
+
+\subsubsection{Systemgränssnitt}
+\subsubsection{Användargränssnitt}
+\subsubsection{Hårdvarugränssnitt}
+\subsubsection{Mjukvarugränssnitt}
+\subsubsection{Kommunikationsgränssnitt}
+\subsubsection{Minne}
+\subsubsection{Opperationer}
+\subsubsection{Platsanpassningskrav}
+
+\subsection{Produktfunktioner}
+
+\subsection{Andvändarkarateristik}
+
+\subsection{Begränsningar}
+\emph{[This section lists any other items that may limit the developer's
+  options.]}
+
+\subsubsection{Regelverk}
+\subsubsection{Hårdvarubegränsningar}
+\subsubsection{Gränssnitt till andra system}
+\subsubsection{Paralella operationer}
+\subsubsection{Kontroll funktioner}
+\subsubsection{Styr funktioner}
+\subsubsection{Högnivåspråkkrav}
+\subsubsection{Handskaknings protokoll}
+\subsubsection{Pålitlighetskrav}
+\subsubsection{Applikationens kritikalitiet}
+\subsubsection{Säkerhetshänsysnstagande}
+
+\subsection{Antagande och beroende}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%  Specific Requirements %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Specifika krav}
+\label{sec:specific}
+\emph{[This section of the \ac{SRS} lists all of the software requirements to
+  a level of detail sufficient to enable designers to design a system to
+  satisfy those requirements, and testers to test that the systems satisfies
+  those requirements. Each separate requirment should be uniquely numbered.]}
+
+\subsection{Externa Gränssnitt}
+
+\subsubsection{Användargränssnitt}
+\subsubsection{Hårdvarugränssnitt}
+\subsubsection{Mjukvarugränssnitt}
+\subsubsection{Kommunikationsgränssnitt}
+\subsection{Systemfunktioner}
+\subsection{Prestandakrav}
+\subsection{Designbegränsningar}
+\subsection{Systemattribut}
+\subsection{Övriga krav}
+
+\appendix
+
+
+\section{Versionshistorik}
+
+\begin{verbatim}
+$Log: SRS-template.tex,v $
+Revision 1.4  2000/07/20 21:35:58  jimg
+Minor changes
+
+Revision 1.3  2000/07/17 05:46:19  jimg
+Added more boiler plate based on the caching SRS.
+
+\end{verbatim}
+
+\printgloss{dods-glossary}
+
+\raggedright
+
+\bibliography{dods}
+
+\end{document}
