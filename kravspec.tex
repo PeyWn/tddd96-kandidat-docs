@@ -74,10 +74,10 @@ server som klient.
 Strukturen i det här dokument är som följer:
 
 \begin{enumerate}
-\item Sektion~\ref{sec:overall} beskriver det större sammanhanget för de olika
+\item Del~\ref{sec:overall} beskriver det större sammanhanget för de olika
 kraven.
-\item Sektion~\ref{sec:specific} Ger en deltaljerad förklaring till alla krav.
-\item Efter sektion~\ref{sec:specific} finns en lista av förkortnigar, en lista
+\item Del~\ref{sec:Specifika krav} Ger en deltaljerad förklaring till alla krav.
+\item Efter del~\ref{sec:Specifika krav} finns en lista av förkortnigar, en lista
 med versionshistorik samt en ordlista och referenser.
 
 \end{"enumerate}
@@ -94,14 +94,30 @@ med versionshistorik samt en ordlista och referenser.
 
 \subsection{Produktperspektiv}
 \label{subsec:Produktperspektiv}
+Mjukvaran kommer att interagera med andra system för att skapa största möjliga
+nytta för användaren.
+Mjukvaran kommer att vara kopplad mot beffintliga system för hantering av
+resurser. Detta gäller system för att se tillgänglighet av personal, utrustning
+och lokaler.
 \subsubsection{Systemgränssnitt}
 \label{subsec:Systemgranssnitt}
+
 \subsubsection{Användargränssnitt}
 \label{subsec:Anvandargranssnitt}
+Systemet ska vara webbaserat och gå att interager med i de webbläsare som
+används på slutanvändarens dator (Explorer 11?).
 \subsubsection{Hårdvarugränssnitt}
 \label{subsec:Hardvarugranssnitt}
+SERVER? DATOR FÖR ANV?
 \subsubsection{Mjukvarugränssnitt}
 \label{subsec:Mjukvarugranssnitt}
+Klienten i systemet ska gå att använda i webbläsaren på användarens dator.
+Datorerna på sjukhuset där systemet kommer användas administreras av en
+IT-avdelning. Det är IT-avdelningen som beslutar om vilken webbläsare som ska
+användas detta innebär att systemet bara behöver stödja den webbläsaren fullt
+ut.
+
+VILKA ANDRA SYSTEM KOMMER ATT ANVÄDAS?
 \subsubsection{Kommunikationsgränssnitt}
 \label{subsec:Kommunikationsgranssnitt}
 \subsubsection{Minne}
@@ -123,24 +139,26 @@ med versionshistorik samt en ordlista och referenser.
 
 \subsubsection{Regelverk}
 \label{subsec:Regelverk}
+Vilka regelverk måste följas?
 \subsubsection{Hårdvarubegränsningar}
 \label{subsec:Hardvarubegransningar}
 \subsubsection{Gränssnitt till andra system}
 \label{subsec:Granssnitt till andra system}
 \subsubsection{Paralella operationer}
 \label{subsec:Paralella operationer}
-\subsubsection{Kontroll funktioner}
-\label{subsec:Kontroll funktioner}
-\subsubsection{Styr funktioner}
-\label{subsec:Styr funktioner}
+\subsubsection{Kontrollfunktioner}
+\label{subsec:Kontrollfunktioner}
+\subsubsection{Styrfunktioner}
+\label{subsec:Styrfunktioner}
 \subsubsection{Högnivåspråkkrav}
 \label{subsec:Hognivasprakkrav}
-\subsubsection{Handskaknings protokoll}
-\label{subsec:Handskaknings protokoll}
+Systemet ska skrivas i typescript. Klienten ska använd sig av Angular.
+\subsubsection{Handskakningsprotokoll}
+\label{subsec:Handskakningsprotokoll}
 \subsubsection{Pålitlighetskrav}
 \label{subsec:Palitlighetskrav}
 \subsubsection{Applikationens kritikalitiet}
-\label{subsection:Applikationens kritikalitiet}
+\label{subsec:Applikationens kritikalitiet}
 \subsubsection{Säkerhetshänsysnstagande}
 \label{subsec:Sakerhetshansysnstagande}
 
