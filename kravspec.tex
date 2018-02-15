@@ -94,11 +94,13 @@ med versionshistorik samt en ordlista och referenser.
 
 \subsection{Produktperspektiv}
 \label{subsec:Produktperspektiv}
-Mjukvaran kommer att interagera med andra system för att skapa största möjliga
-nytta för användaren.
-Mjukvaran kommer att vara kopplad mot beffintliga system för hantering av
-resurser. Detta gäller system för att se tillgänglighet av personal, utrustning
-och lokaler.
+Systemet avser agera som en prototyp och förstudie till en del av ett större
+stystem som kunden håller på att bygga.
+Mjukvaran kommer därför inte att interagera med andra system. Detta innebär att all
+data kommer att leva i systemet. Denna data kommer att vara påhittad men likna
+den data som i verkligheten skulle kunna finnas.
+I största möjliga mån kommer indata att vara statisk, så som vilka resurser som
+finns däremot kommer det schema, som produkten ska skapa, att vara dynamiskt.
 \subsubsection{Systemgränssnitt}
 \label{subsec:Systemgranssnitt}
 
@@ -137,15 +139,38 @@ För att kunna samverka om gemensamma resurser måste det finns metoder att boka
 och se tillgänglighet för ressureser som är delade eller helt tillhör en annan
 avdelning.\\
 \textbf{Schemaöversikt (hitta och boka tid)}\\
+Schemaöversikten är det huvudsakliga verktyget för att visualisera lediga tider.
+Översikten behöver en mängd olika möjligheter att filtrera och anpassa vilken
+data som syns. Detta gäller tillexempel att kunna se alla lediga tider för en
+kirurg. Eller se alla lediga tider som passar för en beslutad operation.\\
 \textbf{Ingreppsspecifika förberdelser}\\
+
 \textbf{Patientspecifika förberdelser}\\
 
 \subsubsection{Platsanpassningskrav}
 \label{subsec:Platsanpassningskrav}
 \subsection{Produktfunktioner}
 \label{subsec:Produktfunktioner}
+Produktens huvudfunktion ska vara att visualisera de lediga tider för en vald
+operation. Med en ledig tid avses en tid då alla ressureser som krävs för den
+operationen är ledig, så som personal med rätt kunskap samt lokaler och verktyg.
+Vid sökning av en lämplig tid är det viktigt att mjukvaran inte hindrar
+användaren från att använda sin egen kunskap, det ska därför vara möjligt att
+ändra relevanta parametrar för sökningen.
+
+Utöver detta ska det även vara möjligt att se alla beslutatde operationer som
+behöver planeras. Det ska också finnas en vy där alla planerade operationer
+visas. Båda dessa vyer ska ha möjligheter att filtrera och sortera innehållet
+efter olika parametrar.
 \subsection{Andvändarkarateristik}
 \label{subsec:Andvandarkarateristik}
+Produkten som ska utvecklas har på sikt flera olika användare. Då detta
+projekt är avsett att vara en prototyp för framtida system så riktas gränssnittet
+främst mot en användare som vi kallar plannerarren. Planerraren har god
+erfraenhet av olika operationer och komplexiteten som de har. I tidigare system
+har planerraren fattat beslut om operationstider genom att sammla information
+från flera olika sytem och källor. Användaren har vana i att arbeta i sjukhusets
+andra system och kan antas ha grundläggande datorvana.
 
 \subsection{Begränsningar}
 \label{subsec:Begransningar}
@@ -155,11 +180,13 @@ avdelning.\\
 
 \subsubsection{Regelverk}
 \label{subsec:Regelverk}
-Vilka regelverk måste följas?
+Då ingen riktig patientdata kommer finnas i systemet så är det inte nödvändigt
+att ta hänsyn till specifika regelverk
 \subsubsection{Hårdvarubegränsningar}
 \label{subsec:Hardvarubegransningar}
 \subsubsection{Gränssnitt till andra system}
 \label{subsec:Granssnitt till andra system}
+Inga interatkioner med andra system kommer vara aktuella under detta projekt.
 \subsubsection{Paralella operationer}
 \label{subsec:Paralella operationer}
 \subsubsection{Kontrollfunktioner}
@@ -169,8 +196,6 @@ Vilka regelverk måste följas?
 \subsubsection{Högnivåspråkkrav}
 \label{subsec:Hognivasprakkrav}
 Systemet ska skrivas i typescript. Klienten ska använd sig av Angular.
-\subsubsection{Handskakningsprotokoll}
-\label{subsec:Handskakningsprotokoll}
 \subsubsection{Pålitlighetskrav}
 \label{subsec:Palitlighetskrav}
 \subsubsection{Applikationens kritikalitiet}
@@ -191,14 +216,34 @@ Systemet ska skrivas i typescript. Klienten ska använd sig av Angular.
 
 \subsection{Externa Gränssnitt}
 \label{subsec:Externa Granssnitt}
-\subsubsection{Användargränssnitt}
-\label{subsec:EG-Anvandargranssnitt}
 \subsubsection{Hårdvarugränssnitt}
 \label{subsec:EG-Hardvarugranssnitt}
 \subsubsection{Mjukvarugränssnitt}
 \label{subsec:EG-Mjukvarugranssnitt}
 \subsubsection{Kommunikationsgränssnitt}
 \label{subsec:EG-Kommunikationsgranssnitt}
+\subsection{Funktionella krav}
+\label{subsec:Funktionella krav}
+\subsubsection{Beslutsöversikt}
+\textbf{Ska kunna}
+\begin{enumerate}
+  \item Det ska finnas en sorteringsbar översikt av beslutade operationer.
+  \item Det ska finnas en filtreringsfunktion i översikten av beslutade
+  operationer.
+  \item Det ska gå att se all information i ett beslut genom val av ett
+  beslut från översikten av beslut.
+  Ingående data:
+  Personnummer, Efternamn, Förnamn, Diagnoskod enligt ICD-10, Angiven KVÅ-kod
+  som är huvudåtgärd, Operation av parigt organ, angiven sida, Beslutande
+  klinik, Planeringsstatus och Medicinsk brådskandegrad.
+  \item I översikten med beslutade operationer ska medicinisk brådskandegrad
+  framgå i antal dagar, timmar eller minuter det är kvar till behandling utifrån
+  beslutsdatum. Senaste tiden som patienten ska bli opererad.
+  \item Det ska tydligt framgå om en patient ska hanteras akut (alla åtgärder
+  som ska genomföras inom 24 timmar från beslutsdatum) eller elektivt.
+  \item Det ska vara tydligt vilka operationer som är färdigplanerade och vilka
+  som behöver mer åtgärder.
+\end{itemize}
 \subsection{Systemfunktioner}
 \label{subsec:Systemfunktioner}
 \subsection{Prestandakrav}
