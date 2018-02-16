@@ -1,12 +1,5 @@
-
-% A template for an IEEE 830-1998 SRS.
-% 1/11/2000 jhrg
-%
-% $Id$
-
 \documentclass{article}
-\input{Settings}
-
+\input{../Templates/Settings}
 \begin{document}
 
 \title{Kravspecifikation för schemaläggningsstöd för kirurgi}
@@ -50,7 +43,7 @@ kraven.
 \item Efter del~\ref{sec:Specifika krav} finns en lista av förkortningar, en lista
 med versionshistorik samt en ordlista och referenser.
 
-\end{"enumerate}
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%  Overall Description  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -151,31 +144,18 @@ andra system och kan antas ha grundläggande datorvana.
 \emph{[This section lists any other items that may limit the developer's
   options.]}
 
-
 \subsubsection{Regelverk}
 \label{subsec:Regelverk}
 Då ingen riktig patientdata kommer finnas i systemet så är det inte nödvändigt
-att ta hänsyn till specifika regelverk
-\subsubsection{Hårdvarubegränsningar}
-\label{subsec:Hardvarubegransningar}
+att ta hänsyn till specifika regelverk.
+
 \subsubsection{Gränssnitt till andra system}
 \label{subsec:Granssnitt till andra system}
-Inga interatkioner med andra system kommer vara aktuella under detta projekt.
-\subsubsection{Paralella operationer}
-\label{subsec:Paralella operationer}
-\subsubsection{Kontrollfunktioner}
-\label{subsec:Kontrollfunktioner}
-\subsubsection{Styrfunktioner}
-\label{subsec:Styrfunktioner}
+Inga interaktioner med andra system kommer vara aktuella under detta projekt.
+
 \subsubsection{Högnivåspråkkrav}
 \label{subsec:Hognivasprakkrav}
 Systemet ska skrivas i typescript. Klienten ska använd sig av Angular.
-\subsubsection{Pålitlighetskrav}
-\label{subsec:Palitlighetskrav}
-\subsubsection{Applikationens kritikalitiet}
-\label{subsec:Applikationens kritikalitiet}
-\subsubsection{Säkerhetshänsysnstagande}
-\label{subsec:Sakerhetshansysnstagande}
 
 \subsection{Antagande och beroende}
 \label{subsec:Antagande och beroende}
@@ -190,12 +170,16 @@ Systemet ska skrivas i typescript. Klienten ska använd sig av Angular.
 
 \subsection{Externa Gränssnitt}
 \label{subsec:Externa Granssnitt}
+\todo{Add a description of section}
+
 \subsubsection{Hårdvarugränssnitt}
 \label{subsec:EG-Hardvarugranssnitt}
+\todo{Add something relating to PC.}
+
 \subsubsection{Mjukvarugränssnitt}
 \label{subsec:EG-Mjukvarugranssnitt}
-\subsubsection{Kommunikationsgränssnitt}
-\label{subsec:EG-Kommunikationsgranssnitt}
+\todo{Add somting relating to explorer 11.}
+
 \subsection{Funktionella krav}
 \label{subsec:Funktionella krav}
 \subsubsection{Generella krav}
@@ -203,6 +187,7 @@ Systemet ska skrivas i typescript. Klienten ska använd sig av Angular.
 \textbf{Ska krav: }
 \begin{enumerate}
     \item Det ska krävas användarnamn och lösenord för att komma in i systemet.
+    \item Det ska finnas en databas som kan hantera all ingående data. Ingående data definieras i appendix \ref{sec:Ingaende data till systemet}.
 \end{enumerate}
 
 \subsubsection{Beslutsöversikt}
@@ -304,16 +289,17 @@ klinik.
 \begin{enumerate}
 \item Det ska finnas en filterfunktion i kalendervyn för salar, kompetenser, utrustning m.m. T ex kunna se lediga operationstider för en enskild sal.
 \end{enumerate}
-\subsection{Systemfunktioner}
-\label{subsec:Systemfunktioner}
-\subsection{Prestandakrav}
-\label{subsec:Prestandakrav}
-\subsection{Designbegränsningar}
-\label{subsec:Designbegransningar}
-\subsection{Systemattribut}
-\label{subsec:Systemattribut}
-\subsection{Övriga krav}
-\label{subsec:Ovriga krav}
+
+%\subsection{Systemfunktioner}
+%\label{subsec:Systemfunktioner}
+%\subsection{Prestandakrav}
+%\label{subsec:Prestandakrav}
+%\subsection{Designbegränsningar}
+%\label{subsec:Designbegransningar}
+%\subsection{Systemattribut}
+%\label{subsec:Systemattribut}
+%\subsection{Övriga krav}
+%\label{subsec:Ovriga krav}
 
 \input{wordlist}
 
