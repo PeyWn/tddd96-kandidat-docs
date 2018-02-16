@@ -11,25 +11,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Introdunction  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Introduktion}
-\emph{[What is this document about, in very general terms.]}
-
 Detta dokument avser beskriva alla de krav som finns för det schemaläggningsstöd
 som ska utvecklas i kursen TDDD96. Projektet utvecklas med avdelningen för test
 och innovation vid region östergötland.
 
-\emph{Emphasized} text contained in square brackets ([]) is used to indicate
-an editorial comment about the information that should be provided in a part
-of the \ac{SRS}.
-
 \subsection{Syfte}
-\emph{[Who is this document for?]}
 Syftet med dokumentet är att ligga till grund för en gemensam kravbild på
 projektet mellan projektgruppen och kunden. Kraven ska vara kompletta och
 prioritetsordnade för att projektgruppen ska kunna utveckla projektet till den
 standard som önskas och med enkelhet kunna göra rätt prioriteringar när val görs.
 
 \subsection{Område}
-\emph{[What part of the project does this SRS cover.]}
 Kravspecifikationen omfattar alla delar i den mjukvara som ska utvecklas, såväl
 server som klient.
 
@@ -49,11 +41,8 @@ med versionshistorik samt en ordlista och referenser.
 
 \section{Övergripande beskrivning}
 \label{sec:overall}
-
-\emph{[This section of the SRS should describe the general factors that
-  affect the product and its requirements. This section should not state
-  specific requirements. Instead, it provides a background for those
-  requirements, which should be defined in Section 3.]}
+I denna delen kommer kraven beskrivas övergripande och i ett kontext för att
+skapa en bra förståelse för motivet bakom de olika kraven.
 
 \subsection{Produktperspektiv}
 \label{subsec:Produktperspektiv}
@@ -64,16 +53,15 @@ data kommer att leva i systemet. Denna data kommer att vara påhittad men likna
 den data som i verkligheten skulle kunna finnas.
 I största möjliga mån kommer indata att vara statisk, så som vilka resurser som
 finns däremot kommer det schema, som produkten ska skapa, att vara dynamiskt.
-\subsubsection{Systemgränssnitt}
-\label{subsec:Systemgranssnitt}
-
 \subsubsection{Användargränssnitt}
 \label{subsec:Anvandargranssnitt}
 Systemet ska vara webbaserat och gå att integrera med i de webbläsare som
-används på slutanvändarens dator (Explorer 11?).
+används på slutanvändarens dator.
 \subsubsection{Hårdvarugränssnitt}
 \label{subsec:Hardvarugranssnitt}
-SERVER? DATOR FÖR ANV?
+Clienten kommer att användas på en vanlig PC. Servern kommer under utvecklingnen
+att köras på vanliga PC men kan om någon form av småskalig distibution sker
+också köras på kraftigare servrar.
 \subsubsection{Mjukvarugränssnitt}
 \label{subsec:Mjukvarugranssnitt}
 Klienten i systemet ska gå att använda i webbläsaren på användarens dator.
@@ -81,12 +69,11 @@ Datorerna på sjukhuset där systemet kommer användas administreras av en
 IT-avdelning. Det är IT-avdelningen som beslutar om vilken webbläsare som ska
 användas detta innebär att systemet bara behöver stödja den webbläsaren fullt
 ut.
-
-VILKA ANDRA SYSTEM KOMMER ATT ANVÄDAS?
 \subsubsection{Kommunikationsgränssnitt}
 \label{subsec:Kommunikationsgranssnitt}
-\subsubsection{Minne}
-\label{subsec:Minne}
+Datorn som kör klienten kommer att behöva en
+anslutning till serverdelen av systemet antingen via internet eller via ett
+intranät.
 \subsubsection{Operationer}
 \label{subsec:Operationer}
 \textbf{Logga in i systemet}\\
@@ -103,19 +90,17 @@ Det ska vara möjligt att se alla detaljer som finns i planeringsunderlaget.
 Det bör även gå att ändra parametrar i sökningen så som tidsåtgång.\\
 För att kunna samverka om gemensamma resurser måste det finns metoder att boka
 och se tillgänglighet för resurser som är delade eller helt tillhör en annan
-avdelning.\\
-\textbf{Ingreppsspecifika förberedelser (hitta och boka tid)}\\
-
-\textbf{Patientspecifika förberedelser}\\
+avdelning. Det ska också vara möjligt att ange detaljer som är specifika för en
+viss typ av operation samt en specifik patient.\\
 \textbf{Schemaöversikt}\\
 Schemaöversikten är det huvudsakliga verktyget för att visualisera lediga tider.
 Översikten behöver en mängd olika möjligheter att filtrera och anpassa vilken
 data som syns. Detta gäller till exempel att kunna se alla lediga tider för en
 kirurg. Eller se alla lediga tider som passar för en beslutad operation.\\
-
-
 \subsubsection{Platsanpassningskrav}
 \label{subsec:Platsanpassningskrav}
+Den ingående data som systemet använder som grund kommer att behöva vara unik
+för varje organization som systemet ska hantera.
 \subsection{Produktfunktioner}
 \label{subsec:Produktfunktioner}
 Produktens huvudfunktion ska vara att visualisera de lediga tider för en vald
@@ -141,8 +126,7 @@ andra system och kan antas ha grundläggande datorvana.
 
 \subsection{Begränsningar}
 \label{subsec:Begransningar}
-\emph{[This section lists any other items that may limit the developer's
-  options.]}
+I denna del beskrivs de begränsningar som systemet måste ta hänsyn till.
 
 \subsubsection{Regelverk}
 \label{subsec:Regelverk}
@@ -159,14 +143,16 @@ Systemet ska skrivas i typescript. Klienten ska använd sig av Angular.
 
 \subsection{Antagande och beroende}
 \label{subsec:Antagande och beroende}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%  Specific Requirements %%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Specifika krav}
 \label{sec:Specifika krav}
-\emph{[This section of the \ac{SRS} lists all of the software requirements to
-  a level of detail sufficient to enable designers to design a system to
-  satisfy those requirements, and testers to test that the systems satisfies
-  those requirements. Each separate requirment should be uniquely numbered.]}
+Denna del innehåller alla de detaljerade krav som krävs för att utveckla och
+testa systemet. Alla kraven är sorterade efter prioritetsordning och även
+uppdelade i tre olika kategorier, Ska krav, bör krav, och om tid finns krav.
+Dessa är avsedda att underlätta prioriteringen av krav vid implementations
+tillfället.
 
 \subsection{Externa Gränssnitt}
 \label{subsec:Externa Granssnitt}
@@ -181,6 +167,8 @@ Systemet ska skrivas i typescript. Klienten ska använd sig av Angular.
 \todo{Add somting relating to explorer 11.}
 
 \subsection{Funktionella krav}
+Här är beskrivs systemets alla funktionella krav. Kraven är uppdelade efter de
+olika huvudfunktionerna som systemet ska ha.
 \label{subsec:Funktionella krav}
 \subsubsection{Generella krav}
 \label{subsec:Generella krav}
