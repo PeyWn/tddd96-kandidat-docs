@@ -30,7 +30,6 @@
 \end{center}
 
 \section{Inledning}
-\vspace{5mm}
 \label{sec:Inledning}
 Syftet med denna kvalitetsplan är att beskriva de tekniker, aktiviteter och metoder som kommer att användas för att försäkra att en hög kvalitet hålls i projektet. Detta innebär att slutprodukten ska uppfylla alla krav, levereras i tid och hålla sig inom budgeten. 
 \subsection{Syfte}
@@ -39,11 +38,15 @@ Syftet med denna kvalitetsplan är att beskriva de tekniker, aktiviteter och met
 Detta dokument redogör för hur projektets skall uppnå sina högkvalitativa egenskaper och refererar till relevanta delar i projektdokumentation, se sektion \ref{sec:Refererade_dokument}.
 \subsection{Refererade dokument}
 \label{sec:Refererade_dokument}
-Projektplan, Kodstandard, Dokumentstandard, Testplan
-\subsection{Definitioner, namn och förkortningar}
-
+Följande interna dokument refereras till i detta dokument:
 \begin{itemize}
-\vspace{5mm}
+	\item Projektplan
+	\item Kravspecifikation
+	\item Testplan
+\end{itemize}
+\subsection{Definitioner, namn och förkortningar}
+Följande lista definierar namn och termer som används i dokumentet.
+\begin{itemize}
     \item JavaScript - Ett scriptspråk för webbutveckling
     \item Angular - Ett ramverk för gränssnitt till webbsidor
     \item WebStorm - En utvecklingsmiljö till JavaScript
@@ -54,8 +57,6 @@ Projektplan, Kodstandard, Dokumentstandard, Testplan
 \end{itemize}
 
 \section{Översiktlig kvalitetsplan}
-\vspace{5mm}
-
 Denna sektion ger en översikt på hur kvalitetsarbetet i projektet ska utföras.
 
 \subsection{Organisation}
@@ -72,7 +73,7 @@ En analytisk förstudie som omfattar dessa risker mot projektet i sin helhet och
 
 \subsection{Verktyg}
 
-För att versionshantera kod så kommer GitLab att användas. På google drive så finns en mapp som delas med kund för att dela filer. WebStorm kommer användas som integrerad utvecklingsmiljö och Angular som webbramverk. Asana används som ett projekthanteringssystem.
+För att versionshantera kod så kommer GitLab att användas. På Google drive så finns en mapp som delas med kund för att dela filer. WebStorm kommer användas som integrerad utvecklingsmiljö och Angular som webbramverk. Asana används som ett projekthanteringssystem.
 
 Varje person ansvarar för att den är förtrogen med programvaror som används. Skulle det finnas osäkerhet så går det att fråga en annan projektmedlem. Vid behov så kan en medlem med kunskap hålla en genomgång för de andra.
 
@@ -89,7 +90,6 @@ Projektet skall varannan vecka hålla en så kallad sprint planering. Planeringe
 Efter varje sprint hålls en granskning av sprintens resultat där varje projektmedlem redovisar resultaten från föregående sprint. 
 
 \subsubsection{Sprintåterblick}
-
 Det skall även hållas en s.k. sprintåterblick där gruppen analyserar kvalitén på resultat samt diskuterar hur nästkommande sprint kan genomgå förbättringar.
 
 Scrums iterativa arbetssätt ger projektet möjlighet att utvärdera och korrigera både produkten och processer utefter de önskemål som kunden framfört. Förhinder att uppnå den kvalité som utsatts kan snabbt upptäckas och hanteras, se sektion \ref{sec:Kvalitetsmatning} om kvalitetsmätning.
@@ -100,14 +100,13 @@ Vid tidig design av gränssnitt till produkten ska prototyper göras för att ku
 \subsection{Dokumentstandard}
 För att alla dokument som skrivs i projektet ska ha ett konsekvent utseende och stil ska dokumentet Dokumentstandard skrivas och följas. Till denna ska det också finnas dokumentmallar som alla dokument ska bygga på.
 
-\section{Prestationer, resurser och planering}
-\vspace{5mm}
+\subsection{Prestationer, resurser och planering}
 För mjukvaruresurser se detta dokument, verktyg. 
 Den uppskattade tiden och andra resurser i projektet finns beskrivet under punkten Resurser i projektplanen. 
 
-\subsection{Aktiviteter, utfall och uppgifter}
+\section{Aktiviteter, utfall och uppgifter}
 Denna sektion behandlar aktiviteter, utfall och uppgifter för kvalitetssäkring av produkten och processen. 
-\subsubsection{Kvalitetssäkring av produkt}
+\subsection{Kvalitetssäkring av produkt}
 Syftet med kvalitetssäkring av produkten är att skapa ett förtroende för kvaliteten på produkten. Detta innefattar all mjukvara samt alla dokument som skrivs under projektet. I denna sektion definieras de aktiviteter och uppgifter som krävs för att uppnå detta utfall.
 \subsubsection{Utvärdering av planering}
 För att på ett så entydigt sätt som möjligt klarlägga vad projektet har för standard så har en kravspecifikation utformats tillsammans med kund [se kravspec]. 
@@ -119,25 +118,23 @@ Om berörda projektmedlemmar samtycker att ett delsystem är i ett sådant stadi
 I projektet inkluderas inte något underhåll av produkten eftersom det är en prototyp som kunden själva får vidareutveckla vid behov. Därför definieras inga aktiviteter eller uppgifter för detta.
 \subsubsection{Hur produktens kvalite ska kunna mätas?}
 Produktens kvalité ska mätas enligt de standarder och processer som beskriv i detta dokument.
-\section{Kvalitetssäkring av process}
-\vspace{5mm}
+\subsection{Kvalitetssäkring av process}
 Denna sektion beskriver de aktiviteter och uppgifter som krävs för att utvärdera att processerna som används i projektet räcker till och är effektiva.
 
-\subsection{Utvärdering av processer}
+\subsubsection{Utvärdering av processer}
 
 För att den arbetsmetodik som följs i projektet ska hållas så effektiv som möjligt, ska den utvärderas och uppdateras med jämna mellanrum. Hur detta ska göras beskrivs i kapitel X om arbetsmetodik.
 
-\subsection{Utvärdering av miljöer}
+\subsubsection{Utvärdering av miljöer}
 De miljöer som används för utveckling samt dokument ska kontinuerligt utvärderas av alla projektets medlemmar. Eventuella synpunkter eller problem ska tas upp på nästa sprintgenomgång i Scrum-arbetsmetodiken [se kapitel Arbetsmetodik].
 
-\subsection{Mätning av processer}
+\subsubsection{Mätning av processer}
 En process kommer att mätas och detta är arbetsmetodiken som ska användas under projektet. Hur detta ska göras beskrivs i sektion \ref{sec:Kvalitetsmatning}, Kvalitetsmätning.
 
-\subsection{Medlemmars kunskaper}
+\subsubsection{Medlemmars kunskaper}
 Se projektplan avsnitt Kunskap och färdigheter [x.x]
 
 \section{Ytterligare överväganden}
-\vspace{5mm}
 I denna sektion beskrivs ytterligare överväganden som måste behandlas under projektarbetet.
 \subsection{Kvalitetsmätning}
 \label{sec:Kvalitetsmatning}
