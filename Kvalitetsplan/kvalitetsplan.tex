@@ -81,7 +81,11 @@ Varje person ansvarar för att den är förtrogen med programvaror som används.
 Denna sektion beskriver de standarder, rutiner och konventioner som ska följas under projektarbetet.
 
 \subsection{Scrum}
+\label{sec:Scrum}
 För att få en sådan kvalitétssäkrande arbetsmetod som möjligt så valdes arbetsmetodiken Scrum. Nedan följer rutiner som kommer hållas för att säkerställa kvalité.
+
+\subsubsection{Dagliga Scrum-möten}
+Varje dag gruppen möts hålls en snabb genomgång om vad som har åstakommits sen senaste mötet samt vad som skall presteras till nästkommande. Möjliga hot mot prestationer presenteras.
 
 \subsubsection{Sprintplanering}
 Projektet skall varannan vecka hålla en så kallad sprint planering. Planeringen går ut på att kravspecifikationen bryts ner i arbetsmoment som ska genomföras under nästa sprint. Arbetet följer de prioriteringar kund satt upp.
@@ -91,7 +95,6 @@ Efter varje sprint hålls en granskning av sprintens resultat där varje projekt
 
 \subsubsection{Sprintåterblick}
 Det skall även hållas en s.k. sprintåterblick där gruppen analyserar kvalitén på resultat samt diskuterar hur nästkommande sprint kan genomgå förbättringar.
-
 Scrums iterativa arbetssätt ger projektet möjlighet att utvärdera och korrigera både produkten och processer utefter de önskemål som kunden framfört. Förhinder att uppnå den kvalité som utsatts kan snabbt upptäckas och hanteras, se sektion \ref{sec:Kvalitetsmatning} om kvalitetsmätning.
 
 \subsection{Pappersprototyper}
@@ -109,11 +112,11 @@ Denna sektion behandlar aktiviteter, utfall och uppgifter för kvalitetssäkring
 \subsection{Kvalitetssäkring av produkt}
 Syftet med kvalitetssäkring av produkten är att skapa ett förtroende för kvaliteten på produkten. Detta innefattar all mjukvara samt alla dokument som skrivs under projektet. I denna sektion definieras de aktiviteter och uppgifter som krävs för att uppnå detta utfall.
 \subsubsection{Utvärdering av planering}
-För att på ett så entydigt sätt som möjligt klarlägga vad projektet har för standard så har en kravspecifikation utformats tillsammans med kund [se kravspec]. 
+För att på ett så entydigt sätt som möjligt klarlägga vad projektet har för standard så har en kravspecifikation utformats tillsammans med kund, se dokumentet Kravspecifikation.
 Denna standard definierar projektets eftersträvade kvalitet enligt överensstämmelse med kund.
-Kravspecifikationen är en grundpelare för den plan som utarbetats för projektet. [se projektplan]. Kraven representerar kundens behov, önskemål och förväntningar. 
-\subsubsection{Evaluate product for acceptability}
-Om berörda projektmedlemmar samtycker att ett delsystem är i ett sådant stadie att de kan testas för integration i systemet så skall testfall skrivas för delsystemet. När dessa delsystem godkänts i projektets testprotokoll [se testplan kap X.X] så integreras delsystemet i projektet.
+Kravspecifikationen är en grundpelare för den plan som utarbetats för projektet, som är beskriven i Projektplanen. Kraven representerar kundens behov, önskemål och förväntningar. 
+\subsubsection{Utvärdering av acceptanskrav för produkten}
+Om berörda projektmedlemmar samtycker att ett delsystem är i ett sådant stadie att de kan testas för integration i systemet så skall testfall skrivas för delsystemet. När dessa delsystem godkänts i projektets testprotokoll enligt Testplanen, så integreras delsystemet i projektet. 
 \subsubsection{Utvärdering av underhåll för produkten}
 I projektet inkluderas inte något underhåll av produkten eftersom det är en prototyp som kunden själva får vidareutveckla vid behov. Därför definieras inga aktiviteter eller uppgifter för detta.
 \subsubsection{Hur produktens kvalite ska kunna mätas?}
@@ -122,35 +125,34 @@ Produktens kvalité ska mätas enligt de standarder och processer som beskriv i 
 Denna sektion beskriver de aktiviteter och uppgifter som krävs för att utvärdera att processerna som används i projektet räcker till och är effektiva.
 
 \subsubsection{Utvärdering av processer}
-
-För att den arbetsmetodik som följs i projektet ska hållas så effektiv som möjligt, ska den utvärderas och uppdateras med jämna mellanrum. Hur detta ska göras beskrivs i kapitel X om arbetsmetodik.
+För att den arbetsmetodik som följs i projektet ska hållas så effektiv som möjligt, ska den utvärderas och uppdateras på sprintåterblickarna i Scrum, se sektion \ref{sec:Scrum}. 
 
 \subsubsection{Utvärdering av miljöer}
-De miljöer som används för utveckling samt dokument ska kontinuerligt utvärderas av alla projektets medlemmar. Eventuella synpunkter eller problem ska tas upp på nästa sprintgenomgång i Scrum-arbetsmetodiken [se kapitel Arbetsmetodik].
+De miljöer som används för utveckling samt dokument ska kontinuerligt utvärderas av alla projektets medlemmar. Eventuella synpunkter eller problem ska tas upp på nästa sprintåterblick i Scrum-arbetsmetodiken, se sektion \ref{sec:Scrum}.
 
 \subsubsection{Mätning av processer}
 En process kommer att mätas och detta är arbetsmetodiken som ska användas under projektet. Hur detta ska göras beskrivs i sektion \ref{sec:Kvalitetsmatning}, Kvalitetsmätning.
 
 \subsubsection{Medlemmars kunskaper}
-Se projektplan avsnitt Kunskap och färdigheter [x.x]
+Se projektplan avsnitt 'Kunskap och färdigheter'.
 
 \section{Ytterligare överväganden}
 I denna sektion beskrivs ytterligare överväganden som måste behandlas under projektarbetet.
 \subsection{Kvalitetsmätning}
 \label{sec:Kvalitetsmatning}
-Två kvalitetsmätningar skall hållas efter varje sprint [se Scrum-kap xx] för att värdera kvalitéen hos arbetsmetodik samt resulterande produkt. 
-Detta för att samtliga involverade i  projektet på ett tidigt stadium skall känna till och förhålla sig till de föreskrivna kvalitétsmålen.
+Två kvalitetsmätningar skall hållas efter varje sprint för att värdera kvalitéen hos arbetsmetodik samt resulterande produkt. 
+Detta för att samtliga involverade i projektet på ett tidigt stadium skall känna till och förhålla sig till de föreskrivna kvalitétsmålen.
 
 \subsection{Undantag och avvikelser}
 På grund av den iterativa arbetsmetod som projektet skall utföras med kan denna plan samt de refererade dokumenten behöva revideras för att uppnå den eftersträvade standarden. För detta dokument presenteras en överblick över dessa revisioner i dokumenthistoriken.
 
 \subsection{Iterativ arbetsmetodik}
-När en arbetsuppgift bedömts att ej uppfylla de krav som specificerats i kravspecifikationen [Se kravspec] behöver uppgiften upprepas med en lämpligare arbetsmetod i en senare sprint. Se projektplan avsnitt [x.x] samt avsnitt arbetsmetodik [x.x]
+När en arbetsuppgift bedömts att ej uppfylla de krav som specificerats i kravspecifikationen behöver uppgiften upprepas med en lämpligare arbetsmetod i en senare sprint. Se avsnitt 'Aktiviteter' i projektplanen samt sektion \ref{sec:Scrum} om Scrum i detta dokument.
 
 \subsection{Risker med kvalitetssäkring av programvara}
-Att följa denna kvalitetsplan medför de kända risker presenterade i [sektion riskhantering].  En risk att kvalitetsplanen följs för febrilt kan medföra att frågan “Hur mycket får kvalitét kosta?” behöver ställas.
+Att följa denna kvalitetsplan medför de kända risker presenterade i avsnittet 'Riskhantering' i projektplanen. En risk är att kvalitetsplanen följs för febrilt, vilket kan medföra att frågan “Hur mycket får kvalitét kosta?” behöver ställas. Ansvaret att ställa denna fråga ligger på samtliga projektmedlemmar men främst på kvalitetssamordnare.
 
-Båda dessa punkter förväntas hanteras av projektets iterativa arbetsmetoder som behandlats i [sek x.x]
+Båda dessa punkter förväntas hanteras av projektets iterativa arbetsmetod Scrum som behandlas i sektion \ref{sec:Scrum}.
 
 \subsection{Kommunikationsstrategi}
 Internt skall arbetsgruppen föra en daglig kommunikation för att avstämma om arbetsflöde förhinder etc.
