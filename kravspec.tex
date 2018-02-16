@@ -247,8 +247,87 @@ Systemet ska skrivas i typescript. Klienten ska använd sig av Angular.
   \item Det ska tydligt framgå om en patient ska hanteras akut (alla åtgärder
   som ska genomföras inom 24 timmar från beslutsdatum) eller elektivt.
   \item Det ska vara tydligt vilka operationer som är färdigplanerade och vilka
-  som behöver mer åtgärder.
-\end{itemize}
+  som behöver mer åtgärder.\item
+\end{enumerate}
+\subsubsection{Planeringsvy}
+\textbf{Ska kunna}
+\begin{enumerate}
+\item Det ska tydligt framgå i planeringsvyn vilka tider som är inom gränsen
+för den medicinska brådskandegraden.
+\item I planeringsvyn ska det framgå vilka dagar och tider som är lediga för
+att boka in aktuell operation.
+\item En ledig operationstid ska visas som ledig när tillgänglig kompetens,
+material, utrustning och lokaler (operationssal, postoperativ vårdplats och
+vårdplats på avdelning) är tillgängliga.
+\item När man bokar operationstid ska aktuella resurser låsas till bokningen.
+Detta gäller inte förbrukningsmaterial.
+\item Det ska vara möjligt att boka om eller boka av (stryka) en redan bokad
+operationstid.
+\item För bokade operationer i planeringsvyn ska det framgå huvudåtgärd,
+patient och operatör.
+\item I planeringsvyn ska det finnas tre olika markeringar: Bokad operation,
+Ledig operationssalstid där samtliga resurser finns tillgängliga, Ledig
+operationssalstid där resurser saknas.
+\item Det ska i planeringsvyn framgå vilka tider (för aktuellt ingrepp) där
+kompetens, material eller utrustning saknas.
+Exempel: Om det finns en operationssalstid ledig, men förutbestämd utrustning
+är upptagen.
+\item Sammantagen operationstid ska visualiseras.
+\end{enumerate}
+\textbf{Bör kunna}
+\begin{enumerate}
+\item Det ska gå att välja en eller flera kompetenser som ska vara med vid
+genomförandet av operationen.
+\item Det ska gå att se vilka undersökningar och prover som ska genomföras
+specifikt för patienten innan operation. Exempel: Utredningar eller prover
+beställda av anestesiolog.
+\item Det ska tydligt framgå vilka förberedelser som ska göras specifikt för
+ingreppet, när de ska göras och var. T ex blodprover ska tas på avdelningen
+när patienten kommer till sjukhuset.
+\item Det ska tydligt framgå i vilken ordning förberedelserna ska genomföras.
+\item Det ska vara möjligt att ange om patienten ska hanteras inom öppenvård
+(dagkirurgi) eller slutenvård. Det ska vara möjligt att ange om patienten ska
+hanteras inom öppenvård (dagkirurgi) eller slutenvård.
+\item Det ska vara möjligt att i ett planeringsunderlag inkludera andra, för
+patienten, beslutade kirurgiska åtgärder inom egen klinik eller annan klinik
+inom RÖ.
+\item Det ska tydligt i ett planeringsunderlag framgå vilka KVÅ-koder som ingår
+i samverkan.
+\item Det ska tydligt i ett planeringsunderlag framgå vilka ICD10-koder som
+ingår i samverkan.
+\item Den mest brådskande medicinska brådskandegraden ska gälla vid samverkan.
+\item Tidsåtgången för varje huvudåtgärd ska visualiseras.
+\item Vid samverkan ska operationstiden för de två beslutade åtgärderna slås
+ihop, förberedelsetid och avvecklingstid ska baseras på den åtgärd som har
+längst tid.
+\item Finns det andra enheter (ej operationsavdelning eller -klinik) som ska
+medverka under operationen så ska det gå att ange vilka det är.
+Exempel: Röntgen, patologi.
+\item Det ska tydligt i ett planeringsunderlag framgå vilka kliniker som är
+involverade i aktuellt genomförande av operationen.
+\item Det ska tydligt framgå vad som ska utföras av varje enskild deltagande
+klinik.
+\end{enumerate}
+\textbf{Kul att ha}
+\begin{enumerate}
+  \item Det ska vara lätt att se närmast lediga operationstid utifrån aktuella
+  åtgärder och lediga resurser.
+  \item Det ska vara möjligt att registrera patientspecifika implantat och
+  beställningsdatum som ska användas till planerad operation.
+  \item Om patienten har en planerad inläggning ska det vara möjligt att ange
+  tid, datum och plats.
+  \item Det ska gå att ange hur patienten kommer till aktuell
+  operationsavdelning Alternativ: Direkt hemifrån, via mottagning, avdelning.
+\end{enumerate}
+\subsubsection{Schemavy}
+\textbf{Ska kunna}
+\begin{enumerate}
+\item Det ska finnas en kalendervy som innehåller alla planerade operationer.
+\end{enumerate}
+\textbf{Kul att ha}
+\begin{enumerate}
+\item Det ska finnas en filterfunktion i kalendervyn för salar, kompetenser, utrustning m.m. T ex kunna se lediga operationstider för en enskild sal.
+\end{enumerate}
 \subsection{Systemfunktioner}
 \label{subsec:Systemfunktioner}
 \subsection{Prestandakrav}
