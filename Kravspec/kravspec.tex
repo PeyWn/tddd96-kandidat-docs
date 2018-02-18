@@ -13,7 +13,7 @@
 \section{Introduktion}
 Detta dokument avser beskriva alla de krav som finns för det schemaläggningsstöd
 som ska utvecklas i kursen TDDD96. Projektet utvecklas med avdelningen för test
-och innovation vid region östergötland.
+och innovation vid region östergötland, härdanefter benämd som kunden eller RÖ.
 
 \subsection{Syfte}
 Syftet med dokumentet är att ligga till grund för en gemensam kravbild på
@@ -31,9 +31,11 @@ Strukturen i det här dokument är som följer:
 \begin{enumerate}
 \item Del~\ref{sec:overall} beskriver det större sammanhanget för de olika
 kraven.
-\item Del~\ref{sec:Specifika krav} Ger en detaljerad förklaring till alla krav.
-\item Efter del~\ref{sec:Specifika krav} finns en lista av förkortningar, en lista
-med versionshistorik samt en ordlista och referenser.
+\item Del~\ref{sec:Specifika krav} besrkiver kraven i detalj.
+\item Efter del~\ref{sec:Specifika krav} finns en ordlista över begrepp och
+förkortningar.
+\item I appendix~\ref{sec:Ingaende data till systemet} finns en beskrining
+över all den ingånde datan som projektet kommer hantera och analysera.
 
 \end{enumerate}
 
@@ -87,23 +89,25 @@ viktigt att se hur akut operationen är. Översikten ska visa den viktigaste
 informationen men även göra det möjligt att se all detaljerad information om ett specifikt beslut.\\
 \textbf{Planeringsvy}\\
 Det ska vara möjligt att se alla detaljer som finns i planeringsunderlaget.
-Det bör även gå att ändra parametrar i sökningen så som tidsåtgång.\\
+Det bör även gå att ändra parametrar i sökningen så som tidsåtgång. Detta för
+att användaren ska kunna använda sin erfarenhet i systemet utan hinder.
 För att kunna samverka om gemensamma resurser måste det finns metoder att boka
 och se tillgänglighet för resurser som är delade eller helt tillhör en annan
 avdelning. Det ska också vara möjligt att ange detaljer som är specifika för en
 viss typ av operation samt en specifik patient.\\
 \textbf{Schemaöversikt}\\
-Schemaöversikten är det huvudsakliga verktyget för att visualisera lediga tider.
+Schemaöversikten kommer vara ett verktyg för att visualisera lediga och bokade
+tider.
 Översikten behöver en mängd olika möjligheter att filtrera och anpassa vilken
 data som syns. Detta gäller till exempel att kunna se alla lediga tider för en
-kirurg. Eller se alla lediga tider som passar för en beslutad operation.\\
+kirurg.\\
 \subsubsection{Platsanpassningskrav}
 \label{subsec:Platsanpassningskrav}
 Den ingående data som systemet använder som grund kommer att behöva vara unik
 för varje organization som systemet ska hantera.
 \subsection{Produktfunktioner}
 \label{subsec:Produktfunktioner}
-Produktens huvudfunktion ska vara att visualisera de lediga tider för en vald
+Produktens huvudfunktion ska vara att visualisera lediga tider för en vald
 operation. Med en ledig tid avses en tid då alla resurser som krävs för den
 operationen är ledig, så som personal med rätt kunskap samt lokaler och verktyg.
 Vid sökning av en lämplig tid är det viktigt att mjukvaran inte hindrar
@@ -117,11 +121,13 @@ efter olika parametrar.
 \subsection{Andvändarkarateristik}
 \label{subsec:Andvandarkarateristik}
 Produkten som ska utvecklas har på sikt flera olika användare. Då detta
-projekt är avsett att vara en prototyp för framtida system så riktas gränssnittet
+projekt är avsett att vara en prototyp för framtida system så riktas
+gränssnittet
 främst mot en användare som vi kallar planeraren. Planeraren har god
 erfarenhet av olika operationer och komplexiteten som de har. I tidigare system
 har planeraren fattat beslut om operationstider genom att samla information
-från flera olika system och källor. Användaren har vana i att arbeta i sjukhusets
+från flera olika system och källor. Användaren har vana i att arbeta i
+sjukhusets
 andra system och kan antas ha grundläggande datorvana.
 
 \subsection{Begränsningar}
@@ -141,30 +147,37 @@ Inga interaktioner med andra system kommer vara aktuella under detta projekt.
 \label{subsec:Hognivasprakkrav}
 Systemet ska skrivas i typescript. Klienten ska använd sig av Angular.
 
-\subsection{Antagande och beroende}
-\label{subsec:Antagande och beroende}
+%\subsection{Antagande och beroende}
+%\label{subsec:Antagande och beroende}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%  Specific Requirements %%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Specifika krav}
 \label{sec:Specifika krav}
 Denna del innehåller alla de detaljerade krav som krävs för att utveckla och
-testa systemet. Alla kraven är sorterade efter prioritetsordning och även
+testa systemet. Alla kraven är sorterade efter prioritetsordning och de
+funktionella kraven är även
 uppdelade i tre olika kategorier, Ska krav, bör krav, och om tid finns krav.
 Dessa är avsedda att underlätta prioriteringen av krav vid implementations
 tillfället.
 
 \subsection{Externa Gränssnitt}
 \label{subsec:Externa Granssnitt}
-\todo{Add a description of section}
+I denna del berörs specifika krav gällande de system och den miljö som systemet
+ska interagera med och interageras via.
 
 \subsubsection{Hårdvarugränssnitt}
 \label{subsec:EG-Hardvarugranssnitt}
-\todo{Add something relating to PC.}
-
+Klienten ska gå att interagera i med hjälp av:
+\begin{itemize}
+  \item En mus
+  \item Ett tangentbord
+  \item En skärm
+\end{itemize}
 \subsubsection{Mjukvarugränssnitt}
+
 \label{subsec:EG-Mjukvarugranssnitt}
-\todo{Add somting relating to explorer 11.}
+Klienten för systemet ska gå att köra i Internet explorer 11.
 
 \subsection{Funktionella krav}
 Här är beskrivs systemets alla funktionella krav. Kraven är uppdelade efter de
@@ -175,7 +188,9 @@ olika huvudfunktionerna som systemet ska ha.
 \textbf{Ska krav: }
 \begin{enumerate}
     \item Det ska krävas användarnamn och lösenord för att komma in i systemet.
-    \item Det ska finnas en databas som kan hantera all ingående data. Ingående data definieras i appendix \ref{sec:Ingaende data till systemet}.
+    \item En användare ska ha ett användarnamn och ett lösenord.
+    \item Det ska finnas en databas som kan hantera all ingående data.
+    Ingående data definieras i appendix \ref{sec:Ingaende data till systemet}.
 \end{enumerate}
 
 \subsubsection{Beslutsöversikt}
