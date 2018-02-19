@@ -4,7 +4,7 @@
 \usepackage{adjustbox}
 
 \begin{document}
-\def\ftitle{arkitekturdokument}
+\def\ftitle{Arkitekturdokument}
 \def\fversion{1.0}
 \input{../Templates/titlepage}
 
@@ -14,7 +14,7 @@
  \hline
  Datum & händelse & iteration & version\\
  \hline
- 2018-02-14 & Dokument skapas & 1 &  0.1\\
+ 2018-02-10 & Dokument skapas & 1 &  0.1\\
  \hline
   2018-02-19 & Konvertering till \textbf{\LaTeX} & 1 &  0.2\\
  \hline
@@ -31,7 +31,7 @@
 \subsection{Syfte}
 Arkitekturdokumentet ger en utförlig översikt  av schemaläggningssystemets arkitektur. I dokumentet presenteras flera olika vyer av arkitekturen samt en översiktlig beskrivning av systemet och dess funktionalitet.
 \subsection{Översiktlig systembeskrivning}
-Det schemaläggningssystem som ska utvecklas kommer användas på operationsavdelningen i ett sjukhus av sjukhuspersonal för planering av operationer. Systemet ska klara av att utifrån en lista med beslutade operationer ge användaren förslag på operationstider inom operationens tidsgräns då rätt lokal och resurser finns tillgängliga. För tider då lokal finns att tillgå men resurser saknas ska systemet visa vilka resurser som saknas. Användaren ska utifrån detta kunna välja en passande tid och boka in operationen. Besluten ska innehålla relevant data om patient och operationstyp, och det ska för varje beslut framgå om beslutet behandlats eller inte. Ifall patienten behöver flera ingrepp ska användaren kunna se detta och kunna slå samman ingreppen till en operation vid behov. 
+Det schemaläggningssystem som ska utvecklas kommer användas på operationsavdelningen i ett sjukhus av sjukhuspersonal för planering av operationer. Systemet ska klara av att utifrån en lista med beslutade operationer ge användaren förslag på operationstider inom operationens tidsgräns då rätt lokal och resurser finns tillgängliga. För tider då lokal finns att tillgå men resurser saknas ska systemet visa vilka resurser som saknas. Användaren ska utifrån detta kunna välja en passande tid och boka in operationen. Besluten ska innehålla relevant data om patient och operationstyp, och det ska för varje beslut framgå om beslutet behandlats eller inte. Ifall patienten behöver flera ingrepp ska användaren kunna se detta och kunna slå samman ingreppen till en operation vid behov.
 
 Operationer ska kunna avbokas och frigöras från schemat. Det ska finnas en schemaöversikt med en filterfunktion som visar när vilka resurser är lediga eller upptagna. Det ska finnas en tidslinje över operationen som visar när operationsprocessens olika stadier börjar. Det ska gå att logga vilken användare som bokat vad. All information ska lagras i en central databas. Från databasen ska informationen hämtas ned till användardatorer via en server. Systemet ska visas på en skärm och användaren interagerar med det med hjälp av tangentbord och mus.
 
@@ -53,9 +53,9 @@ Denna vy visar de viktigaste fallen då schemaläggningssystemet ska användas. 
 \clearpage
 \section{Systemskiss}
 Här visas och beskrivs en översiktlig skiss av schemaläggningssystemet där det framgår vilken funktionalitet som ska köras var i systemet. \\
-\includegraphics[width=.9\linewidth,height=.7\textheight]{Systemskiss.png} 
+\includegraphics[width=.9\linewidth,height=.7\textheight]{Systemskiss.png}
 \\
-Systemet som beskrivs översiktligt i Diagram 2 innehåller en webbserver som innehåller ett grafisk användargränssnitt. Logik på webbservern hanterar användarkommandon och uppdaterar grafiska komponenter. Slutligen innehåller webbservern kommunikationsfunktionalitet som gör det möjligt att skicka data till och ta emot data från databasservern. Användaren kör systemet via en webbläsare, Internet Explorer 11. 
+Systemet som beskrivs översiktligt i Diagram 2 innehåller en webbserver som innehåller ett grafisk användargränssnitt. Logik på webbservern hanterar användarkommandon och uppdaterar grafiska komponenter. Slutligen innehåller webbservern kommunikationsfunktionalitet som gör det möjligt att skicka data till och ta emot data från databasservern. Användaren kör systemet via en webbläsare, Internet Explorer 11.
 
 Systemet innehåller även en databasserver som kan ta emot data från och skicka data till webbservern och behandla den data som ligger i själva databasen. Användaren kör systemet från en webbläsare.
 
