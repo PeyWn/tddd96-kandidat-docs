@@ -1,6 +1,7 @@
 \documentclass[a4paper,10pt]{article}
 \input{../Templates/Settings}
 
+\externaldocument[arkd-]{../Arkitekturdokument/arkitekturdokument}
 
 \begin{document}
 \def\ftitle{Testplan}
@@ -40,13 +41,13 @@ Följande interna dokument refereras till i detta dokument:
 	\item Testplan
 \end{itemize}
 \subsection{Systemöversikt}
-Se dokumentet Projektplan.
+Se arkitekturdokumentet sektion \ref{arkd-sec:Systemskiss}.
 
-\section{Testöversikt}
+\subsection{Testöversikt}
 Denna del ger en översikt av testerna, vilken typ av tester, vilka resurser som kommer att användas, vilka som har ansvar för vilka test samt vilka verktyg och metoder som kommer att användas.
 
 \subsubsection{Organisation}
-Se detta dokument sektion 1.5.5 Ansvarsområden.
+Se sektion \ref{sec:Ansvarsomraden} Ansvarsområden.
 
 \subsubsection{Testplanering}
 Under iteration två ska pappersprototyper göras som en tidig design av gränssnittet och på så vis få feedback från både gruppen och kunden. Utöver den så kommer tester planeras fortlöpande genom projektet.
@@ -54,6 +55,7 @@ Under iteration två ska pappersprototyper göras som en tidig design av gränss
 \subsubsection{Integrity level scheme}
 \subsubsection{Resources summary}
 \subsection{Ansvarsområden}
+\label{sec:Ansvarsomraden}
 Alla medlemmar har ansvar för de tester som utförs. Projektets testledare har övergripande ansvar för de tester som kommer att genomföras.
 \subsection{Tools, techniques, methods, and metrics}
 För verktyg se sektionen Verktyg i Kvalitetsplanen.
@@ -61,18 +63,18 @@ För verktyg se sektionen Verktyg i Kvalitetsplanen.
 Den här sektionen beskriver processen, dokumentationen och rapporteringen för de tester som genomförs.
 \subsection{Test processes including definition of test levels}
 \begin{itemize}
-	\item Pappersprototyp: Se sektion Pappersprototyper i Kvalitetsplan.
+	\item Pappersprototyp: Se sektion Pappersprototyper i Kvalitetsplan.\todo{mvoe to other place}
 	\item Enhetstester: Ska genomföras regelbundet för att den kod som har skrivits fungerar. Den som skriver koden ska även utföra enhetstester regelbundet.
 	\item Integrationstester: Om projektmedlemmar anser att ett delsystem är redo att integreras i systemet ska integrationstester utföras på detta delsystem.
 	\item Systemtester: När alla delsystem anses uppfyllda ska dessa integreras och testas gentemot de krav som finns beskrivna i dokumentet Kravspec.
-	\item Acceptanstester: För att säkerhetsställa att givna krav är uppfyllda ska kund testa systemet och ge feedback.
+	\item Acceptanstester: För att säkerhetsställa att givna krav är uppfyllda ska kund testa systemet och ge återkoppling.
 \end{itemize}
 
-\subsection{Process: Management}
-\subsection{Activity: Management of test effort}
-\subsection{Process: Acquisition}
-\subsection{Activity: Acquisition support test}
-\subsection{Process: Supply}
+\subsubsection{Process: Management}
+\subsubsection{Activity: Management of test effort}
+\subsubsection{Process: Acquisition}
+\subsubsection{Activity: Acquisition support test}
+\subsubsection{Process: Supply}
 
 ...
 
