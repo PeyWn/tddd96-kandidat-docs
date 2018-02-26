@@ -61,9 +61,16 @@ Systemet som beskrivs översiktligt i Figur 2 är uppdelat i två delar, en webb
 Webbklienten består av tre lager, ett gränssnittslager, ett logiklager och ett kommunikationslager. I klientdelen i Figur 2 beskrivs hur lagren hänger ihop och beror på varandra.
 
 \subsection{Angular}
-Webbklienten kommer att använda sig av webbapplikationsramverket Angular. En Angular-applikation är uppbyggd av en eller flera moduler som i sin tur består av komponenter och tjänster.
+Webbklienten kommer att använda sig av webbapplikationsramverket Angular. En Angular-applikation är uppbyggd av en eller flera moduler som i sin tur består av komponenter och tjänster. 
 \subsubsection{Komponenter}
-Angluarkomponenter används för att beskriva 
+Angularkomponenter används för att dela upp gränssnittet i olika återanvändbara delar. Varje komponent består av dels en HTML-mall som beskriver dess utseende och dels en TypeScript-klass som hanterar allt det dynamiska med komponenten.
+
+Komponentens mall definieras med hjälp av en något utökad HTML-syntax. All vanlig HTML förutom dess script-taggar får användas. Det tillkommer även en Angular-specifik syntax som tillåter mallen att anpassa sitt uteseende beroende på klassens tillstånd.
+
+Klassen i komponenten innehåller allt för att visa upp mallen och de grundläggande funktioner som krävs. Alla icke-trivial logik som klassen behöver får den istället genom tjänster.
+\subsubsection{Tjänster}
+Tjänster i Angular 
+
 \subsection{Gränssnittslager}
    
 
