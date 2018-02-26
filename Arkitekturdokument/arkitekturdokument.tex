@@ -40,7 +40,7 @@ Operationer ska kunna avbokas och frigöras från schemat. Det ska finnas en sch
 Denna vy visar de viktigaste fallen då schemaläggningssystemet ska användas. De fallen är som följer:
 \begin{itemize}
 	\item Inloggning
-	\item Visa tidslinje
+	\item Visa tidslinje för operation
 	\item Visa beslutsöversikt
 	\item Visa beslutsdata
 	\item Boka operation
@@ -56,9 +56,21 @@ Denna vy visar de viktigaste fallen då schemaläggningssystemet ska användas. 
 Här visas och beskrivs en översiktlig skiss av schemaläggningssystemet där det framgår vilken funktionalitet som ska köras var i systemet. \\
 \includegraphics[width=.9\linewidth,height=.7\textheight]{Systemskiss.png}
 \\
-Systemet som beskrivs översiktligt i Diagram 2 innehåller en webbserver som innehåller ett grafisk användargränssnitt. Logik på webbservern hanterar användarkommandon och uppdaterar grafiska komponenter. Slutligen innehåller webbservern kommunikationsfunktionalitet som gör det möjligt att skicka data till och ta emot data från databasservern. Användaren kör systemet via en webbläsare, Internet Explorer 11.
+Systemet som beskrivs översiktligt i Figur 2 är uppdelat i två delar, en webbklient och en webbserver.
+\section{Webbklient}
+Webbklienten består av tre lager, ett gränssnittslager, ett logiklager och ett kommunikationslager. I klientdelen i Figur 2 beskrivs hur lagren hänger ihop och beror på varandra.
 
-Systemet innehåller även en databasserver som kan ta emot data från och skicka data till webbservern och behandla den data som ligger i själva databasen. Användaren kör systemet från en webbläsare.
+\subsection{Angular}
+Webbklienten kommer att använda sig av webbapplikationsramverket Angular. En Angular-applikation är uppbyggd av en eller flera moduler som i sin tur består av komponenter och tjänster.
+\subsubsection{Komponenter}
+Angluarkomponenter används för att beskriva 
+\subsection{Gränssnittslager}
+   
+
+
+%%Systemet som beskrivs översiktligt i Diagram 2 innehåller en webbserver som innehåller ett grafisk användargränssnitt. Logik på webbservern hanterar användarkommandon och uppdaterar grafiska komponenter. Slutligen innehåller webbservern kommunikationsfunktionalitet som gör det möjligt att skicka data till och ta emot data från databasservern. Användaren kör systemet via en webbläsare, Internet Explorer 11.
+
+%%Systemet innehåller även en databasserver som kan ta emot data från och skicka data till webbservern och behandla den data som ligger i själva databasen. Användaren kör systemet från en webbläsare.
 
 
 \end{document}
