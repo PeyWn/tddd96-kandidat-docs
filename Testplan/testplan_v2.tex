@@ -45,16 +45,29 @@ Testerna är till för att säkerhetsställa att det som levereras uppfyller de 
     %Beskrivning
     %Ref till kravspec
     %Beroende
+    %Integritets level
 
 \section{Tester}
 De olika nivåer av tester som kommer att genomföras listas nedan.
 \subsection{Enhetstest}
-När någon skriver kod ska den personen regelbundet testa koden för att fastställa att den fungerar som den ska.
   \textbf{Syfte:}
-    \\ \textbf{Ingående data:}
-    \\ \textbf{Utförande:}
-    \\ \textbf{Resultat:}
-    \\ \textbf{Kriterium för passering:}
+  När någon skriver kod ska den personen regelbundet testa koden för att fastställa att den fungerar som den ska.
+
+  \textbf{Ingående data:}
+        \begin{enumerate}
+            \item Enheten som ska testas.
+            \item \label{itm:Testspecifikation} Testspecifikation: Den här specifikation ska innehålla information om hur testet ska genomföras. Den ska också, om det behövs för enheten, innehålla lämpliga testscenarion. Utöver det så ska det finnas en sektion som redogör för designen av komponenten och om den är uppfylld enligt kravspecifikationen. Vidare så ska det finnas en sektion som redogör för förväntat resultat, enligt kravspecifikation eller utifrån beskrivningen av enheten.
+            \item Bugglista: Den här är listan ska innehålla alla kända problem som systemet har vid testets start, listan kommer att finnas under \emph{issues} på projektets gitlab.
+        \end{enumerate}
+    \textbf{Utförande:} Personen eller personerna som utför testet ska först skapa testspecifikation utifrån beskrivningen ovan, punkt \ref{itm:Testspecifikation} under \emph{Ingående data}. När det här är klart så utför personerna testet. Ett protokoll ska föras enligt mallen \todo{ref till protokoll-mall}. Om några problem uppstod ska dessa föras in under \emph{issues} i projektets gitlab.
+
+    \textbf{Resultat:}
+        \begin{enumerate}
+            \item \label{tim:Testprotokoll} Testprotokoll.
+            \item Bugglista: Lisan ska vid behov uppdateras.
+        \end{enumerate}
+    \textbf{Kriterium för passering:} Om resultatet från testprotokollet, se punkt \ref{itm:Testprotokoll} under resultat ovan, stämmer överens med det förväntade resultatet från testspecifikationen.
+
 \subsection{Integrationstest}
 När två eller flera enheter som ska sammanföras, där var och en har passerat enhetstesterna, så ska de integrationstestas.
    \textbf{Syfte:}
@@ -75,8 +88,6 @@ Två stycken acceptanstest kommer att genomföras, dels en pappersprototyp dels 
     \\ \textbf{Utförande:}
     \\ \textbf{Resultat:}
     \\ \textbf{Kriterium för passering:}
-
-
 
 
 
