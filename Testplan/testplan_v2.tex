@@ -41,11 +41,88 @@ Testerna är till för att säkerhetsställa att det som levereras uppfyller de 
 \section{Moduler}
 
 \section{Funktioner}
-    \subsubsection{FunktionX}
+
+    \subsubsection{Boka Operation}
     %Beskrivning
     %Ref till kravspec
     %Beroende
     %Integritets level
+    
+I denna funktion skall man kunna välja tid, se vilka lediga bokningsbara tider som existerar samt bli informerad om när kompetens, material och utrustning saknas
+Bokningen skall slutföras med en bekräftelseruta
+
+Det går att mata in:
+
+Operationstider (KVÅ-koder)
+\begin{itemize}
+	\item Förberedelsetid 
+	\item Operationstid 
+	\item Avvecklingstid. 
+\end{itemize}
+
+Beslutsdata:
+
+\begin{itemize}
+	\item Personnummer
+	\item Efternamn, Förnamn
+	\item Diagnoskod
+	\item Åtgärdskod enligt KVÅ-standard
+	\item Angiven KVÅ-kod som är huvudåtgärd
+	\item Operation av parigt organ (lateralitet)
+	\item Datum och tid för beslut om kirurgisk åtgärd
+	\item Namn på beslutsfattare inkl. titel
+	\item Beslutande klinik
+	\item Medicinsk brådskandegrad
+	\item Behandlingsnummer
+	\item Akut eller elektiv operation	
+	
+\end{itemize}
+
+
+Funktion för att Boka sal: \\
+Ingående data 
+Namn på lokal
+Typ av lokal
+Tillgänglig salstid
+Möjliga operationer att genomföra i lokalen
+Ingreppsbeskrivning
+
+Funktion för att Avboka operation: \\
+-	Välja tid
+-	Bekräftelseruta
+
+Funktion för Tidslinje för operation \\
+-	Visa beslutsdata
+
+Funktion för översikt av beslutade operationer \\
+-	Visa beslutsdata
+Funktion för schemaöversikt för planerade operationer
+-	Filterfunktion för schemaöversikt 
+
+Funktion för att Reservera material, lokal, kompetens och utrustning \\
+Databashanterings funktion
+
+Funktion för reservation av: \\
+Ingående data 
+	Material
+	Artikelnamn
+	Artikelnummer
+	Typ av material
+	Reserverade tider för flergångsmaterial (tidsåtgång: operation + sterilisering)
+Funktion för reservation Utrustning: \\
+Ingående data
+	Namn
+	MTÖ-nummer 
+	Typ av utrustning
+	Reserverade tider.
+Kompetenser
+Titel
+Efternamn, förnamn
+Kliniktillhörighet
+Klinisk specialitet
+Kompetens (Kvå-kod, huvudåtärd)
+Schema
+
 
 \section{Tester}
 De olika nivåer av tester som kommer att genomföras listas nedan.
@@ -88,6 +165,7 @@ Två stycken acceptanstest kommer att genomföras, dels en pappersprototyp dels 
     \\ \textbf{Utförande:}
     \\ \textbf{Resultat:}
     \\ \textbf{Kriterium för passering:}
+
 
 
 
