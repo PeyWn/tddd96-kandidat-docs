@@ -47,13 +47,99 @@ Testerna är till för att säkerhetsställa att det som levereras uppfyller de 
 \subsection{Avgränsningar}
 
 \section{Moduler}
+<<<<<<< HEAD
 
 >>>>>>> 789fdfb5c7cb76d9b015eec62053861e4b5c5447
+=======
+    \subsection{Server sidan}
+        \subsubsection{Databasen}
+        \subsubsection{logiklagret}
+        \subsubsection{nätverkskommunikationen}
+        
+>>>>>>> cfab04e19ed4c6d789aae93627004c30cca053bd
 \section{Funktioner}
-    \subsubsection{FunktionX}
+
+    \subsubsection{Boka Operation}
     %Beskrivning
     %Ref till kravspec
     %Beroende
+    %Integritets level
+
+I denna funktion skall man kunna välja tid, se vilka lediga bokningsbara tider som existerar samt bli informerad om när kompetens, material och utrustning saknas
+Bokningen skall slutföras med en bekräftelseruta
+
+Det går att mata in:
+
+Operationstider (KVÅ-koder)
+\begin{itemize}
+	\item Förberedelsetid
+	\item Operationstid
+	\item Avvecklingstid.
+\end{itemize}
+
+Beslutsdata:
+
+\begin{itemize}
+	\item Personnummer
+	\item Efternamn, Förnamn
+	\item Diagnoskod
+	\item Åtgärdskod enligt KVÅ-standard
+	\item Angiven KVÅ-kod som är huvudåtgärd
+	\item Operation av parigt organ (lateralitet)
+	\item Datum och tid för beslut om kirurgisk åtgärd
+	\item Namn på beslutsfattare inkl. titel
+	\item Beslutande klinik
+	\item Medicinsk brådskandegrad
+	\item Behandlingsnummer
+	\item Akut eller elektiv operation
+
+\end{itemize}
+
+
+Funktion för att Boka sal: \\
+Ingående data
+Namn på lokal
+Typ av lokal
+Tillgänglig salstid
+Möjliga operationer att genomföra i lokalen
+Ingreppsbeskrivning
+
+Funktion för att Avboka operation: \\
+-	Välja tid
+-	Bekräftelseruta
+
+Funktion för Tidslinje för operation \\
+-	Visa beslutsdata
+
+Funktion för översikt av beslutade operationer \\
+-	Visa beslutsdata
+Funktion för schemaöversikt för planerade operationer
+-	Filterfunktion för schemaöversikt
+
+Funktion för att Reservera material, lokal, kompetens och utrustning \\
+Databashanterings funktion
+
+Funktion för reservation av: \\
+Ingående data
+	Material
+	Artikelnamn
+	Artikelnummer
+	Typ av material
+	Reserverade tider för flergångsmaterial (tidsåtgång: operation + sterilisering)
+Funktion för reservation Utrustning: \\
+Ingående data
+	Namn
+	MTÖ-nummer
+	Typ av utrustning
+	Reserverade tider.
+Kompetenser
+Titel
+Efternamn, förnamn
+Kliniktillhörighet
+Klinisk specialitet
+Kompetens (Kvå-kod, huvudåtärd)
+Schema
+
 
 \section{Tester}
 <<<<<<< HEAD
@@ -63,8 +149,9 @@ Testerna är till för att säkerhetsställa att det som levereras uppfyller de 
 =======
 De olika nivåer av tester som kommer att genomföras listas nedan.
 \subsection{Enhetstest}
-När någon skriver kod ska den personen regelbundet testa koden för att fastställa att den fungerar som den ska.
+\label{sec:Enhetstest}
   \textbf{Syfte:}
+<<<<<<< HEAD
     \\ \textbf{Ingående data:}
     \begin{itemize}
         \item Enhet som ska testas
@@ -100,9 +187,98 @@ Två stycken acceptanstest kommer att genomföras, dels en pappersprototyp dels 
     \\ \textbf{Utförande:}
     \\ \textbf{Resultat:}
     \\ \textbf{Kriterium för passering:}
+=======
+  När någon skriver kod ska den personen regelbundet testa koden för att fastställa att den fungerar som den ska.
 
+  \textbf{Ingående data:}
+        \begin{enumerate}
+            \item Enheten som ska testas.
+            \item Testspecifikation-mall. \emph{(Se dokumentet testspecifikation-mall)}
+            \item Testprotokoll-mall. \emph{(Se dokumentet testprotokoll-mall)}
+            \item Bugglista: Den här är listan ska innehålla alla kända problem som systemet har vid testets start, listan kommer att finnas under \emph{issues} på projektets gitlab.
+        \end{enumerate}
 
+    \textbf{Utförande:} Testet ska utföras av berörda parter samt en oberoende person. Personerna som utför testet ska först skapa testspecifikation utifrån beskrivningen i testspecifikationsmallen. När det här är klart så utför personerna testet enligt specifikationen. Ett protokoll ska föras enligt mallen för testprotokoll, se testprotokoll-mall dokumentet. Om några problem uppstod ska dessa föras in under \emph{issues} i projektets gitlab.
 
+    \textbf{Resultat:}
+        \begin{enumerate}
+            \item \label{itm:Testspecifikation-e} Testspecifikation-testtyp-komponent/modul (komponent/modul är namnet på komponenten eller modulen som specifikation är skriven för).
+            \item \label{itm:Testprotokoll-e} Testprotokoll-testtyp-komponent/modul (komponent/modul är namnet på komponenten eller modulen som specifikation är skriven för)..
+            \item Bugglista: Lisan ska vid behov uppdateras.
+        \end{enumerate}
+    \textbf{Testkriterium:} Om resultatet från testprotokollet, se punkt \ref{itm:Testprotokoll-e} under \emph{resultat} i sektion \ref{sec:Enhetstest} ovan, stämmer överens med det förväntade resultatet från testspecifikationen, punkt \ref{itm:Testspecifikation-e} under \emph{resultat} i sektion \ref{sec:Enhetstest} ovan, så anses komponenten klarat testet.
 
+\subsection{Integrationstest}
+\label{sec:Integrationstest}
+\textbf{Syfte:}
+När två eller flera enheter som ska sammanföras, där var och en har passerat enhetstesterna, så ska de integrationstestas.
 
+\textbf{Ingående data:}
+    \begin{enumerate}
+        \item Modulen som ska integrationstestas.
+        \item Testprotokoll för alla enheter som finns i modulen som ska integrationstestas.
+        \item Testspecifikation-mall. \emph{(Se dokumentet testspecifikation-mall)}
+        \item Testprotokoll-mall. \emph{(Se dokumentet testprotokoll-mall)}
+        \item Bugglista: Den här är listan ska innehålla alla kända problem som systemet har vid testets start, listan kommer att finnas under \emph{issues} på projektets gitlab.
+    \end{enumerate}
+
+\textbf{Utförande:} Testet ska utföras av berörda parter, det bör max finnas en representant per komponent som ska integrationstestas. Personerna som utför testet ska först skapa testspecifikation utifrån beskrivningen i testspecifikationsmallen. När det här är klart så utför personerna testet enligt specifikationen. Ett protokoll ska föras enligt mallen för testprotokoll, se testprotokoll-mall dokumentet. Om några problem uppstod ska dessa föras in under \emph{issues} i projektets gitlab.
+
+\textbf{Resultat:}
+    \begin{enumerate}
+        \item \label{itm:Testspecifikation-i} Testspecifikation-testtyp-komponent/modul (komponent/modul är namnet på komponenten eller modulen som specifikation är skriven för).
+        \item \label{itm:Testprotokoll-i} Testprotokoll-testtyp-komponent/modul (komponent/modul är namnet på komponenten eller modulen som specifikation är skriven för)..
+        \item Bugglista: Lisan ska vid behov uppdateras.
+    \end{enumerate}
+
+\textbf{Testkriterium:} Om resultatet från testprotokollet, se punkt \ref{itm:Testprotokoll-i} under \emph{resultat} i sektion \ref{sec:Integrationstest} ovan, stämmer överens med det förväntade resultatet från testspecifikationen, punkt \ref{itm:Testspecifikation-i} under \emph{resultat} i sektion \ref{sec:Integrationstest} ovan, så anses komponenten klarat testet.
+
+\subsection{Systemtest}
+\label{sec:Systemtest}
+\textbf{Syfte:}
+
+\textbf{Ingående data:}
+   \begin{enumerate}
+       \item Systemet som ska testas.
+       \item Testprotokoll för alla systemet moduler.
+       \item Testspecifikation-mall. \emph{(Se dokumentet testspecifikation-mall)}
+       \item Testprotokoll-mall. \emph{(Se dokumentet testprotokoll-mall)}
+       \item Bugglista: Den här är listan ska innehålla alla kända problem som systemet har vid testets start, listan kommer att finnas under \emph{issues} på projektets gitlab.
+   \end{enumerate}
+
+\textbf{Utförande:} Testet ska utföras av hela projektgruppen. Gruppen utser två till tre personer som ska skapa en testspecifikation utifrån beskrivningen i testspecifikationsmallen. När det här är klart så utför personerna testet enligt specifikationen. Ett protokoll ska föras enligt mallen för testprotokoll, se testprotokoll-mall dokumentet. Om några problem uppstod ska dessa föras in under \emph{issues} i projektets gitlab.
+>>>>>>> cfab04e19ed4c6d789aae93627004c30cca053bd
+
+\textbf{Resultat:}
+    \begin{enumerate}
+        \item \label{itm:Testspecifikation-s} Testspecifikation-testtyp-komponent/modul (komponent/modul är namnet på komponenten eller modulen som specifikation är skriven för).
+        \item \label{itm:Testprotokoll-s} Testprotokoll-testtyp-komponent/modul (komponent/modul är namnet på komponenten eller modulen som specifikation är skriven för)..
+        \item Bugglista: Lisan ska vid behov uppdateras.
+    \end{enumerate}
+
+\textbf{Testkriterium:} Om resultatet från testprotokollet, se punkt \ref{itm:Testprotokoll-s} under \emph{resultat} i sektion \ref{sec:Systemtest} ovan, stämmer överens med det förväntade resultatet från testspecifikationen, punkt \ref{itm:Testspecifikation-s} under \emph{resultat} i sektion \ref{sec:Systemtest} ovan, så anses komponenten klarat testet.
+
+\subsection{Acceptanstest}
+\textbf{Syfte:}
+Två stycken acceptanstest kommer att genomföras. För det första ska ett test utföras på systemets grafiska gränssnitt.  För det andra så ska ett test utföars på hela systemet efter att systemtestet har blivit godkänd.
+
+\textbf{Ingående data:}
+        \begin{enumerate}
+            \item Testprotokoll-systemet.
+            \item Modulen(a) som ska testas.
+            \item Testspecifikation-mall. \emph{(Se dokumentet testspecifikation-mall)}
+            \item Testprotokoll-mall. \emph{(Se dokumentet testprotokoll-mall)}
+            \item Bugglista: Den här är listan ska innehålla alla kända problem som systemet har vid testets start, listan kommer att finnas under \emph{issues} på projektets gitlab.
+        \end{enumerate}
+
+\textbf{Utförande:} Testet ska utföras av hela projektgruppen. Gruppen utser två till tre personer som ska skapa en testspecifikation utifrån beskrivningen i testspecifikationsmallen. När det här är klart så utför personerna testet enligt specifikationen. Ett protokoll ska föras enligt mallen för testprotokoll, se testprotokoll-mall dokumentet. Om några problem uppstod ska dessa föras in under \emph{issues} i projektets gitlab.
+
+\textbf{Resultat:}
+    \begin{enumerate}
+        \item \label{itm:Testspecifikation-a} Testspecifikation-testtyp-komponent/modul (komponent/modul är namnet på komponenten eller modulen som specifikation är skriven för).
+        \item \label{itm:Testprotokoll-a} Testprotokoll-testtyp-komponent/modul (komponent/modul är namnet på komponenten eller modulen som specifikation är skriven för)..
+        \item Bugglista: Lisan ska vid behov uppdateras.
+    \end{enumerate}
+
+\textbf{Testkriterium:} Om resultatet från testprotokollet, se punkt \ref{itm:Testprotokoll-s} under \emph{resultat} i sektion \ref{sec:Systemtest} ovan, stämmer överens med det förväntade resultatet från testspecifikationen, punkt \ref{itm:Testspecifikation-s} under \emph{resultat} i sektion \ref{sec:Systemtest} ovan, så anses komponenten klarat testet.
 \end{document}
