@@ -1,0 +1,83 @@
+\documentclass[a4paper,10pt]{article}
+\input{../Templates/Settings}
+\def\ftitle{Testplan}
+\def\fversion{1.0}
+
+\externaldocument[arkd-]{../Kravspec/kravspec}
+
+
+\begin{document}
+\input{../Templates/titlepage}
+
+\section*{\begin{center}Dokumentationshistorik\end{center}}
+    \begin{center}
+        \begin{tabular}{|c c c c |}
+        \hline
+        Datum & händelse & iteration & version\\
+        \hline
+        2018-02-14 & Dokument skapas & 1 &  0.1\\
+        \hline
+        2018-02-19 & Konvertering till \textbf{\LaTeX} & 1 &  0.2\\
+        \hline
+        2018-02-19 & Version 1.0 färdigställd & 1 &  1.0\\
+        \hline
+        \end{tabular}
+    \end{center}
+    \clearpage
+    \tableofcontents
+    \clearpage
+
+    \begin{abstract}
+
+    \end{abstract}
+    \clearpage
+
+\section{Introduktion}
+Det här dokumentet ska översiktligt beskriva de tester som kommer att genomföras under projektets gång.
+\subsection{Mål och syfte}
+Testerna är till för att säkerhetsställa att det som levereras uppfyller de krav som finns i Kravspecifikation sektion \ref{arkd-sec:Specifika krav}.
+\subsection{Avgränsningar}
+
+\section{Moduler}
+
+\section{Funktioner}
+    \subsubsection{FunktionX}
+    %Beskrivning
+    %Ref till kravspec
+    %Beroende
+
+\section{Tester}
+De olika nivåer av tester som kommer att genomföras listas nedan.
+\subsection{Enhetstest}
+När någon skriver kod ska den personen regelbundet testa koden för att fastställa att den fungerar som den ska.
+  \textbf{Syfte:}
+    \\ \textbf{Ingående data:}
+    \\ \textbf{Utförande:}
+    \\ \textbf{Resultat:}
+    \\ \textbf{Kriterium för passering:}
+\subsection{Integrationstest}
+När två eller flera enheter som ska sammanföras, där var och en har passerat enhetstesterna, så ska de integrationstestas.
+   \textbf{Syfte:}
+    \\ \textbf{Ingående data:}
+    \\ \textbf{Utförande:}
+    \\ \textbf{Resultat:}
+    \\ \textbf{Kriterium för passering:}
+\subsection{Systemtest}
+   \textbf{Syfte:}
+    \\ \textbf{Ingående data:}
+    \\ \textbf{Utförande:}
+    \\ \textbf{Resultat:}
+    \\ \textbf{Kriterium för passering:}
+\subsection{Acceptanstest}
+Två stycken acceptanstest kommer att genomföras, dels en pappersprototyp dels ett på systemet i sig när systemtestet har blivit godkänd.
+    \\ \textbf{Syfte:}
+    \\ \textbf{Ingående data:}
+    \\ \textbf{Utförande:}
+    \\ \textbf{Resultat:}
+    \\ \textbf{Kriterium för passering:}
+
+
+
+
+
+\end{document}
