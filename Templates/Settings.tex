@@ -1,9 +1,17 @@
+%%%%%%%%%%%%%%%%%%%%%%Formatting%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[margin=1.4in]{geometry}
 \usepackage[swedish]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{titlesec}
 \usepackage{titling}
-\usepackage{todonotes}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\rhead{\includegraphics[width=1cm]{../Templates/Aeon}}
+\setlength{\headheight}{25pt}
+\lhead{}
 
 \setlength{\parskip}{1em}
 \setlength{\parindent}{0pt}
@@ -11,3 +19,18 @@
 \titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
 \titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
 \titlespacing{\part}{0pt}{\parskip}{-\parskip}
+%%%%%%%%%%%%%%%%%%%%%%%%End of foramtting%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\usepackage{xr}
+% Used for cross document refererasing.
+% For exempel use
+% \externaldocument[example_document-]{path/to/example_document}
+% Then use
+% \ref{example_document-sec:some_section_in_example_document}
+
+\usepackage{todonotes}
+% Used for todonotes, to use package write
+% \todo{"Message"}
+% This will show a graphical bubble in the pdf with the message

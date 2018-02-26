@@ -2,18 +2,17 @@
 \input{../Templates/Settings}
 \begin{document}
 
-\title{Kravspecifikation för schemaläggningsstöd för kirurgi}
-\author{Grupp 6}
-\date{\today \\ $Revision$ 0.1 }
-
-\input{firstpage}
+\def\ftitle{Kravspecifikation}
+\def\fversion{1.0}
+\input{../Templates/titlepage}
+\input{versiontable}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Introdunction  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Introduktion}
 Detta dokument avser beskriva alla de krav som finns för det schemaläggningsstöd
 som ska utvecklas i kursen TDDD96. Projektet utvecklas med avdelningen för test
-och innovation vid Region Östergötland, hädanefter benämd som kunden eller RÖ.
+och innovation vid Region Östergötland, hädanefter benämnd som kunden eller RÖ.
 
 \subsection{Syfte}
 Syftet med dokumentet är att ligga till grund för en gemensam kravbild på
@@ -62,7 +61,7 @@ används på slutanvändarens dator.
 \subsubsection{Hårdvarugränssnitt}
 \label{subsec:Hardvarugranssnitt}
 Klienten kommer att användas på en vanlig PC. Servern kommer under utvecklingen
-att köras på vanlig PC men kan om någon form av småskalig distibution sker
+att köras på vanlig PC men kan om någon form av småskalig distribution sker
 också köras på kraftigare servrar.
 \subsubsection{Mjukvarugränssnitt}
 \label{subsec:Mjukvarugranssnitt}
@@ -196,7 +195,7 @@ olika huvudfunktionerna som systemet ska ha.
 \subsubsection{Beslutsöversikt}
 \textbf{Ska-krav: }
 \begin{enumerate}
-  \item Det ska finnas en sorteringsbar översikt av beslutade operationer.
+  \item Det ska finnas en sorteringar översikt av beslutade operationer.
   \item Det ska finnas en filtreringsfunktion i översikten av beslutade
   operationer.
   \item Det ska gå att se all information i ett beslut genom val av
