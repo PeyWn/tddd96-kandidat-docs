@@ -58,18 +58,27 @@ Här visas och beskrivs en översiktlig skiss av schemaläggningssystemet där d
 \\
 Systemet som beskrivs översiktligt i Figur 2 är uppdelat i två delar, en webbklient och en webbserver.
 \section{Webbklient}
-Webbklienten består av tre lager, ett gränssnittslager, ett logiklager och ett kommunikationslager. I klientdelen i Figur 2 beskrivs hur lagren hänger ihop och beror på varandra.
+Webbklienten kommer att byggas på webbapplikationsramverket Angular. Den kommer att består av tre lager, ett gränssnittslager, ett logiklager och ett kommunikationslager. I klientdelen i Figur 2 beskrivs hur lagren hänger ihop och beror på varandra.
 
 \subsection{Angular}
-Webbklienten kommer att använda sig av ett webbapplikationsramverk som heter Angular. En Angular-applikation är uppbyggd av en eller flera moduler som i sin tur består av komponenter och tjänster.
+Denna sektion behandlar de delar ur Angulars arkitekturguide (referens till https://angular.io/guide/architecture) som kommer att vara relevanta i projektet.
+
+En Angular-applikation är uppbyggd av en eller flera moduler som i sin tur består av komponenter och tjänster.
 \subsubsection{Komponenter}
-Angularkomponenter används för att dela upp gränssnittet i olika återanvändbara delar. Varje komponent består av dels en HTML-mall som beskriver dess utseende och dels en TypeScript-klass som hanterar allt det dynamiska med komponenten.
+\label{komponent}
+Angularkomponenter används för att dela upp gränssnittet i olika återanvändbara delar. Varje komponent ansvarar för en egen del av gränssnittet och består av dels en HTML-mall som beskriver dess utseende och dels en TypeScript-klass som hanterar allt det dynamiska med komponenten.
 
 Komponentens mall definieras med hjälp av en något utökad HTML-syntax. All vanlig HTML förutom dess script-taggar får användas. Det tillkommer även en Angular-specifik syntax som tillåter mallen att anpassa sitt uteseende beroende på klassens tillstånd.
 \subsubsection{Tjänster}
-Tjänster i Angular är klasser, skrivna i TypeScript, som tillhandahåller funktioner och logik som krävs av modulens komponenter eller andra tjänster.
+Tjänster i Angular är klasser, skrivna i TypeScript, som tillhandahåller funktioner och logik som krävs av modulens komponenter eller andra tjänster. Typiskt ska de ha ett smalt och väldefinierat syfte.
 
-\subsection{Gränssnittslager}   
+\subsection{Gränssnittslager}
+Gränssnittslagret har hand om allt som har med användarupplevelse och grafik i applikationen. Det kommer uteslutande att bestå av Angluarkomponenter som beskrivna i sektion \ref{komponent}.
+
+Varje komponent ska ha ett väldefinierat syfte och såvida den inte är trivial bör den vara uppdelad i andra mindre komponenter. Komponenternas klasser ska endast innehålla den logik som krävs för visning och interaktion med användaren. Alla andra funktioner som krävs men som inte direkt har med användarupplevelsen att göra ska finnas i komponenten, utan i tjänster som ligger i logiklagret.
+
+\subsection{Logiklager}
+   
 
 
 %%Systemet som beskrivs översiktligt i Diagram 2 innehåller en webbserver som innehåller ett grafisk användargränssnitt. Logik på webbservern hanterar användarkommandon och uppdaterar grafiska komponenter. Slutligen innehåller webbservern kommunikationsfunktionalitet som gör det möjligt att skicka data till och ta emot data från databasservern. Användaren kör systemet via en webbläsare, Internet Explorer 11.
