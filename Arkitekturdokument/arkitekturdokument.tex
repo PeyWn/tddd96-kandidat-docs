@@ -30,19 +30,33 @@
 
 \subsection{Syfte}
 Arkitekturdokumentet ger en utförlig översikt  av schemaläggningssystemets arkitektur. I dokumentet presenteras flera olika vyer av arkitekturen samt en översiktlig beskrivning av systemet och dess funktionalitet.
+
+\subsection{Ordlista}
+Här förklaras tekniska termer och förkortningar.
+
+
 \subsection{Översiktlig systembeskrivning}
 Det schemaläggningssystem som ska utvecklas kommer användas på operationsavdelningen i ett sjukhus av sjukhuspersonal för planering av operationer. Systemet ska klara av att utifrån en lista med beslutade operationer ge användaren förslag på operationstider inom operationens tidsgräns då rätt lokal och resurser finns tillgängliga. För tider då lokal finns att tillgå men resurser saknas ska systemet visa vilka resurser som saknas. Användaren ska utifrån detta kunna välja en passande tid och boka in operationen. Besluten ska innehålla relevant data om patient och operationstyp, och det ska för varje beslut framgå om beslutet behandlats eller inte. Ifall patienten behöver flera ingrepp ska användaren kunna se detta och kunna slå samman ingreppen till en operation vid behov.
 
 Operationer ska kunna avbokas och frigöras från schemat. Det ska finnas en schemaöversikt med en filterfunktion som visar när vilka resurser är lediga eller upptagna. Det ska finnas en tidslinje över operationen som visar när operationsprocessens olika stadier börjar. Det ska gå att logga vilken användare som bokat vad. All information ska lagras i en central databas. Från databasen ska informationen hämtas ned till användardatorer via en server. Systemet ska visas på en skärm och användaren interagerar med det med hjälp av tangentbord och mus.
 
+
 \subsection{Mål och filosofi}
 Målet med utvecklingen av systemet är att ta fram en prototyp för ett schemaläggningsverktyg som kan användas som underlag för att få en bild av vilken funktionalitet som ett verkligt schemaläggningsverktyg behöver ha. Då systemet inte kommer tas i egentlig drift prioriteras användbarhet och designlösningar framför prestanda. Ett väl designat användargränssnitt är huvudmålet med projektet.
 
 \subsection{Beroenden}
-Utveckling av systemet kommer ske Angular, vilket får konekvenser för arkitekturen.
+Utveckling av systemet kommer ske Angular, vilket får konekvenser för arkitekturen. Databasen kommer implementeras med MySQL och kommer kommunicera med klienten via ett API som översätter datan till JSON-filer.
 
 \section{Relevanta krav}
-Här listas de krav som är relevanta för arkitekturen.
+Här listas de krav som är relevanta för arkitekturen. Kraven är hämtade ur projektets kravspecifikation.
+
+\begin{tabular}{|c|c|c|}
+  \hline
+  Kravnummer & Kravbeskrivning & Betydelse \\
+  \hline
+\end{tabular}
+
+
 \section{Designbeslut och motivering}
 Här beskrivs designbeslut som fattats och motiveringar av dessa.
 
