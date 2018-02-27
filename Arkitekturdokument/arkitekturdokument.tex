@@ -92,13 +92,16 @@ Tjänster i Angular är klasser, skrivna i TypeScript, som tillhandahåller funk
 \subsection{Gränssnittslager}
 Gränssnittslagret har hand om allt som har med användarupplevelse och grafik i applikationen. Det kommer uteslutande att bestå av Angluar-komponenter som beskrivna i sektion \ref{komponent}.
 
-Varje komponent ska ha ett väldefinierat syfte och såvida den inte är trivial bör den vara uppdelad i andra mindre komponenter. Komponenternas klasser ska endast innehålla den logik som krävs för visning och interaktion med användaren. Alla andra funktioner som krävs men som inte direkt har med användarupplevelsen att göra ska finnas i komponenten, utan i tjänster som ligger i logiklagret.
+Varje komponent ska ha ett väldefinierat syfte och såvida den inte är trivial bör den vara uppdelad i andra mindre komponenter. Komponenternas klasser ska endast innehålla den logik som krävs för visning och interaktion med användaren. Alla andra funktioner som krävs men som inte direkt har med användarupplevelsen att göra ska istället hanteras av tjänster i logiklagret.
 
 \subsection{Logiklager}
 Logiklagret har som uppgift att tillhandahålla all applikationsfunktionalitet som krävs av komponenterna i gränssnittslagret. I lagret ska det endast finnas Angular-tjänster vilka ska ha smala och väldefnierade ansvarsområden.
 
 \subsection{Kommunikationslager}
 Kommunikationslagret har som uppgift att sköta all kommunikation med webbservern som krävs av logiklagret. Den ska liksom logiklagret bestå av Angular-tjänster.
+
+\section{Webbserver}
+
 
 
 %%Systemet som beskrivs översiktligt i Diagram 2 innehåller en webbserver som innehåller ett grafisk användargränssnitt. Logik på webbservern hanterar användarkommandon och uppdaterar grafiska komponenter. Slutligen innehåller webbservern kommunikationsfunktionalitet som gör det möjligt att skicka data till och ta emot data från databasservern. Användaren kör systemet via en webbläsare, Internet Explorer 11.
