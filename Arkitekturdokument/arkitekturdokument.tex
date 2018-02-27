@@ -35,16 +35,29 @@ Det schemaläggningssystem som ska utvecklas kommer användas på operationsavde
 
 Operationer ska kunna avbokas och frigöras från schemat. Det ska finnas en schemaöversikt med en filterfunktion som visar när vilka resurser är lediga eller upptagna. Det ska finnas en tidslinje över operationen som visar när operationsprocessens olika stadier börjar. Det ska gå att logga vilken användare som bokat vad. All information ska lagras i en central databas. Från databasen ska informationen hämtas ned till användardatorer via en server. Systemet ska visas på en skärm och användaren interagerar med det med hjälp av tangentbord och mus.
 
+\subsection{Mål och filosofi}
+Målet med utvecklingen av systemet är att ta fram en prototyp för ett schemaläggningsverktyg som kan användas som underlag för att få en bild av vilken funktionalitet som ett verkligt schemaläggningsverktyg behöver ha. Då systemet inte kommer tas i egentlig drift prioriteras användbarhet och designlösningar framför prestanda. Ett väl designat användargränssnitt är huvudmålet med projektet.
+
+\subsection{Beroenden}
+Utveckling av systemet kommer ske Angular, vilket får konekvenser för arkitekturen.
+
+\section{Relevanta krav}
+Här listas de krav som är relevanta för arkitekturen.
+\section{Designbeslut och motivering}
+Här beskrivs designbeslut som fattats och motiveringar av dessa.
+
+\section{Designmönster}
+Här beskrivs några använda designmönster.
+
+\subsection{Model-view-controller}
+
+
 \section{Användarfallsvy}
 
 Denna vy visar de viktigaste fallen då schemaläggningssystemet ska användas. De fallen är som följer:
 \begin{itemize}
 	\item Inloggning
-<<<<<<< HEAD
-	\item Visa tidslinje
-=======
 	\item Visa tidslinje för operation
->>>>>>> 789fdfb5c7cb76d9b015eec62053861e4b5c5447
 	\item Visa beslutsöversikt
 	\item Visa beslutsdata
 	\item Boka operation
@@ -60,11 +73,6 @@ Denna vy visar de viktigaste fallen då schemaläggningssystemet ska användas. 
 Här visas och beskrivs en översiktlig skiss av schemaläggningssystemet där det framgår vilken funktionalitet som ska köras var i systemet. \\
 \includegraphics[width=.9\linewidth,height=.7\textheight]{Systemskiss.png}
 \\
-<<<<<<< HEAD
-Systemet som beskrivs översiktligt i Diagram 2 innehåller en webbserver som innehåller ett grafisk användargränssnitt. Logik på webbservern hanterar användarkommandon och uppdaterar grafiska komponenter. Slutligen innehåller webbservern kommunikationsfunktionalitet som gör det möjligt att skicka data till och ta emot data från databasservern. Användaren kör systemet via en webbläsare, Internet Explorer 11.
-
-Systemet innehåller även en databasserver som kan ta emot data från och skicka data till webbservern och behandla den data som ligger i själva databasen. Användaren kör systemet från en webbläsare.
-=======
 Systemet som beskrivs översiktligt i Figur 2 är uppdelat i två delar, en webbklient och en webbserver.
 \section{Webbklient}
 Webbklienten kommer att byggas på webbapplikationsramverket Angular. Den kommer att består av tre lager, ett gränssnittslager, ett logiklager och ett kommunikationslager. I klientdelen i Figur 2 beskrivs hur lagren hänger ihop och beror på varandra.
@@ -87,15 +95,15 @@ Gränssnittslagret har hand om allt som har med användarupplevelse och grafik i
 Varje komponent ska ha ett väldefinierat syfte och såvida den inte är trivial bör den vara uppdelad i andra mindre komponenter. Komponenternas klasser ska endast innehålla den logik som krävs för visning och interaktion med användaren. Alla andra funktioner som krävs men som inte direkt har med användarupplevelsen att göra ska finnas i komponenten, utan i tjänster som ligger i logiklagret.
 
 \subsection{Logiklager}
-Logiklagret har som uppgift att tillhandahålla all applikationsfunktionalitet som krävs av komponenterna i gränssnittslagret. I lagret ska det endast finnas Angular-tjänster som alla ska ha smala och väldefnierade ansvarsområden.
+Logiklagret har som uppgift att tillhandahålla all applikationsfunktionalitet som krävs av komponenterna i gränssnittslagret. I lagret ska det endast finnas Angular-tjänster vilka ska ha smala och väldefnierade ansvarsområden.
 
 \subsection{Kommunikationslager}
+Kommunikationslagret har som uppgift att sköta all kommunikation med webbservern som krävs av logiklagret. Den ska liksom logiklagret bestå av Angular-tjänster.
 
 
 %%Systemet som beskrivs översiktligt i Diagram 2 innehåller en webbserver som innehåller ett grafisk användargränssnitt. Logik på webbservern hanterar användarkommandon och uppdaterar grafiska komponenter. Slutligen innehåller webbservern kommunikationsfunktionalitet som gör det möjligt att skicka data till och ta emot data från databasservern. Användaren kör systemet via en webbläsare, Internet Explorer 11.
 
 %%Systemet innehåller även en databasserver som kan ta emot data från och skicka data till webbservern och behandla den data som ligger i själva databasen. Användaren kör systemet från en webbläsare.
->>>>>>> 789fdfb5c7cb76d9b015eec62053861e4b5c5447
 
 
 \end{document}
