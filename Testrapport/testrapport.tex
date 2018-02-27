@@ -1,11 +1,24 @@
 \documentclass[a4paper,10pt]{article}
 \input{../Templates/Settings}
-\def\ftitle{Testrapportmall}
+\def\ftitle{Testrapport}
 \def\fversion{0.1}
 
 \begin{document}
 \input{../Templates/titlepage.tex}
 
+\section*{\begin{center}Dokumentationshistorik\end{center}}
+    \begin{center}
+        \begin{tabular}{|c c c c |}
+        \hline
+        Datum & händelse & iteration & version\\
+        \hline
+        2018-02-27 & Dokument skapas & 2 &  0.1\\
+        \hline
+        \end{tabular}
+    \end{center}
+    \clearpage
+    \tableofcontents
+    \clearpage
 
 
 \section{Enhetstest}
@@ -20,4 +33,11 @@
 \section{Integrationstest}
 \section{Systemtest}
 \section{Acceptanstest}
+\subsection{Prototyp}
+\subsubsection{Testaktivitet}
+\subsubsection{Testresultat}
+\subsubsection{Avvikelser}
+\subsubsection{Utvädering}
+
+
 \end{document}

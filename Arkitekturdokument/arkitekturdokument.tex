@@ -87,12 +87,12 @@ Denna vy visar de viktigaste fallen då schemaläggningssystemet ska användas. 
 Här visas och beskrivs en översiktlig skiss av schemaläggningssystemet där det framgår vilken funktionalitet som ska köras var i systemet. \\
 \includegraphics[width=.9\linewidth,height=.7\textheight]{Systemskiss.png}
 \\
-Systemet som beskrivs översiktligt i Figur 2 är uppdelat i två delar, en webbklient och en webbserver.
+Systemet som beskrivs översiktligt i Figur 2 är uppdelat i två delar, en webbklient och en webbserver. Webbklientens roll är att visa gränssnittet och hantera all logik bakom det. Webbservern är värd för webbklienten och fungerar även som en databasserver som svarar på förfrågningar från klienten.
 \section{Webbklient}
-Webbklienten kommer att byggas på webbapplikationsramverket Angular. Den kommer att består av tre lager, ett gränssnittslager, ett logiklager och ett kommunikationslager. I klientdelen i Figur 2 beskrivs hur lagren hänger ihop och beror på varandra.
+Webbklienten kommer att byggas på webbapplikationsramverket Angular. Dens struktur kommer att består av tre lager, ett gränssnittslager, ett logiklager och ett kommunikationslager. I klientdelen i Figur 2 beskrivs hur lagren hänger ihop och beror på varandra.
 
 \subsection{Angular}
-Denna sektion behandlar de delar ur Angulars arkitekturguide (referens till https://angular.io/guide/architecture) som kommer att vara relevanta i projektet.
+Denna sektion behandlar de delar ur Angulars arkitekturguide (referens till https://angular.io/guide/architecture) som kommer att vara relevanta för webbklienten.
 
 En Angular-applikation är uppbyggd av en eller flera moduler som i sin tur består av komponenter och tjänster.
 \subsubsection{Komponenter}
@@ -106,12 +106,24 @@ Tjänster i Angular är klasser, skrivna i TypeScript, som tillhandahåller funk
 \subsection{Gränssnittslager}
 Gränssnittslagret har hand om allt som har med användarupplevelse och grafik i applikationen. Det kommer uteslutande att bestå av Angluar-komponenter som beskrivna i sektion \ref{komponent}.
 
-Varje komponent ska ha ett väldefinierat syfte och såvida den inte är trivial bör den vara uppdelad i andra mindre komponenter. Komponenternas klasser ska endast innehålla den logik som krävs för visning och interaktion med användaren. Alla andra funktioner som krävs men som inte direkt har med användarupplevelsen att göra ska finnas i komponenten, utan i tjänster som ligger i logiklagret.
+Varje komponent ska ha ett väldefinierat syfte och såvida den inte är trivial bör den vara uppdelad i andra mindre komponenter. Komponenternas klasser ska endast innehålla den logik som krävs för visning och interaktion med användaren. Alla andra funktioner som krävs men som inte direkt har med användarupplevelsen att göra ska istället hanteras av tjänster i logiklagret.
 
 \subsection{Logiklager}
-Logiklagret har som uppgift att tillhandahålla all applikationsfunktionalitet som krävs av komponenterna i gränssnittslagret. I lagret ska det endast finnas Angular-tjänster som alla ska ha smala och väldefnierade ansvarsområden.
+Logiklagret har som uppgift att tillhandahålla all applikationsfunktionalitet som krävs av komponenterna i gränssnittslagret. I lagret ska det endast finnas Angular-tjänster vilka ska ha smala och väldefnierade ansvarsområden.
 
 \subsection{Kommunikationslager}
+Kommunikationslagret har som uppgift att sköta all kommunikation med webbservern som krävs av logiklagret. Den ska liksom logiklagret bestå av Angular-tjänster.
+
+\section{Webbserver}
+Webbservern har två huvuduppgifter. Den första är att vara värd åt webbklienten så att den är tillgänglig för flera olika användare och datorer. Den andra är att hantera en databas för att lagra information om bland annat operationsbeslut, konton, resurser med mera. Detta innefattar att utföra och svara på databasförfrågningar som kommer från klienten.
+
+Webbservern kommer att använda sig av Node.js och ska struktureras i två lager. Ett för kommunikation och ett för databaslogik, se serverdelen i Figur 2. Databashanteraren som kommer att användas är MySQL.
+
+\subsection{Logiklager}
+I logiklagret ligger all funktionalitet för hantering av databasen. Allt som krävs för att kunna utföra och svara på webbklientens databasförfrågningar ska finnas.
+
+\subsection{Kommunikationslager}
+Kommunikationslagret i webbservern hanterar alla förfrågningar som kommer från användare. Den ska leverera webbklienten till användare och att svara på förfrågningar från webbklienten med hjälp av funktionerna i logiklagret.
 
 
 %%Systemet som beskrivs översiktligt i Diagram 2 innehåller en webbserver som innehåller ett grafisk användargränssnitt. Logik på webbservern hanterar användarkommandon och uppdaterar grafiska komponenter. Slutligen innehåller webbservern kommunikationsfunktionalitet som gör det möjligt att skicka data till och ta emot data från databasservern. Användaren kör systemet via en webbläsare, Internet Explorer 11.
