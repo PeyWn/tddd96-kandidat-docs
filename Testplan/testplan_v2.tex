@@ -44,16 +44,14 @@ Testerna är till för att säkerhetsställa att det som levereras uppfyller de 
         \subsubsection{nätverkskommunikationen}
 
 \section{Funktioner}
-
+Denna sektion beskriver de funktioner som ska genomgå testning. Varje funktions användningsområde presenteras tillsammans med den indata som funktionen ska behandla. Varje funktion har blivit tilldelad en integritets nivå som beskriver hur kritisk funktionen är för systemet.
     \subsection{Boka Operation}
     %Beskrivning
     %Ref till kravspec
     %Beroende
     %Integritets level
 
-I denna funktion skall man kunna välja tid, se vilka lediga bokningsbara tider som existerar samt bli informerad om när kompetens, material och utrustning saknas. Bokningen skall slutföras med en bekräftelseruta. Förberedelser och efterarbete beskrivs med hjälp utav KVÅ-kodning.
-
-Det går att mata in:
+I denna funktion skall man kunna välja tid, se vilka lediga bokningsbara tider som existerar samt bli informerad om när kompetens, material och utrustning saknas. Förberedelser och efterarbete beskrivs med hjälp utav KVÅ-kodning.
 
 Beslutsdata:
 \begin{multicols}{2}
@@ -74,11 +72,16 @@ Beslutsdata:
 \end{multicols}
 
 Operationstider (KVÅ-koder)
+\begin{multicols}{3}
 \begin{itemize}
 	\item Förberedelsetid
 	\item Operationstid
 	\item Avvecklingstid.
 \end{itemize}
+\end{multicols}
+
+Se kravspec \ref{krav-subsubsec:Planeringsvy} för mer ingående information om kraven som berör funktionen.
+
     \subsubsection{Boka sal}
 
 
