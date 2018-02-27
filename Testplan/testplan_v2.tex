@@ -2,7 +2,7 @@
 \input{../Templates/Settings}
 \def\ftitle{Testplan}
 \def\fversion{1.0}
-
+\usepackage{multicol}
 \externaldocument[arkd-]{../Kravspec/kravspec}
 
 
@@ -46,26 +46,18 @@ Testerna är till för att säkerhetsställa att det som levereras uppfyller de 
 
 \section{Funktioner}
 
-    \subsubsection{Boka Operation}
+    \subsection{Boka Operation}
     %Beskrivning
     %Ref till kravspec
     %Beroende
     %Integritets level
 
-I denna funktion skall man kunna välja tid, se vilka lediga bokningsbara tider som existerar samt bli informerad om när kompetens, material och utrustning saknas
-Bokningen skall slutföras med en bekräftelseruta
+I denna funktion skall man kunna välja tid, se vilka lediga bokningsbara tider som existerar samt bli informerad om när kompetens, material och utrustning saknas. Bokningen skall slutföras med en bekräftelseruta. Förberedelser och efterarbete beskrivs med hjälp utav KVÅ-kodning.
 
 Det går att mata in:
 
-Operationstider (KVÅ-koder)
-\begin{itemize}
-	\item Förberedelsetid
-	\item Operationstid
-	\item Avvecklingstid.
-\end{itemize}
-
 Beslutsdata:
-
+\begin{multicols}{2}
 \begin{itemize}
 	\item Personnummer
 	\item Efternamn, Förnamn
@@ -79,53 +71,74 @@ Beslutsdata:
 	\item Medicinsk brådskandegrad
 	\item Behandlingsnummer
 	\item Akut eller elektiv operation
-
 \end{itemize}
+\end{multicols}
 
+Operationstider (KVÅ-koder)
+\begin{itemize}
+	\item Förberedelsetid
+	\item Operationstid
+	\item Avvecklingstid.
+\end{itemize}
+    \subsubsection{Boka sal}
+    
 
-Funktion för att Boka sal: \\
 Ingående data
-Namn på lokal
-Typ av lokal
-Tillgänglig salstid
-Möjliga operationer att genomföra i lokalen
-Ingreppsbeskrivning
+\begin{multicols}{2}
+\begin{itemize}
+	\item Namn på lokal
+	\item Typ av lokal
+	\item Tillgänglig salstid
+	\item Möjliga operationer att genomföra i lokalen
+	\item Ingreppsbeskrivning
+\end{itemize}
+\end{multicols}
 
-Funktion för att Avboka operation: \\
+\subsubsection{Avboka sal}
 -	Välja tid
 -	Bekräftelseruta
 
-Funktion för Tidslinje för operation \\
+\subsection{Tidslinje för operation}
 -	Visa beslutsdata
 
-Funktion för översikt av beslutade operationer \\
+\subsection{Översikt av beslutade operationer}
 -	Visa beslutsdata
-Funktion för schemaöversikt för planerade operationer
+\subsection{Schemaöversikt för planerade operationer}
 -	Filterfunktion för schemaöversikt
 
-Funktion för att Reservera material, lokal, kompetens och utrustning \\
+\subsection{Reservera material, lokal, kompetens och utrustning}
 Databashanterings funktion
 
-Funktion för reservation av: \\
+\subsubsection{Material}
 Ingående data
-	Material
-	Artikelnamn
-	Artikelnummer
-	Typ av material
-	Reserverade tider för flergångsmaterial (tidsåtgång: operation + sterilisering)
-Funktion för reservation Utrustning: \\
+\begin{itemize}
+	\item Material
+	\item Artikelnamn
+	\item Typ av material
+	\item Reserverade tider för flergångsmaterial (tidsåtgång: operation + sterilisering)
+\end{itemize}
+
+\subsubsection{Utrustning}
 Ingående data
-	Namn
-	MTÖ-nummer
-	Typ av utrustning
-	Reserverade tider.
-Kompetenser
-Titel
-Efternamn, förnamn
-Kliniktillhörighet
-Klinisk specialitet
-Kompetens (Kvå-kod, huvudåtärd)
-Schema
+\begin{itemize}
+	\item Namn
+	\item MTÖ-nummer
+	\item Typ av utrustning
+	\item Reserverade tider.
+\end{itemize}
+
+\subsubsection{Kompetenser}
+Ingående data
+\begin{multicols}{2}
+\begin{itemize}
+	\item Titel
+	\item Efternamn, förnamn
+	\item Kliniktillhörighet
+	\item Klinisk specialitet
+	\item Kompetens (Kvå-kod, huvudåtärd)
+	\item Schema
+\end{itemize}
+\end{multicols}
 
 
 \section{Tester}
