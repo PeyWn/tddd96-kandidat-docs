@@ -89,7 +89,9 @@ Här visas och beskrivs en översiktlig skiss av schemaläggningssystemet där d
 \\
 Systemet som beskrivs översiktligt i Figur 2 är uppdelat i två delar, en webbklient och en webbserver. Webbklientens roll är att visa gränssnittet och hantera all logik bakom det. Webbservern är värd för webbklienten och fungerar även som en databasserver som svarar på förfrågningar från klienten.
 \section{Webbklient}
-Webbklienten kommer att byggas på webbapplikationsramverket Angular. Dens struktur kommer att består av tre delar, en gränssnittsdel, en applikationslogikdel och en kommunikationsdel. I klientdelen i Figur 2 beskrivs hur delarna hänger ihop och beror på varandra.
+Webbklienten körs i en webbläsare och kommer att byggas på webbapplikationsramverket Angular. Dens struktur kommer att består av tre delar, en gränssnittsdel, en applikationslogikdel och en kommunikationsdel. I klientdelen i Figur 2 visas hur delarna hänger ihop och beror på varandra.
+
+Ett alternativ till Angular som disskuterades till klienten var React. Valet av Angular berodde inte på några direkt tekniska anledningar utan var främst eftersom det rekommenderades av Region Östergötland.  
 
 \subsection{Angular}
 Denna sektion behandlar de delar ur Angulars arkitekturguide (referens till https://angular.io/guide/architecture) som kommer att vara relevanta för webbklienten.
@@ -124,11 +126,5 @@ I logikdelen ligger all funktionalitet för hantering av databasen. Allt som kr�
 
 \subsection{Kommunikationdel}
 Kommunikationsdelen i webbservern hanterar alla förfrågningar som kommer från användare. Den ska leverera webbklienten till användare och svara på förfrågningar från webbklienten med hjälp av funktionerna i logikdelen.
-
-
-%%Systemet som beskrivs översiktligt i Diagram 2 innehåller en webbserver som innehåller ett grafisk användargränssnitt. Logik på webbservern hanterar användarkommandon och uppdaterar grafiska komponenter. Slutligen innehåller webbservern kommunikationsfunktionalitet som gör det möjligt att skicka data till och ta emot data från databasservern. Användaren kör systemet via en webbläsare, Internet Explorer 11.
-
-%%Systemet innehåller även en databasserver som kan ta emot data från och skicka data till webbservern och behandla den data som ligger i själva databasen. Användaren kör systemet från en webbläsare.
-
 
 \end{document}
