@@ -1,10 +1,11 @@
 \documentclass[a4paper,10pt]{article}
 \input{../Templates/Settings}
-\def\ftitle{Testplan}
-\def\fversion{1.0}
 \usepackage{multicol}
 \externaldocument[krav-]{../Kravspec/kravspec}
+\externaldocument[arkdoc-]{../Arkitekturdokument/arkitekturdokument}
 
+\def\ftitle{Testplan}
+\def\fversion{1.0}
 
 \begin{document}
 \input{../Templates/titlepage}
@@ -38,10 +39,7 @@ Testerna är till för att säkerhetsställa att det som levereras uppfyller de 
 \subsection{Avgränsningar}
 
 \section{Moduler}
-    \subsection{Server sidan}
-        \subsubsection{Databasen}
-        \subsubsection{logiklagret}
-        \subsubsection{nätverkskommunikationen}
+Systemet är uppdelat i två delar, webbservern och webbklienten. Dom här delarna är i sin tur är uppdelade i ett antal olika moduler. En övergripande systemskiss finns i arkitekturdokumentet under rubrik \ref{arkdoc-sec:Systemskiss}. Mer information angående webbservern och dess moduler se sektion \ref{arkdoc-sec:webbklient} medans information angående webbservern finns under sektion \ref{arkdoc-sec:webbserver}. 
 
 \section{Funktioner}
 Denna sektion beskriver de funktioner som ska genomgå testning. Varje funktions användningsområde presenteras tillsammans med den indata som funktionen ska behandla. Varje funktion har blivit tilldelad en integritets nivå som beskriver hur kritisk funktionen är för systemet.
