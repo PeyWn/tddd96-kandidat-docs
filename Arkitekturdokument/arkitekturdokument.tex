@@ -61,7 +61,7 @@ Här listas de krav som är relevanta för arkitekturen. Kraven är hämtade ur 
 Här beskrivs designbeslut som fattats och motiveringar av dessa.
 
 \subsection{Angular}
-Till webbklienten beslutades att ramverkat Angular ska användas. Detta för att underlätta strukturen och designen av gränssnitt. 
+Till webbklienten beslutades att ramverkat Angular ska användas. Detta för att underlätta strukturen och designen av gränssnitt.
 Ett alternativ till Angular som disskuterades var React. Att Angular föredrogs berodde inte på några direkt tekniska anledningar utan baserades på önskan från kunden Region Östergötland.
 
 \subsection{Node.js}
@@ -103,7 +103,7 @@ Här visas och beskrivs en översiktlig skiss av schemaläggningssystemet där d
 \\
 Systemet som beskrivs översiktligt i Figur 2 är uppdelat i två delar, en webbklient och en webbserver. Webbklientens roll är att visa gränssnittet och hantera all logik bakom det. Webbservern är värd för webbklienten och fungerar även som en databasserver som svarar på förfrågningar från klienten.
 \section{Webbklient}
-\label{webbklient}
+\label{sec:webbklient}
 Webbklienten körs i en webbläsare och kommer att byggas på webbapplikationsramverket Angular. Dens struktur kommer att består av tre delar, en gränssnittsdel, en applikationslogikdel och en kommunikationsdel. I klientdelen i Figur 2 visas hur delarna hänger ihop och beror på varandra.
 
 \subsection{Angular}
@@ -111,7 +111,7 @@ Denna sektion behandlar de delar ur Angulars arkitekturguide (referens till http
 
 En Angular-applikation är uppbyggd av en eller flera moduler som i sin tur består av komponenter och tjänster.
 \subsubsection{Komponenter}
-\label{komponent}
+\label{sec:komponent}
 Angularkomponenter används för att dela upp gränssnittet i olika återanvändbara delar. Varje komponent ansvarar för en egen del av gränssnittet och består av dels en HTML-mall som beskriver dess utseende och dels en TypeScript-klass som hanterar allt det dynamiska med komponenten.
 
 Komponentens mall definieras med hjälp av en något utökad HTML-syntax. All vanlig HTML förutom dess script-taggar får användas. Det tillkommer även en Angular-specifik syntax som tillåter mallen att anpassa sitt uteseende beroende på klassens tillstånd.
@@ -119,7 +119,7 @@ Komponentens mall definieras med hjälp av en något utökad HTML-syntax. All va
 Tjänster i Angular är klasser, skrivna i TypeScript, som tillhandahåller funktioner och logik som krävs av modulens komponenter eller andra tjänster. Typiskt ska de ha ett smalt och väldefinierat syfte.
 
 \subsection{Gränssnittsdel}
-Gränssnittsdelen har hand om allt som har med användarupplevelse och grafik i applikationen. Den kommer uteslutande att bestå av Angluar-komponenter som beskrivna i sektion \ref{komponent}.
+Gränssnittsdelen har hand om allt som har med användarupplevelse och grafik i applikationen. Den kommer uteslutande att bestå av Angluar-komponenter som beskrivna i sektion \ref{sec:komponent}.
 
 Varje komponent ska ha ett väldefinierat syfte och såvida den inte är trivial bör den vara uppdelad i andra mindre komponenter. Komponenternas klasser ska endast innehålla den logik som krävs för visning och interaktion med användaren. Alla andra funktioner som krävs men som inte direkt har med användarupplevelsen att göra ska istället hanteras av tjänster i applikationslogikdelen.
 
