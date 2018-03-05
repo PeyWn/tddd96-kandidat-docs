@@ -29,9 +29,10 @@
 \clearpage
 \section{Inledning}
 \label{sec:Inledning}
+Här presenteras en översikt av vad dokumentet innehåller och hur systemet är uppbyggt.
 
 \subsection{Syfte}
-Arkitekturdokumentet ger en utförlig översikt  av schemaläggningssystemets arkitektur. I dokumentet presenteras flera olika vyer av arkitekturen samt en översiktlig beskrivning av systemet och dess funktionalitet.
+Arkitekturdokumentet ger en översikt av schemaläggningssystemets arkitektur. I dokumentet presenteras arkitekturen samt en översiktlig beskrivning av systemet och dess funktionalitet. Här finns även en genomgång av de arkitektuellt signifikanta beslut som fattats och varför de fattats.
 
 \subsection{Ordlista}
 Här förklaras tekniska termer och förkortningar.
@@ -98,7 +99,7 @@ Det API som sköter kommunikation mellan klient och server skall översätta tes
 Här beskrivs några använda designmönster.
 
 \subsection{Model-view-controller}
-Designmönstret MVC för användargränssnitt möjliggör separation av intern representation av gränssnittets data från sättet datan presenteras för användare. Designmönstret delar upp gränssnittet i tre delar, Model, View och Controller. Delarna beskrivs i större detalj nedan:
+Designmönstret MVC för användargränssnitt möjliggör separation av hur gränssnittets data representeras internt sättet datan visas upp för användare. Designmönstret delar upp gränssnittet i tre delar, Model, View och Controller (referens till https://en.wikipedia.org/wiki/Model-view-controller. Delarna beskrivs i större detalj nedan:
 \begin{itemize}
   \item Model innehåller gränssnittets data och logik för att manipulera datan.
   \item View presenterar data från Model för användaren.
@@ -159,3 +160,4 @@ Kommunikationsdelen i webbservern hanterar alla förfrågningar som kommer från
 \clearpage
 \printbibliography
 \end{document}
+--
