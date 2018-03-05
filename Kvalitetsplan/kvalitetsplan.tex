@@ -19,6 +19,8 @@
  \hline
    2018-02-19 & Version 1.0 färdigställd & 1 &  1.0\\
  \hline
+   2018-03-04 & Revision av version 1.0  & 2 & 1.1\\
+ \hline
 \end{tabular}
 \clearpage
 \end{center}
@@ -49,10 +51,11 @@ Följande lista definierar namn och termer som används i dokumentet.
     \item GitLab - En webb-baserad versionshanterare som använder git
     \item Scrum - En agil utvecklingsmetodik
     \item Asana - Ett webb-baserat verktyg för projekthantering
+    \item Typescript - Ett kodspråk med öppen källkod.
 \end{itemize}
 
 \section{Översiktlig kvalitetsplan}
-Denna sektion ger en översikt på hur kvalitetsarbetet i projektet ska utföras.
+Denna sektion ger en översikt av hur kvalitetsarbetet i projektet ska utföras.
 
 \subsection{Organisation}
 
@@ -60,7 +63,7 @@ Projektgruppens kvalitetssamordnare är ansvarig för kvalitetssäkringen av pro
 
 \subsection{Riskhantering}
 
-För att kunna leverera en produkt som håller den kvalitet som utlovats så har risker mot projektet identifierats och en riskbedömning av dessa tagits fram. \\
+För att kunna leverera en produkt som håller den kvalitet som utlovats så har risker för projektet identifierats och en riskbedömning av dessa tagits fram. \\
 Se sektionen \emph{Riskhantering} i Projektplanen.
 
 Riskbedömningen omfattar en värdering av sannolikheten av olika risker samt eventuell inverkan dessa skulle ha på projektet. En sammanslagning utav dessa två är en indikator på hur direkta hoten är mot kvaliteten i den levererade produkten.
@@ -68,7 +71,7 @@ En analytisk förstudie som omfattar dessa risker mot projektet i sin helhet och
 
 \subsection{Verktyg}
 
-För att versionshantera kod så kommer GitLab att användas. På Google drive så finns en mapp som delas med kund för att dela filer. WebStorm kommer användas som integrerad utvecklingsmiljö och Angular som webbramverk. Asana används som ett projekthanteringssystem.
+För att versionshantera kod så kommer GitLab att användas. På Google drive finns en mapp som delas med kund för att dela filer. WebStorm kommer användas som integrerad utvecklingsmiljö och Angular som webbramverk. Asana används som ett projekthanteringssystem.
 
 Varje person ansvarar för att den är förtrogen med programvaror som används. Skulle det finnas osäkerhet så går det att fråga en annan projektmedlem. Vid behov så kan en medlem med kunskap hålla en genomgång för de andra.
 
@@ -77,7 +80,7 @@ Denna sektion beskriver de standarder, rutiner och konventioner som ska följas 
 
 \subsection{Scrum}
 \label{sec:Scrum}
-För att få en sådan kvalitetssäkrande arbetsmetod som möjligt så valdes arbetsmetodiken Scrum. Nedan följer rutiner som kommer hållas för att säkerställa kvalitet.
+För att få en så kvalitetssäkrande arbetsmetod som möjligt så valdes arbetsmetodiken Scrum. Nedan följer rutiner som kommer hållas för att säkerställa kvalitet.
 
 \subsubsection{Dagliga Scrum-möten}
 Varje dag gruppen möts hålls en snabb genomgång om vad som har åstadkommits sedan senaste mötet samt vad som skall presteras till nästkommande. Möjliga hot mot prestationer presenteras.
@@ -99,7 +102,7 @@ Vid tidig design av gränssnitt till produkten ska prototyper göras för att ku
 För att alla dokument som skrivs i projektet ska ha ett konsekvent utseende och stil ska dokumentet Dokumentstandard skrivas och följas. Till denna ska det också finnas dokumentmallar som alla dokument ska bygga på.
 
 \subsection{Prestationer, resurser och planering}
-För mjukvaruresurser se detta dokument, verktyg.
+För mjukvaruresurser se detta dokument, sektion 2.3.
 Den uppskattade tiden och andra resurser i projektet finns beskrivet under punkten Resurser i projektplanen.
 
 \section{Aktiviteter, utfall och uppgifter}
@@ -111,9 +114,9 @@ För att på ett så entydigt sätt som möjligt klarlägga vad projektet har f�
 Denna standard definierar projektets eftersträvade kvalitet enligt överensstämmelse med kund.
 Kravspecifikationen är en grundpelare för den plan som utarbetats för projektet, som är beskriven i Projektplanen. Kraven representerar kundens behov, önskemål och förväntningar.
 \subsubsection{Utvärdering av acceptanskrav för produkten}
-Om berörda projektmedlemmar samtycker att ett delsystem är i ett sådant stadie att de kan testas för integration i systemet så skall testfall skrivas för delsystemet. När dessa delsystem godkänts i projektets testprotokoll enligt Testplanen, så integreras delsystemet i projektet.
+Om berörda projektmedlemmar samtycker att delsystem är i ett sådant stadium att dessa kan testas för integration i systemet så skall testfall skrivas för delsystemen. När dessa delsystem godkänts i projektets testprotokoll enligt Testplanen, så integreras delsystemet i projektet.
 \subsubsection{Utvärdering av underhåll för produkten}
-I projektet inkluderas inte något underhåll av produkten eftersom det är en prototyp som kunden själva får vidareutveckla vid behov. Därför definieras inga aktiviteter eller uppgifter för detta.
+I projektet inkluderas inte något underhåll av produkten eftersom det är en prototyp som kunden själv får vidareutveckla vid behov. Därför definieras inga aktiviteter eller uppgifter för detta.
 \subsubsection{Hur produktens kvalitet ska mätas}
 Produktens kvalitet ska mätas enligt de standarder och processer som beskrivs i detta dokument.
 \subsection{Kvalitetssäkring av process}
@@ -140,15 +143,15 @@ Detta för att samtliga involverade i projektet på ett tidigt stadium skall kä
 
 \subsection{Undantag och avvikelser}
 
-Eftersom projektet skall utföras enligt en iterativ arbetsmetod så kommer den här planen samt det dokument som den refererar till att revideras under projektets gång. Detta är nödvändigt för att uppnå den eftersträvade standarden. I den här planen så presenteras en överblick av revisionerna i dokumenthistoriken.
+Eftersom projektet skall utföras enligt en iterativ arbetsmetod så kommer den här planen samt de dokument den refererar till att revideras under projektets gång. Detta är nödvändigt för att uppnå den eftersträvade standarden. I den här planen presenteras en överblick av revisionerna i dokumenthistoriken.
 
 \subsection{Iterativ arbetsmetodik}
-När en arbetsuppgift bedömts att ej uppfylla de krav som specificerats i kravspecifikationen behöver uppgiften upprepas med en lämpligare arbetsmetod i en senare sprint. Se avsnitt \emph{Aktiviteter} i projektplanen samt sektion \ref{sec:Scrum} om Scrum i detta dokument.
+När en arbetsuppgift bedömts att ej uppfylla de krav som specificerats i kravspecifikationen behöver uppgiften upprepas med en lämpligare arbetsmetod i en senare sprint. Se sektion \emph{Aktiviteter} i projektplanen samt sektion \ref{sec:Scrum} om Scrum i detta dokument.
 
 \subsection{Risker med kvalitetssäkring av programvara}
 Att följa denna kvalitetsplan medför de kända risker presenterade i avsnittet \emph{Riskhantering} i projektplanen. En risk är att kvalitetsplanen följs för febrilt, vilket kan medföra att frågan “Hur mycket får kvalitet kosta?” behöver ställas. Ansvaret att ställa denna fråga ligger på samtliga projektmedlemmar men främst på kvalitetssamordnare.
 
-Båda dessa punkter förväntas hanteras av projektets iterativa arbetsmetod Scrum som behandlas i sektion \ref{sec:Scrum}.
+Den sistnämnda punkten förväntas hanteras av projektets iterativa arbetsmetodik Scrum som behandlas i sektion \ref{sec:Scrum}.
 
 \subsection{Kommunikationsstrategi}
 Internt skall arbetsgruppen föra en daglig kommunikation för att avstämma om arbetsflöde förhinder etc.
