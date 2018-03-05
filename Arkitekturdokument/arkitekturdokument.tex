@@ -52,25 +52,26 @@ Utveckling av systemet kommer ske Angular, vilket får konsekvenser för arkitek
 \section{Arkitekturellt signifikanta krav}
 Här listas några krav som är relevanta för arkitekturen. Kraven är hämtade ur projektets kravspecifikation.
 
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{|c|p{6cm}|c|}
   \hline
-  Kravtitel & Kravbeskrivning & Betydelse \\
+  Krav & Kravbeskrivning & Betydelse \\
   \hline
-  Krav \ref{krav-subsec:Hognivasprakkrav} & Klienten ska använda sig av Angular och TypeScript. & Medför begränsningar för hur klienten kan implementeras. \\
-  \hline
-  Krav \ref{krav-subsec:EG-Mjukvarugranssnitt} & Klienten ska kunna köras på Internet Explorer 11. & Arkitekturen måste anpassas att fungera på en äldre webbläsare.
+  \ref{krav-subsec:Hognivasprakkrav} & Klienten ska använda sig av Angular och TypeScript. & Begränsar hur klienten kan implementeras.
   \\
   \hline
-  
+  \ref{krav-subsec:EG-Mjukvarugranssnitt} & Klienten ska kunna köras på Internet Explorer 11. & Måste anpassas efter en äldre webbläsare.
+  \\
+  \hline
+  \ref{krav-subsec:Generella krav} & Det ska gå att logga in och det ska \hyphenation{finnas}finnas en databas. & Måste ha en klient-server arkitektur.
+  \\
+  \hline
 \end{tabular}
 
 \subsection{Tilltänkta användare}
-Systemet skall användas av erfarna operationsplanerare som tidigare arbetat med schemaläggning.
-
+Systemet skall främst användas av erfarna operationsplanerare som tidigare arbetat med schemaläggning. Även annan vårdpersonal kan komma att använda systemet.
 
 \section{Designbeslut och motivering}
 Här beskrivs designbeslut som fattats och motiveringar av dessa.
-
 
 \subsection{Model-view-controller}
 För att enkelt kunna arbeta parallellt på systemets olika delar togs beslutet att använda designmönstret Model-view-controller.
@@ -142,6 +143,7 @@ Denna del har som uppgift att tillhandahålla all applikationsfunktionalitet som
 Kommunikationsdelen ska sköta all kommunikation med webbservern som krävs av applikationslogiken. Den ska endast bestå av Angular-tjänster.
 
 \section{Webbserver}
+\label{sec:webbserver}
 Webbservern har två huvuduppgifter. Den första är att vara värd åt webbklienten så att den är tillgänglig för flera olika användare och datorer. Den andra är att hantera en databas för att lagra information om bland annat operationsbeslut, konton, resurser med mera. Detta innefattar att utföra och svara på databasförfrågningar som kommer från klienten.
 
 Webbservern kommer att använda sig av Node.js och ska struktureras i två delar. En för kommunikation och en för databaslogik, se serverdelen i Figur 2. MySQL kommer att användas som databashanterare.
@@ -151,5 +153,7 @@ I logikdelen ligger all funktionalitet för hantering av databasen. Allt som kr�
 
 \subsection{Kommunikationdel}
 Kommunikationsdelen i webbservern hanterar alla förfrågningar som kommer från användare. Den ska leverera webbklienten till användare och svara på förfrågningar från webbklienten med hjälp av funktionerna i logikdelen.
+
+\section{Referenser}
 
 \end{document}
