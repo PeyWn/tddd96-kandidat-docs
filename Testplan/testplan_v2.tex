@@ -45,6 +45,9 @@ Systemet är uppdelat i två delar, webbservern och webbklienten. Dom här delar
 
 \section{Funktioner}
 Denna sektion beskriver de funktioner som ska genomgå testning. Varje funktions användningsområde presenteras tillsammans med den indata som funktionen ska behandla. Varje funktion har blivit tilldelad en integritets nivå som beskriver hur kritisk funktionen är för systemet.
+
+Se kravspecifikationen \ref{krav-subsec:Funktionellakrav} för mer ingående information om kraven som berör funktionen.
+    
     \subsection{Boka Operation}
     %Beskrivning
     %Ref till kravspec
@@ -54,7 +57,7 @@ Denna sektion beskriver de funktioner som ska genomgå testning. Varje funktions
 I denna funktion skall man kunna välja tid, se vilka lediga bokningsbara tider som existerar samt bli informerad om när kompetens, material och utrustning saknas. Förberedelser och efterarbete beskrivs med hjälp utav KVÅ-kodning.
 
 Beslutsdata:
-\begin{multicols}{2}
+\begin{multicols}{3}
 \begin{itemize}
 	\item Personnummer
 	\item Efternamn, Förnamn
@@ -80,10 +83,8 @@ Operationstider (KVÅ-koder)
 \end{itemize}
 \end{multicols}
 
-Se kravspecifikationen \ref{krav-subsubsec:Planeringsvy} för mer ingående information om kraven som berör funktionen.
-
-    \subsubsection{Boka sal}
-
+\subsubsection{Boka sal}
+Det ska gå att kunna välja namn på den lokal man vill boka och välja vilken typ av lokal det är. Man ska även kunna se tillgängliga tider för salen ifråga. Vid bokning skall man få information över vilka operationer som går att genomföra i lokalen samt en inggreppbeskrivning.
 
 Ingående data
 \begin{multicols}{2}
@@ -97,37 +98,61 @@ Ingående data
 \end{multicols}
 
 \subsubsection{Avboka sal}
+
+Det ska vara möjligt att avboka en tid som man sedan tidigare bokat.
+
 -	Välja tid
--	Bekräftelseruta
+
+\subsection{Inloggning}
+I denna funktion ska följande uppfyllas: 
+\begin{enumerate}
+	\item Krävas användarnamn och lösenord för att komma in i systemet.
+    \item En användare ska ha ett användarnamn och ett lösenord.
+    \item Det ska finnas en databas som kan hantera all ingående data.
+\end{enumerate}    
 
 \subsection{Tidslinje för operation}
+
+Ska presentera den beslutsdata som finns att tillgå.
+
 -	Visa beslutsdata
 
 \subsection{Översikt av beslutade operationer}
+
+Ska presentera beslutade operationer.
+
 -	Visa beslutsdata
 \subsection{Schemaöversikt för planerade operationer}
+
+En överblick för de operationer som ej blivit beslutade men som är planerade, skall gå att filtrera utefter önskemål angivna i kravspec.
+
 -	Filterfunktion för schemaöversikt
 
+\clearpage
 \subsection{Reservera material, lokal, kompetens och utrustning}
-Databashanterings funktion
 
+Databasfunktion som kan reservera de olika resurser som behövs för operation samt post- eller pre-operativa processer.
 \subsubsection{Material}
 Ingående data
+\begin{multicols}{2}
 \begin{itemize}
 	\item Material
 	\item Artikelnamn
 	\item Typ av material
-	\item Reserverade tider för material som måste steriliseras (tidsåtgång: operationstid + steriliseringstid)
+	\item Reserverade tider för material som måste steriliseras \\Tidsåtgång: \\ Operationstid + steriliseringstid
 \end{itemize}
+\end{multicols}
 
 \subsubsection{Utrustning}
 Ingående data
+\begin{multicols}{2}
 \begin{itemize}
 	\item Namn
 	\item MTÖ-nummer
 	\item Typ av utrustning
 	\item Reserverade tider.
 \end{itemize}
+\end{multicols}
 
 \subsubsection{Kompetenser}
 Ingående data
@@ -141,7 +166,6 @@ Ingående data
 	\item Schema
 \end{itemize}
 \end{multicols}
-
 
 \section{Tester}
 Den här sektionen redogör för de olika testningsprocedurerna som ska utföras för de olika testnivåer.
