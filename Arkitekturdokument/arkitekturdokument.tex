@@ -1,6 +1,8 @@
 \documentclass[a4paper,10pt]{article}
 \input{../Templates/Settings}
 \usepackage{adjustbox}
+\usepackage[backend=bibtex]{biblatex}
+\addbibresource{bib-arkitektur.bib}
 \externaldocument[krav-]{../Kravspec/kravspec}
 
 \begin{document}
@@ -86,7 +88,7 @@ På serversidan beslutades att Node.js kommer att användas. Det fanns ett par m
 Eftersom Node.js har allt som önskas till projektet har andra alternativ inte undersökts.
 
 \subsection{MySQL med JSON-API}
-Som databashanterare valdes MySQL. Ett alternativ som också diskuterades var MongoDB som är en objekt-baserad hanterare (referens till https://docs.mongodb.com/manual/introduction/) till skillnad från MySQL som är tabell-baserad.
+Som databashanterare valdes MySQL. Ett alternativ som också diskuterades var MongoDB som är en objekt-baserad hanterare\cite{mongodbintro} till skillnad från MySQL som är tabell-baserad.
 
 Anledningen att MySQL föredrogs var eftersom Region Östergötland tillhandahåller testdata till systemet i tabell-form.
 
@@ -120,7 +122,7 @@ Systemet som beskrivs översiktligt i Figur 2 är uppdelat i två delar, en webb
 Webbklienten körs i en webbläsare och kommer att byggas på webbapplikationsramverket Angular. Dens struktur kommer att består av tre delar, en gränssnittsdel, en applikationslogikdel och en kommunikationsdel. I klientdelen i Figur 2 visas hur delarna hänger ihop och beror på varandra.
 
 \subsection{Angular}
-Denna sektion behandlar de delar ur Angulars arkitekturguide (referens till https://angular.io/guide/architecture) som kommer att vara relevanta i projektet.
+Denna sektion behandlar de delar ur Angulars arkitekturguide\cite{angularguide} som kommer att vara relevanta i projektet.
 
 En Angular-applikation är uppbyggd av en eller flera moduler som i sin tur består av komponenter och tjänster.
 \subsubsection{Komponenter}
@@ -154,6 +156,6 @@ I logikdelen ligger all funktionalitet för hantering av databasen. Allt som kr�
 \subsection{Kommunikationdel}
 Kommunikationsdelen i webbservern hanterar alla förfrågningar som kommer från användare. Den ska leverera webbklienten till användare och svara på förfrågningar från webbklienten med hjälp av funktionerna i logikdelen.
 
-\section{Referenser}
-
+\clearpage
+\printbibliography
 \end{document}
