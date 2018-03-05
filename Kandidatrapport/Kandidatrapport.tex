@@ -1,0 +1,198 @@
+\documentclass[a4paper,10pt]{article}
+\input{../Templates/Settings}
+
+
+\def\ftitle{Kandidatrapport}
+\def\fversion{0.1}
+
+\begin{document}
+\input{../Templates/titlepage}
+
+\section*{\begin{center}Dokumentationshistorik\end{center}}
+\begin{center}
+\begin{tabular}{|c c c c |}
+ \hline
+ Datum & händelse & iteration & version\\
+ \hline
+ 2018-02-19 & Dokument skapas & 2 &  0.1\\
+ \hline
+\end{tabular}
+\clearpage
+\end{center}
+\tableofcontents
+\clearpage
+\section{Inledning}
+
+\subsection{Motivering}
+På en operationsavdelning så utförs många olika ingrepp som kräver många olika sorters kompetenser, utrustning och material. För att organisera upp detta arbete så sitter idag en person och schemalägger de olika operationer som ska genomföras för att se till att resurser finns tillgängligt, att operationen har lokaler att vistas i och att den operation med högst brådskandegrad får högst prioritet. All denna information är mycket för en person att hålla koll på och det kan leda till att en operation inte kan utföras för att alla behov inte är tillgodosedda till operationstillfället eller att operationssalar står tomma.
+För att förenkla processen att schemalägga operationer så ska ett schemaläggningsstöd tas fram där all information som rör operationen ska finnas tillgänglig så att man enkelt ska kunna få fram tillgängliga operationstider för det ingrepp som ska utföras. Denna programvara kommer att förenkla vårdpersonalens arbete då man inte behöver hålla lika många saker i huvudet och man kommer kunna fylla upp de tillgängliga operationstider som finns. Detta kommer även hjälpa de som väntar på operation då väntan på att opereras kommer minska om sjukhus kan optimera den tid som finns tillgänglig och därmed kunna operera fler personer än vad som görs idag.
+
+\subsection{Syfte}
+Syftet med projektet var att utveckla ett schemaläggningsstöd för kirurgi på Region Östergötland för att underlätta och optimera schemaläggning av operationer.
+Rapportens syfte är att beskriva tillvägagångssättet för utveckling av produkten, beskrivning av slutprodukten samt en utvärdering gällande hur projektet har fortgått och hur resultatet blev. 
+
+\subsection{Frågeställning}
+För att ge rapporten ett fokus så har ett antal frågeställningar formulerats som behandlas i rapporten:
+\begin{enumerate}
+	\item Hur kan systemet som utvecklas implementeras så att värde skapas för kunden?
+	\item Hur kan man separera front-end och back-end på ett bra sätt så att delarna inte är beroende av varandra?
+	\item Vilka erfarenheter kan dokumenteras från projektet som kan vara intressanta för framtida projekt?
+	\item Vilket stöd kan man få genom att skapa och följa upp en systemanatomi?
+	\item Hur väl kan produkten som utvecklas integreras och arbeta med redan existerande system?
+\end{enumerate}
+
+\subsection{Avgränsningar}
+Denna rapport är avgränsad till den produkt som arbetats fram samt de individuella bidragen. I övrigt så har kunden gett oss ganska fria händer gällande utvecklingen av produkten, den begränsning vi har fått är att produkten ska gå att köra på Internet Explorer 11.
+I övrigt så har projektarbetet en tidsbudget på 2800 timmar, det vill säga 400 timmar per person. Dessa timmar är fördelade på olika områden såsom dokumentskrivning, utveckling och individuellt bidrag.
+
+\newpage
+
+\section{Bakgrund}
+I detta stycket beskrivs bakgrunden till kundens beslut att beställa projektet. Utöver det så beskrivs också övergripande de erfarenheter som teamet när de går in i projektet.
+
+Planering av operationer på ett sjukhus sker i en mycket komplex miljö. Det finns väldigt många resurser som måste koordineras för att allt ska fungera som det ska.
+I dagsläget finns nödvändig information om detta i olika system och ibland finns det inte i något system alls utan bara i huvudet på de olika anställda. Detta skapar en situation där det är svårt att överblicka information om de olika resurser som finns och deras tillgänglighet vid olika tider.
+För att lösa detta problem behövs ett system som kan visualisera alla resurser och hitta lediga tider för olika typer av operationer baserat på tillgången av dessa resurser.
+
+Det är mer än bara en operationssal och en kirurg som ska finnas tillgängligt för att en operation ska kunna genomföras. Det krävs ofta att ett antal prover genomförs på patienten innan operationen genomförs därefter ska patienten förberedas inför operationen. Vilka förberedelser som ska göras beror både på vilken patient det är och vilken operation det är som ska utföras. Sedan är det själva operationen som ska genomföras. I vissa fall krävs det flera olika kompetenser på plats i operationssalen och då måste dessa kunna bokas i förväg. Det är även olika uppsättningar verktyg och specialutrustning för olika operationer.
+Patienten måste givetvis också ha en plats att återhämta sig på efter operationen, en så kallad postoperativ vårdplats.
+
+Det är ett stort nytt system under utveckling där schemaläggningsstöd är en del i ett större sammanhang. Projektet som vi beskriver i denna rapport avser vara en prototyp för att testa vilka funktioner som är viktiga och även hur dessa kan implementeras i ett användargränssnitt som är lättarbetat och effektivt. Det är därför ett primärt fokus på funktioner och gränssnitt över robusthet och säkerhet.
+
+Teamets erfarenheter vid ingången i projektet består mest i tidigare projekt under utbildningen.
+
+\section{Teori}
+
+\section{Metod}
+
+\subsection{Projektorganisation}
+Projektets organisation består utav sju personer som studerar på Linköpings universitet, de har även en handledare i projektet som finns tillgänglig om problem skulle uppstå. I detta avsnitt så beskrivs hur organisationen är uppbyggd med de olika roller som existerar, hur möten går till, dokumentation av projektet samt ett avsnitt om kompetensutveckling.
+
+\subsubsection{Roller}
+I projektgruppen så är varje person tilldelad en specifik roll. Dessa roller innebär att man har ett antal specifika uppgifter och ansvar som man ska upprätthålla. Nedan så beskrivs dessa roller och vad de innebär.
+
+\textbf{Teamledare}\\
+Teamledaren har ansvaret för att leda arbetet i gruppen och att gruppen når de mål som har satts upp. För att hjälpa gruppen med detta så ska teamledare arbeta för att coacha gruppen, se till att de processer som är uppsatta efterföljs och se till att gruppen har en trevlig arbetsmiljö.
+
+Som teamledare är man även en representant för teamet utåt där man ofta är kontaktperson med examinator, handledare eller annan person som kan tänkas vilja ha kontakt med gruppen. Teamledaren har även ansvaret för att en projektplan ska skrivas i förstudien av projektet och personen har även sista ordet om det skulle uppstå en sådan situation i gruppen.
+
+\textbf{Analysansvarig}\\
+Som analysansvarig så är man den person som håller den huvudsakliga kontakten med kund. Personen tar reda på vad kunden är ute efter och arbetar sedan med att analysera och sammanställa dessa till en kravspecifikation till projektgruppen. Om det skulle vara så att krav och behov från kunden är otydliga för gruppen så är det analysansvariges uppgift att tolka dessa krav åt resten av gruppen så att det är förståeligt och så att kunden inte missuppfattas.
+
+För att både projektgruppen och kunden ska bli nöjda så är analysansvarig ansvar för förhandling mellan de båda parterna, det ska vara en jämn fördelning mellan vad kund vill att projektet ska åstadkomma och vad gruppen tror att man kan åstadkomma. Analysansvarig har mycket kontakt med arkitekten vid utformandet av arkitekturen för produkten, detta så att de krav som är uppsatta blir uppfyllda. När utvecklingen av produkten påbörjas och funktionalitet börjar implementeras så hålls även en god kontakt med testledaren så att man testar produkten utifrån de krav som är dokumenterade i kravspecifikationen så att man kan säkerställa uppfyllnaden av dessa.
+
+\textbf{Arkitekt}\\
+Arkitekten har ansvaret för att produkten ska ha en stabil arkitektur. Ansvaret för att göra övergripande teknikval ligger på arkitekten och i tekniska frågor så är det arkitekten som har det sista ordet, bortsett från teamledaren. För att göra dessa teknikval så förväntas det av arkitekten att komponenter och gränssnitt identifieras och att de görs tydliga för gruppen. Denna bakgrundskunskap som arkitekten införskaffar sig gör att personen är en styrande röst och har möjligheten att kunna kommunicera bärande idéer.
+
+Arkitekten håller en god kontakt med analysansvarig. Detta för att kunna skapa en arkitektur som bygger på och upprätthåller de krav som finns från kunden, men det gäller också att arkitekten genom analysansvarig kommunicerar till kund i de fall det finns krav som inte är möjliga rent kunskaps- eller teknikmässigt.
+
+\textbf{Utvecklingsledare}\\
+Om man går vidare från arkitektens arbete med övergripande teknikval så ansvarar utvecklingsledaren med detaljerad design av produkten. Under utvecklingsfasen i projektet så leder och, vid behov, fördelar utvecklingsledaren arbetet så att allting ska gå så smidigt som möjligt. Denna roll har även ansvaret för att fatta beslut om vilken utvecklingsmiljö man ska arbeta med. 
+
+I projektet som hör till denna rapport så är alla i gruppen delaktiga vid utveckling vilket innebär att utvecklingsledaren kommer leda samtliga personer, oavsett vilken roll de innehar.
+
+\textbf{Testledare}\\
+Testledaren är den person som ansvarar för att produkten testas enligt en standard som kan säkerställa systemets funktionalitet och uppfyllnad mot de mål som finns uppsatta. För att säkerställa detta och den kvalitet som produkten ska upprätthålla så testas kvalitetskrav tillsammans med kvalitetssamordnaren.
+
+Som testledare är det bra med viss distans till det som testas då beslutet om systemets status ligger hos denna person. Testledaren ansvarar även för att skriva en testplan samt en testrapport.
+
+\textbf{Kvalitetssamordnare & Dokumentansvarig}\\
+Den sammanslagna rollen kvalitetssamordnare & dokumentansvarig går ut på att du ska kunna säkerställa att kvalitet och dokumentation ska upprätthållas och skrivas under projektets gång. Som kvalitetssamordnare så tittar du mycket på den budget som projektet har och hur mycket av detta man kan lägga ned i just kvalitet.
+
+Som dokumentansvarig så ser du till att det finns dokumentmallar för de dokument som ska skrivas. Personen ser till att det tas fram en logotyp för projektet och att gruppen kan leverera till de deadlines som existerar. 
+
+Denna sammanslagna roll arbetar mycket med konfigurationsansvarig så att båda är överens om versionshantering och tillvägagångssätt vid releaser av produkten.
+
+\textbf{Konfigurationsansvarig}
+\\Konfigurationsansvarig har ansvaret för att produkten som skapas versions- och konfigurationshanteras på ett korrekt sätt. Rollen går ut på att man ska bestämma vilka arbetsprodukter som ska versionshanteras och vara med i en specifik release. Eftersom att konfigurationsansvarig ser till att version- och konfigurationshantering sköts på ett korrekt sätt så ansvarar denne också för att välja de verktyg som ska användas för detta.
+
+Denna roll arbetar mycket med utvecklingsledaren och dokumentansvarige då dessa två är ansvariga för utveckling av produkter och dokument som ska ingå i olika utgåvor.
+
+\subsubsection{Möten}
+Gruppen har möten nästan en gång om dagen för att uppdatera varandra om vad man har gjort, vad man ska göra och om man har några problem. Dessa möten följer scrum-metodik och längre ner i detta metodkapitel så beskrivs scrum-metoden och hur den har applicerats på gruppen.
+
+Utöver scrum så hade även gruppen möte med handledaren en gång i veckan för att uppdatera varandra och handledaren gällande statusen för projektet. Till dessa möten så skickades en dagordning ut av teamledaren i god tid innan mötet, denna dagordning hade ett antal punkter som alltid togs upp och medlemmar i gruppen samt handledaren kunde skicka in extra punkter att ta upp senast klockan 12.00 dagen innan mötet.
+
+Slutligen så håller projektgruppen möten med kund med jämna mellanrum där några personer från projektgruppen möter några av de involverade personerna på företaget. Dessa möten går ut på att uppdatera kunden om statusen för projektet, utbyta idéer och se till att projektgruppen och kund är på samma spår. 
+
+\subsubsection{Dokumentation}
+För dokumentation av interna dokument så har gruppen främst använt sig utav google drive, detta innefattar bland annat protokoll från handledarmöten, gruppkontrakt, veckorapporter och tidsrapportering.
+
+För dokument som har lämnats in i diverse iterationer så har gruppen hanterat dessa i LaTeX och versionshanterat dem i Git.
+
+\subsubsection{Kompetensutveckling}
+Vid utveckling av kompetens och för att kunna bevara och dela erfarenheter med varandra så har gruppen arbetat på några olika sätt.
+
+Om gruppen behövde grundläggande kunskap i något verktyg eller metod så gick man tillväga på det sättet att en person samlade in kunskap om det aktuella området och sedan höll personen en genomgång för gruppen innan verktyget eller metoden började användas i projektet.
+
+Vidare så ägde dagliga scrum-möten rum där gruppmedlemmarna delade med sig vad de gjort och erfarenheter de fått ut av detta.
+
+\subsection{Utvecklingsmetod}
+I början av projektet så hade inte projektgruppen så mycket struktur i arbetet och större delen av gruppen arbetade med konfigurering av diverse verktyg som använts i projektet t.ex. Git, LaTeX och Google Drive.
+Efter ett möte med kunden i början av februari så kom frågan upp gällande vilken arbetssätt vi skulle använda oss av och kund föreslog scrum. Teamledaren i gruppen gjorde efterforskningar gällande hur scrum fungerar och höll i en presentation för gruppen där slutsatsen var att scrum fortsättningsvis ska användas som utvecklingsmetod i projektet.
+
+\subsection{Förstudie}
+Under förstudien, som var uppdelad i två iterationer, så arbetade gruppen väldigt mycket med dokumentation som skulle ligga till grund för design och implementation av systemet. Ett flertal dokument utformades och är listade i tabell 1 nedan.
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Dokument} & \textbf{Beskrivning} \\
+\hline
+Projektplan & Beskrivning av projektet och arbetsgången \\
+\hline
+Kravspecifikation & Beskrivning av de krav som finns på produkten \\
+\hline
+Kvalitetsplan & Beskrivning av tekniker, aktiviteter och metoder för att försäkra hög kvalitet i projektet \\
+\hline
+Statusrapport 1 & Statusrapport över arbetet i iteration 1 \\
+\hline
+Systemanatomi & Skiss på hur systemet ska se ut \\
+\hline
+Preliminär rapporthalva av kandidatarbetet & Dokumentation av projektet fram till slutet av iteration 2 \\
+\hline
+Arkitekturdokument & Beskrivning av systemet \\
+\hline
+Testplan & Beskrivning av hur testning av systemet ska gå till \\
+\hline
+Testrapport & Utvärdering av testning under iteration 2 \\
+\hline
+Utvärdering av iteration 2 & Utvärdering över hur arbetet gick under iteration 2 \\
+\hline
+\end{tabular}
+\end{center}
+
+Under iteration två så lämnade man även in projektplan, kravspecifikation och kvalitetsplan en andra gång så att handledaren fick se hur de hade utvecklats.
+
+Utöver denna dokumentation så arbetade gruppen mycket med kompetensutveckling för att förstå det system och de verktyg som skulle användas under design och implementationsfasen. Gruppmedlemmar höll en genomgång i Git och en genomgång i scrum så gruppen skulle få grundläggande kunskaper och kunna applicera dessa verktyg. 
+
+Under förstudien hade gruppen även flera möten med kund för att kunna få information om vad kunden ville ha för typ av produkt så att en kravspecifikation kunde utformas.
+
+\subsection{Design}
+När kravspecifikationen var färdigställd så var det dags att arbeta på designen av produkten. Varje medlem i gruppen tog fram varsin pappersprototyp och presenterade dessa under ett gruppmöte. Gruppen utbytte idéer och tankar om prototyperna och kom fram till tre prototyper som sedan visades upp på ett kundmöte. Där utbytte gruppmedlemmar och kund i sin tur idéer och tankar för vilken typ av design som skulle lämpa sig bäst för deras behov.
+
+\subsection{Utveckling}
+\textit{Dokumenteras under/efter utvecklingsfasen}
+
+\subsection{Utvärdering}
+\textit{Dokumenteras under utvärderingen}
+
+\section{Resultat}
+
+\subsection{Systembeskrivning}
+
+\subsection{Gemensamma erfarenheter}
+
+\subsection{Översikt över individuella bidrag}
+
+\section{Diskussion}
+
+\subsection{Resultat}
+
+\subsection{Metod}
+
+\subsection{Arbetet i ett vidare sammanhang}
+
+\section{Slutsatser}
+
+\end{document}
