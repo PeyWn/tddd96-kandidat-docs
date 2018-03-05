@@ -32,7 +32,7 @@
 Här presenteras en översikt av vad dokumentet innehåller och hur systemet är uppbyggt.
 
 \subsection{Syfte}
-Arkitekturdokumentet ger en översikt av schemaläggningssystemets arkitektur. I dokumentet presenteras arkitekturen samt en översiktlig beskrivning av systemet och dess funktionalitet. Här finns även en genomgång av de arkitektuellt signifikanta beslut som fattats och varför de fattats.
+Arkitekturdokumentet ger en översikt av schemaläggningssystemets arkitektur. I dokumentet presenteras arkitekturen samt en översiktlig beskrivning av systemet och dess funktionalitet. Här finns även en genomgång av de arki1tektuellt signifikanta beslut som fattats och varför de fattats.
 
 \subsection{Ordlista}
 Här förklaras tekniska termer och förkortningar.
@@ -52,7 +52,7 @@ Operationer ska kunna avbokas och frigöras från schemat. Det ska finnas en sch
 Målet med utvecklingen av systemet är att ta fram en prototyp för ett schemaläggningsverktyg som kan användas som underlag för att få en bild av vilken funktionalitet som ett verkligt schemaläggningsverktyg behöver ha. Då systemet inte kommer tas i egentlig drift prioriteras användbarhet och designlösningar framför prestanda. Ett väl designat användargränssnitt är huvudmålet med projektet.
 
 \subsection{Beroenden}
-Utveckling av systemet kommer ske Angular, vilket får konsekvenser för arkitekturen. Databasen kommer implementeras med MySQL och kommer kommunicera med klienten via ett API som översätter datan till JSON-filer.
+Utveckling av systemet kommer ske Angular, vilket får konsekvenser för arkitekturen. Databasen kommer implementeras med MySQL och kommer kommunicera med klienten via ett API som översätter datorn till JSON-filer.
 
 \section{Arkitekturellt signifikanta krav}
 Här listas några krav som är relevanta för arkitekturen. Kraven är hämtade ur projektets kravspecifikation\cite{kravspec}.
@@ -101,7 +101,7 @@ Det API som sköter kommunikation mellan klient och server skall översätta tes
 Här beskrivs några använda designmönster.
 
 \subsection{Model-view-controller}
-Designmönstret MVC för användargränssnitt möjliggör separation av hur gränssnittets data representeras internt sättet datan visas upp för användare. Designmönstret delar upp gränssnittet i tre delar, Model, View och Controller.\cite{mvc} Delarna beskrivs i större detalj nedan:
+Designmönstret MVC för användargränssnitt möjliggör separation av hur gränssnittets data representeras internt sättet datorn visas upp för användare. Designmönstret delar upp gränssnittet i tre delar, Model, View och Controller.\cite{mvc} Delarna beskrivs i större detalj nedan:
 \begin{itemize}
   \item Model innehåller gränssnittets data och logik för att manipulera datan.
   \item View presenterar data från Model för användaren.
@@ -122,7 +122,7 @@ Figur 2: Systemskiss
 Systemet som beskrivs översiktligt i Figur 2 är uppdelat i två delar, en webbklient och en webbserver.
 \section{Webbklient}
 \label{sec:webbklient}
-Webbklienten körs i en webbläsare och kommer att byggas på webbapplikationsramverket Angular. Dens struktur kommer att består av tre delar, en gränssnittsdel, en applikationslogikdel och en kommunikationsdel. I klientdelen i Figur 2 visas hur delarna hänger ihop och beror på varandra.
+Webbklienten körs i en webbläsare och kommer att byggas på webbapplikationsramverket Angular. Dess struktur kommer att består av tre delar, en gränssnittsdel, en applikationslogikdel och en kommunikationsdel. I klientdelen i Figur 2 visas hur delarna hänger ihop och beror på varandra.
 
 \subsection{Angular}
 Denna sektion behandlar de delar ur Angulars arkitekturguide \cite{angularguide} som kommer att vara relevanta i projektet.
@@ -132,7 +132,7 @@ En Angular-applikation är uppbyggd av en eller flera moduler som i sin tur best
 \label{sec:komponent}
 Angularkomponenter används för att dela upp gränssnittet i olika återanvändbara delar. Varje komponent ansvarar för en egen del av gränssnittet och består av dels en HTML-mall som beskriver dess utseende och dels en TypeScript-klass som hanterar allt det dynamiska med komponenten.
 
-Komponentens mall definieras med hjälp av en något utökad HTML-syntax. All vanlig HTML förutom dess script-taggar får användas. Det tillkommer även en Angular-specifik syntax som tillåter mallen att anpassa sitt uteseende beroende på klassens tillstånd.
+Komponentens mall definieras med hjälp av en något utökad HTML-syntax. All vanlig HTML förutom dess script-taggar får användas. Det tillkommer även en Angular-specifik syntax som tillåter mallen att anpassa sitt utseende beroende på klassens tillstånd.
 \subsubsection{Tjänster}
 Tjänster i Angular är klasser, skrivna i TypeScript, som tillhandahåller funktioner och logik som krävs av modulens komponenter eller andra tjänster. Typiskt ska de ha ett smalt och väldefinierat syfte.
 
@@ -142,7 +142,7 @@ Gränssnittsdelen har hand om allt som har med användarupplevelse och grafik i 
 Varje komponent ska ha ett väldefinierat syfte och såvida den inte är trivial bör den vara uppdelad i andra mindre komponenter. Komponenternas klasser ska endast innehålla den logik som krävs för visning och interaktion med användaren. Alla andra funktioner som krävs men som inte direkt har med användarupplevelsen att göra ska istället hanteras av tjänster i applikationslogikdelen.
 
 \subsection{Applikationslogikdel}
-Denna del har som uppgift att tillhandahålla all applikationsfunktionalitet som krävs av komponenterna i gränssnittsdelen. I denna del ska det endast finnas Angular-tjänster vilka ska ha smala och väldefnierade ansvarsområden.
+Denna del har som uppgift att tillhandahålla all applikationsfunktionalitet som krävs av komponenterna i gränssnittsdelen. I denna del ska det endast finnas Angular-tjänster vilka ska ha smala och väldefinierade ansvarsområden.
 
 \subsection{Kommunikationsdel}
 Kommunikationsdelen ska sköta all kommunikation med webbservern som krävs av applikationslogiken. Den ska endast bestå av Angular-tjänster.
@@ -167,4 +167,3 @@ Denna information kommer att begäras av klienten vid behov vilket görs genom A
 \clearpage
 \printbibliography
 \end{document}
-
