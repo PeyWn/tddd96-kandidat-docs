@@ -52,16 +52,19 @@ Utveckling av systemet kommer ske Angular, vilket får konsekvenser för arkitek
 \section{Arkitekturellt signifikanta krav}
 Här listas de krav som är relevanta för arkitekturen. Kraven är hämtade ur projektets kravspecifikation.
 
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{|c|p{6cm}|c|}
   \hline
-  Kravnummer & Kravbeskrivning & Betydelse \\
+  Krav & Kravbeskrivning & Betydelse \\
   \hline
-  Krav \ref{krav-subsec:Hognivasprakkrav} & Klienten ska använda sig av Angular och TypeScript. & Medför begränsningar för hur klienten kan implementeras. \\
-  \hline
-  Krav \ref{krav-subsec:EG-Mjukvarugranssnitt} & Klienten ska kunna köras på Internet Explorer 11. & Arkitekturen måste anpassas att fungera på en äldre webbläsare.
+  \ref{krav-subsec:Hognivasprakkrav} & Klienten ska använda sig av Angular och TypeScript. & Begränsar hur klienten kan implementeras.
   \\
   \hline
-  
+  \ref{krav-subsec:EG-Mjukvarugranssnitt} & Klienten ska kunna köras på Internet Explorer 11. & Måste anpassas efter en äldre webbläsare.
+  \\
+  \hline
+  \ref{krav-subsec:Generella krav} & Det ska gå att logga in och det ska \hyphenation{finnas}finnas en databas. & Måste ha en klient-server arkitektur.
+  \\
+  \hline
 \end{tabular}
 
 
