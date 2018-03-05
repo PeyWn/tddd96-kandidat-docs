@@ -29,7 +29,7 @@ För att förenkla processen att schemalägga operationer så ska ett schemaläg
 
 \subsection{Syfte}
 Syftet med projektet var att utveckla ett schemaläggningsstöd för kirurgi på Region Östergötland för att underlätta och optimera schemaläggning av operationer.
-Rapportens syfte är att beskriva tillvägagångssättet för utveckling av produkten, beskrivning av slutprodukten samt en utvärdering gällande hur projektet har fortgått och hur resultatet blev. 
+Rapportens syfte är att beskriva tillvägagångssättet för utveckling av produkten, beskrivning av slutprodukten samt en utvärdering gällande hur projektet har fortgått och hur resultatet blev.
 
 \subsection{Frågeställning}
 För att ge rapporten ett fokus så har ett antal frågeställningar formulerats som behandlas i rapporten:
@@ -48,18 +48,47 @@ I övrigt så har projektarbetet en tidsbudget på 2800 timmar, det vill säga 4
 \newpage
 
 \section{Bakgrund}
-I detta stycket beskrivs bakgrunden till kundens beslut att beställa projektet. Utöver det så beskrivs också övergripande de erfarenheter som teamet när de går in i projektet.
+I detta stycket beskrivs bakgrunden till kundens beslut att beställa projektet.
+Utöver det så beskrivs också övergripande de erfarenheter som teamet när de går
+in i projektet.
 
-Planering av operationer på ett sjukhus sker i en mycket komplex miljö. Det finns väldigt många resurser som måste koordineras för att allt ska fungera som det ska.
-I dagsläget finns nödvändig information om detta i olika system och ibland finns det inte i något system alls utan bara i huvudet på de olika anställda. Detta skapar en situation där det är svårt att överblicka information om de olika resurser som finns och deras tillgänglighet vid olika tider.
-För att lösa detta problem behövs ett system som kan visualisera alla resurser och hitta lediga tider för olika typer av operationer baserat på tillgången av dessa resurser.
+\subsection{Processen idag}
+Planering av operationer på ett sjukhus sker i en mycket komplex miljö. Det
+finns väldigt många resurser som måste koordineras för att allt ska fungera som
+det ska.
+I dagsläget finns nödvändig information om detta i olika system och ibland finns
+det inte i något system alls utan bara i huvudet på de olika anställda. Detta
+skapar en situation där det är svårt att överblicka information om de olika
+resurser som finns och deras tillgänglighet vid olika tider.
 
-Det är mer än bara en operationssal och en kirurg som ska finnas tillgängligt för att en operation ska kunna genomföras. Det krävs bland annat ofta att ett antal prover genomförs på patienten innan operationen genomförs därefter ska patienten förberedas inför operationen. Vilka förberedelser som ska göras beror både på vilken patient det är och vilken operation det är som ska utföras. Sedan är det själva operationen som ska genomföras. I vissa fall krävs det flera olika kompetenser på plats i operationssalen och då måste dessa kunna bokas i förväg. Det är även olika uppsättningar verktyg och specialutrustning för olika operationer.
-Patienten måste givetvis också ha en plats att återhämta sig på efter operationen, en så kallad postoperativ vårdplats.
+Det är mer än bara en operationssal och en kirurg som ska finnas tillgängligt
+för att en operation ska kunna genomföras. Det krävs ofta att ett antal prover
+genomförs på patienten innan operationen genomförs därefter ska patienten
+förberedas inför operationen. Vilka förberedelser som ska göras beror både på
+vilken patient det är och vilken operation det är som ska utföras. Sedan är det
+själva operationen som ska genomföras. I vissa fall krävs det flera olika
+kompetenser på plats i operationssalen och då måste dessa kunna bokas i förväg.
+Det är även olika uppsättningar verktyg och specialutrustning för olika
+operationer.
+Patienten måste givetvis också ha en plats att återhämta sig på efter
+operationen, en så kallad postoperativ vårdplats.
 
-Det är ett stort nytt system under utveckling där schemaläggningsstöd är en del i ett större sammanhang. Projektet som vi beskriver i denna rapport avser vara en prototyp för att testa vilka funktioner som är viktiga och även hur dessa kan implementeras i ett användargränssnitt som är lättarbetat och effektivt. Det är därför ett primärt fokus på funktioner och gränssnitt över robusthet och säkerhet.
+\subsection{Projektet}
+För att lösa detta problem behövs ett system som kan visualisera alla resurser
+och hitta lediga tider för olika typer av operationer baserat på tillgången av
+dessa resurser.
 
-Teamets erfarenheter vid ingången i projektet består mest i tidigare projekt under utbildningen.
+Det är ett stort nytt system under utveckling där schemaläggningsstöd är en del
+i ett större sammanhang. Projektet som vi beskriver i denna rapport avser vara
+en prototyp för att testa vilka funktioner som är viktiga och även hur dessa
+kan implementeras i ett användargränssnitt som är lättarbetat och effektivt.
+Det är därför ett primärt fokus på funktioner och gränssnitt över robusthet och
+säkerhet.
+
+\subsection{Gemensamma erfarenheter}
+Teamets erfarenheter vid ingången i projektet består mest i tidigare projekt
+under utbildningen.
+
 
 \section{Teori}
 
@@ -87,7 +116,7 @@ Arkitekten har ansvaret för att produkten ska ha en stabil arkitektur. Ansvaret
 Arkitekten håller en god kontakt med analysansvarig. Detta för att kunna skapa en arkitektur som bygger på och upprätthåller de krav som finns från kunden, men det gäller också att arkitekten genom analysansvarig kommunicerar till kund i de fall det finns krav som inte är möjliga rent kunskaps- eller teknikmässigt.
 
 \textbf{Utvecklingsledare}\\
-Om man går vidare från arkitektens arbete med övergripande teknikval så ansvarar utvecklingsledaren med detaljerad design av produkten. Under utvecklingsfasen i projektet så leder och, vid behov, fördelar utvecklingsledaren arbetet så att allting ska gå så smidigt som möjligt. Denna roll har även ansvaret för att fatta beslut om vilken utvecklingsmiljö man ska arbeta med. 
+Om man går vidare från arkitektens arbete med övergripande teknikval så ansvarar utvecklingsledaren med detaljerad design av produkten. Under utvecklingsfasen i projektet så leder och, vid behov, fördelar utvecklingsledaren arbetet så att allting ska gå så smidigt som möjligt. Denna roll har även ansvaret för att fatta beslut om vilken utvecklingsmiljö man ska arbeta med.
 
 I projektet som hör till denna rapport så är alla i gruppen delaktiga vid utveckling vilket innebär att utvecklingsledaren kommer leda samtliga personer, oavsett vilken roll de innehar.
 
@@ -99,7 +128,11 @@ Som testledare är det bra med viss distans till det som testas då beslutet om 
 \textbf{Kvalitetssamordnare \& Dokumentansvarig}\\
 Den sammanslagna rollen kvalitetssamordnare \& dokumentansvarig går ut på att kunna säkerställa att kvalitet och dokumentation ska upprätthållas och skrivas under projektets gång. Kvalitetssamordnare tittar på den budget som projektet har och hur mycket av detta man kan lägga ned i just kvalitet.
 
-Dokumentansvarig ansvarar för att det finns dokumentmallar för de dokument som ska skrivas. Personen ser till att det tas fram en logotyp för projektet och att gruppen kan leverera till de deadlines som existerar. 
+<<<<<<< HEAD
+Som dokumentansvarig så ser du till att det finns dokumentmallar för de dokument som ska skrivas. Personen ser till att det tas fram en logotyp för projektet och att gruppen kan leverera till de deadlines som existerar.
+=======
+Dokumentansvarig ansvarar för att det finns dokumentmallar för de dokument som ska skrivas. Personen ser till att det tas fram en logotyp för projektet och att gruppen kan leverera till de deadlines som existerar.
+>>>>>>> bcae4b13241b28e7461c2b2c23cb085be6b77a69
 
 Denna sammanslagna roll arbetar mycket med konfigurationsansvarig så att båda är överens om versionshantering och tillvägagångssätt vid releaser av produkten.
 
@@ -113,7 +146,7 @@ Gruppen har möten nästan en gång om dagen för att uppdatera varandra om vad 
 
 Utöver scrum så hade även gruppen möte med handledaren en gång i veckan för att uppdatera varandra och handledaren gällande statusen för projektet. Till dessa möten så skickades en dagordning ut av teamledaren i god tid innan mötet, denna dagordning hade ett antal punkter som alltid togs upp och medlemmar i gruppen samt handledaren kunde skicka in extra punkter att ta upp senast klockan 12.00 dagen innan mötet.
 
-Slutligen så håller projektgruppen möten med kund med jämna mellanrum där några personer från projektgruppen möter några av de involverade personerna på företaget. Dessa möten går ut på att uppdatera kunden om statusen för projektet, utbyta idéer och se till att projektgruppen och kund är på samma spår. 
+Slutligen så håller projektgruppen möten med kund med jämna mellanrum där några personer från projektgruppen möter några av de involverade personerna på företaget. Dessa möten går ut på att uppdatera kunden om statusen för projektet, utbyta idéer och se till att projektgruppen och kund är på samma spår.
 
 \subsubsection{Dokumentation}
 För dokumentation av interna dokument så har gruppen främst använt sig utav google drive, detta innefattar bland annat protokoll från handledarmöten, gruppkontrakt, veckorapporter och tidsrapportering.
@@ -165,7 +198,7 @@ Utvärdering av iteration 2 & Hur arbetet gick under iteration 2 \\
 
 Under iteration två så lämnade man in projektplan, kravspecifikation och kvalitetsplan en andra gång så att handledaren fick se hur de hade utvecklats.
 
-Utöver denna dokumentation så arbetade gruppen mycket med kompetensutveckling för att förstå det system och de verktyg som skulle användas under design och implementationsfasen. Gruppmedlemmar höll en genomgång i Git och en genomgång i scrum så gruppen skulle få grundläggande kunskaper och kunna applicera dessa verktyg. 
+Utöver denna dokumentation så arbetade gruppen mycket med kompetensutveckling för att förstå det system och de verktyg som skulle användas under design och implementationsfasen. Gruppmedlemmar höll en genomgång i Git och en genomgång i scrum så gruppen skulle få grundläggande kunskaper och kunna applicera dessa verktyg.
 
 Under förstudien hade gruppen även flera möten med kund för att få information om vad kunden ville ha för typ av produkt så att en kravspecifikation kunde utformas.
 
