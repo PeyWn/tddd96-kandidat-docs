@@ -1,7 +1,7 @@
 \documentclass[a4paper,10pt]{article}
 \input{../Templates/Settings}
 \usepackage{multicol}
-\usepackage[backend=bibtex]{biblatex}
+\usepackage[backend=bibtex,sorting=none]{biblatex}
 
 \def\ftitle{Testplan}
 \def\fversion{1.0}
@@ -32,13 +32,6 @@
     \end{center}
     \clearpage
     \tableofcontents
-    \clearpage
-
-
-
-
-    \vfill
-    \printbibliography
     \clearpage
 
 \section{Introduktion}
@@ -172,7 +165,7 @@ Den här sektionen redogör för de olika testningsprocedurerna som ska utföras
         \begin{enumerate}
             \item \label{itm:Testspecifikation-e} Testspecifikation-testtyp-komponent/modul (komponent/modul är namnet på komponenten eller modulen som specifikation är skriven för).
             \item \label{itm:Testprotokoll-e} Testprotokoll-testtyp-komponent/modul (komponent/modul är namnet på komponenten eller modulen som specifikation är skriven för)..
-            \item Bugglista: Lisan ska vid behov uppdateras.
+            \item Bugglista: Listan ska vid behov uppdateras.
         \end{enumerate}
     \textbf{Testkriterium:} Om resultatet från testprotokollet, se punkt \ref{itm:Testprotokoll-e} under \emph{resultat} i sektion \ref{sec:Enhetstest} ovan, stämmer överens med det förväntade resultatet från testspecifikationen, punkt \ref{itm:Testspecifikation-e} under \emph{resultat} i sektion \ref{sec:Enhetstest} ovan, så anses komponenten klarat testet.
 
@@ -249,4 +242,6 @@ Två stycken acceptanstest ska att genomföras. Ett test ska utföras på system
     \end{enumerate}
 
 \textbf{Testkriterium:} Testet anses vara godkänt om och endast om alla krav i specifikationen är behandlade och uppfyllda.
+\clearpage
+\printbibliography
 \end{document}
