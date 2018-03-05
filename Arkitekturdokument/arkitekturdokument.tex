@@ -36,9 +36,10 @@ Arkitekturdokumentet ger en översikt av schemaläggningssystemets arkitektur. I
 
 \subsection{Ordlista}
 Här förklaras tekniska termer och förkortningar.
-  MVC   (Model-view-controller) Ett designmönster för gränssnitt.
-  JSON  (JavaScript Object Notation) Filtyp för att överföra data som objekt i JavaScript.
-
+\begin{itemize}
+  \item MVC   (Model-view-controller) Ett designmönster för gränssnitt.
+  \item JSON  (JavaScript Object Notation) Filtyp för att överföra data som objekt i JavaScript.
+\end{itemize}
 
 \subsection{Översiktlig systembeskrivning}
 Det schemaläggningssystem som ska utvecklas kommer användas på operationsavdelningen i ett sjukhus av sjukhuspersonal för planering av operationer. Systemet ska klara av att utifrån en lista med beslutade operationer ge användaren förslag på operationstider inom operationens tidsgräns då rätt lokal och resurser finns tillgängliga. För tider då lokal finns att tillgå men resurser saknas ska systemet visa vilka resurser som saknas. Användaren ska utifrån detta kunna välja en passande tid och boka in operationen. Besluten ska innehålla relevant data om patient och operationstyp, och det ska för varje beslut framgå om beslutet behandlats eller inte. Ifall patienten behöver flera ingrepp ska användaren kunna se detta och kunna slå samman ingreppen till en operation vid behov.
@@ -53,7 +54,7 @@ Målet med utvecklingen av systemet är att ta fram en prototyp för ett schemal
 Utveckling av systemet kommer ske Angular, vilket får konsekvenser för arkitekturen. Databasen kommer implementeras med MySQL och kommer kommunicera med klienten via ett API som översätter datan till JSON-filer.
 
 \section{Arkitekturellt signifikanta krav}
-Här listas några krav som är relevanta för arkitekturen. Kraven är hämtade ur projektets kravspecifikation.
+Här listas några krav som är relevanta för arkitekturen. Kraven är hämtade ur projektets kravspecifikation \cite{kravspec}.
 
 \begin{tabular}{|c|p{6cm}|c|}
   \hline
@@ -89,7 +90,7 @@ På serversidan beslutades att Node.js kommer att användas. Det fanns ett par m
 Eftersom Node.js har allt som önskas till projektet har andra alternativ inte undersökts.
 
 \subsection{MySQL med JSON-API}
-Som databashanterare valdes MySQL. Ett alternativ som också diskuterades var MongoDB som är en objekt-baserad hanterare\cite{mongodbintro} till skillnad från MySQL som är tabell-baserad.
+Som databashanterare valdes MySQL. Ett alternativ som också diskuterades var MongoDB som är en objekt-baserad hanterare \cite{mongodbintro} till skillnad från MySQL som är tabell-baserad.
 
 Anledningen att MySQL föredrogs var eftersom Region Östergötland tillhandahåller testdata till systemet i tabell-form.
 
@@ -99,7 +100,7 @@ Det API som sköter kommunikation mellan klient och server skall översätta tes
 Här beskrivs några använda designmönster.
 
 \subsection{Model-view-controller}
-Designmönstret MVC för användargränssnitt möjliggör separation av hur gränssnittets data representeras internt sättet datan visas upp för användare. Designmönstret delar upp gränssnittet i tre delar, Model, View och Controller (referens till https://en.wikipedia.org/wiki/Model-view-controller. Delarna beskrivs i större detalj nedan:
+Designmönstret MVC för användargränssnitt möjliggör separation av hur gränssnittets data representeras internt sättet datan visas upp för användare. Designmönstret delar upp gränssnittet i tre delar, Model, View och Controller. \cite{mvc} Delarna beskrivs i större detalj nedan:
 \begin{itemize}
   \item Model innehåller gränssnittets data och logik för att manipulera datan.
   \item View presenterar data från Model för användaren.
@@ -123,7 +124,7 @@ Systemet som beskrivs översiktligt i Figur 2 är uppdelat i två delar, en webb
 Webbklienten körs i en webbläsare och kommer att byggas på webbapplikationsramverket Angular. Dens struktur kommer att består av tre delar, en gränssnittsdel, en applikationslogikdel och en kommunikationsdel. I klientdelen i Figur 2 visas hur delarna hänger ihop och beror på varandra.
 
 \subsection{Angular}
-Denna sektion behandlar de delar ur Angulars arkitekturguide\cite{angularguide} som kommer att vara relevanta i projektet.
+Denna sektion behandlar de delar ur Angulars arkitekturguide \cite{angularguide} som kommer att vara relevanta i projektet.
 
 En Angular-applikation är uppbyggd av en eller flera moduler som i sin tur består av komponenter och tjänster.
 \subsubsection{Komponenter}
