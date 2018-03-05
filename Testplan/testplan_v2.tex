@@ -1,11 +1,10 @@
 \documentclass[a4paper,10pt]{article}
 \input{../Templates/Settings}
 \usepackage{multicol}
-
+\usepackage[backend=bibtex]{biblatex}
 
 \def\ftitle{Testplan}
 \def\fversion{1.0}
-
 
 \addbibresource{bib-testplan.bib}
 \externaldocument[krav-]{../Kravspec/kravspec}
@@ -39,7 +38,7 @@
 
 
     \vfill
-    \printbibliography[heading=bibintoc]
+    \printbibliography
     \clearpage
 
 \section{Introduktion}
