@@ -29,79 +29,8 @@
 \section{Integrationstest}
 \section{Systemtest}
 \section{Acceptanstest}
-\subsection{Pappersprototyptest 1}
-Tre stycken pappersprototyper hade tagits fram av gruppen och testades på kunden för att få feedback för att skapa en bättre prototyp.Två av dessa hade redan tidigare utvärderats och förbättrats i gruppen. Den tredje prototypen hade inte tidigare diskuterats i gruppen då denna skapades efter det diskussionstillfälle som var avsatt. Den var inte helt fullständig utan var främst tänkt att visa vissa alternativa lösningar på enskilda gränssnittselement.
-\subsection{Deltagare}
-\begin{itemize}
-\item Martin, “dator”
-\item Björn, Testledare
-\item Christoffer, Observatör
-\item Henrik, Observatör
-\end{itemize}
 
-\textbf{Region Östergötaland}
-\begin{itemize}
-\item Daniel, Testperson
-\item Åsa
-\item Gunnar, Skype
-\item Erik, Skype
-\end{itemize}
-\subsection{Testaktivitet}
-De två första prototyperna testades genom att Daniel(RÖ) fick i uppdrag att boka in en operation i pappersprototypen. När han gjorde ett val så uppdaterade Martin gränssittet för att reflektera förändringen till följd av valet. Under testet så talade Daniel om vad han såg och hur han tänkte att han borde göra. Vid olika tillfällen så flikade de övriga personerna från RÖ in med tankar och åsikter.
-\subsubsection{Testresultat prototyp 1}
-Först presenteras en inloggningsskärm. Daniel loggar in utan problem men det noteras att:
-\begin{itemize}
-  \item Det kan vara bra med en kom ihåg mig ruta
-  \item Det kan eventuellt gå att använda RÖs singel sign on system som bygger på open-id connect.
-\end{itemize}
-Efter inloggningen presenteras en schemaöversikt och en beslutsöversikt.De flesta av elementen i gränssnittet identifieras korrekt av Daniel men några oklarheter uppstår:
-\begin{itemize}
-\item Datum är bara siffror i rutor och därmed inte helt klart vad de innebär.
-\item Det är inte helt klart att det är beslut som listas i listan med beslut.
-\item Det finns en återställ knapp, vad gör den?
-\item Vid bokning står det akut/elektiv vilket är fel.
-\end{itemize}
-I planneringsvyn finns ett område för att anpassa sökparametrarna. Utifrån denna skapas en diskussion:
-\begin{itemize}
-\item Alla operaioner kan inte utföras i alla salar.
-\item Vissa prarameterar kan ta mer plats än vad som givits.
-\item Planeringsvyn har en gradient färgkodning för att visa på hur nära sista tiden för operationen är, detta bedöms som otydligt och föreslås att bytas ut mot en enkel linje eller markör på sista tiden.
-\end{itemize}
 
-En dag väljs för att boka in en tid och följade problem identifieras: \\
-\begin{itemize}
-\item En ledig tid identifieras av Daniel som upptagen. Anledningen till detta är att förslagen har för mycket information och därmed ses som upptagna istället för lediga
-En lösning skulle kunna vara mindre detaljer i förslagen
-\item Oklart att det går att välja/klicka på ett förslag
-\item Oklart varför tomma salar är obokningsbara, finns ingen indikation på vad som saknas.
-\end{itemize}
-
-Utöver detta så kom även följande punkter fram:
-\begin{itemize}
-\item Vad som också kom fram var att det vore bra att på något sätt visualisera “öppetider” för de olika salarna.
-\item Materiallistor kan vara väldigt långa och behöver plats.
-\item Mycket tomt utrymme efter inloggning, används det till något? Eventuellt så kan en översikt över redan planerade operationer implmenteras.
-\item Det syns inte vilken användare som är inloggad och denne kan inte heller logga ut.
-\end{itemize}
-\subsubsection{Testresultat prototyp 2}
-Detta test ledde inte till något bra flyt då Daniel upplevde det som svårt att veta vad som skulle göras för att nå målet.
-\begin{itemize}
-\item Inloggning fungerar bra
-\item Han ser översikten och blir oklar på vad nästa steg är
-\item Även i denna prototyp var det oklart att det beslutats som var listade i listan.
-\item Det finns inget namn på besluten, detta bör finnas.
-\end{itemize}
-
-\subsubsection{Utvärdering}
-Efter detta så diskuterades de olika prototyperna och ibland jämfördes de med element som fanns med i Christoffers prototyp.
-
-\begin{itemize}
-\item Det ska finnas en bekräftelseruta med en total sammanfattning över alla detaljer i bokningen innan man bekräftar bokningen.
-\item Det ska stå namn på patienten i listan över beslut, eller åtminstone initialer.
-\item Det är ett intressant koncept att visa detaljer om en bokning i form av en tidslinje
-\item Det kommer behövas testas olika lösningar på översikten över lediga tider men något form av spårsystem som visades i Christoffers prototyp kan vara intressant att utveckla.
-\item Sökparameterlösningen som fanns i Björns prototyp är bra att utveckla på.
-\end{itemize}
 
 
 
