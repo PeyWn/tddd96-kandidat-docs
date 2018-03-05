@@ -1,12 +1,15 @@
 \documentclass[a4paper,10pt]{article}
+\usepackage[backend=bibtex,sorting=none]{biblatex}
+\addbibresource{projektplan-bib.bib}
 \input{../Templates/Settings}
-
 
 \def\ftitle{Projektplan}
 \def\fversion{1.1}
 
 \begin{document}
+
 \input{../Templates/titlepage}
+1
 
 \section*{\begin{center}Dokumentationshistorik\end{center}}
 \begin{center}
@@ -30,7 +33,7 @@ Här ges en översiktlig beskrivning av projektet. Underrubrikerna beskriver var
 \subsection{Bakgrund}
 Gruppen som ligger bakom denna projektplan har fått i uppdrag att bygga ett schemaläggningsstöd för kirurgi till Region Östergötland.
 
-Region Östergötland utförde under hösten 2017 ett projekt, GOLI(a)T-projektet, med syfte att ta fram förslag på en gemensam operationsprocess för de olika verksamheter som ingår i regionen.
+Region Östergötland utförde under hösten 2017 ett projekt, GOLI(a)T-projektet \cite{goliat}, med syfte att ta fram förslag på en gemensam operationsprocess för de olika verksamheter som ingår i regionen.
 
 För att ytterligare effektivisera arbetet under den framtagna operationsprocessens planeringsfas och minska väntetider efterfrågar Region Östergötland nu ett grafiskt schemaläggningsverktyg som kan användas av operationsplanerare för att koordinera vårdresurser.
 
@@ -220,4 +223,7 @@ Om man märker att krav tar längre tid än förväntat så får man omvärdera 
 Åtgärd: Konflikter i gruppen ska hanteras så snart som möjligt då det kan ha stor påverkan på projektet och stämningen i gruppen. Om personer i gruppen blir oense så får man hantera konflikten olika beroende på vilken typ av konflikt det är.
 Om om det är en sakkonflikt t.ex. vilket programmeringsspråk man ska använda för att skriva front-end delen i projektet så får man låta samtliga sidor yttra sig och berätta varför de anser att deras alternativ är bäst. Därefter så får gruppen försöka komma till ett gemensamt beslut och om inte det lyckas så har teamledaren det sista ordet.
 Om det är eller har utvecklats till en personlig konflikt så får man ta in en medlare, någon person i gruppen som inte är involverad i konflikten som får båda parter att lugna ner sig och lösa diskussionen om det fanns någon grund till varför konflikten uppstod.
+
+\clearpage
+\printbibliography
 \end{document}
