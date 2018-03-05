@@ -8,7 +8,7 @@
 
 \addbibresource{bib-testplan.bib}
 \externaldocument[krav-]{../Kravspec/kravspec}
-\externaldocument[arkdoc-]{../Arkitekturdokument/arkitekturdokument}
+\externaldocument[arki-]{../Arkitekturdokument/arkitekturdokument}
 
 
 
@@ -41,13 +41,13 @@ Testerna är till för att säkerställa att det som levereras uppfyller de krav
 \subsection{Avgränsningar}
 
 \section{Moduler}
-Systemet är uppdelat i två delar, webbservern och webbklienten. Dom här delarna är i sin tur är uppdelade i ett antal olika moduler. En övergripande systemskiss finns i arkitekturdokumentet under rubrik \ref{arkdoc-sec:Systemskiss}. Mer information angående webbservern och dess moduler se sektion \ref{arkdoc-sec:webbklient} medans information angående webbservern finns under sektion \ref{arkdoc-sec:webbserver}.
+Systemet är uppdelat i två delar, webbservern och webbklienten. Dom här delarna är i sin tur är uppdelade i ett antal olika moduler. En övergripande systemskiss finns i arkitekturdokumentet under rubrik \ref{arki-sec:Systemskiss}. Mer information angående webbservern och dess moduler se sektion \ref{arki-sec:webbklient} medans information angående webbservern finns under sektion \ref{arki-sec:webbserver}.
 
 \section{Funktioner}
 Denna sektion beskriver de funktioner som ska genomgå testning. Varje funktions användningsområde presenteras tillsammans med den indata som funktionen ska behandla. Varje funktion har blivit tilldelad en integritets nivå som beskriver hur kritisk funktionen är för systemet.
 
 Se kravspecifikationen \ref{krav-subsec:Funktionellakrav} för mer ingående information om kraven som berör funktionen.
-    
+
     \subsection{Boka Operation}
     %Beskrivning
     %Ref till kravspec
@@ -61,7 +61,7 @@ Beslutsdata:
 \begin{itemize}
 	\item Personnummer
 	\item Efternamn, Förnamn
-	\item Diagnoskod
+	\item Diagnoskod1
 	\item Åtgärdskod enligt KVÅ-standard
 	\item Angiven KVÅ-kod som är huvudåtgärd
 	\item Operation av parigt organ (lateralitet)
@@ -104,12 +104,12 @@ Det ska vara möjligt att avboka en tid som man sedan tidigare bokat.
 -	Välja tid
 
 \subsection{Inloggning}
-I denna funktion ska följande uppfyllas: 
+I denna funktion ska följande uppfyllas:
 \begin{enumerate}
 	\item Krävas användarnamn och lösenord för att komma in i systemet.
     \item En användare ska ha ett användarnamn och ett lösenord.
     \item Det ska finnas en databas som kan hantera all ingående data.
-\end{enumerate}    
+\end{enumerate}
 
 \subsection{Tidslinje för operation}
 
