@@ -11,7 +11,7 @@
 
 \section{Introduktion}
 Detta dokument avser beskriva alla de krav som finns för det schemaläggningsstöd
-som ska utvecklas i kursen TDDD96. Projektet utvecklas med avdelningen för test
+som ska utvecklas av Projektgruppen Aeon. Projektet utvecklas med avdelningen för test
 och innovation vid Region Östergötland, hädanefter benämnd som kunden eller RÖ.
 
 \subsection{Syfte}
@@ -34,7 +34,7 @@ kraven.
 \item Efter del~\ref{sec:Specifika krav} finns en ordlista över begrepp och
 förkortningar.
 \item I appendix~\ref{sec:Ingaende data till systemet} finns en beskrivning
-över all den ingånde datan som projektet kommer hantera och analysera.
+över alla de ingånde data som projektet kommer hantera och analysera.
 
 \end{enumerate}
 
@@ -56,7 +56,7 @@ I största möjliga mån kommer indata att vara statisk, så som vilka resurser 
 finns. Däremot kommer det schema, som produkten ska skapa, att vara dynamiskt.
 \subsubsection{Användargränssnitt}
 \label{subsec:Anvandargranssnitt}
-Systemet ska vara webbaserat och gå att integrera med i de webbläsare som
+Systemet ska vara webbaserat och gå att hantera i de webbläsare som
 används på slutanvändarens dator.
 \subsubsection{Hårdvarugränssnitt}
 \label{subsec:Hardvarugranssnitt}
@@ -68,7 +68,7 @@ också köras på kraftigare servrar.
 Klienten i systemet ska gå att använda i webbläsaren på användarens dator.
 Datorerna på sjukhuset där systemet kommer användas administreras av en
 IT-avdelning. Det är IT-avdelningen som beslutar om vilken webbläsare som ska
-användas, detta innebär att systemet bara behöver stödja den webbläsaren fullt
+användas. Detta innebär att systemet bara behöver stödja den webbläsaren fullt
 ut.
 \subsubsection{Kommunikationsgränssnitt}
 \label{subsec:Kommunikationsgranssnitt}
@@ -88,7 +88,7 @@ viktigt att se hur akut operationen är. Översikten ska visa den viktigaste
 informationen men även göra det möjligt att se all detaljerad information om ett specifikt beslut.\\
 \textbf{Planeringsvy}\\
 Det ska vara möjligt att se alla detaljer som finns i planeringsunderlaget.
-Det bör även gå att ändra parametrar i sökningen så som tidsåtgång. Detta för
+Det bör även gå att ändra parametrar i sökningen såsom tidsåtgång. Detta för
 att användaren ska kunna använda sin erfarenhet i systemet utan hinder.
 För att kunna samverka om gemensamma resurser måste det finnas metoder att boka
 och se tillgänglighet för resurser som är delade eller helt tillhör en annan
@@ -108,7 +108,7 @@ för varje organisation som systemet ska hantera.
 \label{subsec:Produktfunktioner}
 Produktens huvudfunktion ska vara att visualisera lediga tider för en vald
 operation. Med en ledig tid avses en tid då alla resurser som krävs för den
-operationen är ledig, så som personal med rätt kunskap samt lokaler och verktyg.
+operationen är ledig, såsom personal med rätt kunskap samt lokaler och verktyg.
 Vid sökning av en lämplig tid är det viktigt att mjukvaran inte hindrar
 användaren från att använda sin egen kunskap, det ska därför vara möjligt att
 ändra relevanta parametrar för sökningen.
@@ -117,7 +117,7 @@ Utöver detta ska det även vara möjligt att se alla beslutade operationer som
 behöver planeras. Det ska också finnas en vy där alla planerade operationer
 visas. Båda dessa vyer ska ha möjligheter att filtrera och sortera innehållet
 efter olika parametrar.
-\subsection{Användarkarateristik}
+\subsection{Användarkarakteristik}
 \label{subsec:Andvandarkarateristik}
 Produkten som ska utvecklas har på sikt flera olika användare. Då detta
 projekt är avsett att vara en prototyp för framtida system så riktas
@@ -138,13 +138,13 @@ I denna del beskrivs de begränsningar som systemet måste ta hänsyn till.
 Då ingen riktig patientdata kommer finnas i systemet så är det inte nödvändigt
 att ta hänsyn till specifika regelverk.
 
-\subsubsection{Gränssnitt till andra system}
+\subsubsection{Gränssnitt mot andra system}
 \label{subsec:Granssnitt till andra system}
 Inga interaktioner med andra system kommer vara aktuella under detta projekt.
 
 \subsubsection{Högnivåspråkkrav}
 \label{subsec:Hognivasprakkrav}
-Systemet ska skrivas i typescript. Klienten ska använda sig av Angular.
+Systemet ska skrivas i Typescript. Klienten ska använda sig av Angular.
 
 %\subsection{Antagande och beroende}
 %\label{subsec:Antagande och beroende}
@@ -169,8 +169,7 @@ ska interagera med och interageras via.
 \label{subsec:EG-Hardvarugranssnitt}
 Det ska gå att interagera med klienten med hjälp av:
 \begin{itemize}
-  \item En mus
-  \item Ett tangentbord
+  \item En mus och tangentbord
   \item En skärm
 \end{itemize}
 \subsubsection{Mjukvarugränssnitt}
@@ -260,7 +259,7 @@ ingår i samverkan.
 \item Den mest brådskande medicinska brådskandegraden ska gälla vid samverkan.
 \item Tidsåtgången för varje huvudåtgärd ska visualiseras.
 \item Vid samverkan ska operationstiden för de två beslutade åtgärderna slås
-ihop, förberedelsetid och avvecklingstid ska baseras på den åtgärd som har
+ihop. Förberedelsetid och avvecklingstid ska baseras på den åtgärd som har
 längst tid.
 \item Finns det andra enheter (ej operationsavdelning eller -klinik) som ska
 medverka under operationen så ska det gå att ange vilka det är.

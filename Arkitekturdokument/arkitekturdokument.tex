@@ -50,11 +50,11 @@ Målet med utvecklingen av systemet är att ta fram en prototyp för ett schemal
 Utveckling av systemet kommer ske Angular, vilket får konsekvenser för arkitekturen. Databasen kommer implementeras med MySQL och kommer kommunicera med klienten via ett API som översätter datan till JSON-filer.
 
 \section{Arkitekturellt signifikanta krav}
-Här listas de krav som är relevanta för arkitekturen. Kraven är hämtade ur projektets kravspecifikation.
+Här listas några krav som är relevanta för arkitekturen. Kraven är hämtade ur projektets kravspecifikation.
 
 \begin{tabular}{|c|c|c|}
   \hline
-  Kravnummer & Kravbeskrivning & Betydelse \\
+  Kravtitel & Kravbeskrivning & Betydelse \\
   \hline
   Krav \ref{krav-subsec:Hognivasprakkrav} & Klienten ska använda sig av Angular och TypeScript. & Medför begränsningar för hur klienten kan implementeras. \\
   \hline
@@ -63,6 +63,9 @@ Här listas de krav som är relevanta för arkitekturen. Kraven är hämtade ur 
   \hline
   
 \end{tabular}
+
+\subsection{Tilltänkta användare}
+Systemet skall användas av erfarna operationsplanerare som tidigare arbetat med schemaläggning.
 
 
 \section{Designbeslut och motivering}
@@ -103,22 +106,6 @@ Designmönstret MVC för användargränssnitt möjliggör separation av intern r
 
 Eftersom att webbapplikationen kommer att bygga på ramverket Angular blir användandet av designmönstret Model-view-controller naturligt. Angular uppmuntrar en struktur där gränssnitt och applikationslogik är uppdelade. Förutom detta kommer även funktionerna för datahämtning att vara separata från applikationslogiken. Mer om strukturen på webbklienten går att läsa i sektion \ref{sec:webbklient}.
 
-\section{Användarfallsvy}
-
-Denna vy visar de viktigaste fallen då schemaläggningssystemet ska användas. De fallen är som följer:
-\begin{itemize}
-	\item Inloggning
-	\item Visa tidslinje för operation
-	\item Visa beslutsöversikt
-	\item Visa beslutsdata
-	\item Boka operation
-	\item Avboka operation
-	\item Visa schemaöversikt
-	\item Slå ihop operationer
-\end{itemize}
-\subsection{Användarfallsdiagram}
-\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Usecasediagram.png}
-Figur 1: Användarfallsdiagram
 \clearpage
 \section{Systemskiss}
 \label{sec:Systemskiss}
