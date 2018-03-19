@@ -7,7 +7,7 @@
 
 \begin{document}
 \def\ftitle{Arkitekturdokument}
-\def\fversion{1.0}
+\def\fversion{1.1}
 \input{../Templates/titlepage}
 
 \section*{\begin{center}Dokumentationshistorik\end{center}}
@@ -43,7 +43,7 @@ Här förklaras tekniska termer och förkortningar.
 \end{itemize}
 
 \subsection{Översiktlig systembeskrivning}
-Det schemaläggningssystem som ska utvecklas kommer användas på operationsavdelningen i ett sjukhus av sjukhuspersonal för planering av operationer. Systemet ska klara av att utifrån en lista med beslutade operationer ge användaren förslag på operationstider inom operationens tidsgräns då rätt lokal och resurser finns tillgängliga. För tider då lokal finns att tillgå men resurser saknas ska systemet visa vilka resurser som saknas. Användaren ska utifrån detta kunna välja en passande tid och boka in operationen. Besluten ska innehålla relevant data om patient och operationstyp, och det ska för varje beslut framgå om beslutet behandlats eller inte. Ifall patienten behöver flera ingrepp ska användaren kunna se detta och kunna slå samman ingreppen till en operation vid behov.
+Det schemaläggningssystem som ska utvecklas kommer användas på operationsavdelningen i ett sjukhus av sjukhuspersonal för planering av operationer. Systemet ska klara av att utifrån en lista med beslutade operationer ge användaren förslag på operationstider inom operationens tidsgräns då rätt lokal och resurser finns tillgängliga. För tider då lokal finns att tillgå men resurser saknas ska systemet visa vilka resurser som saknas. Användaren ska utifrån detta kunna välja en passande tid och boka in operationen. Besluten ska innehålla relevanta data om patient och operationstyp, och det ska för varje beslut framgå om beslutet behandlats eller inte. Ifall patienten behöver flera ingrepp ska användaren kunna se detta och kunna slå samman ingreppen till en operation vid behov.
 
 Operationer ska kunna avbokas och frigöras från schemat. Det ska finnas en schemaöversikt med en filterfunktion som visar när vilka resurser är lediga eller upptagna. Det ska finnas en tidslinje över operationen som visar när operationsprocessens olika stadier börjar. Det ska gå att logga vilken användare som bokat vad. All information ska lagras i en central databas. Från databasen ska informationen hämtas ned till användardatorer via en server. Systemet ska visas på en skärm och användaren interagerar med det med hjälp av tangentbord och mus.
 
@@ -52,9 +52,9 @@ Operationer ska kunna avbokas och frigöras från schemat. Det ska finnas en sch
 Målet med utvecklingen av systemet är att ta fram en prototyp för ett schemaläggningsverktyg som kan användas som underlag för att få en bild av vilken funktionalitet som ett verkligt schemaläggningsverktyg behöver ha. Då systemet inte kommer tas i egentlig drift prioriteras användbarhet och designlösningar framför prestanda. Ett väl designat användargränssnitt är huvudmålet med projektet.
 
 \subsection{Beroenden}
-Utveckling av systemet kommer ske Angular, vilket får konsekvenser för arkitekturen. Databasen kommer implementeras med MySQL och kommer kommunicera med klienten via ett API som översätter datorn till JSON-filer.
+Utveckling av systemet kommer ske med Angular, vilket får konsekvenser för arkitekturen. Databasen kommer implementeras med MySQL och kommer kommunicera med klienten via ett API som översätter datan till JSON-filer.
 
-\section{Arkitekturellt signifikanta krav}
+\section{Arkitektoniskt signifikanta krav}
 Här listas några krav som är relevanta för arkitekturen. Kraven är hämtade ur projektets kravspecifikation\cite{kravspec}.
 
 \begin{tabular}{|c|p{6cm}|c|}
@@ -101,7 +101,7 @@ Det API som sköter kommunikation mellan klient och server skall översätta tes
 Här beskrivs några använda designmönster.
 
 \subsection{Model-view-controller}
-Designmönstret MVC för användargränssnitt möjliggör separation av hur gränssnittets data representeras internt sättet datorn visas upp för användare. Designmönstret delar upp gränssnittet i tre delar, Model, View och Controller.\cite{mvc} Delarna beskrivs i större detalj nedan:
+Designmönstret MVC för användargränssnitt möjliggör separation av hur gränssnittets data representeras internt sättet datorn visas upp för användare. Designmönstret delar upp gränssnittet i tre delar, Model, View och Controller.\cite{mvc} Delarna beskrivs nedan:
 \begin{itemize}
   \item Model innehåller gränssnittets data och logik för att manipulera datan.
   \item View presenterar data från Model för användaren.
