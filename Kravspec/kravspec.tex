@@ -1,9 +1,10 @@
 \documentclass{article}
 \input{../Templates/Settings}
+\externaldocument[kval-]{../Kvalitetsplan/kvalitetsplan}
 \begin{document}
 
 \def\ftitle{Kravspecifikation}
-\def\fversion{1.1}
+\def\fversion{1.2}
 \input{../Templates/titlepage}
 \input{versiontable}
 
@@ -291,7 +292,14 @@ klinik.
 \item Det ska finnas en filterfunktion i kalendervyn för salar, kompetenser, utrustning m.m. T.ex. kunna se lediga operationstider för en enskild sal.
 \end{enumerate}
 
+\subsection{Kvalitetskrav}
+\label{subsec:kvalitetsakrav}
+\begin{enumerate}
+\item Kodstandarden beskriven i kvalitetsplan sektion \ref{kval-sec:kodstandard} ska följas.
+\end{enumerate}
+
 \section{Användarfallsvy}
+
 Här visas ett diagram över några av de viktigaste användarfallen.\\
 
 \includegraphics[width=\textwidth,height=.7\textheight]{Usecasediagram.png}\\
