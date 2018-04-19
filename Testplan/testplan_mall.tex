@@ -29,8 +29,6 @@
         \hline
         2018-03-05 & Version 1.0 färdigställd & 1 &  1.0\\
         \hline
-        2018-04-17 & Revision av version 1.0 & 2 &  1.1\\
-        \hline
         \end{tabular}
     \end{center}
     \clearpage
@@ -63,7 +61,6 @@ Se kravspecifikationen \ref{krav-subsec:Funktionellakrav} för mer ingående
 information om kraven som berör funktionen.
 
     \subsection{Boka Operation}
-    \label{sec:Boka Operation}
     %Beskrivning
     %Ref till kravspec
     %Beroende
@@ -99,7 +96,6 @@ Operationstider (KVÅ-koder)
 \end{multicols}
 
 \subsubsection{Boka sal}
-\label{sec: Boka sal}
 Det ska gå att välja namn på den lokal man vill boka och välja vilken typ av lok
 al det är. Man ska även kunna se tillgängliga tider för salen. Vid
 bokning skall man få information över vilka operationer som går att genomföra i
@@ -117,7 +113,7 @@ Ingående data
 \end{multicols}
 
 \subsubsection{Avboka sal}
-\label{sec: Avboka sal}
+
 Det ska vara möjligt att avboka en tid som man sedan tidigare bokat.
 
 -	Välja tid
@@ -206,11 +202,11 @@ de olika testnivåer.
       \item Testprotokoll-mall. \emph{(Se dokumentet: testprotokoll-mall)}
       \item Bugglista: Den här är listan ska innehålla alla kända problem som
       systemet har vid testets start, listan kommer att finnas under
-      \emph{issues} på projektets gitlab. 
+      \emph{issues} på projektets gitlab.
     \end{enumerate}
 
   \textbf{Utförande:} Testet ska utföras av berörda parter samt en oberoende
-  person. Personerna som utför testet ska först skapa testspecifikation utifrån beskrivningen i 		 testspecifikationsmallen. När det här är klart så utför
+  person. Personerna som utför testet ska först skapa testspecifikation utifrån beskrivningen i testspecifikationsmallen. När det här är klart så utför
   personerna testet enligt specifikationen \cite{kravspec}. Ett protokoll ska
   föras enligt mallen för testprotokoll, se testprotokoll-mall dokumentet. Om
   några problem uppstod som inte kunde lösas på plats ska dessa föras in under
@@ -232,22 +228,12 @@ de olika testnivåer.
   ovan, stämmer överens med det förväntade resultatet från testspecifikationen,
   punkt \ref{itm:Testspecifikation-e} under \emph{resultat} i sektion
   \ref{sec:Enhetstest} ovan, så anses komponenten klarat testet.
-  
-  \textbf{Enhetstester under iteration 4}
-  
-  \textbf{TestID:} 007
-  \\ \textbf{Syfte:} se \ref{sec:  Boka sal}
-  \\ \textbf{Ingående data:} se \ref{sec: Boka sal}  
-  \\ \textbf{Utförande:} 
-  \\ \textbf{Resultat:}	
-  \\ \textbf{Testkriterium:}
-  
-  
+
 \subsection{Integrationstest}
 \label{sec:Integrationstest}
 \textbf{Syfte:}
 Ett integrationstest ska utföras för att säkerställa att en modul och dess
-komponenter fungerar enligt specifikationen \cite{kravspec}. När två eller flera enhetstester har godkänts så ska de integrationstestas. Testet säkerställer
+komponenter fungerar enligt specifikationen \cite{kravspec}. Testet säkerställer
 också att modulen följer designkraven.
 
 \textbf{Ingående data:}
@@ -290,15 +276,6 @@ från testspecifikationen, punkt \ref{itm:Testspecifikation-i} under
 \emph{resultat} i sektion \ref{sec:Integrationstest} ovan, så anses komponenten
 klarat testet.
 
-\textbf{Integrationstester under iteration 4}
-
-\textbf{TestID:} 007
-\\ \textbf{Syfte:} se \ref{sec:  Boka sal}
-\\ \textbf{Ingående data:} se \ref{sec: Boka sal}  
-\\ \textbf{Utförande:} 
-\\ \textbf{Resultat:}	
-\\ \textbf{Testkriterium:}
-  
 \subsection{Systemtest}
 \label{sec:Systemtest}
 \textbf{Syfte:}
@@ -344,15 +321,6 @@ ovan, stämmer överens med det förväntade resultatet från testspecifikatione
 punkt \ref{itm:Testspecifikation-s} under \emph{resultat} i sektion
 \ref{sec:Systemtest} ovan, så anses komponenten klarat testet.
 
-\subsubsection{Systemtester under iteration 4}
-
-	\textbf{TestID:} 007
-  \\ \textbf{Syfte:} se \ref{sec:  Boka sal}
-  \\ \textbf{Ingående data:} se \ref{sec: Boka sal}  
-  \\ \textbf{Utförande:} 
-  \\ \textbf{Resultat:}	
-  \\ \textbf{Testkriterium:}
-  
 \subsection{Acceptanstest}
 \textbf{Syfte:}
 Två stycken acceptanstest ska att genomföras. Ett test ska utföras på systemets
@@ -393,53 +361,5 @@ gitlab.
 
 \textbf{Testkriterium:} Testet anses vara godkänt om och endast om alla krav i specifikationen är behandlade och uppfyllda.
 \clearpage
-
-\subsubsection{Acceptanstester under iteration 4}
-
-\textbf{TestID:} 007
-  \\ \textbf{Syfte:} se \ref{sec:  Boka sal}
-  \\ \textbf{Ingående data:} se \ref{sec: Boka sal}  
-  \\ \textbf{Utförande:} 
-  \\ \textbf{Resultat:}	
-  \\ \textbf{Testkriterium:}
-
 \printbibliography
-
-\newpage
-\appendix
-\section{Testspecifikationmall}
-\label{sec: Testspecifikationmall}
-\subsection{TestID}
-\subsection{Typ av test:}
-\emph{[Vilket typ av test är det]}
-\subsection{Genomförande:}
-\emph{[kort beskriving av sektion]}
-\subsection{Testscenarion:}
-\emph{[Vad är det som ska testas, kan vara flera saker]}
-\subsubsection{Första saken att testa:}
-\subsubsection{Design av komponent:}
-\emph{[Beskriv design av komponent och om den är uppfylld enligt Kravspec]}
-\subsubsection{Förväntat resultat:}
-\emph{[Det förväntade resultat enligt kravspec eller beskrivning av enheten]}
-
-\newpage
-\section{Testprotokollmall} 
-\label{sec: Testprotokollmall}
-\subsection{TestID:}
-\subsection{Testansvarig:\\Observatör:}
-\subsection{Datum:}
-
-\subsection{Resurser:}
-\emph{[Vilka resurser kommer att användas i testet, med Referenser om så behövs]}
-
-\subsection{Test log:}
-\emph{[En detaljerad log över vad som skädde under testent gång]\\
-T.ex. \\ 14:23 Testet startades \\ 14:39 Fann en bugg huxflux \\ 15:40 Åtgärdade buggen huxflux \\ 16:00 Testet slutfördes}
-\
-
-\subsection{Resultat:}
-\emph{[Vad blev resultat och blev den godkänd]}
-
-\subsection{Buggar:}
-\emph{[Här så ska alla olösta bugg som hittades under testet listas OBS! de ska också skrivas issues i gitlab]}
 \end{document}
