@@ -4,7 +4,7 @@
 \begin{document}
 
 \def\ftitle{Kravspecifikation}
-\def\fversion{1.2}
+\def\fversion{1.3}
 \input{../Templates/titlepage}
 \input{versiontable}
 
@@ -101,6 +101,14 @@ tider.
 Översikten behöver en mängd olika möjligheter att filtrera och anpassa vilken
 data som syns. Detta gäller till exempel att kunna se alla lediga tider för en
 kirurg.\\
+
+\begin{figure}
+	\includegraphics[width=\textwidth,height=.7\textheight]{Usecasediagram.png}
+	\caption{Användarfallsdiagram}
+	\label{fig:Användarfallsdiagram}
+\end{figure}
+
+
 \subsubsection{Platsanpassningskrav}
 \label{subsec:Platsanpassningskrav}
 Den ingående data som systemet använder som grund kommer att behöva vara unik
@@ -128,7 +136,7 @@ erfarenhet av olika operationer och komplexiteten som de har. I tidigare system
 har planeraren fattat beslut om operationstider genom att samla information
 från flera olika system och källor. Användaren har vana att arbeta i
 sjukhusets
-andra system och kan antas ha grundläggande datorvana.
+andra system och kan antas ha grundläggande datorvana. Alla inloggade användare anses vara plannerare vilket går att se i figur \ref{fig:Användarfallsdiagram}.
 
 \subsection{Begränsningar}
 \label{subsec:Begransningar}
@@ -195,7 +203,7 @@ olika huvudfunktionerna som systemet ska ha.
 
 \subsubsection{Beslutsöversikt}
 \textbf{Ska-krav: }
-\begin{enumerate}
+\begin{enumerate}[resume]
   \item Det ska finnas en sorteringar översikt av beslutade operationer.
   \item Det ska finnas en filtreringsfunktion i översikten av beslutade
   operationer.
@@ -215,7 +223,7 @@ olika huvudfunktionerna som systemet ska ha.
 \end{enumerate}
 \subsubsection{Planeringsvy}\label{subsubsec:Planeringsvy}
 \textbf{Ska-krav: }
-\begin{enumerate}
+\begin{enumerate}[resume]
 \item Det ska tydligt framgå i planeringsvyn vilka tider som är inom gränsen
 för den medicinska brådskandegraden.
 \item I planeringsvyn ska det framgå vilka dagar och tider som är lediga för
@@ -239,7 +247,7 @@ Exempel: Om det finns en operationssalstid ledig, men förutbestämd utrustning
 \item Sammantagen operationstid ska visualiseras.
 \end{enumerate}
 \textbf{Bör-krav: }
-\begin{enumerate}
+\begin{enumerate}[resume]
 \item Det ska gå att välja en eller flera kompetenser som ska vara med vid
 genomförandet av operationen.
 \item Det ska gå att se vilka undersökningar och prover som ska genomföras
@@ -272,7 +280,7 @@ involverade i aktuellt genomförande av operationen.
 klinik.
 \end{enumerate}
 \textbf{Om tid finns krav:}
-\begin{enumerate}
+\begin{enumerate}[resume]
   \item Det ska vara lätt att se närmast lediga operationstid utifrån aktuella
   åtgärder och lediga resurser.
   \item Det ska vara möjligt att registrera patientspecifika implantat och
@@ -284,27 +292,21 @@ klinik.
 \end{enumerate}
 \subsubsection{Schemavy}
 \textbf{Ska-krav: }
-\begin{enumerate}
+\begin{enumerate}[resume]
 \item Det ska finnas en kalendervy som innehåller alla planerade operationer.
 \end{enumerate}
 \textbf{Om tid finns krav:}
-\begin{enumerate}
+\begin{enumerate}[resume]
 \item Det ska finnas en filterfunktion i kalendervyn för salar, kompetenser, utrustning m.m. T.ex. kunna se lediga operationstider för en enskild sal.
 \end{enumerate}
 
 \subsection{Kvalitetskrav}
 \label{subsec:kvalitetsakrav}
 \textbf{Ska-krav: }
-\begin{enumerate}
+\begin{enumerate}[resume]
 \item Kodstandarden beskriven i kvalitetsplan sektion \ref{kval-sec:kodstandard} ska följas.
 \end{enumerate}
 
-\section{Användarfallsvy}
-
-Här visas ett diagram över några av de viktigaste användarfallen.\\
-
-\includegraphics[width=\textwidth,height=.7\textheight]{Usecasediagram.png}\\
-Figur 1: Användarfallsdiagram
 
 %\subsection{Systemfunktioner}
 %\label{subsec:Systemfunktioner}
