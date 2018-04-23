@@ -8,11 +8,23 @@
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{enumitem}
+\usepackage{pdfpages}
 
+
+\fancyhf{}
+\fancyfoot[LE,RO]{\thepage}
 \pagestyle{fancy}
+\fancypagestyle{plain}{
+    \fancyhf[lef,rof]{\thepage}%
+}
+
 \rhead{\includegraphics[width=1cm]{../Templates/Aeon}}
 \setlength{\headheight}{25pt}
 \lhead{}
+
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing{\chapter}{\parskip}{-10px}{0px}
 
 \setlength{\parskip}{1em}
 \setlength{\parindent}{0pt}
