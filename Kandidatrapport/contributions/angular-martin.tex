@@ -1,7 +1,49 @@
 \chapter{Angular som webbutvecklingsplattform - Martin}
 
-Angular är en plattform för front-end delen av webbutvecklingsprocessen. Den kommer under vårt projekt användas för att skriva klientsidan av vår applikation i språket TypeScript.
+\vspace{1.5em}
+\section{Inledning}
 
-Plattformen valdes till projektet först och främst eftersom kunden använde sig av Angular i andra projekt, och därför gjorde gruppen ingen utvärdering av Angular som verktyg utan nöjde sig med kundens förslag. Det kan dock vara intressant att göra en sådan utvärdering. Jag har därför tänkt analysera vilka för- och nackdelar Angular har och vilken konsekvens valet av Angular kan tänkas få för applikationens uppbyggnad. Möjligtvis kan jämförelser med andra webbutvecklingsplattformar vara aktuella.
+Det finns i dagsläget ett flertal olika verktyg och ramverk med syfte att underlätta arbete med webbutveckling. För en ovan utvecklare kan det vara svårt att orientera sig bland alla tillgängliga alternativ. Angular och React är båda exempel på sådana. Denna rapport kommer att undersöka det val som måste göras genom att granska ramverket Angular, som i Aeon-projektet använts till att utveckla front-end delen av den schemaläggningsapplikation som tagits fram.
 
-Jag har tänkt samla information från Liu:s bibliotek när jag behöver publicerade artiklar. Annars hittar jag information från webben och använder mig av de erfarenheter med Angular jag och övriga gruppmedlemmar kommer förvärva oss under projektets gång.
+Under Aeon-projektets gång kommer funktioner och beteenden hos Angular att utredas och utvärderas för att ta reda på om just Angular är ett bra val för projekt med liknande parametrar som Aeon.
+
+\section{Syfte}
+
+Syftet med studien är att undersöka vilka faktorer som behöver betraktas vid val av utvecklingsplattform till ett webbutvecklingsprojekt med samma dimensioner som Aeon och med projektdeltagare som har liknande förkunskaper. Studien ska även redogöra för vilka konsekvenser valet av just utvecklingsplattformen Angular kommer ha på projektets design och utförande.
+
+\subsection{Frågor}
+\begin{itemize}
+	\item Vilka faktorer bör man i allmänhet ta hänsyn till vid val av utvecklingsverktyg till ett projekt i webbutveckling?
+	\item Vilken inverkan får valet av Angular som utvecklingsplattform på projektets utförande? 
+\end{itemize}
+
+\subsection{Avgränsningar}
+
+Studien kommer begränsa sig till att undersöka just utvecklingsplattformen Angular, och andra alternativ kommer enbart behandlas översiktligt.
+
+\section{Bakgrund}
+
+
+Studien är utförd i samband med kandidatprojektet i kursen TDDD96. I den kursen fick projektgruppen i uppdrag av en beställare, Region Östergötland, att ta fram ett schemaläggningsstöd för kirurgi för att underlätta planering och bokning av operationer. Det verktyget skulle enligt beställarens uttryckliga krav vara en webbapplikation. Det ställdes inga sådana krav på valet av utvecklingsplattform, men beställarens IT-experter hade i tidigare projekt använd sig av Angular. Ingen av projektmedlemmarna hade några större erfarenheter av arbete med webbutveckling sedan tidigare, och ett flertal hade inga erfarenheter inom området alls. Då ingen i projektgruppen hade några särskilda önskemål på denna punkt och då gruppen såg möjligheter att dra nytta av beställarens tidigare erfarenheter så fattades beslutet att använda Angular i Aeon också. Gruppen utförde alltså ingen egentlig analys av för- och nackdelar eller någon undersökning av andra möjliga alternativ.  
+
+\section{Teori}
+
+Under denna rubrik får läsaren ta del av den teori som ligger bakom studien.
+
+\subsection{Angular}
+
+Angular är en utvecklingsplattform och ett ramverk för utveckling av webbapplikationer. Arkitekturen i Angular är komponentbaserad, där varje komponent innehåller en HTML-mall som beskriver vilket innehåll som ska visas upp för användaren och en TypeScript-klass som hanterar logik och funktionalitet kopplad till HTML-mallen. Angular innehåller även tjänster, som också använder TypeScript. Tjänsterna tillhandahåller logik och funktionalitet som inte är direkt kopplad till någon specifik komponent.  I det projekt som studien behandlar har Angular 5 använts. Angular bör inte förväxlas med dess föregångare med liknande namn, AngularJS, som använder sig av JavaScript istället \cite{angularguide}.
+
+\subsection{TypeScript}
+
+TypeScript är det programmeringsspråk Angular är skrivet i och det språk detta kandidatprojekt använt för att skriva klasser och tjänster i Angular. Språket är en påbyggnad av JavaScript som bland annat lägger till stöd för statisk typning och klasser \cite{typescript}.
+
+\section{Metod}
+
+Under denna rubrik kommer de arbetssätt som användes under studiens gång att redovisas. De metoder som använts är en litteraturstudie och en empirisk undersökning av projektgruppens egna erfarenheter med Angular. 
+
+\subsection{Litteraturstudie}
+
+\subsection{Empirisk undersökning} 
+
+Med hjälp av en enkät och intervjuer frågades gruppens medlemmar ut angående de erfarenheter av Angular de förvärvat sig under projektets gång. I enkäten fick projektgruppens medlemmar svara på frågor om vad de tyckt varit bra med Angular, vad som varit dåligt, vilken funktionalitet de haft störst nytta av och vilken funktionalitet de saknat. De har även fått svara på om de sammanfattningsvis varit nöjda med valet av Angular som utvecklingsplattform.  
