@@ -1,10 +1,10 @@
-\documentclass[a4paper,10pt, twoside]{article}
+\documentclass[a4paper,10pt]{article}
 \input{../Templates/Settings}
 \externaldocument[kand-]{../Kandidatrapport/Kandidatrapport}
 
 \begin{document}
 \def\ftitle{Kvalitetsplan}
-\def\fversion{1.1}
+\def\fversion{1.2}
 \input{../Templates/titlepage}
 
 \section*{\begin{center}Dokumentationshistorik\end{center}}
@@ -20,6 +20,8 @@
    2018-02-19 & Version 1.0 färdigställd & 1 &  1.0\\
  \hline
    2018-03-04 & Revision av version 1.0  & 2 & 1.1\\
+ \hline
+    2018-04-23 & Tillägg sektion "Kodstandard för TypeScript och JavaScript"  & 3 & 1.2\\
  \hline
 \end{tabular}
 \clearpage
@@ -56,6 +58,7 @@ Följande lista definierar namn och termer som används i dokumentet.
     \item Scrum - En agil utvecklingsmetodik
     \item Asana - Ett webb-baserat verktyg för projekthantering
     \item Typescript - Ett kodspråk med öppen källkod.
+    \item TSLint - Ett statiskt kodanalys-verktyg som felsöker koden i realtid.
 \end{itemize}
 
 \section{Översiktlig kvalitetsplan}
@@ -109,6 +112,9 @@ För att alla dokument som skrivs i projektet ska ha ett konsekvent utseende och
 \subsubsection{Kodstandard för TypeScript och JavaScript}
 \label{sec:kodstandard}
 I denna sektion beskrivs den kodstandard som ska följas vid kodning i TypeScript och JavaScript.
+
+Gruppens kod exklusivt importerade bibliotek skall uppfylla de konfiguerbara regler som de statiska kodanalys-verktyget TSLint tillhandager.
+Detta för att uppnå en hållbar standard inom läsbarhet, underhåll samt funktionallitet.
 
 \textbf{Språk}
 \begin{itemize}
