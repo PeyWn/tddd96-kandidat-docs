@@ -1,11 +1,93 @@
 \chapter{Kvalitetsförsäkrande metoder i ett småskaligt mjukvaruprojekt}
-
-
 Inviduellt bidrag Kvalitetssamordnare. Tor Utterborn
+
 \section{Inledning}
-I dagens industri sätter företagare mer och mer fokus på hållbarhetstänk. Hållbarhetstänk i dels metoder för utvecklandet av produkten, men också hållbarhetstänk hos produkten i ekonomiska,  miljö och samhällsaspekter.
-Om man använder metoder specificerade i kvalitetsplanen för att kvalitetsförsäkra produkten. Kommer vi då uppnå en högkvalitativ produkt i dessa tre ämnesområden?
+I dagens industri sätter företagare mer och mer fokus på hållbarhet när de ska producera en produkt eller tjänst. Hållbarhet i dels metoder för utvecklandet, men också hållbarhet i ekonomiska, miljö och samhällsaspekter.
+De tre aspekterna skall tillsammans bilda en s.k. (LCA) [1]. En ’sluten kedja’ där de tre områdenas sammansatta effekt får en så liten negativ påverkan på resurser som möjligt.
+
 \section{Syfte}
-Det finns många kvalitetsförsäkrande arbetsmoment inom småskalig mjukvaruutveckling. Kan några av dessa metoder föra vårt arbete mot en mer kvalitativ produkt? Och ur ett större perspektiv, vad kan man dra för slutsatser kring de arbetsmetoder, standard etc. som undersökts. 
+Det finns många kvalitetsförsäkrande arbetsmoment inom småskalig mjukvaruutveckling. Kan några av de metoder vi valt föra vårt arbete mot en mer kvalitativ produkt? Och ur ett större perspektiv, vad kan man dra för slutsatser kring de arbetsmetoder, standard etc. som undersökts. \\
 Jag tycker det kan vara intressant att undersöka detta i ett projekt som ska utveckla ett verktyg som i teorin ska boka in och användas för att boka in tusentals operationer om året.
-Jag tänkte samla information från Linköpings publicerade artiklar i deras bibliotek, möjligtvis artiklarna vi blev tilldelade i hållbarhetsseminariet. Sedan får jag i min roll som kvalitetssamordnare samla och diskutera erfarenheter med projektmedlemmar under projektets gång.
+Jag tänkte samla information från Linköpings publicerade artiklar i deras bibliotek, internet, möjligtvis artiklarna vi blev tilldelade i hållbarhetsseminariet. Sedan får jag i min roll som kvalitetssamordnare samla och diskutera erfarenheter med projektmedlemmar under projektets gång.
+
+\section{Metoder}
+
+Kvalitetsförsäkran kan vara dyrt, tidskrävande och det är ofta svårt att avgöra när man uppnått sina mål tillräckligt. [Källa]
+
+IEEE-730 är en utbredd standard för kvalitetsförsäkran inom mjukvaruutveckling. Standarden ska bistå projektet genom att ställa frågor som:
+\\ \\
+\emph{När är ett projekts kvalitativa mål uppfyllda?}
+
+Som kvalitetssamordnare bör man fastslå metoder i sin kvalitetsplan för att veta svaren på ovan nämnda fråga. \\
+
+ISO/IEC TR 29110-5-1-3
+
+Om en produkt eller tjänst har en positiv inverkan på de tre huvudområdena hållbar utveckling fokuserar på så kan den enligt ”ISO/IEC TR 29110-5-1-3” [Källa 2] anses vara av högkvalitativa mått.  Denna ISO (standardisering) fokuserar på: 
+
+\begin{itemize}
+	\item Övervakning av parallella arbetsflöden
+	\item Återanvändning av komponenter i projekt
+	\item Kontinuerligt mäta projekt och förbättra processer.
+\end{itemize}
+
+Ett av de ”modeord” som existerar inom kvalitetsförsäkrande metoder inom mjukvaruutveckling idag är automatiserade kod-kontroller i utvecklingsmiljön. Att manuellt utföra dessa kvalitetsförsäkrande processer är en uttröttande och repetitiv process. [Källa]
+\subsection{TSLint}
+Ett s.k. statiskt kodanalys-verktyg är Lint som i grunden är utvecklat för programmeringsspråket C. En vidareutveckling på verktyget är ”TSLint”, samma verktyg men utvecklat för Typescript, de kodspråk vi valde att använda i vårt projekt. TSLint skall hjälpa utvecklaren av projektet med läsbarhet, underhåll samt funktionalitetsproblem med koden.
+
+\subsection{Angular}
+Ett av de mest etablerade programmeringsramverken för webbutveckling i dagsläget är Angular. [källa] Angular har med sina komponentbaserad arkitektur[5] en vy att vara ett ramverk som förespråkar:
+
+\begin{itemize}
+	\item Återanvändning av kod
+	\item Läsbarhet
+	\item Enkla enhetstester
+	\item Underhåll
+\end{itemize}
+
+
+\section{Frågeställning}
+
+Om man använder metoder specificerade i kvalitetsplanen för att kvalitetsförsäkra produkten. 
+
+Kommer användandet av TSLint under projektets gång hjälpa oss att uppnå en mer kvalitativ produkt/tjänst ur ett LCA perspektiv?
+
+Kommer användandet av ramverket Angular under projektets gång hjälpa oss att uppnå en mer kvalitativ produkt/tjänst ur ett LCA perspektiv?
+
+\section{Resultat}
+Här tänkte jag samla data från enkäter och intervjuer med projektmedlemmar när vi kommit längre i implementeringen av koden i projektet.
+Jag tänkte göra mer undersökningar och presentera mina fynd från artiklar, bloggar, vetenskapliga artiklar etc. i områdena: 
+
+Frågor i enkäten/intervju kommer vara i stil med:
+
+
+\begin{itemize}
+	\item Fördelar med att använda statisk kodanalys,angular,webstorm etc. 
+	\item Nackdelar med att suppressa warnings 
+\end{itemize}
+
+Ur ett perspektiv som fokuserar på: 
+\begin{itemize}
+	\item Läsbarhet 
+	\item Underhåll
+	\item Funktionalitet
+	\item Övervakning av parallella arbetsflöden
+	\item Återanvändning av komponenter i projekt
+	\item Kontinuerligt mäta projekt och förbättra processer.
+\end{itemize}
+
+Vilka fördelar/nackdelar ser du som projektmedlem med användandet av TSLint/Angular?
+
+
+
+\section{Källor}
+
+[1] LCA - Book - Life Cycle Assessment (LCA) - A guide to approaches, experiences and information sources - European Enviroment Agency 
+
+[2] ISO - ISO/IEC TR 29110-5-1-3:2017 
+
+[3] Sustainable software-architectures -  https://www.software.ac.uk/blog/2017-05-22-best-practices-sustainable-software-architectures 
+
+[4] IEEE-730 - https://standards.ieee.org/findstds/standard/730-2014.html 
+
+[5] Angular - https://www.altexsoft.com/blog/engineering/the-good-and-the-bad-of-angular-development/ 
+
