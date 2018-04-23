@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[a4paper,10pt, twoside]{article}
 \input{../Templates/Settings}
 \usepackage{multicol}
 \usepackage[backend=bibtex,sorting=none]{biblatex}
@@ -195,7 +195,7 @@ Den här sektionen redogör för de olika testningsprocedurerna som ska utföras
 
 \subsection{Enhetstest}
 \label{sec:Enhetstest}
-  \textbf{Syfte:} Efter det att en funktion har implementerats ska koden genomgå ett enhetstest. Testet ska utföras för att säkerställa att funktionen     	   fungerar enligt specifikationen \cite{kravspec}. Vidare används testet för att fastställa att funktionen är följer designkraven. Testerna kommer att 	   vara av typen black-box. 
+  \textbf{Syfte:} Efter det att en funktion har implementerats ska koden genomgå ett enhetstest. Testet ska utföras för att säkerställa att funktionen     	   fungerar enligt specifikationen \cite{kravspec}. Vidare används testet för att fastställa att funktionen är följer designkraven. Testerna kommer att 	   vara av typen black-box.
 
   \textbf{Ingående data:}
     \begin{enumerate}
@@ -210,7 +210,7 @@ Den här sektionen redogör för de olika testningsprocedurerna som ska utföras
 
   \textbf{Utförande:} Testet ska utföras av berörda parter samt en oberoende
    person. Personerna som utför testet ska först skapa testspecifikation utifrån beskrivningen i testspecifikationsmallen. När det här är klart så utför
-   personerna testet enligt specifikationen \cite{kravspec}. Ett protokoll ska föras enligt mallen för testprotokoll, se appendix \ref{sec:       		 
+   personerna testet enligt specifikationen \cite{kravspec}. Ett protokoll ska föras enligt mallen för testprotokoll, se appendix \ref{sec:
    Testprotokollmall} testprotokollmall. Omn ågra problem uppstod som inte kunde lösas på plats ska dessa föras in under \emph{issues} i projektets gitlab.
 
   \textbf{Resultat:}
@@ -224,69 +224,69 @@ Den här sektionen redogör för de olika testningsprocedurerna som ska utföras
   \textbf{Testkriterium:} Om resultatet från testprotokollet, se punkt \ref{itm:Testprotokoll-e} under \emph{resultat} i sektion \ref{sec:Enhetstest}
    ovan, stämmer överens med det förväntade resultatet från testspecifikationen, punkt \ref{itm:Testspecifikation-e} under \emph{resultat} i sektion
   \ref{sec:Enhetstest} ovan, så anses komponenten klarat testet.
-  
+
   \textbf{Enhetstester under iteration 4 :}
   \\  Under iteration 4 kommer följande enhetstester att genomföras.
-  
+
   \textbf{TestID:} \ref{sec:Boka Operation}
   \\ \textbf{Syfte:} Säkerhetställa att det går att välja tid, se lediga bokningsbara tider, bli informerad när kompetens, material eller utrustning saknas.
-  \\ \textbf{Ingående data:}  
-  \\ \textbf{Utförande:} Interaktion med gränssnittet. 
-  \\ \textbf{Resultat:}	
+  \\ \textbf{Ingående data:}
+  \\ \textbf{Utförande:} Interaktion med gränssnittet.
+  \\ \textbf{Resultat:}
   \\ \textbf{Testkriterium:}
-  
+
   \textbf{TestID:} \ref{sec: Boka sal}
   \\ \textbf{Syfte:} Namn på lokal och typ av lokal ska kunna bokas. Det ska även gå att se tillgängliga tider för lokalen.
-  \\ \textbf{Ingående data:}   
+  \\ \textbf{Ingående data:}
   \\ \textbf{Utförande:} Interaktion med gränssnittet.
-  \\ \textbf{Resultat:}	
-  \\ \textbf{Testkriterium:} 
-  
+  \\ \textbf{Resultat:}
+  \\ \textbf{Testkriterium:}
+
   \textbf{TestID:} \ref{sec: Avboka sal}
   \\ \textbf{Syfte:} Ska vara möjligt att avboka en bokad lokal.
-  \\ \textbf{Ingående data:} Välja tid.  
-  \\ \textbf{Utförande:} 
-  \\ \textbf{Resultat:}	
+  \\ \textbf{Ingående data:} Välja tid.
+  \\ \textbf{Utförande:}
+  \\ \textbf{Resultat:}
   \\ \textbf{Testkriterium:}
-  
+
   \textbf{TestID:} \ref{sec: Inloggning}
   \\ \textbf{Syfte:} Det ska gå att logga in i systemet med ett giltigt lösenord.
-  \\ \textbf{Ingående data:} 
-  \\ \textbf{Utförande:} 
-  \\ \textbf{Resultat:}	
+  \\ \textbf{Ingående data:}
+  \\ \textbf{Utförande:}
+  \\ \textbf{Resultat:}
   \\ \textbf{Testkriterium:}
-  
+
   \textbf{TestID:} \ref{sec: Tidlinje för operation}
-  \\ \textbf{Syfte:} Visa tillgänglig beslutsdata  
-  \\ \textbf{Ingående data:}   
-  \\ \textbf{Utförande:} 
-  \\ \textbf{Resultat:}	
+  \\ \textbf{Syfte:} Visa tillgänglig beslutsdata
+  \\ \textbf{Ingående data:}
+  \\ \textbf{Utförande:}
+  \\ \textbf{Resultat:}
   \\ \textbf{Testkriterium:}
-  
+
   \textbf{TestID:} \ref{sec: Översikt av beslutade operationer}
   \\ \textbf{Syfte:} Presentera belutade operationer.
-  \\ \textbf{Ingående data:}   
-  \\ \textbf{Utförande:} 
-  \\ \textbf{Resultat:}	
+  \\ \textbf{Ingående data:}
+  \\ \textbf{Utförande:}
+  \\ \textbf{Resultat:}
   \\ \textbf{Testkriterium:}
-  
+
   \textbf{TestID:} \ref{sec: Schemaöversikt för planerade operationer}
   \\ \textbf{Syfte:} Visa planerade men ej beslutade operationer som ska kunna filtreras.
-  \\ \textbf{Ingående data:} 
-  \\ \textbf{Utförande:} 
-  \\ \textbf{Resultat:}	
+  \\ \textbf{Ingående data:}
+  \\ \textbf{Utförande:}
+  \\ \textbf{Resultat:}
   \\ \textbf{Testkriterium:}
-  
+
   \textbf{TestID:} \ref{sec: Resevera material, lokal, kompetens och utrustning}
   \\ \textbf{Syfte:} Reservera resurser som behövs för operation samt post- eller pre-operativa processer.
-  \\ \textbf{Ingående data:} 
-  \\ \textbf{Utförande:} 
-  \\ \textbf{Resultat:}	
+  \\ \textbf{Ingående data:}
+  \\ \textbf{Utförande:}
+  \\ \textbf{Resultat:}
   \\ \textbf{Testkriterium:}
-  
+
 \subsection{Integrationstest}
 \label{sec:Integrationstest}
-\textbf{Syfte:} Ett integrationstest ska utföras för att säkerställa att en modul och dess komponenter fungerar enligt specifikationen \cite{kravspec}. 	  Testet säkerställer också att modulen följer designkraven. När funktioner är klara och testade och ska sammanfogas ska de integrationstestas. 
+\textbf{Syfte:} Ett integrationstest ska utföras för att säkerställa att en modul och dess komponenter fungerar enligt specifikationen \cite{kravspec}. 	  Testet säkerställer också att modulen följer designkraven. När funktioner är klara och testade och ska sammanfogas ska de integrationstestas.
 
 \textbf{Ingående data:}
 \begin{enumerate}
@@ -298,7 +298,7 @@ Den här sektionen redogör för de olika testningsprocedurerna som ska utföras
      på projektets gitlab. Det är sen upp till valfri person att lösa dem.
 \end{enumerate}
 
-\textbf{Utförande:} 
+\textbf{Utförande:}
 Testet ska utföras av berörda parter, det bör max finnas en representant per komponent som ska integrationstestas. Personerna som utför testet ska börja med att skapa testspecifikation utifrån den beskrivning som finns i testspecifikationsmallen. När det är klart så utför personerna testet enligt specifikationen \cite{kravspec}. Ett protokoll ska föras enligt mallen för testprotokoll, se appendix \ref{sec: Testprotokollmall} Testprotokollmall. Om några problem uppstod som inte kunde lösas på plats ska dessa föras in under \emph{issues} i projektets gitlab.
 
 \textbf{Resultat:}
@@ -308,18 +308,18 @@ Testet ska utföras av berörda parter, det bör max finnas en representant per 
     \item Bugglista: Listan ska vid behov uppdateras.
 \end{enumerate}
 
-\textbf{Testkriterium:} 
+\textbf{Testkriterium:}
 Om resultatet från testprotokollet, se punkt \ref{itm:Testprotokoll-i} under \emph{resultat} i sektion \ref{sec:Integrationstest} ovan, stämmer överens med det förväntade resultatet från testspecifikationen, punkt \ref{itm:Testspecifikation-i} under \emph{resultat} i sektion \ref{sec:Integrationstest} ovan, så anses komponenten klarat testet.
 
 \textbf{Integrationstester under iteration 4}
-     
+
 \textbf{TestID:}
-\\ \textbf{Syfte:} 
-\\ \textbf{Ingående data:} 
-\\ \textbf{Utförande:} 
-\\ \textbf{Resultat:}	
+\\ \textbf{Syfte:}
+\\ \textbf{Ingående data:}
+\\ \textbf{Utförande:}
+\\ \textbf{Resultat:}
 \\ \textbf{Testkriterium:}
-  
+
 \subsection{Systemtest}
 \label{sec:Systemtest}
 \textbf{Syfte:} Testet ska utföras för att säkerställa att systemet behandlar och utan problem kan utföra alla de funktioner som krävs av systemet enligt specifikationen \cite{kravspec}.
@@ -352,15 +352,15 @@ punkt \ref{itm:Testspecifikation-s} under \emph{resultat} i sektion
 \ref{sec:Systemtest} ovan, så anses komponenten klarat testet.
 
 \textbf{Systemtester under iteration 4}
-\\ Under iteration 4 ska ett systemtest genomföras. 
+\\ Under iteration 4 ska ett systemtest genomföras.
 
-   \textbf{TestID:} 
-\\ \textbf{Syfte:} 
-\\ \textbf{Ingående data:} 
-\\ \textbf{Utförande:} 
-\\ \textbf{Resultat:}	
+   \textbf{TestID:}
+\\ \textbf{Syfte:}
+\\ \textbf{Ingående data:}
+\\ \textbf{Utförande:}
+\\ \textbf{Resultat:}
 \\ \textbf{Testkriterium:}
-  
+
 \subsection{Acceptanstest}
 \textbf{Syfte:} Två stycken acceptanstest ska att genomföras. Ett test ska utföras på systemets grafiska gränssnitt.  Det andra testet ska utföras på hela systemet efter att systemtester blivit godkänt.
 
@@ -393,11 +393,11 @@ gitlab.
 \textbf{Acceptanstester under iteration 4}
 \\ Under iteration 4 ska två stycken acceptanstester genomföras.
 
-\textbf{TestID:} 
-  \\ \textbf{Syfte:} 
-  \\ \textbf{Ingående data:} 
-  \\ \textbf{Utförande:} 
-  \\ \textbf{Resultat:}	
+\textbf{TestID:}
+  \\ \textbf{Syfte:}
+  \\ \textbf{Ingående data:}
+  \\ \textbf{Utförande:}
+  \\ \textbf{Resultat:}
   \\ \textbf{Testkriterium:}
 
 \printbibliography
@@ -418,7 +418,7 @@ gitlab.
 
 \newpage
 
-\section{Testprotokollmall} 
+\section{Testprotokollmall}
 \label{sec: Testprotokollmall}
 
 
