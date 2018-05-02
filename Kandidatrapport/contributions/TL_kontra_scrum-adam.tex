@@ -4,10 +4,10 @@
 Scrum modellen är en arbetssätt som används ofta inom mjukvaruutveckling och är en bevisat fungerande metod. I en grupp som använder sig utav Scrum-metoden så finns det ingen specifik ledare, om man bortser från scrum master som har ansvaret för att se till att Scrum-metodiken används, då alla är utvecklare och gruppen bestämmer tillsammans vad som ska göras och hur problem ska lösas.
 I detta projektet har även alla gruppmedlemar en projektroll varav en person innehar rollen som teamledare. Denna studie ska utreda hur rollen som teamledare fungerar i kombination med scrum-metodik.
 
-\section{A.1.1 Syfte}
+\subsection{A.1.1 Syfte}
 Rollen som teamledare innebär att du ska coacha projektgruppen och se till att de mål som finns för projektet uppfylls. Enligt scrum-metodik så är det gruppen som tillsammans ska bestämma över de beslut som tas och hur problem ska lösas. Syftet med denna studie är att utreda om det går att kombinera rollen som teamledare med scrum-metodik.
 
-\section{A.1.2 Frågeställning}
+\subsection{A.1.2 Frågeställning}
 Utefter det syfte som denna studie har ska följande frågor försöka besvaras:
 
 \begin{enumerate}
@@ -22,8 +22,61 @@ I början av projektet skulle gruppen tilldela samtliga medlemmar en roll, däri
 \section{A.3 Teori}
 Detta avsnitt går igenom den teori som finns till grund för denna studie.
 
-\subsection{A.3.1 Scrum}
-Scrum är en agil utvecklingsmetod som består av tre organ, produktägaren, scrummästaren och utvecklingsteamet. Produktägaren är den person som kommer med en beställning till utvecklingsteamet. Scrummästaren arbetar för att scrum-metodiken ska upprätthållas och ser till, tillsammans med produktägaren, att underhålla backloggen så att utvecklingsteamet förstår vad som ska göras och så att arbetet kan fortgå. Utvecklingsteamet är själva kärnan i scrum-metodiken, det är teamet som bestämmer vilka uppgifter som ska utföras under en sprint och hur de ska lösas. För en utförligare beskrivning av scrum-metodiken, se avsnitt \ref{scrum}.
+\subsection{A.3.1 Scrum} \label{adam_scrum}
+Scrum är en arbetsmetodik som främst används för mjukvaruutveckling. Metodiken appliceras på mindre team (3-9 personer) och går ut på att teamet arbetar i tidsbestämda sprintar där det existerar ett antal uppgifter som ska genomföras under respektive sprint.
+I scrum så existerar ett fåtal specifika roller som används för att beskriva de inblandade i projektet. De roller som existerar är:
+
+\begin{itemize}
+	\item \textbf{Produktägare}
+	
+	Produktägaren är den person som representerar beställaren, vanligtvis aktieägarna i större bolag, och förmedlar till utvecklingsteamet vilka krav som finns och vilka av dessa som har högst prioritet. En viktig egenskap för en produktägare är empati, du arbetar med aktieägare som ofta har olika bakgrund och värderingar. Produktägaren måste också vara bra på att samarbeta med utvecklarna så att arbetet med produkten går bra och att krav uppfylls.
+	
+	\item \textbf{Scrummästare}
+	
+	Scrummästaren skiljer sig från den klassiska teamledaren eller projektledaren. Dess roll är att se till att det inte existerar några hinder för utvecklingsteamet så att de kan uppnå projektmål och leverera en produkt. En annan viktig uppgift för scrummästaren är att se till att de processer som man valt att applicera i scrum-metoden utförs och efterföljs. Samarbete med produktägaren finns också för att underhålla backloggen så att utvecklingsteamet förstår vad som ska göras och så att arbetet med produkten kan fortgå.
+	
+	\item \textbf{Utvecklingsteam}
+	
+	Utvecklingsteamet är själva projektgruppen och den ansvarar för att göra framsteg i arbetet och utföra de uppgifter som existerar i respektive sprint. Trots att det kan finnas olika typer av roller så kallas alla i teamet för utvecklare. För att inte skapa förvirring så kallas utvecklingsteamet för leveransteam och personerna för teammedlemmar.	
+\end{itemize}
+
+Utöver de roller som existerar i scrum så använder man sig också av fyra olika mötestyper som inträffar med olika frekvens. Det viktiga med dessa möten är att de är tidsbestämda och den maximala tid som ska läggas på dessa beror i flera fall på hur lång en sprint i projektet är, detta för att man inte ska lägga alltför lång tid på möten. De mötestyper som existerar är:
+
+\begin{itemize}
+	\item \textbf{Sprintplanering (maximalt 4 timmar för en tvåveckors-sprint)}
+	
+	Sprintplaneringen är uppdelad i två delar, den första delen går ut på att produktägaren, scrummästaren och utvecklingsteamet väljer de uppgifter från backloggen som man tror kommer hinnas med under den kommande sprinten. När detta är gjort så kommer planeringens andra del, utvecklingsteamet diskuterar och kommer mer specifikt fram till vilka arbetsuppgifter som behöver göras för att uppgifterna från backloggen ska kunna utföras och uppfyllas. Denna andra iteration över uppgifterna kan leda till att man delar upp vissa uppgifter eller att vissa uppgifter läggs tillbaka i backloggen då man inte tror att dessa kommer hinnas med under kommande sprint.
+	
+	\item \textbf{Daglig scrum (maximalt 15 minuter)}
+	
+	Varje dag hålls ett dagligt scrum-möte för att uppdatera utvecklingsteamet om vilka framsteg och hinder som finns i sprinten så att teamet kan öka sina chanser att nå målen med nuvarande sprint. Dessa möten är tidsbestämda till 15 minuter och de kan utföras stående i en ring, så att man inte fokuserar på annat och så att man håller sig inom de 15 minuterna. Man kan utgå ifrån tre frågor under en daglig scrum:
+	
+	\begin{itemize}
+		\item Vad har jag gjort sedan igår?
+		\item Vad ska jag åstadkomma till imorgon?
+		\item Vad hindrar mig?
+	\end{itemize}
+	
+	Om det skulle komma fram att det finns några hinder i gruppen så ska scrummästaren notera detta och man bör sätta en person på att lösa problemet så att sprinten kan fortgå utan hinder.
+	
+	\item \textbf{Sprintgenomgång (maximalt 2 timmar för en tvåveckors-sprint)}
+	
+	När en sprint är avslutad hålls en sprintgenomgång, där man tittar på vilka arbetsuppgifter utvecklingsteamet har, och inte har, hunnit med att slutföra. Man håller också en demo för beställaren där man visar vilka framsteg som har gjorts under sprinten. Efter genomgång av utförda och icke utförda arbetsuppgifter samt demo så diskuterar utvecklingsteamet och beställaren vad teamet ska arbeta med härnäst.
+	 
+Det som är viktigt att tänka på under en sprintgenomgång är att man inte ska visa upp arbetsuppgifter som inte är färdiga, t.ex. ska man inte visa upp funktionalitet i ett program om funktionaliteten inte är helt färdig.
+
+\item \textbf{Sprintåterblick (maximalt 90 minuter för en tvåveckors-sprint)}
+
+När en sprintgenomgång har utförts är det dags för en sprintåterblick. Sprintåterblick innebär att man utvärderar den sprint som har varit genom att utgå från två frågor:
+
+\begin{itemize}
+	\item Vad gick bra under sprinten?
+	\item Vad kan förbättras till nästa sprint?
+\end{itemize}
+
+Från dessa två frågor så identifierar man förbättringar som kan göras. Man väljer ut några av dessa punkter och arbetar med dem i nästa sprint.
+
+\end{itemize}
 
 \subsection{A.3.2 Teamledarrollen}
 Teamledaren är den person som ska coacha teamet mot de mål som är uppsatta. Du är lyhörd och ser till att alla känner sig delaktiga i processen. Teamledaren är inte en projektledare och kan därför ta ett steg tillbaka i ledarrollen för att få medlemmar i gruppen att ta plats och utvecklas.\cite{teamledare} Trots att teamledaren kan ta ett steg tillbaka så är personen ändå närvarande i gruppen och ser till att ha täta avstämningar för att ha koll på vad som händer och för att skapa samhöriget inom gruppen.\cite{teamguide}
