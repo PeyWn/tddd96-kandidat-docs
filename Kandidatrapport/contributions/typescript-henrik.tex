@@ -1,23 +1,23 @@
-\chapter{Jämförelse mellan TypeScript och JavaScript i projektet - Henrik Lindström}
+\chapter{Jämförelse mellan TypeScript och JavaScript - Henrik Lindström}
 
 \section{Inledning}
-Vid utveckling av webbapplikationer är språkvalen något begränsade. I grunden är det dynamiskt typade JavaScript ofta det enda alternativet eftersom det är det enda scriptingspråk med ett brett stöd av webbläsare. Vill man ha statisk typning så finns det dock alternativ som uppnår samma webbläsarstöd genom att kompileras till JavaScript. Ett av dessa är TypeScript som är en typad utökning av JavaScript. Under projektet användes delvis TypeScript vid utveckling av webbklienten och delvis JavaScript vid utveckling av webbservern.
+Vid utveckling av webbapplikationer är språkvalen något begränsade. I grunden är det dynamiskt typade JavaScript ofta det enda alternativet eftersom det är det enda scriptspråket med ett brett stöd av webbläsare. Vill man ha statisk typning så finns det dock alternativ som uppnår samma webbläsarstöd genom att kompileras till JavaScript. Ett av dessa är TypeScript som är en typad utökning av JavaScript. Under projektet användes delvis TypeScript och delvis JavaScript vid utveckling av webbklienten respektive webbservern.
 
 I denna rapport utreds hur de två olika språken och dess olika typsystem påverkade utvecklingsarbetet i projektet Schemaläggningsstöd för kirurgi där en webbapplikation utvecklades.
 \section{Syfte}
-Denna rapport undersöker positiva och negativa effekter med användning av TypeScript jämfört med JavaScript i projektet. Mer specifikt är de två språkens olika typsystem som ligger i fokus. Syftet med detta är för att komma fram till vilka effekter statisk jämfört med dynamisk typning hade på utvecklingsarbetet. Detta innefattar effekter på feldetektering, kodförståelse och utvecklingsfart. 
+Denna rapport undersöker positiva och negativa effekter med användning av TypeScript jämfört med JavaScript i projektet. Mer specifikt är det de två språkens olika typsystem som ligger i fokus. Syftet med detta är att komma fram till vilka effekter statisk typning hade på utvecklingsarbetet jämfört med dynamisk. Detta innefattar effekter på feldetektering, kodförståelse och utvecklingsfart. 
 
-\section{Frågeställning}
+\section{Frågeställningar}
 För att uppfylla syftet kommer följande frågeställningar att besvaras i rapporten:
 \begin{enumerate}
 \item Bidrog den statiska typningen i TypeScript till att fel hittades tidigare under utvecklingen?
 \item Bidrog den statiska typningen i TypeScript till kod som var lättare att läsa och förstå?
-\item Hur påverkades produktiviteten vid utveckling av statisk jämfört med dynamisk typning?
+\item Hur påverkades produktiviteten vid utveckling av statisk typning jämfört med dynamisk?
 \end{enumerate}
 \section{Bakgrund}
 I projektet utvecklades en webbapplikation bestående av två delar, en webbklient och en webbserver. Eftersom det bestämdes att klienten skulle skrivas med hjälp av plattformen Angular medförde det också språket TypeScript som i plattformen. På serversidan bestämdes det istället att utvecklingen skulle ske med vanlig JavaScript. Detta innebar alltså att båda språken användes i projektet och att gruppmedlemmarna fick testa på och få erfarenheter av dem båda. Alla medlemmar i projektet hade också svaga eller inga kunskaper om de båda språken innan projektet. Detta innebar att projektet lämpade sig rätt så bra för denna undersökning.
 
-Jämförelse mellan strikt och dynamiskt typade språk är relevant eftersom det finns en massa språk på båda sidor som flitigt används inom mjukvaruutveckling. Detta tyder på att båda typsystemen är mycket relevanta och det är därför intressant att jämföra dem, i det här fallet inom webbutveckling.
+Jämförelse mellan strikt och dynamiskt typade språk är relevant eftersom det finns många språk på båda sidor som flitigt används inom mjukvaruutveckling. Detta tyder på att båda typsystemen är mycket relevanta och det är därför intressant att jämföra dem, i det här fallet inom webbutveckling.
 \section{Teori}
 I denna del beskrivs teori gällande de de två språken som jämförs i rapporten och deras olika typsystem.
 \subsection{JavaScript}
@@ -25,9 +25,9 @@ I denna del beskrivs teori gällande de de två språken som jämförs i rapport
 \subsection{Dynamisk typning}
 \subsection{Statisk typning}
 \section{Metod}
-För att besvara frågeställningarna samlades gruppmedlemmarnas erfarenheter med de två olika språken under projektet. Alla medlemmar kom under utvecklingen i kontakt med både JavaScript och TypeScript och hade därför grund för att jämföra dem. Dessa erfarenhter samlades dels kontinuerligt under projektet men även med hjälp av en enkät i slutet av utvecklingsarbetet. Utöver gruppens erfarenheter studerades även litteratur om feldetektering och vidareutveckling av kod för dynamisk och statisk typning. Detta användes som komplettering och som jämförelse för de erfarenheter som samlats i gruppen.
+För att besvara frågeställningarna samlades gruppmedlemmarnas erfarenheter med de två olika språken under projektet. Alla medlemmar kom under utvecklingen i kontakt med både JavaScript och TypeScript och hade därför grund för att jämföra dem. Dessa erfarenhter samlades dels kontinuerligt under projektet och dels med hjälp av en enkät mot slutet av utvecklingsarbetet. Utöver gruppens erfarenheter studerades även litteratur om feldetektering och vidareutveckling av kod för dynamisk och statisk typning. Detta användes som komplettering och som jämförelse för de erfarenheter som samlats i gruppen.
 \subsection{Enkät}
-För att hämta in erfarenheter inom hur gruppens medlemmar upplevt att feldetektering, kodförståelse och utvecklingsfart delades en enkät ut internt som besvarades av alla medlemmar. Enkäten bestod av en beskrivning följt av frågorna. Frågorna som användes presenteras i tabell \ref{henrik_fragor} nedan.
+För att hämta in erfarenheter inom hur gruppens medlemmar upplevt att feldetektering, kodförståelse och utvecklingsfart delades en enkät ut internt som besvarades av alla medlemmar. Enkäten inleddes av en kort beskrivning av undersökningen följt av 6 frågor. Frågorna som användes presenteras i tabell \ref{henrik_fragor} nedan.
 
 \begin{table}[h]
 \centering
@@ -37,14 +37,16 @@ För att hämta in erfarenheter inom hur gruppens medlemmar upplevt att feldetek
 \begin{tabular}{|c|c|c|}
 \hline
 Nr & Fråga                                                                                                                                                 & Svarsalternativ                                                                                                     \\ \hline
-1  & \begin{tabular}[c]{@{}c@{}}Hur ofta hjälpte typsystemet i TypeScript dig att undvika\\ fel i koden vid skrivning eller kompilering?\end{tabular}      & Ofta, Ibland, Aldrig                                                                                                \\ \hline
+1  & \begin{tabular}[c]{@{}c@{}}Hur ofta hjälpte typsystemet i TypeScript dig att undvika\\ fel i koden vid skrivning eller kompilering?\end{tabular}      & Ofta, Ibland, Sällan/aldrig                                                                                         \\ \hline
 2  & \begin{tabular}[c]{@{}c@{}}Tror du att fler fel hade gått odetekterade om klienten skrivits\\ i JavaScript i stället?\end{tabular}                    & Ja, Vet ej, Nej                                                                                                     \\ \hline
-3  & \begin{tabular}[c]{@{}c@{}}Hur mycket hjälpte klasser och typsättning av variabler och funktioner\\ dig att förstå andra medlemmars kod?\end{tabular} & Ingenting, Liten hjälp, Stor hjälp                                                                                  \\ \hline
-4  & \begin{tabular}[c]{@{}c@{}}Påverkade den extra typsättningen i TypeScript din\\ produktivitet i utvecklingen?\end{tabular}                            & \begin{tabular}[c]{@{}c@{}}Hade varit produktivare utan, Ingen skillnad,\\ Hjälpte med produktiviteten\end{tabular} \\ \hline
+3  & \begin{tabular}[c]{@{}c@{}}Hur mycket hjälpte klasser och typning av variabler och funktioner\\ dig att förstå andra medlemmars kod?\end{tabular} & Ingenting, Liten hjälp, Stor hjälp                                                                                    \\ \hline
+4  & \begin{tabular}[c]{@{}c@{}}Hur påverkade den extra typningen i TypeScript din\\ produktivitet i utvecklingen?\end{tabular}                            & \begin{tabular}[c]{@{}c@{}}Negativt, Inte märkbart,\\ Positivt\end{tabular} \\ \hline
 5  & \begin{tabular}[c]{@{}c@{}}Ifall typsystemet påverkade din produktivitet,\\ på vilka sätt gjorde den det?\end{tabular}                                & Öppet svar                                                                                                          \\ \hline
 \end{tabular}%
 }
 \end{table}
+
+Några övriga för/nackdelar du märkt 
 
 \section{Resultat}
 \section{Diskussion}
