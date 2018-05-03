@@ -24,10 +24,19 @@ I denna del beskrivs teori gällande de de två språken som jämförs i rapport
 JavaScript är ett dynamiskt och objektorienterat skriptpråk som främst används för att programmera interaktiva webbsidor och webbapplikationer. Språket kan även kan köras utanför webbläsare genom t.ex. miljön Node.js där det ofta används som skriptspråk för webbservrar.\cite{henrik_js1}
 
 Språkets syntax delar många likheter med kända språk som Java och C++ men det finns också stora skillnader. En av dessa är att JavaScript är ett dynamiskt typat språk. Detta innebär att variabler i språket inte har någon speciell typ, istället är det värden som håller i typinformationen. Det medför att en variabel kan hålla värden av vilken typ som helst och byta mellan dem.\cite{henrik_js2} En annan stor skillnad är hur objekt hanteras i JavaScript. Det finns inga klasser utan endast objekt. Medlemsvariabler och funktioner för objektet skapas istället underkörning, antingen vid skapandet av objektet eller vid senare tillfälle.\cite{henrik_js3}
+JavaScript är även ett interpreterat språk\cite{henrik_js1} vilket innebär att det kompileras utan istället körs direkt som det är skrivet. Detta medför bland annat att ett program kan köras problemfritt trots att det innehåller fel i koden, så länge körningen inte kommer till den felaktiga delen.
 \subsection{TypeScript}
-TypeScript är ett skriptspråk utvecklat Microsoft som är en strikt syntatisk övermängd till JavaScript. Vad detta betyder är att allt som är giltig JavaScript-kod är även giltig i TypeScript, men att extra funktionalitet också finns tillgänglig. De största ändringar
+TypeScript är ett skriptspråk utvecklat Microsoft som är en strikt syntatisk övermängd till JavaScript. Vad detta betyder är att allt som är giltig JavaScript-kod är även giltig i TypeScript, men att extra funktionalitet också finns tillgänglig. De största utökningar som gjorts är frivillig statisk typning och klasser.
+
+För att ha ett lika brett stöd som JavaScript är TypeScript ett kompilerat språk som omvandlas till vanlig JavaScript. Att det är ett kompilerat språk tillsammans med statisk typning och klasser tillåter TypeScript att hitta typfel och andra mindre fel som felstavningar direkt vid kompilering.
 \subsection{Dynamisk typning}
+Ett dynamiskt typat språk är ett språk där typkontroll endast görs vid körning av programmet och alltså inte alls i förväg. Detta innebär att variabler och funktioner i källkoden inte har någon förutbestämd typ. Variabler har fortfarande en typ men denna bestämns först vid tilldelning under körning och kan ändras.
+
+Det går alltså inte direkt att se vilken typ en variabel eller funktion har i källkoden, utan detta kräver djupare analysering av denna.
 \subsection{Statisk typning}
+Att ett språk är statiskt typat betyder att typer för variabler och funktioner finns direkt i källkoden av programmet. Typerna är alltså bestämda i förväg och kan inte ändras under programmets körning.
+
+Effekten av detta är att det direkt från koden går att avgöra typer på allt och därmed också ifall det finns typfel. Dessa kan då rapporteras innan programmet ens körs.
 \section{Metod}
 För att besvara frågeställningarna samlades gruppmedlemmarnas erfarenheter med de två olika språken under projektet. Många av medlemmarna kom under utvecklingen i kontakt med både JavaScript och TypeScript och hade därför en bra grund för att jämföra dem. Dessa erfarenhter samlades dels kontinuerligt under projektet och dels genom intervjuer i slutet av utvecklingsarbetet. Utöver gruppens erfarenheter studerades även litteratur om feldetektering och vidareutveckling av kod för dynamisk och statisk typning. Detta användes som komplettering och som jämförelse för de erfarenheter som samlats i gruppen.
 \subsection{Intervjuer}
