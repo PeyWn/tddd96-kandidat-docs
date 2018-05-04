@@ -1,20 +1,20 @@
-\chapter{Angular som webbutvecklingsplattform - Martin}
+\chapter{Angular som webbutvecklingsplattform - Martin Persson}
 
 \vspace{1.5em}
 \section{Inledning}
 
-Det finns i dagsläget ett flertal olika verktyg och ramverk med syfte att underlätta arbete med webbutveckling. För en ovan utvecklare kan det vara svårt att orientera sig bland alla tillgängliga alternativ. Angular och React är båda exempel på sådana. Denna rapport kommer att undersöka det val som måste göras genom att granska ramverket Angular, som i Aeon-projektet använts till att utveckla front-end delen av den schemaläggningsapplikation som tagits fram.
+Det finns i dagsläget ett flertal olika verktyg och ramverk med syfte att underlätta arbete med webbutveckling. För en ovan utvecklare kan det vara svårt att orientera sig bland alla tillgängliga alternativ. Angular är ett exempel på ett sådant. Denna rapport kommer att undersöka det val som måste göras genom att granska ramverket Angular, som i Aeon-projektet använts till att utveckla front-end-delen av den schemaläggningsapplikation som tagits fram.
 
 Under Aeon-projektets gång kommer funktioner och beteenden hos Angular att utredas och utvärderas för att ta reda på om just Angular är ett bra val för projekt med liknande parametrar som Aeon.
 
 \section{Syfte}
 
-Syftet med studien är att undersöka vilka faktorer som behöver betraktas vid val av utvecklingsplattform till ett webbutvecklingsprojekt med samma dimensioner som Aeon och med projektdeltagare som har liknande förkunskaper. Studien ska även redogöra för vilka konsekvenser valet av just utvecklingsplattformen Angular kommer ha på projektets design och utförande.
+Syftet med studien är att undersöka vilka faktorer som behöver betraktas vid val av utvecklingsplattform till ett webbutvecklingsprojekt med samma dimensioner som Aeon och med projektdeltagare som har liknande förkunskaper. Studien ska även redogöra för vad valet av just utvecklingsplattformen Angular har kunnat tillföra det utförda projektet.
 
-\subsection{Frågor}
+\subsection{Frågeställing}
 \begin{itemize}
-	\item Vilka faktorer bör man i allmänhet ta hänsyn till vid val av utvecklingsverktyg till ett projekt i webbutveckling?
-	\item Vilken inverkan får valet av Angular som utvecklingsplattform på projektets utförande? 
+	\item Vilka faktorer bör man ta hänsyn till vid val av utvecklingsverktyg till ett projekt i webbutveckling med samma profil som Aeon?
+	\item Vad har valet av utvecklingsplattformen Angular tillfört detta projekt? 
 \end{itemize}
 
 \subsection{Avgränsningar}
@@ -32,18 +32,73 @@ Under denna rubrik får läsaren ta del av den teori som ligger bakom studien.
 
 \subsection{Angular}
 
-Angular är en utvecklingsplattform och ett ramverk för utveckling av webbapplikationer. Arkitekturen i Angular är komponentbaserad, där varje komponent innehåller en HTML-mall som beskriver vilket innehåll som ska visas upp för användaren och en TypeScript-klass som hanterar logik och funktionalitet kopplad till HTML-mallen. Angular innehåller även tjänster, som också använder TypeScript. Tjänsterna tillhandahåller logik och funktionalitet som inte är direkt kopplad till någon specifik komponent.  I det projekt som studien behandlar har Angular 5 använts. Angular bör inte förväxlas med dess föregångare med liknande namn, AngularJS, som använder sig av JavaScript istället \cite{angularguide}.
+Angular är en utvecklingsplattform och ett ramverk för utveckling av webbapplikationer. Arkitekturen i Angular är komponentbaserad, där varje komponent innehåller en HTML-mall som beskriver vilket innehåll som ska visas upp för användaren och en TypeScript-klass som hanterar logik och funktionalitet kopplad till HTML-mallen. HTML-kod som skrivs i Angular är utökad med Angular-specifik funktionalitet som gör den kraftfullare. Bland annat tillkommer möjliheten att använda for-loopar och if-satser i HTML-koden.
+
+Angular innehåller även tjänster, som också använder TypeScript. Tjänsterna tillhandahåller logik och funktionalitet som inte är direkt kopplad till någon specifik komponent. Angular rekommenderar starkt att utvecklare följer denna föreslagna uppdelning och strukturering av kod. I det projekt som studien behandlar har Angular 5 använts. Angular bör inte förväxlas med dess föregångare med liknande namn, AngularJS, som använder sig av vanlig JavaScript istället för TypeScript \cite{angularguide}.
+
 
 \subsection{TypeScript}
 
-TypeScript är det programmeringsspråk Angular är skrivet i och det språk detta kandidatprojekt använt för att skriva klasser och tjänster i Angular. Språket är en påbyggnad av JavaScript som bland annat lägger till stöd för statisk typning och klasser \cite{typescript}.
+TypeScript är det programspråk Angular är skrivet i och det språk detta kandidatprojekt använt för att skriva klasser och tjänster i Angular. Språket är en påbyggnad av JavaScript som bland annat lägger till stöd för statisk typning och klasser \cite{typescript}.
+
+\subsection{Webstorm}
+
+Webstorm är den utvecklingsmiljö för webapplikationer som använts under projektets gång. Utvecklingsmiljön har stöd för generering av komponenter och tjänster till projekt i Angular 
+
+
 
 \section{Metod}
 
-Under denna rubrik kommer de arbetssätt som användes under studiens gång att redovisas. De metoder som använts är en litteraturstudie och en empirisk undersökning av projektgruppens egna erfarenheter med Angular. 
+Under denna rubrik kommer de arbetssätt som användes under studiens gång att redovisas. De metoder som använts är en litteraturstudie med flera källor och en empirisk undersökning i form av intervjuer rörande projektgruppens egna erfarenheter med Angular.
 
 \subsection{Litteraturstudie}
 
+För att mer ingående kunna behandla frågan om vilka faktorer man behöver ta hänsyn till vid val av ramverk har en mängd olika källor studerats. Information har hämtats från diverse teknikbloggar, produkthemsidor och vetenskapliga artiklar. Den publicerade artikeln ARTIKELNAMN HÄR är en av de artiklar som behandlats noggrannast och presenterar en mer strukturerad komparativ studie av olika webbramverk. Den kunskap som har förvärvats från litteraturstudien har sedan jäförts med erfarenheter från eget användande av Angular och de intervjusvar som kommit fram under den empiriska undersökningen som behandlas i nästa delrubrik.
+
 \subsection{Empirisk undersökning} 
 
-Med hjälp av en enkät och intervjuer frågades gruppens medlemmar ut angående de erfarenheter av Angular de förvärvat sig under projektets gång. I enkäten fick projektgruppens medlemmar svara på frågor om vad de tyckt varit bra med Angular, vad som varit dåligt, vilken funktionalitet de haft störst nytta av och vilken funktionalitet de saknat. De har även fått svara på om de sammanfattningsvis varit nöjda med valet av Angular som utvecklingsplattform.  
+Med hjälp av intervjuer frågades gruppens medlemmar ut angående de erfarenheter av Angular de förvärvat sig under projektets gång. Under intervjun fick projektgruppens medlemmar svara på frågor om vad de tyckt varit bra med Angular, vad som varit dåligt, vilken funktionalitet de haft störst nytta av och vilken funktionalitet de saknat. De har även fått svara på om de sammanfattningsvis varit nöjda med valet av Angular som utvecklingsplattform. Utifrån intervjuföremålens svar har sedan en slutsats om Angulars nytta dragits och frågan om vad Angular tillför ett projekt av Aeons karaktäristik har kunnat besvaras.
+
+\section{Resultat}
+
+Under denna rubrik presenteras de resultat som litteraturstudien och den empiriska undersökningen uppnått.
+
+\subsection{Val av utvecklingsplattform}
+
+Tänk på: Prestanda(mindre viktigt), Utvecklarvänlighet(mer viktigt), 
+
+Angular är en komplett lösning, bra för nybörjare. Bra stöd för MVC. 
+
+Tungt, inte lämpat för mindre applikationer.
+
+\subsection{Empirisk undersökning}
+
+Under intervjuerna med projektmedlemmarna frågades de främst ut om sina erfarenheter med Angular, men de fick även svara på vad de tyckte om det sätt vi valt ramverk på. 
+
+\subsubsection{Utvärdering av Angular}
+
+Alla utom två av de som blivit tillfrågade under intervjuerna saknade helt erfarenhet av webbapplikationsutveckling innan projektets start. Samtliga tyckte att det till en början varit svårt att lära sig hur Angular fungerar och bör användas. De upplevde att Angular innehöll mycket funktionalitet och att det var svårt att greppa hur varje del hängde samman med resten av ramverket. Några av projektmedlemmarna hade använt sig av den handledning som tillhandahölls på Angulars hemsida LÄNK, och den upplevdes ge en bra grund, men de tyckte samtidigt att de ofta stötte på problem som inte täcktes av handledningen, och att det då var svårt att veta hur man skulle gå tillväga.
+
+Efter inlärningsperioden upplevde de tillfrågade flera styrkor med Angular. Alla som deltagit i intervjuerna uppskattade Angulars komponentstruktur. Som fördelar med den nämndes modularitet, att den gör det enkelt för flera utvecklare att arbeta parallellt på olika komponenter och att det finns möjlighet att återanvända komponenter i olika sammanhang. Den utökade HTML-funktionaliteten som erbjuds av Angular var också en styrka som nämndes.
+
+Som nackdel nämndes utöver att det varit svårt att lära sig att den stora mängden funktionalitet gjorde det svårt att veta hur man skulle lösa ett givet problem på det bästa sättet, samt att filstrukturen, där komponenter lades inuti andra komponenter, snabbt blev väldigt rörig och svår att navigera.
+
+\subsubsection{Val av ramverk}
+
+Samtliga av de tillfrågade var överlag nöjda med valet av Angular som ramverk. De flesta av projektmedlemmarna tyckte att gruppen gjort rätt som på kundens inrådan valt Angular som ramverk och ansåg inte att den tid som en förstudie om valet av ramverk tagit hade lönat sig senare i projektet. Alla var dock inte överens om detta, och det fanns projektmedlemmar som menade att en förstudie hade kunnat visa på ett ramverk som varit enklare att sätta sig in i än Angular, då de flesta menade att Angular hade en brant inlärningskurva. Tid som gått åt att lära sig Angular kunde då istället använts till produktutveckling, menade de.   
+
+
+\section{Diskussion}
+
+Under denna rubrik kommer de resultat som uppnåtts under studiens gång att diskuteras och svar på frågeställningen att presenteras.
+
+\subsection{Metod}
+
+Eftersom gruppen inte själva funnit något behov av att ta ställning till för-och-nackdelar med olika webbutvecklingsramverk så var det nödvändigt att utföra en litteraturstudie för att kunna svara på frågan om vad man bör tänka på vid just val av utvecklingsverktyg. Lyckligtvis fanns det många webbutvecklare som ställts inför detta val innan denna projektgrupp gjorde det, och därför fanns det mycket material att tillgå för en litteraturstudie, vilket är en ytterligare fördel med ett sådant slags undersökning.
+
+För att ta reda på vad Angular tillför är det lämpligt att tillfråga utvecklare som faktiskt använt sig av ramverket, och det uppnåddes i och med den empiriska undersökningen och dess iintervjuer med projektmedlemmarna. Istället för intervjuer hade projektgruppen kunnat få svara på en enkät, men en enkät är avsevärt mycket mindre interaktiv än en intervju. Under intervjuerna som hölls fanns och utnyttjades möjligheten att ställa öpnna frågor och för en diskussion med deltagarna. Den effekten kan i någon mån efterliknas i en enkät genom att låta respondenter svara i löpande text istället för att bocka för ja- eller nej-rutor, men möjligheten att ställa oförutsedda men relevanta följdfrågor försvinner helt. 
+
+Intervjuerna som hölls var begränsade till medlemmar av projektgruppen. Då det med all sannolikhet fanns andra webbutvecklare som tidigare använt Angular under utveckling av webbapplikationer i projekt av liknande skala som Aeon hade det varit möjligt att intervjua fler deltagare utöver bara projektgruppen. Det hade till och med varit möjligt att intervjua webbutvecklare som använt sig av andra ramverk än Angular under webbapplikationsutvecklingsprocessen, och därmed gjort den empiriska undersökningen till mer av en komparativ studie mellan olika ramverk än bara en utvärdering av vad Angular tillfört. Då denna studies andra frågeställning var just hur Angular påverkat detta projekt gjordes dock bedömningen att intervjuer med projektmedlemmarna vore tillräckligt.
+
+\section{Slutsatser}
+
