@@ -51,5 +51,12 @@ För att interagera med MySQL används språket Structured Query Language (SQL).
 
 
 \section{Sequelize}
-Sequelize är ett ORM-system som används för att konvertera data från databaser så att du kan hämta och manipulera data utan att använda SQL.
-\cite{sequelize}
+Sequelize är ett ORM-system för Node.js som stödjer dialekterna PostGreSQL, MySQL, SQLite och MSSQL. \cite{sequelize} ORM står för Object-relational mapping och är en teknik som tillåter hämtning och manipulering av data i en relationsdatabas med hjälp av objekt och objektorientering. Detta innebär att ingen användning av SQL krävs i Sequelize, dock möjliggör den fortfarande att köra normala SQL-frågor.
+
+I Sequelize används modeller och associationer för utformning eller beskrivning av databasen. Det går antingen att manuellt skapa modellerna och associationerna utifrån en existerande databas eller att låta Sequelize generera databasen utifrån dem.
+
+Modellerna definierar de objekt som används för att manipulera och läsa från databasen. Varje modell beskriver attributerna i sin motsvarande tabell och för att beskriva relationer mellan olika modeller används så kallade associationer. Med hjälp av associationerna kan 1:1, 1:n och n:m relationer mellan tabeller beskrivas.
+
+Ändringar i databasens struktur kan hanteras genom att använda migrationer i Sequelize. Dessa beskriver dels hur ändringen utförs och dels hur den ångras. Genom att utföra dem i ordning kan man byta mellan alla tidigare versioner av databasen. \cite{migrations}
+
+För att fylla databasen med initial data har Sequelize så kallade seeds. Dessa är script som både kan utföras och ångras. De används främst för att lägga in statisk data i databasen men kan även skrivas för att generera data.
