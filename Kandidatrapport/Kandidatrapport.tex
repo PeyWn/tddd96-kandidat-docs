@@ -1,9 +1,8 @@
-\documentclass[a4paper,10pt]{report}
+\documentclass[a4paper,10pt, twoside]{report}
 \input{../Templates/Settings}
-\renewcommand{\bibname}{Referenser}
 
 \def\ftitle{Kandidatrapport}
-\def\fversion{0.3}
+\def\fversion{1.0}
 
 \begin{document}
 \input{../Templates/titlepage}
@@ -31,8 +30,7 @@
 \input{contributions/kvalite-tor}
 \input{contributions/krav-christoffer}
 
-
-\input{Chapter/referenser}
+\printbibliography[title=Referenser]
 
 \part{Bilagor}
 
