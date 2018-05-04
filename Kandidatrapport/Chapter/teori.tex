@@ -26,8 +26,21 @@ WebStorm är en IDE som främst används för web, JavaScript och TypeScript utv
 \section{Angular}
 
 \section{MySQL}
-MySQL är ett databashanteringssystem för att skapa och behandla data. För att hålla reda på information förvarar MySQL data i tabeller. En tabell innehåller data som är relaterad med varandra och sedan kan man koppla samman dessa tabeller med varandra.
-\cite{mysql}
+MySQL är ett relationsdatabashanteringssystem för att skapa och behandla data. För att hålla reda på 
+information förvarar MySQL data i tabeller. En tabell kan liknas vid en model av ett verkligt objekt. 
+Exempel på detta är en patient, en bokning eller en sal \cite{mysql}. Tabellen innehåller en kolumn för varje 
+attribut som objektet har, till exempel ett namn och ett personnummer. Detta innebär att varje rad i 
+tabellen motsvarar en unik entitet av det modelerade objektet. Det vill säga en specifik patient eller 
+en specifik sal.
+
+Tabeller kan även kopplas ihop med så kallade relationer. På så sätt kan till exempel en specifik bokning kopplas ihop med en specifik patient. Detta fungerar genom att alla tabeller har en unik nyckel. Nyckeln kan vara vilket attribut som helst så länge det har ett unikt värde för alla objekt i tabellen. En tabell kan ha flera nycklar men den nyckel som används för relationer kallas för primary key eller primärnyckel på svenska. 
+
+Primärnyckeln kan anvädas för att unikt identifiera ett visst objekt i tabellen. Denna egenskapen används för att koppla ihop olika objekt från olika tabeller. Detta går att göra på många olika sätt men i grunden används värdet på primärnykeln för ett visst objekt som värde för ett attribut i ett annat objekt. Ett exempel är att tabellen bokning kan ha ett attribut som kallas 'patient'. När en ny boking skapas används då värdet för primärnyckeln till den specifika patienten för att koppla patienten till den nya bokningen.
+
+Relationer är mycket användbara då de tillåter att datan filtreras och presenteras på ett effektivt sätt så att det är enkelt att hitta den data som behövs.
+
+För att interagera med MySQL används språket Structured Qurey Language (SQL). I SQL kan kommandon skrivas både för att mata in och begära ut olika data. Även om SQL är väldigt kraftfullt så har vi i det här projektet valt att använda oss av sequlize.
+
 
 \section{Sequelize}
 Sequelize är ett ORM-system som används för att konvertera data från databaser så att du kan hämta och manipulera data utan att använda SQL.
