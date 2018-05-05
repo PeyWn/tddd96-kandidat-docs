@@ -5,6 +5,14 @@ teamet har samlat på sig under projektets gång.
 \section{Systembeskrivning}
 \textit{Skrivs när systemet är byggt, vill man få en känsla för hur det kan
 komma att se ut så läser man bäst om det i arkitekturdokumentet}
+
+\subsection{Back-end}
+Back-end i projektet är en server som har två huvuduppgifter. Den första är att vara värd för klienten så att den kan kommas åt av flera användare och datorer över nätverk. Den andra uppgiften är att ha en databas med tillhörande webb-API. Databasen används för att hantera all data som behövs för schemaläggningen som bland annat operationsbeslut, kirurger, resurser och bokningar med mera. Webb-API tillåter klienten att kunna logga in och sedan hämta och modifiera denna data.
+
+Servern är byggd på miljön Node.js och är skriven i JavaScript. Den använder sig av Node.js-biblioteket Express för den statiska leveransen och klienten och för att definiera HTTP-API:t. För hantering av databasen används i grunden MySQL men även ORM-biblioteket Sequelize i Node.js. Sequelize tillåter objekt-orienterad hantering av databasen och tar bort behovet att använda direkta SQL-frågor. All test-data som används i prototypen läggs också in i databasen med hjälp av seeds i Sequelize. Mer om sequelize går att läsa i stycke \ref{sequelize_teori} i teorin.
+
+Hela API:et i servern skyddas bakom autensiering. Detta görs med hjälp av Node.js-biblioteket Passport och ser till att ingen data i databasen kan kommas åt eller modifieras utan att först logga in. 
+
 \subsection{LoFi-Prototyper}
 
 \begin{figure}[H]
