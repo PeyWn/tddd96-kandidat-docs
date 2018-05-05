@@ -1,39 +1,56 @@
 \chapter{Resultat}
-I denna del kommmer resultatet av projektet beskrivas. Det innebär dels
-resultatet den mjukvara som har utvecklats, dels vilka erfarenheter som
+Det är kapitlet kommer att beskriva resultatet av den mjukvaran som har utvecklats samt vilka erfarenheter som
 teamet har samlat på sig under projektets gång.
+
 \section{Systembeskrivning}
 \textit{Skrivs när systemet är byggt, vill man få en känsla för hur det kan
 komma att se ut så läser man bäst om det i arkitekturdokumentet}
-\subsection{GUI-Prototyper}
-Under projektets andra iteration utvecklades tre olika prototyper. Dessa
-prototyper designades för att visa på olika designalternativ på
+
+\subsection{Back-end}
+Back-end i projektet är en server som har två huvuduppgifter. Den första är att vara värd för klienten så att den kan kommas åt av flera användare och datorer över nätverk. Den andra uppgiften är att ha en databas med tillhörande webb-API. Databasen används för att hantera all data som behövs för schemaläggningen som bland annat operationsbeslut, kirurger, resurser och bokningar med mera. Webb-API tillåter klienten att kunna logga in och sedan hämta och modifiera denna data.
+
+Servern är byggd på miljön Node.js och är skriven i JavaScript. Den använder sig av Node.js-biblioteket Express för den statiska leveransen och klienten och för att definiera HTTP-API:t. För hantering av databasen används i grunden MySQL men även ORM-biblioteket Sequelize i Node.js. Sequelize tillåter objekt-orienterad hantering av databasen och tar bort behovet att använda direkta SQL-frågor. All test-data som används i prototypen läggs också in i databasen med hjälp av seeds i Sequelize. Mer om seeds och Sequelize går att läsa i stycke \ref{sequelize_teori} i teorin.
+
+Hela API:et i servern skyddas bakom autensiering. Detta görs med hjälp av Node.js-biblioteket Passport och ser till att ingen data i databasen kan kommas åt eller modifieras utan att först logga in. 
+
+\subsection{LoFi-Prototyper}
+
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{Figures/LoFi_no2.jpg}
+  \caption{Sista LoFi-prototypen}
+  \label{fig:LofiPic}
+\end{figure}
+
+
+Under projektets andra iteration utvecklades tre olika LoFi-prototyper. Dessa
+LoFi-prototyper designades för att visa på olika designalternativ på
 användargränssnittet. Ett exempel på detta är informationen som var med i listan
-över beslutade operationer. I en av prototyperna identifierades patienten som hörde
-ihop med beslutet med namn, den andra med personnummer. I den tredje prototypen
-fanns inget alls som identifierade patienten utan enbart information om vilken
+över beslutade operationer.
+
+I en av prototyperna identifierades patienten som hörde ihop med beslutet med namn, den andra med personnummer. I den tredje LoFi-prototypen
+fanns inget som identifierade patienten utan enbart information om vilken
 typ av operation det var. På liknande sätt utvärderades olika sätt att
-visualisera lediga tider i schemat samt olika sätt att anpassa sökparametrarna i
-en sökning efter lediga tider. När prototyperna visades för kunden kunde alternativen sållas bort och en tydligare bild av behoven framträdde.
-Till exempel beslutades att namn på patienten i samband med beslut var tydligast.
+visualisera lediga tider i schemat samt olika sätt att anpassa sökparametrarna för en sökning efter lediga tider.
 
-Den första iterationen av prototyper användes sedan för att ta fram en ny
-prototyp med enbart mindre designalternativ som visades för tre olika
-operationsplanerare.....
-\textit{Detta kommer i nästa iteration}
+När prototyperna visades för kunden kunde alternativen sållas bort och en tydligare bild av behoven framträdde.
+Till exempel fanns det endast personnummer och inte namn på patienterna, vilket var något som önskades.
+
+Den första iterationen av LoFi-prototyper användes sedan för att ta fram en ny
+LoFi-prototyp, som uppdaterats enligt återkoppling från föregående iteration. Den nya LoFi-prototypen visades för tre olika operationsplanerare för att få deras tankar och idéer om den grafiska designen. (Figur \ref{fig:LofiPic} illustrerar en bild av den sista Lofi-prototypen.)
+
 \subsection{Systemanatomi}
-\todo{referens samt bild på systemanatomi}
-\includegraphics[width=\textwidth,height=.4\textheight]{Figures/Systemanatomi.png}\\
+I första iterationen togs det fram en systemanatomi (se figur \ref{fig:Systemanatomi}) som användes under projektets gång som ett hjälpmedel för strukturera upp arbetet under utvecklingen. Den gav en översiktlig bild av vilken funktionalitet produkten skulle innehålla och hur de olika delarna samverkade med varandra. Utöver detta presenterades den i ett tidigt skede för kunden i syfte att säkerställa att projektgruppens syn på systemet stämde överens med kundens.
 
-I första iterationen togs det fram en systemanatomi som använts under
-projektets gång för att styra arbetet under utvecklingen.
+\begin{figure}[H]
+    \includegraphics[width=\textwidth,height=.4\textheight]{Figures/Systemanatomi.png}\\
+    \caption{Systemanatomi}
+    \label{fig:Systemanatomi}
+\end{figure}
 
 \subsection{Värde för kund}
-Den produkt som har skapats är ett lättöverskådligt schemaläggningssystem för operationer. Det följer ***Skriv in typiskt bra krav som är godkända av kund och som visar på funktionalitet och värde för kunden***
+Den produkt som har skapats är ett lättöverskådligt schemaläggningssystem för operationer. Slutprodukten tillsammans med tankar och erfarenheter från design och utvecklings-faserna kommer att ha ett stort värde för kunden. Detta eftersom projektet kommer att användas som en form av förstudie till ett större projekt (se stycke \ref{sec:syfte}).
 
-\section{Separation av front-end och back-end}
-
-\section{Integration i redan existerande system}
+Det medför att Region Östergötland kommer att ha något att utgå ifrån då deras projekt startar, vilket hjälper av flera anledningar. Projektägaren som också är insatt i det större projektet kommer att kunna ta med sig många erfarenheter från det här projekt.
 
 \section{Gemensamma erfarenheter}
 I början av projektet fick vi snabbt större erfarenhet av olika områden
@@ -56,6 +73,6 @@ För/nackdelar med TypeScript jämfört med JavaScript
 \subsection{Martin}
 Angular som webbutvecklingsplattform
 \subsection{Niclas}
-Pappersprototypens betydelse vid utveckling av programvara
+Prototypuveckling i kandidatprojekt
 \subsection{Tor}
 Kvalitetsförsäkrande metoder i ett småskaligt mjukvaruprojekt

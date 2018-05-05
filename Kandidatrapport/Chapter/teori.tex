@@ -1,34 +1,77 @@
 \chapter{Teori}
-Detta kapitel beskriver teorin bakom de olika metoder och verktyg som har använts.
+Detta kapitel beskriver teorin bakom de olika metoder och verktyg som har använts för att utveckla och färdigställa projektet.
 
 \section{Scrum} \label{scrum}
-Scrum är en agil utvecklingsmetod som består av tre komponenter, produktägaren, scrummästaren och utvecklingsteamet. 
-Produktägaren är den person som kommer med en beställning till utvecklingsteamet. 
-Scrummästaren arbetar för att scrum-metodiken ska upprätthållas och ser till, tillsammans med produktägaren, att underhålla backloggen så att utvecklingsteamet förstår vad som ska göras och så att arbetet kan fortgå. 
-Utvecklingsteamet är själva kärnan i scrum-metodiken, det är teamet som bestämmer vilka uppgifter som ska utföras under en sprint och hur de ska lösas. 
+Scrum är en agil utvecklingsmetod som består av tre komponenter, produktägaren, scrummästaren och utvecklingsteamet.
+Produktägaren är den person som kommer med en beställning till utvecklingsteamet.
+Scrummästaren arbetar för att scrum-metodiken ska upprätthållas och ser, tillsammans med produktägaren, till att underhålla backloggen så att utvecklingsteamet förstår vad som ska göras och så att arbetet kan fortgå.
+
+Utvecklingsteamet är själva kärnan i scrum-metodiken, det är teamet som bestämmer vilka uppgifter som ska utföras under en sprint och hur de ska lösas.
 För en utförligare beskrivning av scrum-metodiken, se avsnitt \ref{adam_scrum}.
 
 \section{GitLab}
-GitLab är ett versionshanteringssystem på internet, som versionshanterar med Git, där de som är medlemmar i projektet kan lägga till och ändra i filer. 
-Git fungerar på det sättet att varje medlem i ett projekt arbetar på en kopia lokalt för att sedan skicka upp de ändringar man gjort till den gemensamma mappen online. 
-GitLab har också tidigare versioner sparade så om någon skulle göra uppdateringar av en programvara som inte fungerar så kan man enkelt gå tillbaka till en tidigare version av programmet.
+GitLab är webbtjänst för hantering av data som använder versionshanteringsprogrammet Git. De som är medlemmar i ett Gitlab-projekt kan lägga till och ändra i filer.
+Med Git arbetar varje medlem i ett projekt på en lokal kopia av data som finns på Gitlabservern för att sedan skicka upp de ändringar man gjort till servern. Git fungerar på så sätt att alla ändringar sparas. Det betyder att om någon skulle göra en ändring som har oönskad effekt kan man enkelt gå tillbaka till en tidigare version av den data som finns på servern.
 
-I Git kan man skapa grenar i ett projekt, detta innebär att man arbetar på en kopia av projektet som sedan skickas upp och måste godkännas av någon annan medlem i projektet för att kunna slås ihop med den ursprungliga projektmappen. 
-Det finns också möjlighet att ärendehantera med hjälp av Git. 
-Då skapar en person ett ärende om att den t.ex. har hittat en bugg eller att den anser att en ny funktionalitet ska implementeras. 
-Sedan så finns dessa ärenden sparade i projektet så att medlemmar kan se och hantera dem. \cite{gitlab}
+Git har stöd för något som kallas grenar, en gren kan beskrivas som en kopia av all projektets data, vanligtvis av den data som finns i projektets huvudgren. När en ny gren har skapats sker alla ändringar som görs på den nya grenen. Det finns flera fördelar med att arbeta i grenar. För det första möjliggör det parallellt och strukturerat arbete då man kan namnge en gren så att namnet motsvarar ändringarnas syfte. Till exempel kan det vara namnet på någon ny funktionalitet.
+
+Vidare gör det inget för om en gren inte fungerar i sitt nuvarande tillstånd, det gör att man inte förstör för sina medarbetar när man testar nya saker. För det andra kan man genom Gitlab skapa sammanslagningsförfrågningar för att väva samman två grenar. Fördelen med det är att det på ett väldigt enkelt sätt går att se vilka ändringar som har gjorts på den nya grenen och vad som kommer att uppdateras.
+
+Det finns också möjlighet att ärendehantera med hjälp av Git.
+Då skapar en person ett ärende om att den t.ex. har hittat en bugg eller att den anser att en ny funktionalitet ska implementeras.
+Sedan finns dessa ärenden sparade på projektet sida på Gitlab så att medlemmar kan se och hantera dem. \cite{gitlab}
 
 \section{Webstorm}
-WebStorm är en IDE som främst används för web, JavaScript och TypeScript utveckling. WebStorm innehåller flera smidiga funktioner såsom kodkomplettering, API-dokumentation och inbyggt stöd för versionshantering. \cite{webstorm}
-
+WebStorm är en utvecklingsmiljö skapad av programvaruutvecklaren JetBrains som är anpassad för JavaScript och webbutveckling. Den har även stöd och hjälp för relaterade språk som HTML, CSS och TypeScript. Till dessa språk finns smidiga hjälpfunktioner som kodkomplettering, kraftfull navigering, feldetektering i realtid och refaktorisering. För populära miljöer och ramverk som Node.js, Angular och React finns det inbyggd assistans direkt i Webstorms gränssnitt. Det finns även grafiskt gränssnitt som assisterar användning av versionhanteringssystem som till exempel Git.\cite{webstorm}
 \section{Node.js}
+Node.js är en asynkron och händelsedriven miljö som tillåter körning av JavaScript utanför webbläsare. Node är designat för att skapa skalbara nätverksapplikationer men kan lika väl användas för att skapa typer av system och applikationer. \cite{nodejs}
+
+Node.js har även sin tillhörande pakethanterare, (Node Package Manager), som är det största ekosystemet för bibliotek med öppen källkod. \cite{npm}
+I den finns det det bland annat bibliotek för Angular, Sequelize och hantering av HTTP och MySQL.
 
 \section{Angular}
+Angular är ett ramverk för webbutveckling med en komponentbaserad arkitektur som använts på projektets front-end.
+
+Komponenterna i Angular består i huvudsak av tre delar:
+
+\begin{itemize}
+\item HTML-mall
+\item CSS-fil
+\item TypeScript-klass
+\end{itemize}
+
+HTML-mallen beskriver vilket grafiskt innehåll som ritas upp för användaren. HTML-koden som skrivs i Angular är utökad med Angular-specifik funktionalitet. Detta gör den kraftfullare än vanligt HTML-kod.
+
+CSS-filen gör det grafiska innehållet mer detaljrikt. CSS står för Cascading Style Sheets och tillför möjligheter att justera innehållets färg, placering, textstorlek eller typsnitt och andra grafiska egenskaper.
+
+TypeScript-klassen innehåller logik kopplad till det grafiska innehållet hos en specifik komponent. TypeScript är ett programspråk som utökar funktionaliteten hos JavaScript med bland annat statisk typning. Även Angulars tjänster är skriva i detta programspråk.
+
+Utöver komponenterna finns även tjänster som tillhandahåller funktionalitet som inte är kopplad till någon särskild komponent. Mer om Angular finns att läsa i avsnitt \ref{martin_angular}.
 
 \section{MySQL}
-MySQL är ett databashanteringssystem för att skapa och behandla data. För att hålla reda på information förvarar MySQL data i tabeller. En tabell innehåller data som är relaterad med varandra och sedan kan man koppla samman dessa tabeller med varandra.
-\cite{mysql}
+MySQL är ett relationsdatabashanteringssystem för att skapa och behandla data. För att hålla reda på
+information förvarar MySQL data i tabeller. En tabell kan liknas vid en model av ett verkligt objekt.
+Exempel på detta är en patient, en bokning eller en sal \cite{mysql}. Tabellen innehåller en kolumn för varje
+attribut som objektet har, till exempel ett namn och ett personnummer. Detta innebär att varje rad i
+tabellen motsvarar en unik entitet av det modelerade objektet. Det vill säga en specifik patient eller
+en specifik sal.
+
+Tabeller kan även kopplas ihop med så kallade relationer. På så sätt kan till exempel en specifik bokning kopplas ihop med en specifik patient. Detta fungerar genom att alla tabeller har en unik nyckel. Nyckeln kan vara vilket attribut som helst så länge det har ett unikt värde för alla objekt i tabellen. En tabell kan ha flera nycklar men den nyckel som används för relationer kallas för primary key eller primärnyckel på svenska.
+
+Primärnyckeln kan anvädas för att unikt identifiera ett visst objekt i tabellen. Denna egenskapen används för att koppla ihop olika objekt från olika tabeller. Detta går att göra på många olika sätt men i grunden används värdet på primärnykeln för ett visst objekt som värde för ett attribut i ett annat objekt. Ett exempel är att tabellen bokning kan ha ett attribut som kallas 'patient'. När en ny boking skapas används då värdet för primärnyckeln till den specifika patienten för att koppla patienten till den nya bokningen.
+
+Relationer är mycket användbara då de tillåter att datan filtreras och presenteras på ett effektivt sätt så att det är enkelt att hitta den data som behövs.
+
+För att interagera med MySQL används språket Structured Query Language (SQL). I SQL kan kommandon skrivas både för att mata in och begära ut olika data. Även om SQL är väldigt kraftfullt så har vi i det här projektet valt att använda oss av Sequelize.
+
 
 \section{Sequelize}
-Sequelize är ett ORM-system som används för att konvertera data från databaser så att du kan hämta och manipulera data utan att använda SQL.
-\cite{sequelize}
+Sequelize är ett ORM-system för Node.js som stödjer dialekterna PostGreSQL, MySQL, SQLite och MSSQL. \cite{sequelize} ORM står för Object-relational mapping och är en teknik som tillåter hämtning och manipulering av data i en relationsdatabas med hjälp av objekt och objektorientering. Detta innebär att ingen användning av SQL krävs i Sequelize, dock möjliggör den fortfarande att köra normala SQL-frågor.
+
+I Sequelize används modeller och associationer för utformning eller beskrivning av databasen. Det går antingen att manuellt skapa modellerna och associationerna utifrån en existerande databas eller att låta Sequelize generera databasen utifrån dem.
+
+Modellerna definierar de objekt som används för att manipulera och läsa från databasen. Varje modell beskriver attributerna i sin motsvarande tabell och för att beskriva relationer mellan olika modeller används så kallade associationer. Med hjälp av associationerna kan 1:1, 1:n och n:m relationer mellan tabeller beskrivas.
+
+Ändringar i databasens struktur kan hanteras genom att använda migrationer i Sequelize. Dessa beskriver dels hur ändringen utförs och dels hur den ångras. Genom att utföra dem i ordning kan man byta mellan alla tidigare versioner av databasen. \cite{migrations}
+
+För att fylla databasen med initial data har Sequelize så kallade seeds. Dessa är script som både kan utföras och ångras. De används främst för att lägga in statisk data i databasen men kan även skrivas för att generera data.
