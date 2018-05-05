@@ -5,6 +5,14 @@ teamet har samlat på sig under projektets gång.
 \section{Systembeskrivning}
 \textit{Skrivs när systemet är byggt, vill man få en känsla för hur det kan
 komma att se ut så läser man bäst om det i arkitekturdokumentet}
+
+\subsection{Back-end}
+Back-end i projektet är en server som har två huvuduppgifter. Den första är att vara värd för klienten så att den kan kommas åt av flera användare och datorer över nätverk. Den andra uppgiften är att ha en databas med tillhörande webb-API. Databasen används för att hantera all data som behövs för schemaläggningen som bland annat operationsbeslut, kirurger, resurser och bokningar med mera. Webb-API tillåter klienten att kunna logga in och sedan hämta och modifiera denna data.
+
+Servern är byggd på miljön Node.js och är skriven i JavaScript. Den använder sig av Node.js-biblioteket Express för den statiska leveransen och klienten och för att definiera HTTP-API:t. För hantering av databasen används i grunden MySQL men även ORM-biblioteket Sequelize i Node.js. Sequelize tillåter objekt-orienterad hantering av databasen och tar bort behovet att använda direkta SQL-frågor. All test-data som används i prototypen läggs också in i databasen med hjälp av seeds i Sequelize. Mer om seeds och Sequelize går att läsa i stycke \ref{sequelize_teori} i teorin.
+
+Hela API:et i servern skyddas bakom autensiering. Detta görs med hjälp av Node.js-biblioteket Passport och ser till att ingen data i databasen kan kommas åt eller modifieras utan att först logga in. 
+
 \subsection{LoFi-Prototyper}
 
 \begin{figure}[H]
@@ -28,8 +36,7 @@ När prototyperna visades för kunden kunde alternativen sållas bort och en tyd
 Till exempel fanns det endast personnummer och inte namn på patienterna, vilket var något som önskades.
 
 Den första iterationen av LoFi-prototyper användes sedan för att ta fram en ny
-LoFi-prototyp med enbart mindre designalternativ som visades för tre olika
-operationsplanerare. (Figur \ref{fig:LofiPic} illustrerar en bild av den sista Lofi-prototypen.)
+LoFi-prototyp, som uppdaterats enligt återkoppling från föregående iteration. Den nya LoFi-prototypen visades för tre olika operationsplanerare för att få deras tankar och idéer om den grafiska designen. (Figur \ref{fig:LofiPic} illustrerar en bild av den sista Lofi-prototypen.)
 
 \subsection{Systemanatomi}
 I första iterationen togs det fram en systemanatomi (se figur \ref{fig:Systemanatomi}) som användes under projektets gång som ett hjälpmedel för strukturera upp arbetet under utvecklingen. Den gav en översiktlig bild av vilken funktionalitet produkten skulle innehålla och hur de olika delarna samverkade med varandra. Utöver detta presenterades den i ett tidigt skede för kunden i syfte att säkerställa att projektgruppens syn på systemet stämde överens med kundens.

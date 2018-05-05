@@ -22,7 +22,9 @@ Då skapar en person ett ärende om att den t.ex. har hittat en bugg eller att d
 Sedan finns dessa ärenden sparade på projektet sida på Gitlab så att medlemmar kan se och hantera dem. \cite{gitlab}
 
 \section{Webstorm}
-WebStorm är en utvecklingsmiljö skapad av programvaruutvecklaren JetBrains som är anpassad för JavaScript och webbutveckling. Den har även stöd och hjälp för relaterade språk som HTML, CSS och TypeScript. Till dessa språk finns smidiga hjälpfunktioner som kodkomplettering, kraftfull navigering, feldetektering i realtid och refaktorisering. För populära miljöer och ramverk som Node.js, Angular och React finns det inbyggd assistans direkt i Webstorms gränssnitt. Det finns även grafiskt gränssnitt som assisterar användning av versionhanteringssystem som till exempel Git.\cite{webstorm}
+WebStorm är en utvecklingsmiljö skapad av programvaruutvecklaren JetBrains som är anpassad för JavaScript och webbutveckling. Den har även stöd och hjälp för relaterade språk som HTML, CSS och TypeScript. Till dessa språk finns smidiga hjälpfunktioner som kodkomplettering, kraftfull navigering, feldetektering i realtid och refaktorisering. 
+
+För populära miljöer och ramverk som Node.js, Angular och React finns det inbyggd assistans direkt i Webstorms gränssnitt. Det finns även grafiskt gränssnitt som assisterar användning av versionhanteringssystem som till exempel Git.\cite{webstorm}
 \section{Node.js}
 Node.js är en asynkron och händelsedriven miljö som tillåter körning av JavaScript utanför webbläsare. Node är designat för att skapa skalbara nätverksapplikationer men kan lika väl användas för att skapa typer av system och applikationer. \cite{nodejs}
 
@@ -30,33 +32,33 @@ Node.js har även sin tillhörande pakethanterare, (Node Package Manager), som �
 I den finns det det bland annat bibliotek för Angular, Sequelize och hantering av HTTP och MySQL.
 
 \section{Angular}
-Angular är ett ramverk för webbutveckling med en komponentbaserad arkitektur som använts på projektets front-end. 
+Angular är ett ramverk för webbutveckling med en komponentbaserad arkitektur som använts på projektets front-end.
 
 Komponenterna i Angular består i huvudsak av tre delar:
 
-\begin{itemize} 
-\item HTML-mall 
+\begin{itemize}
+\item HTML-mall
 \item CSS-fil
-\item TypeScript-klass 
+\item TypeScript-klass
 \end{itemize}
 
 HTML-mallen beskriver vilket grafiskt innehåll som ritas upp för användaren. HTML-koden som skrivs i Angular är utökad med Angular-specifik funktionalitet. Detta gör den kraftfullare än vanligt HTML-kod.
 
-CSS-filen gör det grafiska innehållet mer detaljrikt. CSS står för Cascading Style Sheets och tillför möjligheter att justera innehållets färg, placering, textstorlek eller typsnitt och andra grafiska egenskaper.  
+CSS-filen gör det grafiska innehållet mer detaljrikt. CSS står för Cascading Style Sheets och tillför möjligheter att justera innehållets färg, placering, textstorlek eller typsnitt och andra grafiska egenskaper.
 
 TypeScript-klassen innehåller logik kopplad till det grafiska innehållet hos en specifik komponent. TypeScript är ett programspråk som utökar funktionaliteten hos JavaScript med bland annat statisk typning. Även Angulars tjänster är skriva i detta programspråk.
 
 Utöver komponenterna finns även tjänster som tillhandahåller funktionalitet som inte är kopplad till någon särskild komponent. Mer om Angular finns att läsa i avsnitt \ref{martin_angular}.
- 
+
 \section{MySQL}
-MySQL är ett relationsdatabashanteringssystem för att skapa och behandla data. För att hålla reda på 
-information förvarar MySQL data i tabeller. En tabell kan liknas vid en model av ett verkligt objekt. 
-Exempel på detta är en patient, en bokning eller en sal \cite{mysql}. Tabellen innehåller en kolumn för varje 
-attribut som objektet har, till exempel ett namn och ett personnummer. Detta innebär att varje rad i 
-tabellen motsvarar en unik entitet av det modelerade objektet. Det vill säga en specifik patient eller 
+MySQL är ett relationsdatabashanteringssystem för att skapa och behandla data. För att hålla reda på
+information förvarar MySQL data i tabeller. En tabell kan liknas vid en model av ett verkligt objekt.
+Exempel på detta är en patient, en bokning eller en sal \cite{mysql}. Tabellen innehåller en kolumn för varje
+attribut som objektet har, till exempel ett namn och ett personnummer. Detta innebär att varje rad i
+tabellen motsvarar en unik entitet av det modelerade objektet. Det vill säga en specifik patient eller
 en specifik sal.
 
-Tabeller kan även kopplas ihop med så kallade relationer. På så sätt kan till exempel en specifik bokning kopplas ihop med en specifik patient. Detta fungerar genom att alla tabeller har en unik nyckel. Nyckeln kan vara vilket attribut som helst så länge det har ett unikt värde för alla objekt i tabellen. En tabell kan ha flera nycklar men den nyckel som används för relationer kallas för primary key eller primärnyckel på svenska. 
+Tabeller kan även kopplas ihop med så kallade relationer. På så sätt kan till exempel en specifik bokning kopplas ihop med en specifik patient. Detta fungerar genom att alla tabeller har en unik nyckel. Nyckeln kan vara vilket attribut som helst så länge det har ett unikt värde för alla objekt i tabellen. En tabell kan ha flera nycklar men den nyckel som används för relationer kallas för primary key eller primärnyckel på svenska.
 
 Primärnyckeln kan anvädas för att unikt identifiera ett visst objekt i tabellen. Denna egenskapen används för att koppla ihop olika objekt från olika tabeller. Detta går att göra på många olika sätt men i grunden används värdet på primärnykeln för ett visst objekt som värde för ett attribut i ett annat objekt. Ett exempel är att tabellen bokning kan ha ett attribut som kallas 'patient'. När en ny boking skapas används då värdet för primärnyckeln till den specifika patienten för att koppla patienten till den nya bokningen.
 
