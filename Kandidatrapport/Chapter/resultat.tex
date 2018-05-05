@@ -6,13 +6,13 @@ teamet har samlat på sig under projektets gång.
 Systemet som skapats består av två separata delar, en back-end och en front-end.
 
 \subsection{Front-end}
-Projektets front-end utvecklades i ramverket Angular. Front-end använder sig därför av den komponentbaserade arkitektur som starkt förordas av ramverket. Komponenter i Angular är indelade i delar som i grova drag motsvarar delarna Model, View och Control i designmönstret MVC. Av denna anledning har applikationen följt detta designmönster på komponentnivån.    
+Projektets front-end utvecklades i ramverket Angular. Front-end använder sig därför av den komponentbaserade arkitektur som starkt förordas av ramverket. Komponenter i Angular är indelade i delar som i grova drag motsvarar delarna Model, View och Control i designmönstret MVC. Av denna anledning har applikationen följt detta designmönster på komponentnivån.
 
-Det grafiska innehållet på projektets front-end är uppdelat i komponenter som uppdateras eller byts ut till andra komponenter när användaren interager med systemet. De komponenter som finns överst i applikationens komponenthierarki är tomma behållare vars enda syfte är att separera applikationens olika beståndsdelar från varandra. Inuti dessa har sedan komponenter med faktiska funkioner, som knappsatser eller sökrutor, placerats.
+Det grafiska innehållet på projektets front-end är uppdelat i komponenter som uppdateras eller byts ut till andra komponenter när användaren interagerar med systemet. De komponenter som finns överst i applikationens komponenthierarki är tomma behållare vars enda syfte är att separera applikationens olika beståndsdelar från varandra. Inuti dessa har sedan komponenter med faktiska funktioner, som knappsatser eller sökrutor, placerats.
 
 Applikationen består av flera olika vyer, där vissa av vyerna ska visas upp i samma behållare men vid olika tillfällen, beroende på vilken vy användaren för stunden är intresserad av. För att byta mellan vyerna används Angulars tjänster. Tjänsterna är inte direkt kopplade till någon specifik komponent och används därför för att kommunicera mellan komponenter i olika delar av komponenthierarkin.
 
-All den data om patienter, salar och utrustning som användaren är intresserad av finns på en server i projektets back-end. Därför är det nödvändigt med kommunikation mellan de båda delarna. På projektets front-end sköts kommunikationen med AJAX-anrop. Dessa anrop sker i tjänster för att de ska vara tillgängliga för alla kompononenter som behövder tillgång till data av olika sorter.    
+All den data om patienter, salar och utrustning som användaren är intresserad av finns på en server i projektets back-end. Därför är det nödvändigt med kommunikation mellan de båda delarna. På projektets front-end sköts kommunikationen med AJAX-anrop. Dessa anrop sker i tjänster för att de ska vara tillgängliga för alla komponenter som behövde tillgång till data av olika sorter.    
 
 \subsection{LoFi-Prototyper}
 
