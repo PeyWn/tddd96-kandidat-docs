@@ -22,7 +22,7 @@ Då skapar en person ett ärende om att den t.ex. har hittat en bugg eller att d
 Sedan finns dessa ärenden sparade på projektet sida på Gitlab så att medlemmar kan se och hantera dem. \cite{gitlab}
 
 \section{Webstorm}
-WebStorm är en utvecklingsmiljö skapad av programvaruutvecklaren JetBrains som är anpassad för JavaScript och webbutveckling. Den har även stöd och hjälp för relaterade språk som HTML, CSS och TypeScript. Till dessa språk finns smidiga hjälpfunktioner som kodkomplettering, kraftfull navigering, feldetektering i realtid och refaktorisering. 
+WebStorm är en utvecklingsmiljö skapad av programvaruutvecklaren JetBrains som är anpassad för JavaScript och webbutveckling. Den har även stöd och hjälp för relaterade språk som HTML, CSS och TypeScript. Till dessa språk finns smidiga hjälpfunktioner som kodkomplettering, kraftfull navigering, feldetektering i realtid och refaktorisering.
 
 För populära miljöer och ramverk som Node.js, Angular och React finns det inbyggd assistans direkt i Webstorms gränssnitt. Det finns även grafiskt gränssnitt som assisterar användning av versionhanteringssystem som till exempel Git.\cite{webstorm}
 \section{Node.js}
@@ -50,6 +50,17 @@ TypeScript-klassen innehåller logik kopplad till det grafiska innehållet hos e
 
 Utöver komponenterna finns även tjänster som tillhandahåller funktionalitet som inte är kopplad till någon särskild komponent. Mer om Angular finns att läsa i avsnitt \ref{martin_angular}.
 
+\section{Model-View-Controller} \label{mvc-ref}
+
+Designmönstret MVC för användargränssnitt möjliggör separation av hur gränssnittets data representeras internt sättet datan visas upp för användare. Designmönstret delar upp gränssnittet i tre delar, Model, View och Controller.\cite{mvc} Delarna beskrivs nedan:
+\begin{itemize}
+  \item Model innehåller gränssnittets data och logik för att manipulera datan. Denna del motsvaras av Angulars tjänster.
+  \item View presenterar data från Model för användaren. Denna del motsvaras av HTML-mallen i en Angular-komponent.
+  \item Controller hanterar kommunikation mellan användare och Model. Denna del motsvaras av TypeScript-klassen i en Angular-komponent.
+\end{itemize}
+
+Det system som tagits fram implementerar alltså designmönstret MVC utgående från de verktyg och den arkitektur Angular tillhandahåller.
+
 \section{MySQL}
 MySQL är ett relationsdatabashanteringssystem för att skapa och behandla data. För att hålla reda på
 information förvarar MySQL data i tabeller. En tabell kan liknas vid en model av ett verkligt objekt.
@@ -67,7 +78,7 @@ Relationer är mycket användbara då de tillåter att datan filtreras och prese
 För att interagera med MySQL används språket Structured Query Language (SQL). I SQL kan kommandon skrivas både för att mata in och begära ut olika data. Även om SQL är väldigt kraftfullt så har vi i det här projektet valt att använda oss av Sequelize.
 
 
-\section{Sequelize}
+\section{Sequelize}\label{sec:sequelize_teori}
 Sequelize är ett ORM-system för Node.js som stödjer dialekterna PostGreSQL, MySQL, SQLite och MSSQL. \cite{sequelize} ORM står för Object-relational mapping och är en teknik som tillåter hämtning och manipulering av data i en relationsdatabas med hjälp av objekt och objektorientering. Detta innebär att ingen användning av SQL krävs i Sequelize, dock möjliggör den fortfarande att köra normala SQL-frågor.
 
 I Sequelize används modeller och associationer för utformning eller beskrivning av databasen. Det går antingen att manuellt skapa modellerna och associationerna utifrån en existerande databas eller att låta Sequelize generera databasen utifrån dem.
