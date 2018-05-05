@@ -47,6 +47,17 @@ CSS-filen gör det grafiska innehållet mer detaljrikt. CSS står för Cascading
 TypeScript-klassen innehåller logik kopplad till det grafiska innehållet hos en specifik komponent. TypeScript är ett programspråk som utökar funktionaliteten hos JavaScript med bland annat statisk typning. Även Angulars tjänster är skriva i detta programspråk.
 
 Utöver komponenterna finns även tjänster som tillhandahåller funktionalitet som inte är kopplad till någon särskild komponent. Mer om Angular finns att läsa i avsnitt \ref{martin_angular}.
+
+\section{Model-View-Controller} \label{mvc-ref}
+
+Designmönstret MVC för användargränssnitt möjliggör separation av hur gränssnittets data representeras internt sättet datan visas upp för användare. Designmönstret delar upp gränssnittet i tre delar, Model, View och Controller.\cite{mvc} Delarna beskrivs nedan:
+\begin{itemize}
+  \item Model innehåller gränssnittets data och logik för att manipulera datan. Denna del motsvaras av Angulars tjänster. 
+  \item View presenterar data från Model för användaren. Denna del motsvaras av HTML-mallen i en Angular-komponent.
+  \item Controller hanterar kommunikation mellan användare och Model. Denna del motsvaras av TypeScript-klassen i en Angular-komponent. 
+\end{itemize}
+
+Det system som tagits fram implementerar alltså designmönstret MVC utgående från de verktyg och den arkitektur Angular tillhandahåller. 
  
 \section{MySQL}
 MySQL är ett relationsdatabashanteringssystem för att skapa och behandla data. För att hålla reda på 
