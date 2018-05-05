@@ -1,7 +1,7 @@
 \chapter{Resultat}
-I denna del kommmer resultatet av projektet beskrivas. Det innebär dels
-resultatet den mjukvara som har utvecklats, dels vilka erfarenheter som
+Det är kapitlet kommer att beskriva resultatet av den mjukvaran som har utvecklats samt vilka erfarenheter som
 teamet har samlat på sig under projektets gång.
+
 \section{Systembeskrivning}
 Systemet som skapats består av två separata delar, en back-end och en front-end.
 
@@ -15,33 +15,44 @@ Applikationen består av flera olika vyer, där vissa av vyerna ska visas upp i 
 All den data om patienter, salar och utrustning som användaren är intresserad av finns på en server i projektets back-end. Därför är det nödvändigt med kommunikation mellan de båda delarna. På projektets front-end sköts kommunikationen med AJAX-anrop. Dessa anrop sker i tjänster för att de ska vara tillgängliga för alla kompononenter som behövder tillgång till data av olika sorter.    
 
 \subsection{LoFi-Prototyper}
+
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{Figures/LoFi_no2.jpg}
+  \caption{Sista LoFi-prototypen}
+  \label{fig:LofiPic}
+\end{figure}
+
+
 Under projektets andra iteration utvecklades tre olika LoFi-prototyper. Dessa
 LoFi-prototyper designades för att visa på olika designalternativ på
 användargränssnittet. Ett exempel på detta är informationen som var med i listan
-över beslutade operationer. I en av prototyperna identifierades patienten som hörde ihop med beslutet med namn, den andra med personnummer. I den tredje LoFi-prototypen
+över beslutade operationer.
+
+I en av prototyperna identifierades patienten som hörde ihop med beslutet med namn, den andra med personnummer. I den tredje LoFi-prototypen
 fanns inget som identifierade patienten utan enbart information om vilken
 typ av operation det var. På liknande sätt utvärderades olika sätt att
-visualisera lediga tider i schemat samt olika sätt att anpassa sökparametrarna för en sökning efter lediga tider. När prototyperna visades för kunden kunde alternativen sållas bort och en tydligare bild av behoven framträdde.
+visualisera lediga tider i schemat samt olika sätt att anpassa sökparametrarna för en sökning efter lediga tider.
+
+När prototyperna visades för kunden kunde alternativen sållas bort och en tydligare bild av behoven framträdde.
 Till exempel fanns det endast personnummer och inte namn på patienterna, vilket var något som önskades.
 
 Den första iterationen av LoFi-prototyper användes sedan för att ta fram en ny
 LoFi-prototyp med enbart mindre designalternativ som visades för tre olika
-operationsplanerare.
+operationsplanerare. (Figur \ref{fig:LofiPic} illustrerar en bild av den sista Lofi-prototypen.)
+
 \subsection{Systemanatomi}
-\begin{figure}
-\includegraphics[width=\textwidth,height=.4\textheight]{Figures/Systemanatomi.png}\\
-\caption{Systemanatomi}
-\label{fig:Systemanatomi}
+I första iterationen togs det fram en systemanatomi (se figur \ref{fig:Systemanatomi}) som användes under projektets gång som ett hjälpmedel för strukturera upp arbetet under utvecklingen. Den gav en översiktlig bild av vilken funktionalitet produkten skulle innehålla och hur de olika delarna samverkade med varandra. Utöver detta presenterades den i ett tidigt skede för kunden i syfte att säkerställa att projektgruppens syn på systemet stämde överens med kundens.
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth,height=.4\textheight]{Figures/Systemanatomi.png}\\
+    \caption{Systemanatomi}
+    \label{fig:Systemanatomi}
 \end{figure}
 
-I första iterationen togs det fram en systemanatomi som användes under projektets gång som ett hjälpmedel för strukturera upp arbetet under utvecklingen. Den gav en översiktlig bild av vilken funktionalitet produkten skulle innehålla och hur de olika delarna samverkade med varandra. Utöver detta presenterades den i ett tidigt skede för kunden i syfte att säkerställa att projektgruppens syn på systemet stämde överens med kundens. 
-
 \subsection{Värde för kund}
-Den produkt som har skapats är ett lättöverskådligt schemaläggningssystem för operationer. Det följer ***Skriv in typiskt bra krav som är godkända av kund och som visar på funktionalitet och värde för kunden***
+Den produkt som har skapats är ett lättöverskådligt schemaläggningssystem för operationer. Slutprodukten tillsammans med tankar och erfarenheter från design och utvecklings-faserna kommer att ha ett stort värde för kunden. Detta eftersom projektet kommer att användas som en form av förstudie till ett större projekt (se stycke \ref{sec:syfte}).
 
-\section{Separation av front-end och back-end}
-
-\section{Integration i redan existerande system}
+Det medför att Region Östergötland kommer att ha något att utgå ifrån då deras projekt startar, vilket hjälper av flera anledningar. Projektägaren som också är insatt i det större projektet kommer att kunna ta med sig många erfarenheter från det här projekt.
 
 \section{Gemensamma erfarenheter}
 I början av projektet fick vi snabbt större erfarenhet av olika områden
@@ -64,6 +75,6 @@ För/nackdelar med TypeScript jämfört med JavaScript
 \subsection{Martin}
 Angular som webbutvecklingsplattform
 \subsection{Niclas}
-Prototypuveckling i kandidatprojekt 
+Prototypuveckling i kandidatprojekt
 \subsection{Tor}
 Kvalitetsförsäkrande metoder i ett småskaligt mjukvaruprojekt

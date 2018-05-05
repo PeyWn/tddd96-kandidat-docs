@@ -10,12 +10,12 @@ Denna rapport undersöker positiva och negativa effekter med användning av Type
 \section{Frågeställningar}
 För att uppfylla syftet kommer följande frågeställningar att besvaras i rapporten:
 \begin{enumerate}
-\item Bidrog den statiska typningen i TypeScript till att fel hittades tidigare under utvecklingen?
-\item Bidrog den statiska typningen i TypeScript till kod som var lättare att läsa och förstå?
-\item Hur påverkades produktiviteten vid utveckling av statisk typning jämfört med dynamisk?
+\item Bidrar den statiska typningen i TypeScript till att fel hittas tidigare under utvecklingen?
+\item Bidrar den statiska typningen i TypeScript till kod som är lättare att läsa och förstå?
+\item Hur påverkas produktivitet vid utveckling av statisk typning jämfört med dynamisk?
 \end{enumerate}
 \section{Bakgrund}
-I projektet utvecklades en webbapplikation bestående av två delar, en webbklient och en webbserver. Eftersom det bestämdes att klienten skulle skrivas med hjälp av plattformen Angular medförde det också språket TypeScript som i plattformen. På serversidan bestämdes det istället att utvecklingen skulle ske med vanlig JavaScript. Detta innebar alltså att båda språken användes i projektet och att gruppmedlemmarna fick testa på och få erfarenheter av dem båda. Alla medlemmar i projektet hade också svaga eller inga kunskaper om de båda språken innan projektet. Detta innebar att projektet lämpade sig rätt så bra för denna undersökning.
+I projektet utvecklades en webbapplikation bestående av två delar, en webbklient och en webbserver. Eftersom det bestämdes att klienten skulle skrivas med hjälp av plattformen Angular medförde det också att språket TypeScript valdes. Detta eftersom Angular själv är skrivet i TypeScript. På serversidan bestämdes det istället att utvecklingen skulle ske med vanlig JavaScript. Både TypeScript och JavaScript användes alltså i projektet och en stor del av gruppen använde och fick erfarenheter om båda. Alla medlemmar hade också svaga eller inga kunskaper om de båda språken innan projektet. Detta innebar att projektet lämpade sig rätt så bra för denna undersökning.
 
 Jämförelse mellan strikt och dynamiskt typade språk är relevant eftersom det finns många språk på båda sidor som flitigt används inom mjukvaruutveckling. Detta tyder på att båda typsystemen är mycket relevanta och det är därför intressant att jämföra dem, i det här fallet inom webbutveckling.
 \section{Teori}
@@ -38,9 +38,13 @@ Att ett språk är statiskt typat betyder att typer för variabler och funktione
 
 Effekten av detta är att det direkt från koden går att avgöra typer på allt och därmed också ifall det finns typfel. Dessa kan då rapporteras innan programmet ens körs.
 \section{Metod}
-För att besvara frågeställningarna samlades gruppmedlemmarnas erfarenheter med de två olika språken under projektet. Många av medlemmarna kom under utvecklingen i kontakt med både JavaScript och TypeScript och hade därför en bra grund för att jämföra dem. Dessa erfarenhter samlades dels kontinuerligt under projektet och dels genom intervjuer i slutet av utvecklingsarbetet. Utöver gruppens erfarenheter studerades även litteratur om feldetektering och vidareutveckling av kod för dynamisk och statisk typning. Detta användes som komplettering och som jämförelse för de erfarenheter som samlats i gruppen.
+För att besvara frågeställningarna samlades gruppmedlemmarnas erfarenheter med de två olika språken under projektet. Många av medlemmarna kom under utvecklingen i kontakt med både JavaScript och TypeScript och hade därför en bra grund för att jämföra dem. Information samlades dels genom egna erfarenheter under projektet och dels genom intervjuer med övriga gruppmedlemmar i slutet av utvecklingsarbetet. Utöver gruppens erfarenheter studerades även litteratur om feldetektering och vidareutveckling av kod för dynamisk och statisk typning. Detta användes som komplettering och som jämförelse för de erfarenheter som samlats i gruppen.
+
+\subsection{Egna erfarenheter}
+Under projektets gång har jag, som hade rollen utvecklingsledare, fått många erfarenheter inom både JavaScript och TypeScript. Detta då jag behövde spendera mycket tid på både klienten och servern för att uppfylla min roll. I undersökningen kommer mina erfarenheter att kombineras med de från övriga gruppmedlemmar.
+
 \subsection{Intervjuer}
-För att hämta in erfarenheter inom hur gruppens medlemmar upplevt att feldetektering, kodförståelse och utvecklingsfart hölls intervjuer med alla medlemmar som hade fått erfarenhet av TypeScript under projektet. Detta innefattade alla utom författaren och en medlem som endast arbetat med servern och ej kommit i kontakt med TypeScript-koden i klienten alls. Det blev därmed 5 intervjuer som genomfördes. Frågorna som ställdes presenteras i tabell \ref{henrik_fragor} nedan.
+För att hämta in erfarenheter inom hur gruppens övriga medlemmar upplevt att feldetektering, kodförståelse och utvecklingsfart påverkats hölls intervjuer med alla som hade fått erfarenhet av TypeScript under projektet. Detta gjordes för alla utom en medlem som endast arbetat med servern och ej kommit i kontakt med TypeScript-koden i klienten alls. Det blev därmed 5 intervjuer som genomfördes. Frågorna som ställdes presenteras i tabell \ref{henrik_fragor} nedan.
 
 \begin{table}[h]
 \centering
