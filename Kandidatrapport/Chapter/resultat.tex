@@ -3,8 +3,15 @@ I denna del kommmer resultatet av projektet beskrivas. Det innebär dels
 resultatet den mjukvara som har utvecklats, dels vilka erfarenheter som
 teamet har samlat på sig under projektets gång.
 \section{Systembeskrivning}
-\textit{Skrivs när systemet är byggt, vill man få en känsla för hur det kan
-komma att se ut så läser man bäst om det i arkitekturdokumentet}
+Systemet som skapats består av två separata delar, en back-end och en front-end.
+
+\subsection{Front-end}
+Projektets front-end utvecklades i ramverket Angular. Den använder sig därför av den komponentbaserade arkitektur som starkt förordas av det ramverket. Det grafiska innehållet på projektets front-end var uppdelat i komponenter som uppdaterades eller byttes ut till andra komponenter när användaren interagerade med systemet. De komponenter som fanns överst i applikationens komponenthierarki var tomma behållare vars enda syfte var att separera applikationens olika beståndsdelar från varandra. Inuti dessa placerades sedan komponenter med faktiska funkioner, som knappsatser eller sökrutor.
+
+Applikationen består av flera olika vyer, där vissa av vyerna skulle visas upp i samma behållare men vid olika tillfällen, beroende på vilken vy användaren för stunden är intresserad av. För att byta mellan vyerna användes Angulars tjänster. Tjänsterna är inte direkt kopplade till någon specifik komponent och kunde därför användas för att kommunicera mellen komponenter i olika delar av komponenthierarkin.
+
+Då all den data om patienter,salar och utrustning som  
+
 \subsection{LoFi-Prototyper}
 Under projektets andra iteration utvecklades tre olika LoFi-prototyper. Dessa
 LoFi-prototyper designades för att visa på olika designalternativ på
