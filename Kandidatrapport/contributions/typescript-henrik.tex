@@ -46,7 +46,7 @@ För att besvara frågeställningarna samlades gruppmedlemmarnas erfarenheter me
 Under projektets gång har jag, som hade rollen utvecklingsledare, fått många erfarenheter inom både JavaScript och TypeScript. Detta då jag behövde spendera mycket tid på både klienten och servern för att uppfylla min roll. I undersökningen kommer mina erfarenheter att kombineras med de från övriga gruppmedlemmar.
 
 \subsection{Intervjuer}
-För att hämta in erfarenheter inom hur gruppens övriga medlemmar upplevt att feldetektering, kodförståelse och utvecklingsfart påverkats hölls intervjuer med alla som hade fått erfarenhet av TypeScript under projektet. Detta gjordes för alla utom en medlem som endast arbetat med servern och ej kommit i kontakt med TypeScript-koden i klienten alls. Det blev därmed 5 intervjuer som genomfördes. Frågorna som ställdes presenteras i tabell \ref{henrik_fragor} nedan.
+För att hämta in erfarenheter inom hur gruppens övriga medlemmar upplevt att feldetektering, kodförståelse och utvecklingsfart påverkats hölls intervjuer med alla som hade fått erfarenhet av TypeScript under projektet. Detta gjordes för alla utom en medlem som endast arbetat med servern och ej kommit i kontakt med TypeScript-koden i klienten alls. Det blev därmed fem intervjuer som genomfördes. Frågorna som ställdes presenteras i tabell \ref{henrik_fragor} nedan.
 
 \begin{table}[H]
 \centering
@@ -73,8 +73,34 @@ För att kunna jämföra de resultat som fås från projektgruppens erfarenheter
 \section{Resultat}
 I denna sektion beskrivs resultaten från mina egna erfarenhter, intervjuerna och litteraturstudien som tillsammans utgör hela undersökningen.
 \subsection{Egna erfarenheter}
+Jag hade innan det här projektet inte ens hör talas om TypeScript. JavaScript hade jag i alla fall kommit i kontakt med några gånger innan, men mina kunskaper om språket var mycket begränsade.
+
+Under själva projektet fick jag mycket tid åt utveckling och använde den ungefär jämnt över båda språken.
+\subsubsection{Hitta fel}
+Jag tycker att klasserna och den statiska typningen i TypeScript till viss del hjälpte mig att hitta fel tidigare under projektet. Detta var inte något jag märkte eller tänkte på när jag använde TypeScript utan snarare under utvecklingen i JavaScript. Det inträffade ett flertal gånger att jag råkade göra små fel i JavaScript som inte ens resulterade i ett fel vid körning. Till exempel vid felstavning av en medlem vid användning av ett objekt. Dessa var fel som hade givit fel vid kompilering om TypeScript använts men som istället inte hittades förrän dess effekter märktes av.
+\subsubsection{Kodförståelse}
+När det kom till att läsa och förstå kod skriven av andra medlemmar tyckte jag inte att klasser och statisk typning gjorde någon större skillnad. Det var definitivt till hjälp, speciellt att veta typer på argument och returvärden till funktioner, men bra dokumentation av kod i JavaScript hade kunnat ersätta detta till stor del.
+
+Däremot var klasser och typer till stor hjälp vid användning av externa bibliotek. I JavaScript spenderade jag mycket tid i dokumentation och sökning på internet för att förstå hur dess funktioner kunde användas. Både att veta vad för slags objekt funktionen accepterade som argument och vad den returnerade för något. I TypeScript var detta betydligt mer klart, speciellt tack vare smidiga funktioner i utveklingsmiljön för autokomplettering och navigation till klassdeklarationer.
+\subsubsection{Produktivitet}
+Angående hur produktiv jag var med de båda språken har jag något blandade erfarenheter. Fördelarna med JavaScript var helt enkelt att det var mindre kod att skriva. Att slippa skriva ut typer för variabler gjorde ingen större skillnad, däremot sparades tid från att slippa deklarera klasser, speciellt för många små objekt.
+
+TypeScript hade också fördelar som hänger ihop med det jag beskrev om att hitta fel och kodförståelse ovan. Detta då snabbare feldetektion och förståelse av koden bidrog till sparad tid och ökad produktivitet. 
 \subsection{Intervjuer}
+I denna sektion presenteras resultaten från den intervjudersökning som genomfördes på övriga gruppmedlemmar.
+
+Alla medlemmar som intervjuades hade svaga eller inga kunskaper inom både JavaScript och TypeScript från innan projektet. Av de fem som intervjuades hade alla fått använda sig av TypeScript under projektet. När det kom till JavaScript skilde det sig något men alla hade i alla fall kommit i kontakt med språket under projektet.
+\subsubsection{Hitta fel}
+Från frågorna 1 och 2 i intervjun (se tabell \ref{henrik_fragor}) som handlade om detektering av fel erhölls blandade erfarenheter. 
+
+nej räcker med bra kommunikation, ett par gånger, inte något jag märkt, ett par gånger, ja ide:n klagat några gånger
+
+kanske små fel, hade nog hänt felstavning, lite färre typfel men enhetstester kan ersätta, fel argument till funktion, något iden håller i handen 
+\subsubsection{Kodförståelse}
+
+\subsubsection{Produktivitet}
 \subsection{Litteraturstudie}
+
 \section{Diskussion}
 \subsection{Resultat}
 \subsection{Metod}
