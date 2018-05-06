@@ -83,7 +83,7 @@ Sequelize är ett ORM-system för Node.js som stödjer dialekterna PostGreSQL, M
 
 I Sequelize används modeller och associationer för utformning eller beskrivning av databasen. Det går antingen att manuellt skapa modellerna och associationerna utifrån en existerande databas eller att låta Sequelize generera databasen utifrån dem.
 
-Modellerna definierar de objekt som används för att manipulera och läsa från databasen. Varje modell beskriver attributerna i sin motsvarande tabell och för att beskriva relationer mellan olika modeller används så kallade associationer. Med hjälp av associationerna kan 1:1, 1:n och n:m relationer mellan tabeller beskrivas.
+Modellerna definierar de objekt som används för att manipulera och läsa från databasen. Varje modell beskriver attributerna i sin motsvarande tabell och för att beskriva relationer mellan olika modeller används så kallade associationer. Med hjälp av associationerna kan en till en, en till många och många till många-relationer mellan tabeller beskrivas.
 
 Ändringar i databasens struktur kan hanteras genom att använda migrationer i Sequelize. Dessa beskriver dels hur ändringen utförs och dels hur den ångras. Genom att utföra dem i ordning kan man byta mellan alla tidigare versioner av databasen. \cite{migrations}
 
