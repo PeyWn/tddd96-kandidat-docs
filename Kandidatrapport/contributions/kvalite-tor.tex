@@ -1,18 +1,40 @@
 \chapter{Kvalitetsförsäkrande metoder i ett småskaligt mjukvaruprojekt av Tor Utterborn}
 
+\section{old}
+
+Och ur ett större perspektiv, vad kan man dra för slutsatser kring de arbetsmetoder, standarder etc. som undersökts. \\
+
+Jag tycker det kan vara intressant att undersöka detta i ett projekt som ska utveckla ett verktyg som i teorin ska boka in och användas för att boka in tusentals operationer om året.
 
 \section{Inledning}
-I dagens industri sätter företagare mer och mer fokus på hållbarhet när de ska producera en produkt eller tjänst. Hållbarhet i dels metoder för utvecklandet, men också hållbarhet i ekonomiska, miljö och samhällsaspekter.
-De tre aspekterna skall tillsammans bilda en s.k. (LCA) [1]. En ’sluten kedja’ där de tre områdenas sammansatta effekt får en så liten negativ påverkan på resurser som möjligt.
+I dagens industri sätter företagare mer och mer fokus på hållbarhet när de ska producera en produkt eller tjänst. Hållbarhet i dels metoder för utvecklandet, men också hållbarhet i den mån produkten påverkar ekonomiska, miljö och samhälleliga aspekter.
+
+Huvudtanken i hållbarhetslära är att påverkan på de tre områdena tillsammans ska bilda en s.k. (LCA) [1]. En ’sluten kedja’ där de tre områdenas sammansatta effekt får en så liten negativ inverkan på resurser som möjligt.
 
 \section{Syfte}
-Det finns många kvalitetsförsäkrande arbetsmoment inom småskalig mjukvaruutveckling. Kan några av de metoder vi valt föra vårt arbete mot en mer kvalitativ produkt? Och ur ett större perspektiv, vad kan man dra för slutsatser kring de arbetsmetoder, standard etc. som undersökts. \\
-Jag tycker det kan vara intressant att undersöka detta i ett projekt som ska utveckla ett verktyg som i teorin ska boka in och användas för att boka in tusentals operationer om året.
-Jag tänkte samla information från Linköpings publicerade artiklar i deras bibliotek, internet, möjligtvis artiklarna vi blev tilldelade i hållbarhetsseminariet. Sedan får jag i min roll som kvalitetssamordnare samla och diskutera erfarenheter med projektmedlemmar under projektets gång.
+När en prototyp som Aeon utvecklas, ett mjukvaruprojekt som i teorin ska boka in tusentals operationer om året. 
+Kan några av de kvalitetsförsäkrande moment vi valt föra vårt arbete mot en mer kvalitativ produkt? Och ur ett större perspektiv, vad kan man dra för slutsatser kring de arbetsmetoder, standarder etc. som undersökts under projektets gång.
 
+\section{Frågeställning}
+
+Om man använder metoder specificerade i kvalitetsplanen för att kvalitetsförsäkra produkten. 
+
+\begin{itemize}
+	\item Kommer användandet av TSLint under projektets gång hjälpa oss att uppnå en mer kvalitativ produkt/tjänst ur ett LCA perspektiv?
+	\item Kommer användandet av ramverket Angular under projektets gång hjälpa oss att uppnå en mer kvalitativ produkt ur ett LCA perspektiv?
+\end{itemize}
+
+\section{Avgränsningar}
+Denna rapport inriktar sig på de kvalitetsförsäkrande metoder vi valt att arbeta efter, se dokument %\ref{kvalite}
+
+\section{Definitioner}
+
+\section{Bakgrund}
+
+\section{Teori}
+
+Kvalitetsförsäkran kan vara dyrt, tidskrävande och det är ofta svårt att avgöra när man uppnått sina uppsatta mål. [Källa]
 \section{Metoder}
-
-Kvalitetsförsäkran kan vara dyrt, tidskrävande och det är ofta svårt att avgöra när man uppnått sina mål tillräckligt. [Källa]
 
 IEEE-730 är en utbredd standard för kvalitetsförsäkran inom mjukvaruutveckling. Standarden ska bistå projektet genom att ställa frågor som:
 \\ \\
@@ -20,8 +42,7 @@ IEEE-730 är en utbredd standard för kvalitetsförsäkran inom mjukvaruutveckli
 
 Som kvalitetssamordnare bör man fastslå metoder i sin kvalitetsplan för att veta svaren på ovan nämnda fråga. \\
 
-ISO/IEC TR 29110-5-1-3
-
+\subsection{ISO/IEC TR 29110-5-1-3}
 Om en produkt eller tjänst har en positiv inverkan på de tre huvudområdena hållbar utveckling fokuserar på så kan den enligt ”ISO/IEC TR 29110-5-1-3” [Källa 2] anses vara av högkvalitativa mått.  Denna ISO (standardisering) fokuserar på: 
 
 \begin{itemize}
@@ -31,11 +52,12 @@ Om en produkt eller tjänst har en positiv inverkan på de tre huvudområdena h�
 \end{itemize}
 
 Ett av de ”modeord” som existerar inom kvalitetsförsäkrande metoder inom mjukvaruutveckling idag är automatiserade kod-kontroller i utvecklingsmiljön. Att manuellt utföra dessa kvalitetsförsäkrande processer är en uttröttande och repetitiv process. [Källa]
+
 \subsection{TSLint}
 Ett s.k. statiskt kodanalys-verktyg är Lint som i grunden är utvecklat för programmeringsspråket C. En vidareutveckling på verktyget är ”TSLint”, samma verktyg men utvecklat för Typescript, de kodspråk vi valde att använda i vårt projekt. TSLint skall hjälpa utvecklaren av projektet med läsbarhet, underhåll samt funktionalitetsproblem med koden.
 
 \subsection{Angular}
-Ett av de mest etablerade programmeringsramverken för webbutveckling i dagsläget är Angular. [källa] Angular har med sina komponentbaserad arkitektur[5] en vy att vara ett ramverk som förespråkar:
+Ett av de mest etablerade programmeringsramverken för webbutveckling är Angular som är utvecklat av Google. [källa] Angular har med sina komponentbaserad arkitektur[5] en vy att vara ett ramverk som förespråkar:
 
 \begin{itemize}
 	\item Återanvändning av kod
@@ -43,15 +65,6 @@ Ett av de mest etablerade programmeringsramverken för webbutveckling i dagsläg
 	\item Enkla enhetstester
 	\item Underhåll
 \end{itemize}
-
-
-\section{Frågeställning}
-
-Om man använder metoder specificerade i kvalitetsplanen för att kvalitetsförsäkra produkten. 
-
-Kommer användandet av TSLint under projektets gång hjälpa oss att uppnå en mer kvalitativ produkt/tjänst ur ett LCA perspektiv?
-
-Kommer användandet av ramverket Angular under projektets gång hjälpa oss att uppnå en mer kvalitativ produkt/tjänst ur ett LCA perspektiv?
 
 \section{Resultat}
 Här tänkte jag samla data från enkäter och intervjuer med projektmedlemmar när vi kommit längre i implementeringen av koden i projektet.
@@ -77,6 +90,8 @@ Ur ett perspektiv som fokuserar på:
 
 Vilka fördelar/nackdelar ser du som projektmedlem med användandet av TSLint/Angular?
 
+
+\section{Diskussion}
 
 
 \section{Källor}
