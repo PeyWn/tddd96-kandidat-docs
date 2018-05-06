@@ -49,7 +49,7 @@ LoFi-prototyp, som uppdaterats enligt återkoppling från föregående iteration
 \subsection{Grafiskt gränssnitt}
 Då arbetet med prototyper var klart inleddes implementationen av designen i form av de grafiska komponenterna. Det här resulterade i en komplett webbsida med tre olika huvudkomponenter, sidopanelen, informationslisten och den huvudsakliga innehållsrutan.
 
-Arbetsflödet i appen börjar med att användaren loggar in med sin använare. Därefter presenteras vyn som visas i figur \ref{fig:window}.
+Arbetsflödet i appen börjar med att användaren loggar in med sina inloggningsuppgifter. Därefter presenteras vyn som visas i figur \ref{fig:window}.
 
 \begin{figure}
 	\includegraphics[width=\linewidth]{Figures/window.png}
@@ -65,7 +65,7 @@ Det går även att söka i listan dessutom kan användare filtrera listan på ol
 
 När användaren klickar på en patient så visas en detaljvy för patienten (figur \ref{fig:planeringsvy}). Här kan användaren se mer detaljerad information om beslutet så som hur lång tid operationen beräknas ta, hur lång förberedelse tid som krävs mm. Det går ochså att se en lista med alla de verktyg och matrial som krävs.
 
-Längst ner finns det även en ruta med sökkreterier för att filtrera den schemavy som visas i huvudfönstret så att en ledig tid kan hittas.
+Längst ner finns det även en ruta med sökkriterier för att filtrera den schemavy som visas i huvudfönstret så att en ledig tid kan hittas.
 \begin{figure}[H]
 	\centering
 
@@ -93,7 +93,7 @@ I informationslisten syns det också vilken användare som är inloggad längst 
 I huvudfönstret visas i grundutförandet en månadsvy över där det går att se hur många operationer det är inbokade på olika dagar. om en dag markeras så visas fler detaljer över de operationer som är inbokade på den dagen. När en patient har valts i sidomenyn används måndadsvyn för att välja vilken dag då man vill boka in operationen. När en dag har valts så skickas användaren vidare till spårvyn.
 
 \subsubsection{Spårvyn}
-Spårvyn visar ett antal konfigurerbara spår där varje spår motsvarar schemat för en viss resurs på den valda dagen. Dessa spår visas brevid varandra för att enkelt visualisera de olika resurserna och på så sätt skapa en bra överblick över när de olika resurserna är lediga i relatione till varandra. Det går att välja vilka resurser som ska visas så som salar, olika personal och verktyg. \todo{Utöka med vidare förklaring när den är fastställd.}\todo{infoga bild på spårvy}
+Spårvyn visar ett antal konfigurerbara spår där varje spår motsvarar schemat för en viss resurs på den valda dagen. Dessa spår visas brevid varandra för att enkelt visualisera de olika resurserna och på så sätt skapa en bra överblick över när de olika resurserna är lediga i relation till varandra. Det går att välja vilka resurser som ska visas så som salar, olika personal och verktyg. \todo{Utöka med vidare förklaring när den är fastställd.}\todo{infoga bild på spårvy}
 
 
 
