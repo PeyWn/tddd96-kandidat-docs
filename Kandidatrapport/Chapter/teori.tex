@@ -10,16 +10,18 @@ Utvecklingsteamet är själva kärnan i scrum-metodiken, det är teamet som best
 För en utförligare beskrivning av scrum-metodiken, se avsnitt \ref{adam_scrum}.
 
 \section{GitLab}
-GitLab är en webbtjänst för hantering av data som använder versionshanteringsprogrammet Git. De som är medlemmar i ett Gitlab-projekt kan lägga till och ändra i filer.
+GitLab är en webbtjänst för hantering av data som använder versionshanteringsprogrammet Git. Medlemmar i ett Gitlab-projekt kan lägga till och ändra i filer.
 Med Git arbetar varje medlem i ett projekt på en lokal kopia av data som finns på Gitlabservern för att sedan skicka upp de ändringar man gjort till servern. Git fungerar på så sätt att alla ändringar sparas. Det betyder att om någon skulle göra en ändring som har oönskad effekt kan man enkelt gå tillbaka till en tidigare version av den data som finns på servern.
 
-Git har stöd för något som kallas grenar, en gren kan beskrivas som en kopia av hela projektets data, vanligtvis av den data som finns i projektets huvudgren. När en ny gren har skapats sker alla ändringar som görs på den nya grenen. Det finns flera fördelar med att arbeta i grenar. För det första möjliggör det parallellt och strukturerat arbete då man kan namnge en gren så att namnet motsvarar ändringarnas syfte. Till exempel kan det vara namnet på någon ny funktionalitet.
+Git har stöd för något som kallas grenar, en gren kan beskrivas som en kopia av projektets data, vanligtvis av den data som finns i projektets huvudgren. När en ny gren har skapats sker alla ändringar som görs på den nya grenen. Det finns flera fördelar med att arbeta i grenar. För det första möjliggör det parallellt och strukturerat arbete då man kan namnge en gren så att namnet motsvarar ändringarnas syfte. Till exempel kan det vara namnet på någon ny funktionalitet.
 
-Vidare gör det inget för om en gren inte fungerar i sitt nuvarande tillstånd, det gör att man inte förstör för sina medarbetar när man testar nya saker. För det andra kan man genom GitLab skapa sammanslagningsförfrågningar för att väva samman två grenar. Fördelen med det är att det på ett väldigt enkelt sätt går att se vilka ändringar som har gjorts på den nya grenen och vad som kommer att uppdateras.
+Vidare gör det inget om en gren inte fungerar i sitt nuvarande tillstånd, om du sitter i en gren så kan kollegor fortfarande sitta i andra grenar när du testar nya saker.
+För det andra kan man genom Gitlab skapa sammanslagningsförfrågningar för att väva samman två grenar.
+Fördelen med det är att det på ett väldigt enkelt sätt går att se vilka ändringar som har gjorts på den nya grenen och vad som kommer att uppdateras.
 
 Det finns också möjlighet att ärendehantera med hjälp av Git.
 Då skapar en person ett ärende om att den t.ex. har hittat en bugg eller att den anser att en ny funktionalitet ska implementeras.
-Sedan finns dessa ärenden sparade på projektsidan på GitLab så att medlemmar kan se och hantera dem. \cite{gitlab}
+Sedan finns dessa ärenden sparade på projektets sida på Gitlab så att medlemmar kan se och hantera dem. \cite{gitlab}
 
 \section{Webstorm}
 Webstorm är en utvecklingsmiljö skapad av programvaruutvecklaren JetBrains som är anpassad för JavaScript och webbutveckling. Den har även stöd och hjälp för relaterade språk som HTML, CSS och TypeScript. Till dessa språk finns smidiga hjälpfunktioner som kodkomplettering, kraftfull navigering, feldetektering i realtid och refaktorisering.
@@ -42,11 +44,11 @@ Komponenterna i Angular består i huvudsak av tre delar:
 \item TypeScript-klass
 \end{itemize}
 
-HTML-mallen beskriver vilket grafiskt innehåll som ritas upp för användaren. HTML-koden som skrivs i Angular är utökad med Angular-specifik funktionalitet. Detta gör den kraftfullare än vanligt HTML-kod.
+HTML-mallen beskriver vilket grafiskt innehåll som ritas upp för användaren. HTML-koden som skrivs i Angular är utökad med Angular-specifik funktionalitet. Detta gör den kraftfullare än vanlig HTML-kod.
 
 CSS-filen styr det grafiska innehållet mer detaljrikt. CSS står för Cascading Style Sheets och tillför möjligheter att justera innehållets färg, placering, textstorlek eller typsnitt och andra grafiska egenskaper.
 
-TypeScript-klassen innehåller logik kopplad till det grafiska innehållet hos en specifik komponent. TypeScript är ett programspråk som utökar funktionaliteten hos JavaScript med bland annat statisk typning. Även Angulars tjänster är skriva i detta programspråk.
+TypeScript-klassen innehåller logik kopplad till det grafiska innehållet hos en specifik komponent. TypeScript är ett programspråk som utökar funktionaliteten hos JavaScript med bland annat statisk typning. Även Angulars tjänster är skrivna i detta programspråk.
 
 Utöver komponenterna finns även tjänster som tillhandahåller funktionalitet som inte är kopplad till någon särskild komponent. Mer om Angular finns att läsa i avsnitt \ref{martin_angular}.
 
@@ -64,14 +66,14 @@ Det system som tagits fram implementerar alltså designmönstret MVC utgående f
 \section{MySQL}
 MySQL är ett relationsdatabashanteringssystem för att skapa och behandla data. För att hålla reda på
 information förvarar MySQL data i tabeller. En tabell kan liknas vid en model av ett verkligt objekt.
-Exempel på detta är en patient, en bokning eller en sal \cite{mysql}. Tabellen innehåller en kolumn för varje
+Exempel på detta är en patient, en bokning eller en sal. \cite{mysql} Tabellen innehåller en kolumn för varje
 attribut som objektet har, till exempel ett namn och ett personnummer. Detta innebär att varje rad i
 tabellen motsvarar en unik entitet av det modelerade objektet. Det vill säga en specifik patient eller
 en specifik sal.
 
 Tabeller kan även kopplas ihop med så kallade relationer. På så sätt kan till exempel en specifik bokning kopplas ihop med en specifik patient. Detta fungerar genom att alla tabeller har en unik nyckel. Nyckeln kan vara vilket attribut som helst så länge det har ett unikt värde för alla objekt i tabellen. En tabell kan ha flera nycklar men den nyckel som används för relationer kallas för primary key eller primärnyckel på svenska.
 
-Primärnyckeln kan anvädas för att unikt identifiera ett visst objekt i tabellen. Denna egenskapen används för att koppla ihop olika objekt från olika tabeller. Detta går att göra på många olika sätt men i grunden används värdet på primärnykeln för ett visst objekt som värde för ett attribut i ett annat objekt. Ett exempel är att tabellen bokning kan ha ett attribut som kallas 'patient'. När en ny boking skapas används då värdet för primärnyckeln till den specifika patienten för att koppla patienten till den nya bokningen.
+Primärnyckeln kan användas för att unikt identifiera ett visst objekt i tabellen. Denna egenskapen används för att koppla ihop olika objekt från olika tabeller. Detta går att göra på många olika sätt men i grunden används värdet på primärnykeln för ett visst objekt som värde för ett attribut i ett annat objekt. Ett exempel är att tabellen bokning kan ha ett attribut som kallas 'patient'. När en ny boking skapas används då värdet för primärnyckeln till den specifika patienten för att koppla patienten till den nya bokningen.
 
 Relationer är mycket användbara då de tillåter att datan filtreras och presenteras på ett effektivt sätt så att det är enkelt att hitta den data som behövs.
 
@@ -81,7 +83,7 @@ För att interagera med MySQL används språket Structured Query Language (SQL).
 \section{Sequelize}\label{sec:sequelize_teori}
 Sequelize är ett ORM-system för Node.js som stödjer dialekterna PostGreSQL, MySQL, SQLite och MSSQL. \cite{sequelize} ORM står för Object-relational mapping och är en teknik som tillåter hämtning och manipulering av data i en relationsdatabas med hjälp av objekt och objektorientering. Detta innebär att ingen användning av SQL krävs i Sequelize, dock möjliggör den fortfarande att köra normala SQL-frågor.
 
-I Sequelize används modeller och associationer för utformning eller beskrivning av databasen. Det går antingen att manuellt skapa modellerna och associationerna utifrån en existerande databas eller att låta Sequelize generera databasen utifrån dem.
+I Sequelize används modeller och associationer för utformning eller beskrivning av databasen. Det går antingen att manuellt skapa modellerna och associationerna utifrån en existerande databas eller att låta Sequelize generera databasen utifrån den.
 
 Modellerna definierar de objekt som används för att manipulera och läsa från databasen. Varje modell beskriver attributerna i sin motsvarande tabell och för att beskriva relationer mellan olika modeller används så kallade associationer. Med hjälp av associationerna kan en till en, en till många och många till många-relationer mellan tabeller beskrivas.
 
