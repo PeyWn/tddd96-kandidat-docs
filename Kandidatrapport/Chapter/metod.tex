@@ -52,11 +52,9 @@ Denna roll arbetar mycket med utvecklingsledare och dokumentansvarig då dessa t
 Gruppen hade möte nästan en gång om dagen för att uppdatera varandra om vad man har gjort, vad man ska göra och om man har några problem. Varannan vecka hade gruppen ett längre möte där man redovisade vad som hade presterats, vad som gått bra/kunde ha gjorts bättre och vad man ska göra under kommande två veckor. Dessa möten följde Scrum-metodik, se avsnitt \ref{scrum}.
 
 Utöver Scrum hade gruppen möte med handledaren en gång i veckan för att uppdatera varandra och handledaren om statusen för projektet. Till dessa möten skickades en dagordning ut av teamledaren i god tid innan mötet. Dagordningen bestod av ett antal punkter som skulle behandlas under handledarmötena. 
-
 Utöver dessa punkter hade medlemmar i projektgruppen samt handledare möjlighet att tillföra punkter på dagordningen, deadline för detta var 12.00 dagen innan respektive möte.
-Denna dagordning hade ett antal punkter som alltid togs upp och medlemmar i gruppen samt handledaren kunde skicka in extra punkter att ta upp senast klockan 12.00 dagen innan mötet.
 
-Slutligen höll projektgruppen möten med kund med jämna mellanrum där några personer från projektgruppen träffade några av de involverade personerna på företaget. Dessa möten gick ut på att uppdatera kunden om statusen för projektet, utbyta idéer och se till att projektgruppen och kund var på samma spår.
+Slutligen höll projektgruppen möten med kund med jämna mellanrum där några personer från projektgruppen träffade några av de involverade personerna på Region Östergötaland. Dessa möten gick ut på att uppdatera kunden om statusen för projektet, utbyta idéer och se till att projektgruppen och kund var på samma spår.
 
 \subsection{Dokumentation}
 För hantering av interna dokument har gruppen främst använt sig av google drive. Detta innefattar bland annat protokoll från handledarmöten, gruppkontrakt, veckorapporter och tidsrapportering.
@@ -78,7 +76,7 @@ Efter ett möte med kunden i början av februari kom frågan upp gällande vilke
 
 \section{Förstudie}
 \label{sec:forstudie}
-Under förstudien, som var uppdelad i två iterationer, arbetade gruppen väldigt mycket med dokumentation som skulle ligga till grund för design och implementation av systemet. Ett flertal dokument utformades. Dessa är listade i tabell 1 nedan.
+Under förstudien, som var uppdelad i två iterationer, arbetade gruppen väldigt mycket med dokumentation som skulle ligga till grund för design och implementation av systemet. Ett flertal dokument utformades. Dessa är listade i tabell \ref{tab:docs}.
 
 \begin{table}
 \caption{Dokumentation i förstudien}
@@ -107,6 +105,7 @@ Testrapport & Testning under iteration 2 \\
 Utvärdering av iteration 2 & Hur arbetet gick under iteration 2 \\
 \hline
 \end{tabular}
+\label{tab:docs}
 \end{table}
 
 Under iteration två lämnades projektplan, kravspecifikation och kvalitetsplan in en andra gång så att handledaren fick se hur de hade utvecklats.
@@ -124,7 +123,7 @@ För att bestämma den grafiska designen av produkten skapade samtliga medlemmar
 Kunden gav återkoppling på de olika alternativen och utifrån detta skapade gruppen en ny design och prototyp som efter ett ytterligare möte resulterade i den slutgiltiga designen för produkten.
 
 \subsection{Mjukvarudesign}
-Samtidigt som en grafisk design togs fram så arbetade projektets arkitekt och utvecklingsledare på att ta fram designen för mjukvaran. En systemanatomi och en systemskiss skapades för att få en överblick på hur systemet skulle se ut. 
+Samtidigt som en grafisk design togs fram så arbetade projektets arkitekt och utvecklingsledare på att ta fram designen för mjukvaran. En systemanatomi (figur \ref{fig:Systemanatomi}) och en systemskiss (figur \ref{fig:Systemskiss}) skapades för att få en överblick på hur systemet skulle se ut. 
 
 
 \begin{figure}[H]
@@ -143,12 +142,12 @@ Besluten om mjukvarudesign fattades ofta utgående från den pappersprototyp som
 När designfasen var över gick gruppen in i projektets utvecklingsfas. Gruppen delades upp i två subgrupper där den ena fokuserade på front-end och den andra på back-end.
 
 \subsection{Front-end}
-Arbetet började med att implementera designen för det grafiska gränssnittet med hjälp av Angular komponenter. Efter det så implementerades logiken för de komponenterna. Slutligen sammankopplades det med arbetet gruppen i back-end utfört. Gruppen växlade mellan parprogrammering och enskild programmering beroende på vad som skulle göras.       
+Arbetet började med att implementera designen för det grafiska gränssnittet med hjälp av Angular-komponenter. Efter det så implementerades logiken för de komponenterna. Slutligen sammankopplades det med arbetet gruppen i back-end utfört. Gruppen växlade mellan parprogrammering och enskild programmering beroende på vad som skulle göras.       
 
 \subsection{Back-end}
 När utvecklingen av back-end startade skapades först ett EER-diagram över den databas som produkten skulle använda sig av för att lagra data. 
 Sedan översattes diagrammet till kod, som skrevs i Javascript med hjälp av Sequelize. 
-Gruppen skrev ett API som också implementerades i back-end koden så att man enkelt skulle kunna hämta och modifiera data i databasen.
+Gruppen skrev ett API som också implementerades i back-end-koden så att man enkelt skulle kunna hämta och modifiera data i databasen.
 
 \section{Utvärdering}
 Under projektets gång så utvärderade gruppen arbetet kontinuerligt. Gruppen gjorde även en utvärdering i slutet av projektet.
