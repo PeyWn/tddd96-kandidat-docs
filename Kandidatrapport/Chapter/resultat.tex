@@ -3,15 +3,23 @@ Det är kapitlet kommer att beskriva resultatet av den mjukvaran som har utveckl
 teamet har samlat på sig under projektets gång.
 
 \section{Systembeskrivning}
-\textit{Skrivs när systemet är byggt, vill man få en känsla för hur det kan
-komma att se ut så läser man bäst om det i arkitekturdokumentet}
+Systemet som skapats består av två separata delar, en back-end och en front-end.
+
+\subsection{Front-end}
+Projektets front-end utvecklades i ramverket Angular. Front-end använder sig därför av den komponentbaserade arkitektur som starkt förordas av ramverket. Systemets front-end använder Angulars arkitektur för att implementera designmönstret MVC (se \ref{mvc-ref}).
+
+Det grafiska innehållet på projektets front-end är uppdelat i komponenter som uppdateras eller byts ut till andra komponenter när användaren interagerar med systemet. De komponenter som finns överst i applikationens komponenthierarki är tomma behållare vars enda syfte är att separera applikationens olika beståndsdelar från varandra. Inuti dessa har sedan komponenter med faktiska funktioner, som knappsatser eller sökrutor, placerats.
+
+Applikationen består av flera olika vyer, där vissa av vyerna ska visas upp i samma behållare men vid olika tillfällen, beroende på vilken vy användaren för stunden är intresserad av. För att byta mellan vyerna används Angulars tjänster. Tjänsterna är inte direkt kopplade till någon specifik komponent och används därför för att kommunicera mellan komponenter i olika delar av komponenthierarkin.
+
+All den data om patienter, salar och utrustning som användaren är intresserad av finns på en server i projektets back-end. Därför är det nödvändigt med kommunikation mellan de båda delarna. På projektets front-end sköts kommunikationen med AJAX-anrop. Dessa anrop sker i tjänster för att de ska vara tillgängliga för alla komponenter som behövde tillgång till data av olika sorter.
 
 \subsection{Back-end}
 Back-end i projektet är en server som har två huvuduppgifter. Den första är att vara värd för klienten så att den kan kommas åt av flera användare och datorer över nätverk. Den andra uppgiften är att ha en databas med tillhörande webb-API. Databasen används för att hantera all data som behövs för schemaläggningen som bland annat operationsbeslut, kirurger, resurser och bokningar med mera. Webb-API tillåter klienten att kunna logga in och sedan hämta och modifiera denna data.
 
-Servern är byggd på miljön Node.js och är skriven i JavaScript. Den använder sig av Node.js-biblioteket Express för den statiska leveransen och klienten och för att definiera HTTP-API:t. För hantering av databasen används i grunden MySQL men även ORM-biblioteket Sequelize i Node.js. Sequelize tillåter objekt-orienterad hantering av databasen och tar bort behovet att använda direkta SQL-frågor. All test-data som används i prototypen läggs också in i databasen med hjälp av seeds i Sequelize. Mer om seeds och Sequelize går att läsa i stycke \ref{sequelize_teori} i teorin.
+Servern är byggd på miljön Node.js och är skriven i JavaScript. Den använder sig av Node.js-biblioteket Express för den statiska leveransen och klienten och för att definiera HTTP-API:t. För hantering av databasen används i grunden MySQL men även ORM-biblioteket Sequelize i Node.js. Sequelize tillåter objekt-orienterad hantering av databasen och tar bort behovet att använda direkta SQL-frågor. All test-data som används i prototypen läggs också in i databasen med hjälp av seeds i Sequelize. Mer om seeds och Sequelize går att läsa i stycke \ref{sec:sequelize_teori} i teorin.
 
-Hela API:et i servern skyddas bakom autensiering. Detta görs med hjälp av Node.js-biblioteket Passport och ser till att ingen data i databasen kan kommas åt eller modifieras utan att först logga in. 
+Hela API:et i servern skyddas bakom autentisering. Detta görs med hjälp av Node.js-biblioteket Passport och ser till att ingen data i databasen kan kommas åt eller modifieras utan att först logga in.
 
 \subsection{LoFi-Prototyper}
 
@@ -39,6 +47,36 @@ Den första iterationen av LoFi-prototyper användes sedan för att ta fram en n
 LoFi-prototyp med enbart mindre designalternativ som visades för tre olika
 operationsplanerare. (Figur \ref{fig:LofiPic} illustrerar en bild av den sista Lofi-prototypen.)
 
+\subsection{Grafisk gränssnitt}
+Då arbetet med prototyper var klart inleddes implementationen av designen i form av de grafiska komponenterna. Det här resulterade i en komplett webbsida med tre olika huvudkomponenter, sidopanelen, informationsbaren och den huvudsakliga innehållsrutan.
+
+För sidopanelen och innehållsrutan finns olika vyer.
+I sidopanelen finns planeringsvyn och beslutsvyn. (se figur \ref{fig:sidepanel}) I innehållsrutan finns kalendervyn och sammanfattningsvyn. (se figur \ref{fig:window})
+
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{Figures/planning.png}
+    \caption{Planneringsvyn.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{Figures/beslut.png}
+    \caption{Beslutsvyn.}
+  \end{subfigure}
+  \caption{Sidopanelens två vyer.}
+  \label{fig:sidepanel}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{Figures/window.png}
+  \caption{Gränssnittet}
+  \label{fig:window}
+\end{figure}
+
+
 \subsection{Systemanatomi}
 I första iterationen togs det fram en systemanatomi (se figur \ref{fig:Systemanatomi}) som användes under projektets gång som ett hjälpmedel för strukturera upp arbetet under utvecklingen. Den gav en översiktlig bild av vilken funktionalitet produkten skulle innehålla och hur de olika delarna samverkade med varandra. Utöver detta presenterades den i ett tidigt skede för kunden i syfte att säkerställa att projektgruppens syn på systemet stämde överens med kundens.
 
@@ -49,11 +87,18 @@ I första iterationen togs det fram en systemanatomi (se figur \ref{fig:Systeman
 \end{figure}
 
 \subsection{Värde för kund}
-Den produkt som har skapats är ett lättöverskådligt schemaläggningssystem för operationer. Slutprodukten tillsammans med tankar och erfarenheter från design och utvecklings-faserna kommer att ha ett stort värde för kunden. Detta eftersom projektet kommer att användas som en form av förstudie till ett större projekt (se stycke \ref{sec:syfte}).
+Den produkt som har skapats är ett lättöverskådligt schemaläggningssystem för operationer. Systemet matchar väl med den initila målbilden. Sedan har nya upptäckter under projektets gång gjort att systemet förmodligen behöver kompleteras avsevärt för att vara praktiskt användbart. Detta är dock inte ett stort problem då syftet var att skapa en prototyp (se stycke \ref{sec:syfte}). 
 
-Det medför att Region Östergötland kommer att ha något att utgå ifrån då deras projekt startar, vilket hjälper av flera anledningar. Projektägaren som också är insatt i det större projektet kommer att kunna ta med sig många erfarenheter från det här projekt.
+Dokumentationen och processen under projetket har varit minst lika viktig i att ta reda på vad som kommer och inte kommer att fungera och ger stor insikt i hur systemet kan se ut och hur produkten kan förbättras i framtiden.
+
+Vår förhoppning är att de arbetsdockument som vi tagit fram i gruppen som stöd under arbetet vara till hjälp för den fortsatta utvecklingen. Detta tillsammans med de officiella dokumenten borde skapa en solid teoretisk kunskapsgrund för vidareutveckling.
+
+Vad gäller faktiskt programvara så tror vi starkt på att det finns funktioner och element i vår design som bidrar med en ny syn på schemaläggning och som kan komma till användning antigen så som vi implementerat dem eller att de kan vara till inspiration för andra nya sätt att bygga upp systemet.  
+
+Totalt sätt medför detta att Region Östergötland kommer att ha en bra grund att utgå ifrån då deras projekt startar. Både projekledaren och andra aktörer för det större projetket kommer att kunna ta med sig många erfarenheter från det här projekt i och med att flera av dem har varit så delaktig i vår process genom flera möten.
 
 \section{Gemensamma erfarenheter}
+<<<<<<< HEAD
 Under projektet har medlemmarna fått stor erfarenhet av webbprogrammering då ingen hade någon större erfarenhet av detta sedan tidigare. Gruppen har fått sätta sig in i HTTP-protokoll, databaser och ett flertal programspråk och ramverk. Även versionshantering med git och gitlab har gruppen fått fördjupad kunskap inom. 
 
 Vid utveckling av front-end lärde sig gruppen att använda ramverket Angular och att programmera i HTML, CSS och TypeScript. I back-end behövde medlemmarna istället sätta sig in i JavaScript, MySQL-databas och miljön Node.js med ett flertal tillhörande bibliotek.
@@ -72,8 +117,8 @@ En studie i hur teamledarens roll går att applicera tillsammans med scrum-metod
 Hur kan versionshantering användas effektivt för ett mindre mjukvaruutvecklings projekt.
 \subsection{Christoffer}
 Betydelsen av att samla krav från en varierad grupp aktörer
-\subsection{Henrik}
-För/nackdelar med TypeScript jämfört med JavaScript
+\subsection{Jämförelse mellan TypeScript och JavaScript av Henrik Lindström}
+Denna rapport jämför språken TypeScript och JavaScript baserat på erfarenheter från projektet och litteratur. Undersökningen fokuserar på TypeScript och JavaScripts olika typsystem, statiskt typning och dynamisk. Inom detta är det påverkan på feldetektering, kodförsåelse och produktivitet med de två systemen som behandlas.
 \subsection{Martin}
 Angular som webbutvecklingsplattform
 \subsection{Niclas}
