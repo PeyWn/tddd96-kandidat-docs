@@ -47,33 +47,54 @@ Den första iterationen av LoFi-prototyper användes sedan för att ta fram en n
 LoFi-prototyp, som uppdaterats enligt återkoppling från föregående iteration. Den nya LoFi-prototypen visades för tre olika operationsplanerare för att få deras tankar och idéer om den grafiska designen. (Figur \ref{fig:LofiPic} illustrerar en bild av den sista Lofi-prototypen.)
 
 \subsection{Grafiskt gränssnitt}
-Då arbetet med prototyper var klart inleddes implementationen av designen i form av de grafiska komponenterna. Det här resulterade i en komplett webbsida med tre olika huvudkomponenter, sidopanelen, informationsbaren och den huvudsakliga innehållsrutan.
+Då arbetet med prototyper var klart inleddes implementationen av designen i form av de grafiska komponenterna. Det här resulterade i en komplett webbsida med tre olika huvudkomponenter, sidopanelen, informationslisten och den huvudsakliga innehållsrutan.
 
-För sidopanelen och innehållsrutan finns olika vyer.
-I sidopanelen finns planeringsvyn och beslutsvyn (se figur \ref{fig:sidepanel}). I innehållsrutan finns kalendervyn och sammanfattningsvyn (se figur \ref{fig:window}).
-
-
-\begin{figure}[H]
-  \centering
-  \begin{subfigure}[b]{0.4\linewidth}
-    \includegraphics[width=\linewidth]{Figures/planning.png}
-    \caption{Planneringsvyn}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.4\linewidth}
-    \includegraphics[width=\linewidth]{Figures/beslut.png}
-    \caption{Beslutsvyn}
-  \end{subfigure}
-  \caption{Sidopanelens två vyer}
-  \label{fig:sidepanel}
-\end{figure}
-
-\clearpage
+Arbetsflödet i appen börjar med att användaren loggar in med sina inloggningsuppgifter. Därefter presenteras vyn som visas i figur \ref{fig:window}.
 
 \begin{figure}
-  \includegraphics[width=\linewidth]{Figures/window.png}
-  \caption{Gränssnittet}
-  \label{fig:window}
+	\includegraphics[width=\linewidth]{Figures/window.png}
+	\caption{Gränssnittet}
+	\label{fig:window}
 \end{figure}
+
+
+\subsubsection{Sidopanelen}
+När användaren loggat in så pressenterar sidopanelen alla de beslut som finns att planera (figur \ref{fig:beslutsvy}). Ett beslut visuliseras som ett kort som innehåller en mängd viktig data så som patientens namn, personnummer, hur långt det är innan operationen bör ske och även vilken typ av operation det gäller samt vad anledningen är till att operationen behövs. En akut operation är tydligt markerad med rött för att det enkelt ska gå att se att det är viktigt att boka in denna så snart som möjligt.
+
+Det går även att söka i listan dessutom kan användare filtrera listan på olika kriterier samt sortera den.
+
+När användaren klickar på en patient så visas en detaljvy för patienten (figur \ref{fig:planeringsvy}). Här kan användaren se mer detaljerad information om beslutet så som hur lång tid operationen beräknas ta, hur lång förberedelse tid som krävs mm. Det går ochså att se en lista med alla de verktyg och matrial som krävs.
+
+Längst ner finns det även en ruta med sökkriterier för att filtrera den schemavy som visas i huvudfönstret så att en ledig tid kan hittas.
+\begin{figure}[H]
+	\centering
+
+	\begin{subfigure}[b]{0.4\linewidth}
+		\includegraphics[width=\linewidth]{Figures/beslut.png}
+		\caption{Beslutsvyn}
+		\label{fig:beslutsvy}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.4\linewidth}
+		\includegraphics[width=\linewidth]{Figures/planning.png}
+		\caption{Planneringsvyn}
+		\label{fig:planeringsvy}
+	\end{subfigure}
+	\caption{Sidopanelens två vyer.}
+	\label{fig:sidepanel}
+\end{figure}
+
+
+\subsubsection{Informationslisten}
+Informationslisten är till för att alltid visa information om den patient som för tillfället håller på att bokas in. Så snart ett beslut har valts i sidopanelen så visas patientens namn och personnummer i informationslisten.
+
+I informationslisten syns det också vilken användare som är inloggad längst till höger och det finns även en knapp för att logga ur aktuell användare.
+
+\subsubsection{Huvudfönstret}
+I huvudfönstret visas i grundutförandet en månadsvy över där det går att se hur många operationer det är inbokade på olika dagar. Om en dag markeras så visas fler detaljer över de operationer som är inbokade på den dagen. När en patient har valts i sidomenyn används måndadsvyn för att välja vilken dag då man vill boka in operationen. När en dag har valts så skickas användaren vidare till spårvyn.
+
+\subsubsection{Spårvyn}
+Spårvyn visar ett antal konfigurerbara spår där varje spår motsvarar schemat för en viss resurs på den valda dagen. Dessa spår visas brevid varandra för att enkelt visualisera de olika resurserna och på så sätt skapa en bra överblick över när de olika resurserna är lediga i relation till varandra. Det går att välja vilka resurser som ska visas så som salar, olika personal och verktyg. \todo{Utöka med vidare förklaring när den är fastställd.}\todo{infoga bild på spårvy}
+
 
 
 \subsection{Systemanatomi}
@@ -86,13 +107,13 @@ I första iterationen togs det fram en systemanatomi (se figur \ref{fig:Systeman
 \end{figure}
 
 \subsection{Värde för kund}
-Den produkt som har skapats är ett lättöverskådligt schemaläggningssystem för operationer. Systemet matchar väl med den initila målbilden. Sedan har nya upptäckter under projektets gång gjort att systemet förmodligen behöver kompleteras avsevärt för att vara praktiskt användbart. Detta är dock inte ett stort problem då syftet var att skapa en prototyp (se stycke \ref{sec:syfte}). 
+Den produkt som har skapats är ett lättöverskådligt schemaläggningssystem för operationer. Systemet matchar väl med den initila målbilden. Sedan har nya upptäckter under projektets gång gjort att systemet förmodligen behöver kompleteras avsevärt för att vara praktiskt användbart. Detta är dock inte ett stort problem då syftet var att skapa en prototyp (se stycke \ref{sec:syfte}).
 
 Dokumentationen och processen under projetket har varit minst lika viktig i att ta reda på vad som kommer och inte kommer att fungera och ger stor insikt i hur systemet kan se ut och hur produkten kan förbättras i framtiden.
 
 Vår förhoppning är att de arbetsdokument som vi tagit fram i gruppen som stöd under arbetet vara till hjälp för den fortsatta utvecklingen. Detta tillsammans med de officiella dokumenten borde skapa en solid teoretisk kunskapsgrund för vidareutveckling.
 
-Vad gäller faktiskt programvara så tror vi starkt på att det finns funktioner och element i vår design som bidrar med en ny syn på schemaläggning och som kan komma till användning antigen så som vi implementerat dem eller att de kan vara till inspiration för andra nya sätt att bygga upp systemet.  
+Vad gäller faktiskt programvara så tror vi starkt på att det finns funktioner och element i vår design som bidrar med en ny syn på schemaläggning och som kan komma till användning antigen så som vi implementerat dem eller att de kan vara till inspiration för andra nya sätt att bygga upp systemet.
 
 Totalt sett medför detta att Region Östergötland kommer att ha en bra grund att utgå ifrån då deras projekt startar. Både projekledaren och andra aktörer för det större projetket kommer att kunna ta med sig många erfarenheter från det här projekt i och med att flera av dem har varit så delaktiga i vår process genom flera möten.
 
