@@ -6,6 +6,7 @@ I detta avsnitt ska de frågeställningar som ställts i början av rapporten be
 Systemet som utvecklats kan bytas ut mot det nuvarande systemet för att få en tydligare grafisk vy över de operationer som är planerade. Det utvecklade systemet ger också ett enkelt sätt att boka in nya operationer på datum och tider där all kompetens, utrustning och material finns tillgängligt.
 
 \textbf{Hur kan man separera front-end och back-end på ett bra sätt så att delarna inte är beroende av varandra?}
+För att separera på back-end och front-end så att de kan utvecklas parallellt kan man först definiera ett tydligt API för all kommunikation som kommer att ske mellan dem. När API:et är färdigt kan detta implementeras på back-end i projektet. Efter detta, eller innan om API:et är väldefinierat, kan en modul skapas på front-end som definerar all funktionalitet som krävs för att använda detta API. Nu kan de två delarna fortsätta utvecklas separat så länge API:et inte ändras, och när detta händer är det endast komunikationsmodulen på front-end som behöver uppdateras.
 
 \textbf{Vilka erfarenheter kan dokumenteras från projektet som kan vara intressanta för framtida projekt?}
 
