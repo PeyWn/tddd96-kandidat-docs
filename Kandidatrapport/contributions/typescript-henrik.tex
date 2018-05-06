@@ -70,8 +70,16 @@ TypeScript hade också fördelar som hänger ihop med det jag beskrev om att hit
 \subsection{Intervjuer}
 Resultaten från de fem intervjuer som genomfördes presenteras i bilaga \ref{appendix:henrik}, sektion \ref{henrik_svar}. 
 \subsection{Litteraturstudie}
-\cite{henrik_maintainability}
-\cite{henrik_totypeornot}
+I litteraturstudien som genomfördes betraktades ett konferensbidrag om kvantifiering av detekterbara fel i JavaScript och en journalartikel som studerade statisk typnings påverkan på underhåll av mjukvara.
+
+I konferensbidraget \textit{To Type or Not to Type:
+Quantifying Detectable Bugs in JavaScript} \cite{henrik_totypeornot} undersöktes fel som funnits och behövts fixas i publika JavaScript-projekt och ifall tillagt typinformation med bland annat TypeScript hade upptäckt felet vid kompilering. 
+Resultatet av undersökningen påstår att användandet av TypeScript hade förhindrat 15\% av alla fel i JavaScript-projekt.
+
+Journalartikeln \textit{An empirical study on the impact of static typing
+on software maintainability} \cite{henrik_maintainability} beskriver ett experiment som testar om statisk typning förbättrar förståelse av odokumenterad kod och fixning av syntax och semantiska fel och hur det påverkar utvecklingstid.
+Resultatet av experimentet var att statisk typning hjälper i förståelse av nya klasser och att lösa typ-fel, dock hjälpte det inte för semantiska fel. Vidare påstås att vid programmering med statisk typning krävdes färre byten mellan olika filer vilket förbättrade utvecklingstiden.
+
 
 \section{Diskussion}
 I denna sektion diskuteras de resultat som fåtts från undersökningen och metoden som använts.
