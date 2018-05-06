@@ -47,7 +47,7 @@ Den första iterationen av LoFi-prototyper användes sedan för att ta fram en n
 LoFi-prototyp, som uppdaterats enligt återkoppling från föregående iteration. Den nya LoFi-prototypen visades för tre olika operationsplanerare för att få deras tankar och idéer om den grafiska designen. (Figur \ref{fig:LofiPic} illustrerar en bild av den sista Lofi-prototypen.)
 
 \subsection{Grafiskt gränssnitt}
-Då arbetet med prototyper var klart inleddes implementationen av designen i form av de grafiska komponenterna. Det här resulterade i en komplett webbsida med tre olika huvudkomponenter, sidopanelen, informationsbaren och den huvudsakliga innehållsrutan.
+Då arbetet med prototyper var klart inleddes implementationen av designen i form av de grafiska komponenterna. Det här resulterade i en komplett webbsida med tre olika huvudkomponenter, sidopanelen, informationslisten och den huvudsakliga innehållsrutan.
 
 Arbetsflödet i appen börjar med att användaren loggar in med sin använare. Därefter presenteras vyn som visas i figur \ref{fig:window}.
 
@@ -84,10 +84,10 @@ Längst ner finns det även en ruta med sökkreterier för att filtrera den sche
 \end{figure}
 
 
-\subsubsection{Informationsbaren}
-Informationsbaren är till för att alltid visa information om den patient som för tillfället håller på att bokas in. Så snart ett beslut har valts i sidopanelen så visas patientens namn och personnummer i infobaren.
+\subsubsection{Informationslisten}
+Informationslisten är till för att alltid visa information om den patient som för tillfället håller på att bokas in. Så snart ett beslut har valts i sidopanelen så visas patientens namn och personnummer i informationslisten.
 
-I informationsbaren syns det också vilken användare som är inloggad längst till höger och det finns även en knapp för att logga ur aktuell användare.
+I informationslisten syns det också vilken användare som är inloggad längst till höger och det finns även en knapp för att logga ur aktuell användare.
 
 \subsubsection{Huvudfönstret}
 I huvudfönstret visas i grundutförandet en månadsvy över där det går att se hur många operationer det är inbokade på olika dagar. om en dag markeras så visas fler detaljer över de operationer som är inbokade på den dagen. När en patient har valts i sidomenyn används måndadsvyn för att välja vilken dag då man vill boka in operationen. När en dag har valts så skickas användaren vidare till spårvyn.
