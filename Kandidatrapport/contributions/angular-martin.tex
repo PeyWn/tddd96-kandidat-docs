@@ -24,7 +24,9 @@ Studien kommer begränsa sig till att undersöka just utvecklingsplattformen Ang
 \section{Bakgrund}
 
 
-Studien är utförd i samband med kandidatprojektet i kursen TDDD96. I den kursen fick projektgruppen i uppdrag av en beställare, Region Östergötland, att ta fram ett schemaläggningsstöd för kirurgi för att underlätta planering och bokning av operationer. Det verktyget skulle enligt beställarens uttryckliga krav vara en webbapplikation. Det ställdes inga sådana krav på valet av utvecklingsplattform, men beställarens IT-experter hade i tidigare projekt använd sig av Angular. Ingen av projektmedlemmarna hade några större erfarenheter av arbete med webbutveckling sedan tidigare, och ett flertal hade inga erfarenheter inom området alls. Då ingen i projektgruppen hade några särskilda önskemål på denna punkt och då gruppen såg möjligheter att dra nytta av beställarens tidigare erfarenheter så fattades beslutet att använda Angular i Aeon också. Gruppen utförde alltså ingen egentlig analys av för- och nackdelar eller någon undersökning av andra möjliga alternativ.  
+Studien är utförd i samband med kandidatprojektet i kursen TDDD96. I den kursen fick projektgruppen i uppdrag av en beställare, Region Östergötland, att ta fram ett schemaläggningsstöd för kirurgi för att underlätta planering och bokning av operationer. Det verktyget skulle enligt beställarens uttryckliga krav vara en webbapplikation. Det ställdes inga sådana krav på valet av utvecklingsplattform, men beställarens IT-experter hade i tidigare projekt använd sig av Angular. 
+
+Ingen av projektmedlemmarna hade några större erfarenheter av arbete med webbutveckling sedan tidigare, och ett flertal hade inga erfarenheter inom området alls. Då ingen i projektgruppen hade några särskilda önskemål på denna punkt och då gruppen såg möjligheter att dra nytta av beställarens tidigare erfarenheter så fattades beslutet att använda Angular i Aeon också. Gruppen utförde alltså ingen egentlig analys av för- och nackdelar eller någon undersökning av andra möjliga alternativ.  
 
 \section{Teori}
 
@@ -93,6 +95,30 @@ Samtliga av de tillfrågade var överlag nöjda med valet av Angular som ramverk
 \section{Diskussion}
 
 Under denna rubrik kommer de resultat som uppnåtts under studiens gång att diskuteras och svar på frågeställningen att presenteras.
+
+\subsection{Val av ramverk}
+
+Det finns många faktorer att ta hänsyn till vid val av ramverk. Prestanda, lättlärdhet, stöd från utvecklare är några av de vanligaste. Just prestanda var av sekundär betydelse i ett projekt som Aeon. Kunden hade nämligen inte för avsikt att ta det system vi utvecklat i drift. De ville ha en prototyp som visar upp grafiska lösningar. 
+
+
+\subsection{Utvärdering av Angular}
+
+Intervjuerna som sammanfattats i resultat-delen visade tydligt att gruppmedlemmarna tycke att Angular varit svårt att lära sig. Detta gällde både de två deltagare som uppgett sig ha tidigare erfarenheter av webbutveckling och de övriga som helt saknat sådan erfarenhet innan detta projekt. Att ramverket varit svårt för gruppen att lära in var onekligen en nackdel för projektets utförande. Mycket tid gick åt att sätta sig in i ramverket. Den tiden hade istället kunnat användas till att utveckla systemet. Utvecklingsfasen led ständigt av tidsbrist och med mer tid hade fler av kundens krav kunnat uppfyllas.
+
+Eftersom de flesta av gruppdeltagarna saknade tidigare erfarenheter av webbutveckling misstänker jag dock att inlärningsperioden varit lång i vilket fall. För de få projektmedlemmar som arbetat med webbutveckling tidigare hade kanske ett mer flexibelt ramverk med som inte strikt förordar någon särskilt applikationsuppbyggnad varit enklare att sätta sig in i. För resten av gruppen tror jag inte skillnaden i inlärningstid hade varit drastiskt annorlunda med något annat ramverk. De hade ändå behövt sätta sig in i webbutvecklingens grunder, och att lära sig det på Angular-vis från början hade nog bara varit aningen svårare. Den mödan lönade sig också senare.
+
+Alla som intervjuats höll med om att Angular tillfört mycket till projektet. Det som särskilt framhölls var den komponentbaserade arkitekturen. Den gjorde det självklart och intuitivt att dela upp applikationen i modulära komponenter. Att komponenterna kan skapas i vilken ordning som helst och kopplas samman i efterhand underlättade verkligen utvecklingsarbetet. Komponenternas modulariteten var till stor gagn för gruppen under utvecklingsfasen. En oerfaren grupp som vår hade lätt kunnat missa att göra applikationen så modulär om inte ett ramverk påbjudit det.
+
+Den komponentbaserade arkitekturen gjorde det också enkelt att översätta pappersprototypen till kod i Angular. Det var inga problem att i pappersprototypen identifiera grafiska enheter som sökrutor, menyer och knappar och sedan bestämma komponenter åt dem i Angular. Angular hade alltså stor nytta av pappersprototypen. Den togs fram under designfasen för att visa kunden hur vi tänkt oss systemet, men kom av denna anledning till att vara väldigt användbar under utvecklingsfasen också.
+
+Det var till en början varit svårt för gruppen att förstå sig på hur kommunikaiton mellan olika komponenter och mellan de olika filerna i komponenterna. 
+
+Ett större problem för projektet än Angulars inlärningskurva var nog ett bristande inlärningsarbete. I början av utvecklingsfasen hölls en inledande föreläsning om Angular som väldigt överskådligt förklarade arkitekturen hos ramverket. I övrigt hölls inget gemensamt inlärningsarbete. Var och en av projektmedlemmarna fick istället ansvar för att lära sig om ramverket på egen hand. Det var ett arbetssätt som många var bekväma med, men det resulterade i att kunskaperna varierade stort när utvecklingsfasen började. 
+
+När man ska använda ett så omfångsrikt ramverk som Angular behöver man också se till att lära sig det ordentligt. Att åtminstone tillsammans tagit sig igenom den handledning som Angulars hemsida tillhandahåller, en handledning som enbert ett fåtal i gruppen ens kollat på, hade underlättat utvecklingsfasen rejält. Då ingen hade några tidigare erfarenheter av Angular hade en gemensam inlärning fört med sig möjligheter till diskussion om de oklarheter som fanns. Då hade alla i gruppen haft en genmensam bild av hur man arbetar med Angular. Som gruppen gjorde nu stannade arbetet ofta upp då gruppmedlemmar inte visste hur något skulle implementeras i Angular och var tvungna att söka hjälp på nätet. Ibland hände det att flera gruppmedlemmar stött på samma problem och hittat olika lösningar på det, då Angular erbjuder flera sätt att göra det mesta. Detta gjorde koden mer förvirrande och hade kunnat undvikas med gemensam utbildning.     
+
+     
+
 
 \subsection{Metod}
 
