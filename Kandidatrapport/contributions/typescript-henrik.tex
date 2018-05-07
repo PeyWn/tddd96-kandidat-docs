@@ -5,7 +5,7 @@ Vid utveckling av webbapplikationer är språkvalen något begränsade. I grunde
 
 I denna rapport undersöks hur de två olika språken och dess olika typsystem påverkade utvecklingsarbetet i projektet \textit{Schemaläggningsstöd för kirurgi} där en webbapplikation utvecklades.
 \section{Syfte}
-Denna rapport undersöker positiva och negativa effekter med användning av TypeScript jämfört med JavaScript. Mer specifikt är det de två språkens olika typsystem som ligger i fokus. Syftet med detta är att komma fram till vilka effekter statisk typning jämfört med dynamisk har på feldetektering, kodförståelse och utvecklingsfart. 
+Denna rapport undersöker positiva och negativa effekter med användning av TypeScript jämfört med JavaScript. Mer specifikt är det de två språkens olika typsystem som ligger i fokus. Syftet med detta är att komma fram till vilka effekter statisk typning jämfört med dynamisk har på feldetektering, kodförståelse och utvecklingsfart.
 
 \section{Frågeställningar}
 För att uppfylla syftet kommer följande frågeställningar att besvaras i rapporten:
@@ -21,7 +21,7 @@ Jämförelse mellan strikt och dynamiskt typade språk är relevant eftersom det
 \section{Teori}
 I denna del beskrivs teori gällande de de två språken som jämförs i rapporten och deras olika typsystem.
 \subsection{JavaScript}
-JavaScript är ett dynamiskt och objektorienterat skriptpråk som främst används för att programmera interaktiva webbsidor och webbapplikationer. Språket kan även kan köras utanför webbläsare genom t.ex. miljön Node.js där det ofta används som skriptspråk för webbservrar. \cite{henrik_js1}
+JavaScript är ett dynamiskt och objektorienterat scriptspråk som främst används för att programmera interaktiva webbsidor och webbapplikationer. Språket kan även kan köras utanför webbläsare genom t.ex. miljön Node.js där det ofta används som skriptspråk för webbservrar. \cite{henrik_js1}
 
 Språkets syntax delar många likheter med kända språk som Java och C++ men det finns också stora skillnader. En av dessa är att JavaScript är ett dynamiskt typat språk. Detta innebär att variabler i språket inte har någon speciell typ, istället är det värden som håller i typinformationen. Det medför att variabler inte har någon förutbestämd typ, utan kan byta mellan värden med olika typer. \cite{henrik_js2}
 
@@ -32,7 +32,7 @@ TypeScript är ett skriptspråk utvecklat Microsoft som är en strikt syntatisk 
 
 För att ha ett lika brett stöd som JavaScript är TypeScript ett kompilerat språk som omvandlas till vanlig JavaScript. Att det är ett kompilerat språk tillsammans med statisk typning och klasser tillåter TypeScript att hitta typfel och andra mindre fel som felstavningar direkt vid kompilering.
 \subsection{Dynamisk typning}
-Ett dynamiskt typat språk är ett språk där typkontroll endast görs vid körning av programmet och alltså inte alls i förväg. Detta innebär att variabler och funktioner i källkoden inte har någon förutbestämd typ. Variabler har fortfarande en typ men denna bestämns först vid tilldelning under körning och kan ändras.
+Ett dynamiskt typat språk är ett språk där typkontroll endast görs vid körning av programmet och alltså inte alls i förväg. Detta innebär att variabler och funktioner i källkoden inte har någon förutbestämd typ. Variabler har fortfarande en typ men denna bestäms först vid tilldelning under körning och kan ändras.
 
 Det går alltså inte direkt att se vilken typ en variabel eller funktion har i källkoden, utan detta kräver djupare analysering av koden.
 \subsection{Statisk typning}
@@ -51,10 +51,10 @@ Under projektets gång har jag, som hade rollen utvecklingsledare, fått mycket 
 För att hämta in erfarenheter inom hur gruppens övriga medlemmar upplevt att de två språken fungerat hölls intervjuer med alla som hade fått erfarenhet av båda under projektet. Detta blev alla utom en medlem som endast arbetat med servern och ej kommit i kontakt med TypeScript alls. Det blev därmed fem intervjuer som genomfördes. Frågorna som ställdes presenteras i bilaga \ref{appendix:henrik}, tabell \ref{henrik_fragor}.
 
 \subsection{Litteraturstudie}
-För att kunna jämföra de resultat som fås från projektgruppens erfarenheter utfördes även en litteraturstudie där rapporter relevanta till frågeställningarna betraktades. Dessa hittades genom att söka i bibliotekets databas på Linköpings universitet. 
+För att kunna jämföra de resultat som fås från projektgruppens erfarenheter utfördes även en litteraturstudie där rapporter relevanta till frågeställningarna betraktades. Dessa hittades genom att söka i bibliotekets databas på Linköpings universitet.
 
 \section{Resultat}
-I denna sektion beskrivs resultaten från mina egna erfarenhter, intervjuerna och litteraturstudien som tillsammans utgör hela undersökningen.
+I denna sektion beskrivs resultaten från mina egna erfarenheter, intervjuerna och litteraturstudien som tillsammans utgör hela undersökningen.
 \subsection{Egna erfarenheter}
 Jag hade innan det här projektet inte ens hör talas om TypeScript. JavaScript hade jag i alla fall kommit i kontakt med några gånger innan, men mina kunskaper om språket var mycket begränsade.
 
@@ -68,9 +68,9 @@ Däremot var klasser och typer till stor hjälp vid användning av externa bibli
 \subsubsection{Produktivitet}
 Angående hur produktiv jag var med de båda språken har jag något blandade erfarenheter. Fördelarna med JavaScript var helt enkelt att det var mindre kod att skriva. Att slippa skriva ut typer för variabler gjorde ingen större skillnad, däremot sparades tid från att slippa deklarera klasser, speciellt för många små objekt.
 
-TypeScript hade också fördelar som hänger ihop med det jag beskrev om att hitta fel och kodförståelse ovan. Detta då snabbare feldetektion och förståelse av koden bidrog till sparad tid och ökad produktivitet. 
+TypeScript hade också fördelar som hänger ihop med det jag beskrev om att hitta fel och kodförståelse ovan. Detta då snabbare feldetektion och förståelse av koden bidrog till sparad tid och ökad produktivitet.
 \subsection{Intervjuer}
-Resultaten från de fem intervjuer som genomfördes presenteras i bilaga \ref{appendix:henrik}, sektion \ref{henrik_svar}. 
+Resultaten från de fem intervjuer som genomfördes presenteras i bilaga \ref{appendix:henrik}, sektion \ref{henrik_svar}.
 \subsection{Litteraturstudie}
 I litteraturstudien som genomfördes betraktades ett konferensbidrag om kvantifiering av detekterbara fel i JavaScript och en journalartikel som studerade statisk typnings påverkan på underhåll av mjukvara.
 
@@ -87,11 +87,11 @@ I denna sektion diskuteras undersökningens metod och resultat.
 \subsection{Resultat}
 Nedan diskuteras resultatet bestående mina och gruppens erfarenheter tillsammans med litteraturundersökningen. Diskussionen är uppdelad i tre delar relevanta för varsin frågeställning.
 \subsubsection{Hitta fel}
-Från mina och gruppens erfarenheter var det lite blandat ifall man tyckte att TypeScript hjälpte att hitta fel eller inte. En medlem tyckte att den strikta typningen hade hjälpt många gånger medan resten av gruppen antingen inte märkt av det alls, eller endast ett par gånger. Däremot var det flera som antingen hade stött på eller kunde tänka sig att det lätt kan bli små typ eller stavfel vid utveckling i JavaScript. Ett förslag kom upp om att med enhetstestning ändå borde plocka dessa fel. Överlag verkade gruppens omdömme vara att den statiska typningen i TypeScript hjälper att undvika vissa små fel som kan uppkomma vid utveckling av JavaScript. Dock även att dessa fel inte var speciellt vanliga och går att upptäcka på andra sätt.
+Från mina och gruppens erfarenheter var det lite blandat ifall man tyckte att TypeScript hjälpte att hitta fel eller inte. En medlem tyckte att den strikta typningen hade hjälpt många gånger medan resten av gruppen antingen inte märkt av det alls, eller endast ett par gånger. Däremot var det flera som antingen hade stött på eller kunde tänka sig att det lätt kan bli små typ eller stavfel vid utveckling i JavaScript. Ett förslag kom upp om att med enhetstestning ändå borde plocka dessa fel. Överlag verkade gruppens omdöme vara att den statiska typningen i TypeScript hjälper att undvika vissa små fel som kan uppkomma vid utveckling av JavaScript. Dock även att dessa fel inte var speciellt vanliga och går att upptäcka på andra sätt.
 
-Från litteraturundersökningen påstod båda källorna att statisk typning hjälper till att hitta vissa fel. En av undersökningarna påstod att detta att detta uppgick i 15 \% av alla fel. \cite{henrik_totypeornot} Dock hade det i gruppens mening inte blivit någon speciellt stor skillnad medan 15 \% är ett högt antal. Alla resultat pekar i alla fall på att det blivit någon slags förbättring tack vare typnignen.
+Från litteraturundersökningen påstod båda källorna att statisk typning hjälper till att hitta vissa fel. En av undersökningarna påstod att detta uppgick i 15 \% av alla fel. \cite{henrik_totypeornot} Dock hade det i gruppens mening inte blivit någon speciellt stor skillnad medan 15 \% är ett högt antal. Alla resultat pekar i alla fall på att det blivit någon slags förbättring tack vare typnignen.
 \subsubsection{Kodförståelse}
-När det kom till att förstå kod skriven av någon annan var gruppen eniga om att TypeScipt hade en positiv effekt men med lite blandade åsikter om vad det hjälpte med. Något som kom upp flera gånger var just funktioner och att det kan vara till stor hjälp att direkt se vad som kommer in som argument och vad som returneras för att förstå funktionen. Dock mände flera att bättre dokumentation av funktionen kan ersätta detta. Att enkelt kunna se vilka medlemmar som ett objekt har tack vare att veta dess klass var också något som kom upp som bra med TypeScript.
+När det kom till att förstå kod skriven av någon annan var gruppen eniga om att TypeScipt hade en positiv effekt men med lite blandade åsikter om vad det hjälpte med. Något som kom upp flera gånger var just funktioner och att det kan vara till stor hjälp att direkt se vad som kommer in som argument och vad som returneras för att förstå funktionen. Dock nämnde flera att bättre dokumentation av funktionen kan ersätta detta. Att enkelt kunna se vilka medlemmar som ett objekt har tack vare att veta dess klass var också något som kom upp som bra med TypeScript.
 
 Gruppens erfarenheter stöds också av litteraturstudien som påstod att statiskt typning hjälper förståelse av odokumenterad kod \cite{henrik_maintainability} vilket stämmer överens med att flera i gruppen påstod att bättre dokumentation vaar en alternativ lösning.
 \subsubsection{Produktivitet}
@@ -101,7 +101,7 @@ Medan gruppens erfarenheter pekade på att JavaScript hade en liten fördel inom
 \subsection{Metod}
 Att denna undersökning valdes att göra utgående ifrån det här projektet berodde främst på två saker. Dels att alla gruppmedlemmar hade liten erfarenhet av de både TypeScript och JavaScript sedan tidigare och dels att både ett statiskt typat och ett dynamiskt språk användes i samma projekt.
 
-Det var i början tänkt att alla medlemmar i projektet skulle arbeta på front-end och back-end i ungefär samma utsträckning. Detta bland annat för att alla skulle få erfarenhet av både TypeScript och JavaScript. I verkligheten blev det så för två medlemmar i projktet, medan det var fyra som främst var på front-end och en medlemm som endast jobbade med back-end. Eftersom den person som endast arbetat med back-end inte kommit i kontant med TypeScript alls intervjuades denna inte i undersökningen. Om planerna följts och alla fått använda båda språk lika mycket hade de nog haft bättre underlag för att jämföra dem i intervjun.
+Det var i början tänkt att alla medlemmar i projektet skulle arbeta på front-end och back-end i ungefär samma utsträckning. Detta bland annat för att alla skulle få erfarenhet av både TypeScript och JavaScript. I verkligheten blev det så för två medlemmar i projektet, medan det var fyra som främst var på front-end och en medlem som endast jobbade med back-end. Eftersom den person som endast arbetat med back-end inte kommit i kontant med TypeScript alls intervjuades denna inte i undersökningen. Om planerna följts och alla fått använda båda språk lika mycket hade de nog haft bättre underlag för att jämföra dem i intervjun.
 
 För att samla erfarenheter från övriga medlemmar valdes en intervju. Ett alternativ som betraktades var en enkät, men eftersom det var så pass få personer som ingick i undersökningen valdes intervjun istället. Detta för att få ut mer information från varje person.
 
@@ -110,7 +110,7 @@ Här dras slutsatser om frågeställningarna utifrån denna undersöknings resul
 \subsection{Bidrar den statiska typningen i TypeScript till att fel hittas tidigare under utveckling?}
 Den statisk typning har en bidragande effekt till att typfel och stavfel kan hittas enklare och tidigare i projektet. Dock är resultaten från denna undersökning lite oeniga om hur vanliga dessa fel och därmed hur stort problem de faktiskt är.
 
-Det kan även finnas andra lösningar på samma problem, till exempel bättre testning. 
+Det kan även finnas andra lösningar på samma problem, till exempel bättre testning.
 \subsection{Bidrar den statiska typningen i TypeScript till kod som är lättare att läsa och förstå?}
 Alla resultat i undersökningen pekade på att statisk typning bidrar till kod som är lättare att förstå. De positiva effekter som kom upp var att förståelse av funktioner ökar när typerna på inargument och returnvärde är kända. Även att veta vilka medlemmar som finns i ett visst objekt tack vare att veta dess klass.
 
