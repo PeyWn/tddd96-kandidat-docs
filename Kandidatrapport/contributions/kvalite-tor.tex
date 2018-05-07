@@ -41,8 +41,11 @@ Målet med Projektet Aeon var att utveckla en kvalitativ prototyp för RÖ att f
 \section{Teori}
 
 Kvalitetsförsäkran kan vara dyrt, tidskrävande och det är ofta svårt att avgöra när man uppnått sina mål tillräckligt.\cite{lighthouse}
+Därför arbetar organisationer som t.ex. Institute of Electrical and Electronics Engineers för standardiseringar av arbetsprocesser.
 
-IEEE-730 är en utbredd standard för kvalitetsförsäkran inom mjukvaruutveckling. Standarden ska bistå projektet genom att ställa frågor som:
+IEEE-730
+
+En utbredd standard för kvalitetsförsäkran inom mjukvaruutveckling. Standarden ska bistå projektet genom att ställa frågor som:
 \\ \\
 \emph{När är ett projekts kvalitativa mål uppfyllda?}
 
@@ -50,7 +53,7 @@ Som kvalitetssamordnare bör man fastslå metoder i sin kvalitetsplan för att v
 
 ISO/IEC TR 29110-5-1-3
 
-Om en produkt eller tjänst har en positiv inverkan på de tre huvudområdena hållbar utveckling fokuserar på så kan den enligt ”ISO/IEC TR 29110-5-1-3” [Källa 2] anses vara av högkvalitativa mått.  Denna ISO (standardisering) fokuserar på: 
+Om en produkt eller tjänst har en positiv inverkan på de tre huvudområdena hållbar utveckling fokuserar på så kan den enligt ”ISO/IEC TR 29110-5-1-3” \citep{ISOtor} anses vara av högkvalitativa mått.  Denna ISO (standardisering) fokuserar på: 
 
 \begin{itemize}
 	\item Övervakning av parallella arbetsflöden
@@ -58,7 +61,7 @@ Om en produkt eller tjänst har en positiv inverkan på de tre huvudområdena h�
 	\item Kontinuerligt mäta projekt och förbättra processer.
 \end{itemize}
 
-Ett av de begrepp som existerar inom kvalitetsförsäkrande metoder inom mjukvaruutveckling idag är automatiserade kod-kontroller i utvecklingsmiljön. Att manuellt utföra dessa kvalitetsförsäkrande processer är en uttröttande och repetitiv process. 
+Ett av de begrepp som existerar inom kvalitetsförsäkrande metoder inom mjukvaruutveckling idag är automatiserade kod-kontroller i utvecklingsmiljön.
 
 \subsection{TSLint}
 Ett s.k. statiskt kodanalys-verktyg är Lint som i grunden är utvecklat för programmeringsspråket C. En vidareutveckling på verktyget är ”TSLint”, samma verktyg men utvecklat för Typescript, de kodspråk vi valde att använda i vårt projekt. TSLint skall hjälpa utvecklaren av projektet med läsbarhet, underhåll samt funktionalitetsproblem med koden.
@@ -74,12 +77,9 @@ Ett av de mest etablerade programmeringsramverken för webbutveckling i dagsläg
 \end{itemize}
 \cite{altexsoft}
 
-\section{Resultat}
-Här tänkte jag samla data från enkäter och intervjuer med projektmedlemmar när vi kommit längre i implementeringen av koden i projektet.
-Jag tänkte göra mer undersökningar och presentera mina fynd från artiklar, bloggar, vetenskapliga artiklar etc. i områdena: 
+\section{Resultat} 
 
-Frågor i enkäten/intervju kommer vara i stil med:
-
+Samtliga gruppmedlemmar var överens om att TSLint
 
 \begin{itemize}
 	\item Fördelar med att använda statisk kodanalys,angular,webstorm etc. 
@@ -103,7 +103,17 @@ Vilka fördelar/nackdelar ser du som projektmedlem med användandet av TSLint/An
 
 \section{Diskussion}
 
+Som den oerfarna  grupp vi var kunde TSLint och Angular tillsammans ledsaga oss tilt att tillsammans hålla den kodstandard som behövdes för att arbeta i ett större projekt. 
+
+Vi lärde oss snabbt att manuellt utföra dessa kvalitetsförsäkrande processer var en uttröttande och repetitiv process. När vi väl förstod oss på hur den standardiserade strukturen skulle avläsas och användas var den inte bara ett stöd utan även en vägvisare som underlättade implementationen av kod
+
 \section{Slutsatser}
+
+Ett mindre mjukvaruprojekt likt Aeon, där expertiskunskap saknas och kunskapsnivån är begränsad kan ha oerhörd nytta av kvalitetsförsäkrande ramverk och arbetsmetoder som TSLint och Angular. 
+
+Samtliga gruppmedlemmar var överens om att läsbarheten underlättades av både TSLints kodanalyser samt Angulars komponentbaserade arkitektur. 
+
+Då detta är väl etablerade standarder inom branchen bör dessa tankar även gå att applicera på det framtida arbetslag som ska arbeta vidare med prototypen hos vår kund RÖ. Därför drar vi slutsatsen att dessa metoder hjälpte oss att utveckla en mer kvalitativ produkt.
 
 \section{Källor}
 
@@ -114,6 +124,4 @@ Vilka fördelar/nackdelar ser du som projektmedlem med användandet av TSLint/An
 [3] Sustainable software-architectures -  https://www.software.ac.uk/blog/2017-05-22-best-practices-sustainable-software-architectures 
 
 [4] IEEE-730 - https://standards.ieee.org/findstds/standard/730-2014.html 
-
-[5] Angular - https://www.altexsoft.com/blog/engineering/the-good-and-the-bad-of-angular-development/ 
 
