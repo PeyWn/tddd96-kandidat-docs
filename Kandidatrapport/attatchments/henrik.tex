@@ -1,0 +1,93 @@
+\chapter{Intervjuer om TypeScript och JavaScript}\label{appendix:henrik}
+
+\section{Intervjufrågor}
+Följande tabell presenterar de frågor som ställdes under intervjuundersökningen om TypeScript och JavaScript.
+\begin{table}[H]
+\centering
+\caption{Intervjufrågor}
+\label{henrik_fragor}
+\begin{tabular}{|c|l|}
+\hline
+Nr & \multicolumn{1}{c|}{Fråga}                                                                                                                     \\ \hline
+1  & \begin{tabular}[c]{@{}l@{}}Hade du någon erfarenhet med JavaScript eller TypeScript\\ innan projektet?\end{tabular}                           \\ \hline
+2  & \begin{tabular}[c]{@{}l@{}}Fick du använda TypeScript eller JavaScript under utvecklingen\\ i projektet?\end{tabular}                          \\ \hline
+3  & \begin{tabular}[c]{@{}l@{}}Hjälpte typningen i TypeScript dig att hitta fel under skrivning\\ eller byggning av webbklienten?\end{tabular}     \\ \hline
+4  & \begin{tabular}[c]{@{}l@{}}Tror du att fel hade gått odetekterade utan typkontroll, alltså om\\ vi skrivit i JavaScript istället?\end{tabular} \\ \hline
+5  & Hjälpte klasser och typer dig att förstå kod skriven av någon annan?                                                                           \\ \hline
+6  & \begin{tabular}[c]{@{}l@{}}Påverkade klasser och typning din produktivitet och\\ utvecklingsfart under projektet?\end{tabular}                 \\ \hline
+7  & \begin{tabular}[c]{@{}l@{}}Hjälpte klasser och typning dig att underhålla och ändra befintlig\\ kod?\end{tabular}                              \\ \hline
+8  & \begin{tabular}[c]{@{}l@{}}Har du upplevt några övriga för- eller nackdelar med TypeScript\\ jämfört med JavaScript?\end{tabular}              \\ \hline
+9  & \begin{tabular}[c]{@{}l@{}}Har du några övergripande tankar om hur användandet av\\ TypeScript fungerade i projektet?\end{tabular}             \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Svar på intervjuer}\label{henrik_svar}
+I denna sektion sammanfattas de svar till frågorna i tabell \ref{henrik_fragor} som erhölls från intervjun. Alla deltagande medlemmar är anonymiserade.
+
+\subsection{Gruppmedlem 1}
+\begin{enumerate}
+\item Ingen alls med något av dem.
+\item Mycket TypeScript och en del JavaScript.
+\item Nej, har koll på egen kod och även andras genom bra dialog med dem. Kan dock ske kommunikationsfel.
+\item Troligen att några mindre fel inte upptäckts direkt.
+\item Det ökar läsbarhet för koden, speciellt att veta returvärden och vilka medlemmar som finns i klasser.
+\item Det extra skrivandet kompenseras av de problem som kringgås tack vare statisk typning och klasser.
+\item Nej, inte märkbart.
+\item TypeScript har bidragit till att det blivit enklare att utveckla men språket är lite rörigt då den även tillåter JavaScript.
+\item Har fungerat bra, modernt språk och känner igen syntax från innan.
+\end{enumerate}
+
+\subsection{Gruppmedlem 2}
+\begin{enumerate}
+\item Ingen alls.
+\item Mest TypeScript och lite JavaScript.
+\item Har hänt ett par gånger.
+\item Ja, det har hänt vid felstavningar.
+\item Hjälper att veta typen, men bättre variabelnamn hade kunnat ersätta.
+\item Lite, men inte nämnvärt.
+\item Ingen speciell skillnad.
+\item Inget speciellt.
+\item Det har fungerat bra, men har inte så mycket att jämföra med.
+\end{enumerate}
+
+\subsection{Gruppmedlem 3}
+\begin{enumerate}
+\item Endast lite JavaScript.
+\item Har använt båda ungefär lika mycket.
+\item Inte något som märkts. Något bättre felmeddelanden.
+\item Lite färre fel, men enhetstester hade kunnat fånga upp dem.
+\item Nja, något enklare i funktioner, men kontrakt och kommentarer kan ersätta.
+\item Mer att skriva men får veta om fel tidigare, tror det jämnar ut sig.
+\item Lättare att refakorisera, om man glömmer att ändra  någonstans får man felmeddelanden.
+\item Stör sig på att typerna kommer efter funktioner och variabler. Saknas typer som heltal.
+\item Ingen emot att TypeScript användes, tror inte det hade gjort någon skillnad att skriva i JavaScript istället.
+\end{enumerate}
+
+\subsection{Gruppmedlem 4}
+\begin{enumerate}
+\item Ingen alls.
+\item Har använt mycket TypeScript med delar i JavaScript.
+\item Ja, ett par gånger. Till exempel att skicka fel variabel till funktion.
+\item Tror det lätt hänt att skicka fel typ av variabel till funktioner.
+\item Ja, hjälper att veta vad funktioner tar för argument och returnerar. Hade kunnat ersättas med namngivning, men det är jobbigt.
+\item Lite sämre produktivitet. Är jobbigt att skapa klasser till små objekt.
+\item Om man ändrar på ett ställe men glömmer på ett annat får man ett fel vilket är bra.
+\item Inget speciellt.
+\item Tror att vi tjänade mycket på TypeScript, speciellt då ramverket som användes till klienten byggde på det.
+\end{enumerate}
+
+\subsection{Gruppmedlem 5}
+\begin{enumerate}
+\item Lite JavaScript, visste inte ens vad TypeScript var.
+\item Främst TypeScript men har jobbat lite med JavaScript-bibliotek.
+\item Ja, IDE:n har klagat många gånger om typfel under skrivning.
+\item Ja, blir enkelt små fel.
+\item Ja, bra med autokomplettering och hjälper att veta om t.ex. ett personnummer är av typen nummer eller sträng.
+\item Har inte påverkat produktiviteten märkbart.
+\item Inte speciellt.
+\item En del syntax är svår att förstå, känns som att mycket händer bakom kullisserna.
+\item Tror det var bra och underlättade då klasser kunde återanvändas.
+\end{enumerate}
+
+ 
+

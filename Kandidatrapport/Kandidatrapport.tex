@@ -1,17 +1,19 @@
 \documentclass[a4paper,10pt, twoside]{report}
 \input{../Templates/Settings}
+\usepackage{float}
 
 \def\ftitle{Kandidatrapport}
-\def\fversion{1.0}
+\def\fversion{0.4}
 
 \begin{document}
 \input{../Templates/titlepagethesis}
 \input{Chapter/dokumentationshistorik}
 \input{Chapter/copyright}
 \input{Chapter/sammanfattning}
+\input{Chapter/aeon}
 \input{Chapter/tillkannagivanden}
 
-\part{}
+\part{Huvudrapport}
 \input{Chapter/inledning}
 \input{Chapter/bakgrund}
 \input{Chapter/teori}
@@ -33,6 +35,8 @@
 \printbibliography[title=Referenser]
 
 \part{Bilagor}
+\input{attatchments/bjorn}
+\input{attatchments/henrik}
 
 
 \end{document}
