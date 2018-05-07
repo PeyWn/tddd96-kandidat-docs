@@ -43,7 +43,7 @@ Målet med Projektet Aeon var att utveckla en kvalitativ prototyp för RÖ att f
 Kvalitetsförsäkran kan vara dyrt, tidskrävande och det är ofta svårt att avgöra när man uppnått sina mål tillräckligt.\cite{lighthouse}
 Därför arbetar organisationer som t.ex. Institute of Electrical and Electronics Engineers för standardiseringar av arbetsprocesser.
 
-IEEE-730
+\subsection{IEEE-730}
 
 En utbredd standard för kvalitetsförsäkran inom mjukvaruutveckling. Standarden ska bistå projektet genom att ställa frågor som:
 \\ \\
@@ -51,8 +51,8 @@ En utbredd standard för kvalitetsförsäkran inom mjukvaruutveckling. Standarde
 
 Som kvalitetssamordnare bör man fastslå metoder i sin kvalitetsplan för att veta svaren på ovan nämnda fråga. \\
 
-ISO/IEC TR 29110-5-1-3
 
+\subsection{ISO/IEC TR 29110-5-1-3}
 Om en produkt eller tjänst har en positiv inverkan på de tre huvudområdena hållbar utveckling fokuserar på så kan den enligt ”ISO/IEC TR 29110-5-1-3” \cite{ISOtor} anses vara av högkvalitativa mått.  Denna ISO (standardisering) fokuserar på: 
 
 \begin{itemize}
@@ -61,13 +61,13 @@ Om en produkt eller tjänst har en positiv inverkan på de tre huvudområdena h�
 	\item Kontinuerligt mäta projekt och förbättra processer.
 \end{itemize}
 
-Ett av de begrepp som existerar inom kvalitetsförsäkrande metoder inom mjukvaruutveckling idag är automatiserade kod-kontroller i utvecklingsmiljön.
 
 \subsection{TSLint}
+Ett av de begrepp som existerar inom kvalitetsförsäkrande metoder inom mjukvaruutveckling idag är automatiserade kod-kontroller i utvecklingsmiljön.
 Ett s.k. statiskt kodanalys-verktyg är Lint som i grunden är utvecklat för programmeringsspråket C. En vidareutveckling på verktyget är ”TSLint”, samma verktyg men utvecklat för Typescript, de kodspråk vi valde att använda i vårt projekt. TSLint skall hjälpa utvecklaren av projektet med läsbarhet, underhåll samt funktionalitetsproblem med koden.
 
 \subsection{Angular}
-Ett av de mest etablerade programmeringsramverken för webbutveckling i dagsläget är Angular. [källa] Angular har med sina komponentbaserad arkitektur en vy att vara ett ramverk som förespråkar:
+Ett av de mest etablerade programmeringsramverken för webbutveckling i dagsläget är Angular \cite{altexsoft}. Angular har med sina komponentbaserad arkitektur en vy att vara ett ramverk som förespråkar:
 
 \begin{itemize}
 	\item Återanvändning av kod
@@ -75,43 +75,46 @@ Ett av de mest etablerade programmeringsramverken för webbutveckling i dagsläg
 	\item Enkla enhetstester
 	\item Underhåll
 \end{itemize}
-\cite{altexsoft}
+
 
 \section{Resultat} 
 
-Samtliga gruppmedlemmar var överens om att TSLint
+
+Samtliga gruppmedlemmar var överens om att TSLint:
 
 \begin{itemize}
-	\item Fördelar med att använda statisk kodanalys,angular,webstorm etc. 
-	\item Nackdelar med att suppressa warnings 
+	\item Förbättrade läsbarheten i koden
+	\item Projektmoment så som kodstandard blev drastiskt mindre med TSLint.
+	\item De arbete som behövde utföras med TSLint var mindre än potentiella manuella kodstandard-moment.
 \end{itemize}
 
-Ur ett perspektiv som fokuserar på: 
+När gruppmedlemmarna tillfrågades om Angular så var de överens om att:
+
 \begin{itemize}
-	\item Läsbarhet 
-	\item Underhåll
-	\item Funktionalitet
-	\item Övervakning av parallella arbetsflöden
-	\item Återanvändning av komponenter i projekt
-	\item Kontinuerligt mäta projekt och förbättra processer.
+	\item Angular stödjer återanvändning av komponenter, något som utnyttjades och uppfattades som positivt.
+	\item Uppdelningen i komponenter och separata filer gör det enkelt att se vad som är vad
+	\item Det kräver kompetens för att skriva fristående moduler i Angular
 \end{itemize}
-
-Vilka fördelar/nackdelar ser du som projektmedlem med användandet av TSLint/Angular?
-
 
 \section{Metod}
 
+Metoden för framtagandet av resultatet var kontinuerliga intervjuer med gruppmedlemmar, samt en litteraturstudie av de olika källor presenterade i dokumentet. Källorna är en blandinng mellan etablerade standard inom området och intressanta artiklar tagna från vedertagna hemsidor som t.ex. Linkedin. Se även sektionen i huvuddokumentet Källkritik
+
 \section{Diskussion}
 
-Som den oerfarna  grupp vi var kunde TSLint och Angular tillsammans ledsaga oss tilt att tillsammans hålla den kodstandard som behövdes för att arbeta i ett större projekt. 
+Som den oerfarna  grupp vi var kunde TSLint och Angular tillsammans ledsaga oss att tillsammans hålla den kodstandard som behövdes för att arbeta i ett större projekt. 
 
-Vi lärde oss snabbt att manuellt utföra dessa kvalitetsförsäkrande processer var en uttröttande och repetitiv process. När vi väl förstod oss på hur den standardiserade strukturen skulle avläsas och användas var den inte bara ett stöd utan även en vägvisare som underlättade implementationen av kod
+Vi lärde oss snabbt att manuellt utföra dessa kvalitetsförsäkrande processer var en uttröttande och repetitiv process. När vi väl förstod oss på hur den standardiserade strukturen skulle avläsas och användas var den inte bara ett stöd utan även en vägvisare som underlättade implementationen av kod.
+
+Angulars kod
 
 \section{Slutsatser}
 
-Ett mindre mjukvaruprojekt likt Aeon, där expertiskunskap saknas och kunskapsnivån är begränsad kan ha oerhörd nytta av kvalitetsförsäkrande ramverk och arbetsmetoder som TSLint och Angular. 
+Ett mindre mjukvaruprojekt likt Aeon, där expertiskunskap saknas och kunskapsnivån är begränsad kan ha stor nytta av kvalitetsförsäkrande ramverk och arbetsmetoder som TSLint och Angular. 
 
-Samtliga gruppmedlemmar var överens om att läsbarheten underlättades av både TSLints kodanalyser samt Angulars komponentbaserade arkitektur. 
+Samtliga gruppmedlemmar var överens om att läsbarheten underlättades av både TSLints kodanalyser samt Angulars komponentbaserade arkitektur.
+
+Läsbarhet är i sin tur beskrivet i ISO/IEC TR 29110-5-1-3
 
 Då detta är väl etablerade standarder inom branchen bör dessa tankar även gå att applicera på det framtida arbetslag som ska arbeta vidare med prototypen hos vår kund RÖ. Därför drar vi slutsatsen att dessa metoder hjälpte oss att utveckla en mer kvalitativ produkt.
 
