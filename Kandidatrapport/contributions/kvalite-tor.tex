@@ -31,15 +31,15 @@ Denna rapport inriktar sig på de kvalitetsförsäkrande metoder vi valt att arb
 	\item ISO/IEC TR 29110-5-1-3 : Standard för livscykeler för mycket små enheter
 	\item TSLint : Ett statiskt kodanalys-verktyg
 	\item Angular : Programmeringsramverk
-	\item RÖ : Närsjukvården i centrala Östergötland
+	\item RÖ : Sjukvården i Östergötland
 \end{itemize}
 
 \section{Bakgrund}
-I dagens industri sätter företagare mer och mer fokus på hållbarhet när de ska producera en produkt eller tjänst. Hållbarhet i dels metoder för utvecklandet, men också hållbarhet i ekonomiska, miljö och samhällsaspekter.
-De tre aspekterna skall tillsammans bilda en s.k. LCA \cite{LCA}. En ’sluten kedja’ där de tre områdenas sammansatta effekt får en så liten negativ påverkan på resurser som möjligt.
+I dagens industri sätter företagare fokus på hållbarhet när de ska producera en produkt. Hållbarhet i dels metoder för utvecklandet, men också hållbarhet i ekonomiska, miljö och samhällsaspekter.
+De tre aspekterna skall tillsammans bilda en s.k. LCA \cite{LCA}. En sluten kedja där de tre områdenas sammansatta effekt får en så liten negativ påverkan på resurser som möjligt.
 
 För vidare projektspecifik bakgrund se sektion \ref{cha:bakgrund}
-Målet med Projektet Aeon var att utveckla en kvalitativ prototyp för RÖ att förhoppningsvis vidareutveckla. Kvalitativ betyder i detta sammanhang en produkt som på bästa sätt inkorporeras med de system sjukhuset ansatt för schemaläggningsstöd.
+Målet med projektet Aeon var att utveckla en kvalitativ prototyp för RÖ att vidareutveckla. Kvalitativ betyder i detta sammanhang en produkt som på bästa sätt inkorporeras med de system sjukhuset ansatt för schemaläggningsstöd.
 
 \section{Teori}
 
@@ -81,11 +81,13 @@ Ett av de mest etablerade programmeringsramverken för webbutveckling i dagsläg
 
 \section{Metod}
 
-Metoden för framtagandet av resultatet var kontinuerliga intervjuer med gruppmedlemmar, samt en litteraturstudie av de olika källor presenterade i dokumentet.
+Metoden för framtagandet av resultatet var kontinuerliga intervjuer med gruppmedlemmar, samt en litteraturstudie i området genom de olika källor presenterade i dokumentet.
 
-Källorna är en blandinng mellan etablerade standard inom området och intressanta artiklar tagna från vedertagna hemsidor som t.ex. Linkedin. Se även sektion \ref{sec:källhantering} i huvuddokumentet.
+Källorna är en blanding mellan etablerade standard inom området och intressanta artiklar från vedertagna hemsidor som t.ex. Linkedin. Se även sektion \ref{sec:källhantering} i huvuddokumentet.
 
-\section{Resultat} 
+\section{Resultat}
+
+Den röda tråden i litteraturen undersökt pekar på vikten av att upperätthålla en god kvalitet i ett mjukvaruprojekt för att underlätta underhåll och vidareutveckling av produkten. Utan kvalitetsförsäkrande processer blir det även för ett småskaligt mjukvaruprojekt för resurskrävande att utveckla samt underhålla en produkt. Med andra ord är det inte hållbart.
 
 Samtliga gruppmedlemmar var överens om att TSLint:
 
@@ -103,14 +105,15 @@ När gruppmedlemmarna tillfrågades om Angular så var de överens om att:
 	\item Det kräver kompetens för att skriva fristående moduler i Angular
 \end{itemize}
 
+Angulars komponentbaserade arkitektur gör det enklare för utvecklaren att återanvända kod.  enkelt röra sig i parallella arbetsflöden.
+
 \section{Diskussion}
 
 Som den oerfarna  grupp vi var kunde TSLint och Angular tillsammans ledsaga oss att tillsammans hålla den kodstandard som behövdes för att arbeta i ett större projekt. 
 
 Vi lärde oss snabbt att manuellt utföra dessa kvalitetsförsäkrande processer var en uttröttande och repetitiv process. När vi väl förstod oss på hur den standardiserade strukturen skulle avläsas och användas var den inte bara ett stöd utan även en vägvisare som underlättade implementationen av kod.
 
-Angulars kod
-
+Återanvänding är en av grundpelarna i hållbarhetstänk.
 \section{Slutsatser}
 
 Ett mindre mjukvaruprojekt likt Aeon, där expertiskunskap saknas och kunskapsnivån är begränsad kan ha stor nytta av kvalitetsförsäkrande ramverk och arbetsmetoder som TSLint och Angular. 
