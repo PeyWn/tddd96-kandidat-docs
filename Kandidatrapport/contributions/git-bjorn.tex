@@ -16,7 +16,7 @@
 
 \vspace{3em}
 \section{Inledning}
-Inför ett mjukvaruprojekt är det kritiskt att välja rätt versionshanteringsprogram. Programmet måste på ett bra sätt skala till projektets storlek, den funktionalitet som planeras att användas och inlärningskurvan för programmet måste vara lämpligt. Den här rapporten tillhandahåller information erhållen genom analys av intervjuer angående valet och effektiviteten av olika versionshanteringsprogram för mindre mjukvaruutvecklingsprojekt.
+Inför ett mjukvaruprojekt är det kritiskt att välja rätt versionshanteringsprogram. Programmet måste på ett bra sätt skala till projektets storlek och den funktionalitet som planeras att användas, och inlärningskurvan för programmet måste vara lämpligt. Den här rapporten tillhandahåller information erhållen genom analys av intervjuer angående valet och effektiviteten av olika versionshanteringsprogram för mindre mjukvaruutvecklingsprojekt.
 
 \section{Syfte}
 Syftet med den här rapporten är att undersöka hur versionshantering kan användas i ett mindre mjukvaruutvecklingsprojekt. Rapporten analyserar olika arbetsmetodiker i syftet att utreda om en metodik kan användas tillsammans med en mindre projektgrupps arbetssätt på ett effektivt sätt.
@@ -28,22 +28,22 @@ Syftet med den här rapporten är att undersöka hur versionshantering kan anvä
 \end{enumerate}
 
 \section{Avgränsningar}
-Rapporten kommer endast utföra sin undersökning, intervjuer, på personer som studerar eller studerat vid Linköpings universitet på en datainriktad utbildning. Detta eftersom det blir enklare att finna lämpliga personer att intervjua då det finns mer direkta kanaler att använda för att finna personer att intervjua. Vidare så finns det en viss garanti för att personen har arbetat i mindre mjukvaruprojekt.
+Rapporten kommer endast genomföra sin undersökning, intervjuer, på personer som studerar eller studerat vid Linköpings universitet på en datainriktad utbildning. Detta eftersom det blir enklare att finna lämpliga personer att intervjua då det finns mer direkta kanaler att använda för att finna personer att intervjua. Vidare finns det en viss garanti för att personen har arbetat i mindre mjukvaruprojekt.
 
 \clearpage
 \section{Bakgrund}
 Inför kandidatprojektet för linjen, civilingenjör i datateknik, på Linköpings universitet beslutade sig min projektgrupp sig för att använda versionshanteringsprogrammet Git.
-Webbtjänsten som valdes för att hantera projektgruppen data var GitLab. Gruppen valde Gitlab eftersom institutionen för datavetenskap vid Linköpings universitet tillhandahåller alla studenter med sin egen GitLab-server. Alla studenter har automatisk tillgång till serven utan avgifter.
+Webbtjänsten som valdes för att hantera projektgruppen data var GitLab. Gruppen valde GitLab eftersom institutionen för datavetenskap vid Linköpings universitet tillhandahåller alla studenter tillgång till institutionens GitLab-server. Alla studenter har automatisk tillgång till serven utan avgifter.
 
-Att använda Git möjliggör för det första att gruppen på en enkelt och familjärt sätt kan monitorera ändringar i de filer som versionshanteras, i vårt fall både programkoden och dokumentationen för projektet. Dokumentationen versionshanteras då LaTeX valts som typsättningssystem och Git var ett smidigt sätt att versionshantera LaTeX-filer. För det andra så har Git också stöd för utveckling av olika versioner av samma kod parallellt. Det gör genom något som kallas grenar. Det gör att gruppens medlemmar kan arbeta på olika uppgifter samtidigt utan att vara till besvär för varandra.
+Att använda Git möjliggör för det första att gruppen på en enkelt och familjärt sätt kan monitorera ändringar i de filer som versionshanteras, i vårt fall både programkoden och dokumentationen för projektet. Dokumentationen versionshanteras då LaTeX valts som typsättningssystem och Git var ett smidigt sätt att versionshantera LaTeX-filer. För det andra så har Git också stöd för utveckling av olika versioner av samma kod parallellt. Det görs genom något som kallas grenar. Det gör att gruppens medlemmar kan arbeta på olika uppgifter samtidigt utan att vara till besvär för varandra.
 
 
 \section{Teori}
 Det här avsnittet redogör för den teori som är relevant för rapporten.
 \subsection{Versionshantering}
-Versionshantering är i grunden ett sätt att hantera förändringar och säkerhetskopiera data, vanligtvis handlar det om programkod men kan användas för alla typer av filer. Ingen skulle idag lämna data som är viktig utan att säkerhetskopiera den, att det sedan finns versioner av datan sparade är en stor fördel då det är svårt att mista data. Vissa typer av data, till exempel programkod, har en tendens att ändras mycket under sin livstid. Det blir då väldigt viktigt att kunna hantera alla ändringar och till exempel gå tillbaka till en tidigare version om det skulle behövas. Då versionshantering medför flera fördelar så har det idag blivit en naturlig del av en mjukvaruutvecklares vardag.\cite{VersionControlGit}
+Versionshantering är i grunden ett sätt att hantera förändringar och säkerhetskopiera data, vanligtvis handlar det om programkod men det kan användas för alla typer av filer. Ingen skulle idag lämna data som är viktig utan att säkerhetskopiera den. Att det sedan finns versioner av datan sparade är en stor fördel då det är svårt att mista data. Vissa typer av data, till exempel programkod, har en tendens att ändras mycket under sin livstid. Det blir då väldigt viktigt att kunna hantera alla ändringar och till exempel gå tillbaka till en tidigare version om det skulle behövas. Då versionshantering medför flera fördelar så har det idag blivit en naturlig del av en mjukvaruutvecklares vardag.\cite{VersionControlGit}
 
-Inom versionshantering är det varligt att projekt delas upp i olika grenar, där varje gren har ett specifikt syfte. Projektet har vanligtvis en huvudgren som ofta kallas master på engelska och mästare på svenska. Huvudgrenen ska endast innehålla färdig implementerad och testad funktionalitet.
+Inom versionshantering är det vanligt att projekt delas upp i olika grenar, där varje gren har ett specifikt syfte. Projektet har vanligtvis en huvudgren som ofta kallas master på engelska och mästare på svenska. Huvudgrenen ska endast innehålla implementerad och testad funktionalitet.
 En gren är som en sorts kopia av en annan av projektets grenar, vanligtvis av huvudgrenen. När en gren har skapats så kan ändringar utföras oberoende av ändringar på andra grenar. Det betyder att flera personer kan arbeta på olika saker så som ny funktionalitet eller buggfixar parallellt. När en gren har uppnått sitt syfte så kan den inkorporeras med projektets huvudgren och bli en del av produkten.
 
 De tre populäraste kostnadsfria versionshanteringsprogrammen är Git, Subversion och Mercurial. Git är det mest populära programmet och Subversion och Mercurial delar andra plats.\cite{version_comp}
@@ -52,11 +52,11 @@ Git är ett distribuerat versionshanteringsprogram som har snabbhet, dataintegri
 
 \subsubsection{Mercurial}
 Mercurial är ett distribuerat versionshanteringsprogram vars mål inkluderar att det ska vara lätt att använda sig av och lära sig. Det ska också vara skalbart i förhållande till projektets storlek och behov. Vidare var det designat för stödja en mångfald av operativsystem då mycket av programkoden är skriven i Python och bara små delar i C.
-\cite{VersionControlMercurial}\cite{VersionControlMercurial}
+\cite{VersionControlMercurial}
 
 
 \subsubsection{Apache Subversion}
-Apache Subversion är ett centraliserat versionshanteringsprogram, programmet benämns ofta som SVN efter sitt terminalnamn svn. SVN är från börjar utvecklat med syftet att ersätta Concurrent Versioning System som släpptes 1990. Ett centraliserat system använder sig av en server där all data sparas.\cite{wiki_cvs}\cite{VersionControlSvn}\cite{web_Svn}
+Apache Subversion är ett centraliserat versionshanteringsprogram. Programmet benämns ofta som SVN efter sitt terminalnamn svn. SVN är från börjar utvecklat med syftet att ersätta Concurrent Versioning System som släpptes 1990. Ett centraliserat system använder sig av en server där all data sparas.\cite{wiki_cvs}\cite{VersionControlSvn}\cite{web_Svn}
 
 
 \section{Metod}
@@ -77,7 +77,7 @@ Intervjuerna fokuserar på att samla in information angående vilket versionshan
   \item Följdfråga om föregående fråga sant: Hur kommer det sig att ni valde just det ni gjorde?
   \item Följdfråga om föregående fråga falskt: Hur påverkade det projekt?
 
-  \item I projekt hade ni en arbetsmetodik för versionshantering, om så var fallet hur fungerade den?
+  \item Hade ni en arbetsmetodik för versionshantering, om så var fallet hur fungerade den?
 
   \item Använde sig gruppen av metodiken så som det var tänkt i teorin?
 
@@ -91,28 +91,28 @@ Intervjuerna fokuserar på att samla in information angående vilket versionshan
 
   \item Hur tycker du att programmet i sig fungerade i projektet?
 
-  \item Var det svårt att lära sig versionshanteringsprogrammet? Fanns det programvara som gjorde versionshanteringen blev lättare att hantera?
+  \item Var det svårt att lära sig versionshanteringsprogrammet? Fanns det programvara som gjorde att versionshanteringen blev lättare?
 
 \end{enumerate}
 
 \section{Resultat}
-Under undersökningen intervjuades sex olika studenter som hade tidigare erfarenhet av att arbeta i mindre mjukvaruutvecklingsprojekt. Där projektgruppen för respektive projekt använde sig av versionshantering. Bilaga \ref{appendix:bjorn} innehåller intervjuerna, på grund av att svaren i en av intervjuerna inte kunde publiceras så har den intervjun exkluderats från bilagan.
+Under undersökningen intervjuades sex olika studenter som hade tidigare erfarenhet av att arbeta i mindre mjukvaruutvecklingsprojekt. Där projektgruppen för respektive projekt använde sig av versionshantering. Bilaga \ref{appendix:bjorn} innehåller intervjuerna, på grund av sekretess kunde svaren i en av intervjuerna inte publiceras. Intervjun har således exkluderats från bilagan.
 
-Utifrån intervjuerna så framgick det att den klara majoriteten använde sig utav versionshanteringsprogrammet Git. Vilken webbtjänst som de olika projektgrupperna använde sig av för att lagra och hantera den data som versionshanterats skiljde sig dock åt. En av de som blev intervjuade använde sig av SVN, Apache Subversion, för versionshantering.\cite{VersionControlSvn}
+Utifrån intervjuerna framgick det att en klar majoritet använde sig av versionshanteringsprogrammet Git. Vilken webbtjänst de olika projektgrupperna använde sig av för att lagra och hantera den data som versionshanterats skiljde sig dock åt. En av de som blev intervjuade använde sig av SVN, Apache Subversion, för versionshantering.
 
 Det framgick också att de som arbetade i studentprojekt och hade möjligheten att välja versionshanteringsprogram själva, gärna valde Git på grund av den breda funktionalitet och popularitet programmet har bland studenter på Linköpings universitet. Det enda andra programmet som användes var SVN, detta användes i samband med ett jobb där det var standard på företaget att använda SVN.
 
 Alla använde sig av någon form av arbetsmetodik för versionshanteringen och vävde samman versionshanteringen med andra naturliga aspekter inom mjukvaruutveckling som testning och kodinspektioner. Personen som använde SVN hade den lättaste metodiken i sitt arbete, där användes versionshantering mer som ett sätt att säkerhetskopiera och testa programkod. För att lösa problem som uppstod med SVN tog personen till egna, mer praktiska metoder, istället för att använda SVN:s funktioner som det var tänkt.
 
- När det gäller Git planerade alla att använda sig utav någon form av ``Feature Branch Workflow'', vilket kan beskrivas som ett arbetssätt med funktionalitetsförgrening för Git. Det visade sig att alla som använde sig av Git hade valt eller utformat en arbetsmetodik som passade gruppen kompetens, storlek samt behov. Av den anledningen så användes ofta arbetsmetodiken i praktiken som det var tänkt i teorin.
+ När det gäller Git planerade alla att använda sig utav någon form av ``Feature Branch Workflow'', vilket kan beskrivas som ett arbetssätt med funktionalitetsförgrening för Git. Det visade sig att alla som använde sig av Git hade valt eller utformat en arbetsmetodik som passade gruppen kompetens, storlek och behov. Av den anledningen användes ofta arbetsmetodiken i praktiken som det var tänkt i teorin.
 
- Det framgick också att när det fanns en formulerad arbetsmetodik för versionshantering så användes den på ett effektivt sätt då gruppens medlemmar förstod syftet med metodiken och hur versionshanteringsprogrammet fungerade.
+ Det framgick också att när det fanns en formulerad arbetsmetodik för versionshantering användes den på ett effektivt sätt då gruppens medlemmar förstod syftet med metodiken och hur versionshanteringsprogrammet fungerade.
 
 Det framgick också i fem av sex intervjuer att gruppen behövde ta sig över en viss upplärningskurva för att komma igång med versionshanteringen. Detta då inte alla i de berörda grupperna hade kommit i kontakt med de mer avancerade aspekterna av versionshantering tidigare.
 
 \section{Diskussion}
 
-Resultatet visade på att en klar majoritet använder sig av Git för versionshantering. Alla som hade möjligheten av välja vilket verktyg de skulle använda för versionshantering valde Git. Utav de som inte fick välja utan blivit tilldelade Git så var det fortfarande Git det troligaste valet om de hade fått chansen att välja. Anledningen till det var att majoriteten av gruppen hade tidigare erfarenheter av Git. Det här kan tyda på att Git är ett väldigt populärt på Linköpings universitet där alla de intervjuade personerna studerar.
+Resultatet visade på att en klar majoritet använder sig av Git för versionshantering. Alla som hade möjligheten av välja vilket verktyg de skulle använda för versionshantering valde Git. Av de som inte fick välja utan blivit tilldelade Git så var fortfarande Git det troligaste valet om de hade fått chansen att välja. Anledningen till det var att majoriteten av gruppen hade tidigare erfarenheter av Git. Det här kan tyda på att Git är väldigt populärt på Linköpings universitet där alla de intervjuade personerna studerar.
 
 Då alla intervjuer hade färdigställts kunde ett mönster observeras bland svaren. Grupper vars medlemmar hade tidigare erfarenhet av versionshantering hade en tendens att välja en mer utförlig och avancerad arbetsmetodik. Denna arbetsmetodik arbetades också in i gruppens arbetssätt på ett mer framträdande sätt. Det visade sig också att dessa grupper ofta höll sig till metodiken så som det var tänkt när de arbetade.
 
@@ -120,4 +120,4 @@ Nästan alla som intervjuades uttryckte att det fanns medlemmar i gruppen som in
 
 \section{Slutsatser}
 
-Det visar sig att de flesta använder sig av Git som versionshanteringsprogram när det gäller mindre mjukvaruprojekt. Någon form av arbetsmetodik som använder sig av grenar används för att säkerställa att arbetet flyter på bra. Det visar sig också att då en grupp förstår syftet med arbetsmetodiken och hur versionshanteringsprogrammet fungerar så kommer versionshanteringen användas på ett effektivt sätt. Rapporten visar också på hur arbetsmetodiken för versionshantering kan vävas samman med en projektgrupps arbetssätt för att bli en naturlig del av arbetsprocessen.
+Det visar sig att de flesta studenter som intervjuats använder sig av Git som versionshanteringsprogram när det gäller mindre mjukvaruprojekt. Någon form av arbetsmetodik som använder sig av grenar används för att säkerställa att arbetet flyter på bra. Det visar sig också att då en grupp förstår syftet med arbetsmetodiken och hur versionshanteringsprogrammet fungerar så kommer versionshanteringen användas på ett effektivt sätt. Rapporten visar också på hur arbetsmetodiken för versionshantering kan vävas samman med en projektgrupps arbetssätt för att bli en naturlig del av arbetsprocessen.
