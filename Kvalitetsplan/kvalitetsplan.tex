@@ -1,7 +1,7 @@
 \documentclass[a4paper,10pt]{article}
 \input{../Templates/Settings}
 \externaldocument[kand-]{../Kandidatrapport/Kandidatrapport}
-
+\externaldocument[krav-]{../Kravspec/kravspec}
 \begin{document}
 \def\ftitle{Kvalitetsplan}
 \def\fversion{1.2}
@@ -34,10 +34,9 @@ Detta dokument beskriver kvalitetsarbetet i projekt att skapa ett schemaläggnin
 \subsection{Syfte}
 Syftet med denna kvalitetsplan är att beskriva de tekniker, aktiviteter och metoder som kommer att användas för att försäkra att en hög kvalitet hålls i projektet. Detta innebär att slutprodukten ska uppfylla alla krav, levereras i tid och hålla sig inom budgeten.
 \subsection{Omfattning}
-Detta dokument redogör för hur projektets skall uppnå sina högkvalitativa egenskaper och refererar till relevanta delar i projektdokumentation, se sektion \ref{sec:Refererade_dokument}.
+Detta dokument redogör för hur projektet skall uppnå sina högkvalitativa egenskaper och refererar till relevanta delar i projektdokumentation, se sektion \ref{sec:Refererade_dokument}.
 \subsection{Refererade dokument}
 \label{sec:Refererade_dokument}
-\todo{Ändringar här sen senaste inlämning}
 Följande interna dokument refereras till i detta dokument:
 \begin{itemize}
 	\item Kandidatrapport
@@ -46,7 +45,6 @@ Följande interna dokument refereras till i detta dokument:
 	\item Testplan
 \end{itemize}
 
-För en sammanställning av samtliga dokument i projektet, se Kandidatrapport avsnitt \ref{kand-sec:forstudie}
 \subsection{Definitioner, namn och förkortningar}
 Följande lista definierar namn och termer som används i dokumentet.
 \begin{itemize}
@@ -112,7 +110,6 @@ För att alla dokument som skrivs i projektet ska ha ett konsekvent utseende och
 \subsubsection{Kodstandard för TypeScript och JavaScript}
 \label{sec:kodstandard}
 I denna sektion beskrivs den kodstandard som ska följas vid kodning i TypeScript och JavaScript.
-\todo{Ändringar här sen senaste inlämning}
 Gruppens kod exklusivt importerade bibliotek skall uppfylla de konfiguerbara regler som de statiska kodanalys-verktyget TSLint tillhandager.
 Detta för att uppnå en hållbar standard inom läsbarhet, underhåll samt funktionallitet.
 
@@ -174,6 +171,8 @@ I denna sektion beskrivs ytterligare överväganden som måste behandlas under p
 \label{sec:Kvalitetsmatning}
 Två kvalitetsmätningar skall hållas efter varje sprint för att värdera kvaliteten hos arbetsmetodik samt resulterande produkt.
 Detta för att samtliga involverade i projektet på ett tidigt stadium skall känna till och förhålla sig till de föreskrivna kvalitetsmålen.
+
+Ett användbarhetstest har även skapats för att mäta och fastslå grafiska komponenters användarvänlighet i produkten. Se avsnitt \ref{krav-subsec:kvalitetsakrav} i kravspecifikationen.
 
 \subsection{Undantag och avvikelser}
 
