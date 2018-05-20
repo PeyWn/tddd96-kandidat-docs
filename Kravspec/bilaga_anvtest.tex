@@ -1,0 +1,44 @@
+\section{Bilaga Användbarhetstest}
+\label{anvtest}
+Använbarhetstest för att bedömma kvaliteten på grafiska moduler.
+\section{Typ av test}
+Användbarhetstest som bedöms genom att användare utför ett antal scenarion och därefter utvärderar olika delar av gränssnittet utifrån ett antal frågor
+\section{Genomförande}
+Varje användare kommer att utföra ett antal scenarion där upplevelsen kommer att bedömmas genom användarna svarar på en enkät för varje komponents som testas.
+\subsection{Moduler att testa}
+\begin{itemize}
+	\item Beslutslistan
+	\item Spårvyn
+	\item Detaljvyn
+	\item Sammanfattningsvyn
+	\item Bokningsprocessen
+\end{itemize}
+\subsection{Enketfrågor}
+Det finns en generel enkät som gäller för alla moduler. Enketen ska fyllas i en gång för varje komponenet av varje användare.
+Frågorna besvaras på en skala där 1 är sämst och 5 är bäst. Varje fråga föjs av en fritextfråga där den tillfrågade har möjlighet att fylla i an anledning till att betyget gavs.
+
+\subsubsection{Frågor}
+\begin{itemize}
+	\item Hur lätt var modulen att förstå?
+	\item Hur mycket skulle denna modulen och dess funktionallitet underlätta ditt arbete?
+	\item Hur mycket tid skulle denna modulen och dess funktionallitet spara dig i ditt arbete?	
+	\item Hur väl stämmer informationen i modulen överrens med dina behov?
+	\item Hur väl fungerar modulen tillsammans med övriga systemet?
+\end{itemize}
+
+\subsubsection{Utvärdering}
+Alla delbetyg för varje modul räknas samman och delas med fem för att räkna ut modulens totalbetyg.
+När alla användare har svarat på enkäten så räknas sedan snittet ut för alla användares totalbetyg. Detta ger ett betygssnitt för alla moduler som kan användas för att bedömma modulens status.
+\section{Testscenarion}
+Testet kommer börja med att användaren får ett uppdrag. Efter att detta uppdrag är utfört så kommer användaren ha bekantat sig med alla moduler som ska utvärderas och kan därför svara på alla enkäter. 
+\subsection{Scenario}
+\subsubsection{Uppdrag}
+Användare får i uppgift att:
+\begin{enumerate}
+	\item Hitta det akuta beslut som har kortast tid kvar
+	\item Ta fram en lista över matrial för beslutet
+	\item Boka in en operation för beslutet på närmsta lediga tid
+\end{enumerate}
+Då användaren har lyckats med detta så presenteras ett scenario där kirurgen har en student med sig. Därför behöver användaren förlänga bokningen med 20 minuter.
+\subsubsection{Förväntat resultat}
+En modul ska få ett totalbetygssnitt mellan alla användare på minst 3,8 för att betraktas som godkänd.
