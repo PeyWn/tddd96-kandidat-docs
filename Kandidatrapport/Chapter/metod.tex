@@ -119,9 +119,9 @@ Under förstudien hade gruppen även flera möten med kund för att få informat
 Då kravspecifikationen var färdigställd var det dags för projektet att gå in i designfasen. Under fasen så låg fokus på två saker, grafisk design och mjukvarudesign.
 
 \subsection{Grafisk design}\label{sec:grafisk_design}
-För att bestämma den grafiska designen av produkten skapade samtliga medlemmar i projektgruppen en egen pappersprototyp av hur man tänkt sig att produkten skulle kunna se ut. Gruppen diskuterade de olika förslagen och slog samman tre alternativ som redovisades för kund.
+För att bestämma den grafiska designen av produkten skapade samtliga medlemmar i projektgruppen en egen pappersprototyp av hur man tänkt sig att produkten skulle kunna se ut. Gruppen diskuterade de olika förslagen och kombinerade idéer till tre olika alternativ som redovisades för kund.
 
-Kunden gav återkoppling på de olika alternativen och utifrån detta skapade gruppen en ny design och prototyp som efter ett ytterligare möte resulterade i den slutgiltiga designen för produkten.
+Kunden gav återkoppling på de olika alternativen och utifrån detta skapade gruppen en ny prototyp som efter ett ytterligare möte resulterade i den slutgiltiga designen för produkten (figur 5.1).
 
 Kvaliteten på designen planerades att testas med hjälp av ett användbarhetstest. Testet består av ett formulär som värderar de olika grafiska komponenterna på en skala mellan ett och fem. Utifrån svaren skulle gruppen få en uppfattning om vilka komponenter som upperätthåller en lämplig standard att implementeras i slutprodukten. 
 
@@ -148,7 +148,14 @@ När designfasen var över gick gruppen in i projektets utvecklingsfas. Gruppen 
 Arbetet började med att implementera designen för det grafiska gränssnittet med hjälp av Angular-komponenter. Efter det så implementerades logiken för de komponenterna. Slutligen sammankopplades det med arbetet gruppen i back-end utfört. Gruppen växlade mellan parprogrammering och enskild programmering beroende på vad som skulle göras.       
 
 \subsection{Back-end}
-När utvecklingen av back-end startade skapades först ett EER-diagram över den databas som produkten skulle använda sig av för att lagra data. 
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth,height=.5\textheight]{Figures/EERdiagram.png}\\
+    \caption{EER-diagram}
+    \label{fig:EER-diagram}
+\end{figure}
+
+När utvecklingen av back-end startade skapades först ett EER-diagram över den databas som produkten skulle använda sig av för att lagra data (figur 4.2). 
 Sedan översattes diagrammet till kod, som skrevs i Javascript med hjälp av Sequelize. 
 Gruppen skrev ett API som också implementerades i back-end-koden så att man enkelt skulle kunna hämta och modifiera data i databasen.
 

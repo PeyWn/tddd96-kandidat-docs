@@ -15,7 +15,7 @@ Applikationen består av flera olika vyer, där vissa av vyerna ska visas upp i 
 All den data om patienter, salar och utrustning som användaren är intresserad av finns på en server i projektets back-end. Därför är det nödvändigt med kommunikation mellan de båda delarna. Från projektets front-end sköts kommunikationen med AJAX-anrop. Dessa anrop sker i tjänster för att de ska vara tillgängliga för alla komponenter som behöver tillgång till data av olika sorter.
 
 \subsection{Back-end}
-Back-end i projektet är en server som har två huvuduppgifter. Den första är att vara värd för klienten så att den kan kommas åt av flera användare och datorer över nätverk. Den andra uppgiften är att ha en databas med tillhörande webb-API. Databasen används för att hantera all data som behövs för schemaläggningen som bland annat operationsbeslut, kirurger, resurser och bokningar med mera. Webb-API tillåter klienten att kunna logga in och sedan hämta och modifiera denna data.
+Back-end i projektet är en server som har två huvuduppgifter. Den första är att vara värd för klienten så att den kan kommas åt av flera användare och datorer över nätverk. Den andra uppgiften är att ha en databas med tillhörande webb-API. Databasen används för att hantera all data som behövs för schemaläggningen - bland annat operationsbeslut, kirurger, resurser och bokningar. Ett webb-API tillåter klienten att kunna logga in och sedan hämta och modifiera denna data.
 
 Servern är byggd på miljön Node.js och är skriven i JavaScript. Den använder sig av Node.js-biblioteket Express för den statiska leveransen och klienten och för att definiera HTTP-API:t. För hantering av databasen används i grunden MySQL men även ORM-biblioteket Sequelize i Node.js. Sequelize tillåter objektorienterad hantering av databasen och tar bort behovet att använda direkta SQL-frågor. All testdata som används i prototypen läggs också in i databasen med hjälp av seeds i Sequelize. Mer om seeds och Sequelize går att läsa i avsnitt \ref{sec:sequelize_teori}.
 
@@ -130,7 +130,7 @@ Slutligen så har de fått kunskap att utveckla något i grupp, där förkunskap
 I denna del presenteras deltagarnas individuella bidrag översiktligt.
 
 \subsection{Teamledarens roll kombinerad med Scrum-metodik av Adam Andersson}
-I Scrum-metodik finns det ingen ledare utan alla medlemmar i teamet är med och tar de beslut som ska göras. Denna studie är till för att utvärdera om det går att kombinera rollen teamledare i en projektgrupp som använder sig av Scrum-metodik.
+I Scrum-metodik finns det ingen ledare utan alla medlemmar i teamet är med och tar de beslut som ska göras. Denna studie är till för att utvärdera om det går att kombinera rollen teamledare med en projektgrupp som använder sig av Scrum-metodik och ändå kunna behålla syftet med de båda.
 \subsection{Versionshantering för ett mindre mjukvaruutvecklingsprojekt av Björn Hvass}
 Rapporten undersöker hur versionshantering kan användas i ett mindre mjukvaruutvecklingsprojekt samt redogör för om det går att använda en arbetsmetodik effektivt i den här typen av projekt.
 
