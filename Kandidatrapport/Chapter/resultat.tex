@@ -70,7 +70,6 @@ Längst ner finns det även en ruta med sökkriterier för att filtrera den sche
 
 \begin{figure}[H]
 	\centering
-
 	\begin{subfigure}[b]{0.4\linewidth}
 		\includegraphics[width=\linewidth]{Figures/beslut.png}
 		\caption{Beslutsvyn}
@@ -87,6 +86,7 @@ Längst ner finns det även en ruta med sökkriterier för att filtrera den sche
 
 
 \subsubsection{Informationslisten}
+Informationslisten är den smala rad längst upp gränssnittet i \ref{fig:window}.
 Informationslisten är till för att alltid visa information om den patient som för tillfället håller på att bokas in. Så snart ett beslut har valts i sidopanelen så visas patientens namn och personnummer i informationslisten.
 
 I informationslisten syns det också vilken användare som är inloggad längst till höger och där finns även en knapp för att logga ur aktuell användare.
@@ -95,7 +95,14 @@ I informationslisten syns det också vilken användare som är inloggad längst 
 I huvudfönstret visas i grundutförandet en månadsvy över där det går att se hur många operationer det är inbokade på olika dagar. Om en dag markeras så visas fler detaljer över de operationer som är inbokade på den dagen. När en patient har valts i sidomenyn används måndadsvyn för att välja vilken dag då man vill boka in operationen. När en dag har valts så skickas användaren vidare till spårvyn.
 
 \subsubsection{Spårvyn}
-Spårvyn visar ett antal konfigurerbara spår där varje spår motsvarar schemat för en viss resurs på den valda dagen. Dessa spår visas brevid varandra för att enkelt visualisera de olika resurserna och på så sätt skapa en bra överblick över när de olika resurserna är lediga i relation till varandra. Det går att välja vilka resurser som ska visas så som salar, olika personal och verktyg.
+Spårvyn, figur \ref{fig:track_view}, visar ett antal konfigurerbara spår där varje spår motsvarar schemat för en viss resurs på den valda dagen. Dessa spår visas brevid varandra för att enkelt visualisera de olika resurserna och på så sätt skapa en bra överblick över när de olika resurserna är lediga i relation till varandra. Det går att välja vilka resurser som ska visas så som salar, olika personal och verktyg.
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{Figures/track_view.png}
+	\caption{Spårvyn}
+	\label{fig:track_view}
+\end{figure}
+
 
 \subsection{Systemanatomi}
 I första iterationen togs det fram en systemanatomi (se figur \ref{fig:Systemanatomi}) som användes under projektets gång som ett hjälpmedel för att strukturera upp arbetet under utvecklingen. Den gav en översiktlig bild av vilken funktionalitet produkten skulle innehålla och hur de olika delarna samverkade med varandra. Utöver detta presenterades den i ett tidigt skede för kunden i syfte att säkerställa att projektgruppens syn på systemet stämde överens med kundens.
