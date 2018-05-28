@@ -11,67 +11,54 @@
 \externaldocument[krav-]{../Kravspec/kravspec}
 \externaldocument[arki-]{../Arkitekturdokument/arkitekturdokument}
 
-
-
-
 \begin{document}
 \input{../Templates/titlepage}
 
 \section*{\begin{center}Dokumentationshistorik\end{center}}
-    \begin{center}
+	\begin{center}
         \begin{tabular}{|c c c c |}
         \hline
         Datum & händelse & iteration & version\\
         \hline
-        2018-02-14 & Dokument skapas & 1 &  0.1\\
+        2018-02-14 & Dokument skapas & 1 & 0.1\\
         \hline
-        2018-02-19 & Konvertering till \textbf{\LaTeX} & 1 &  0.2\\
+        2018-02-19 & Konvertering till \textbf{\LaTeX} & 1 & 0.2\\
         \hline
-        2018-03-05 & Version 1.0 färdigställd & 1 &  1.0\\
+        2018-03-05 & Version 1.0 färdigställd & 1 & 1.0\\
         \hline
-        2018-04-17 & Revision av version 1.0 & 2 &  1.1\\
+        2018-04-17 & Revision av version 1.0 & 2 & 1.1\\
         \hline
         \end{tabular}
     \end{center}
-    \clearpage
-    \tableofcontents
-    \clearpage
+\clearpage
+\tableofcontents
+\clearpage
 
 \section{Introduktion}
 Det här dokumentet ska översiktligt beskriva de tester som kommer att genomföras under projektets gång.
 
-
 \subsection{Mål och syfte}
-Testerna är till för att säkerställa att det som levereras uppfyller de krav som
-finns i kravspecifikation sektion \ref{krav-sec:Specifika krav}.
-
-%\subsection{Avgränsningar}
+Testerna är till för att säkerställa att det som levereras uppfyller de krav som finns i kravspecifikation sektion 
+\ref{krav-sec:Specifika krav}.
 
 \section{Moduler}
-Systemet är uppdelat i två delar, webbservern och webbklienten. Dessa delarna är
-i sin tur uppdelade i ett antal olika moduler. En övergripande systemskiss finns
-i arkitekturdokumentet under rubrik \ref{arki-sec:Systemskiss}. Mer information
-angående webbklienten och dess moduler se sektion \ref{arki-sec:webbklient}
-medans information angående webbservern finns under sektion \ref{arki-sec:webbserver}.
+Systemet är uppdelat i två delar, webbservern och webbklienten. Dessa delarna är i sin tur uppdelade i ett antal olika 
+moduler. En övergripande systemskiss finns i arkitekturdokumentet under rubrik \ref{arki-sec:Systemskiss}. Mer information
+angående webbklienten och dess moduler se sektion \ref{arki-sec:webbklient} medan information angående webbservern finns 
+under sektion \ref{arki-sec:webbserver}.
 
 \section{Funktioner}
-Denna sektion beskriver de funktioner som ska genomgå testning. Varje funktions
-användningsområde presenteras tillsammans med den indata som funktionen ska
-behandla. Varje funktion har även blivit tilldelad en integritets nivå som
-beskriver hur kritisk funktionen är för systemet.
-Se kravspecifikationen \ref{krav-subsec:Funktionellakrav} för mer ingående
-information om kraven som berör funktionen.
+Denna sektion beskriver de funktioner som ska genomgå testning. Varje funktions användningsområde presenteras tillsammans 
+med den indata som funktionen ska behandla. Varje funktion har även blivit tilldelad en integritets nivå som
+beskriver hur kritisk funktionen är för systemet. Se kravspecifikationen \ref{krav-subsec:Funktionellakrav} för mer 
+ingående information om kraven som berör funktionen.
 
-    \subsection{Boka Operation}
-    \label{sec:Boka Operation}
-    %Beskrivning
-    %Ref till kravspec
-    %Beroende
-    %Integritets level
+\subsection{Boka Operation}
+\label{sec:Boka Operation}
+I denna funktion skall man kunna välja tid, se vilka lediga bokningsbara tider som existerar samt bli informerad om när 
+kompetens, material och utrustning saknas. Förberedelser och efterarbete beskrivs med hjälp av KVÅ-kodning.
 
-I denna funktion skall man kunna välja tid, se vilka lediga bokningsbara tider som existerar samt bli informerad om när kompetens, material och utrustning saknas. Förberedelser och efterarbete beskrivs med hjälp av KVÅ-kodning.
-
-Beslutsdata:
+Beslutsdata
 \begin{multicols}{3}
 \begin{itemize}
 	\item Personnummer
@@ -100,10 +87,9 @@ Operationstider (KVÅ-koder)
 
 \subsubsection{Boka sal}
 \label{sec: Boka sal}
-Det ska gå att välja namn på den lokal man vill boka och välja vilken typ av lok
-al det är. Man ska även kunna se tillgängliga tider för salen. Vid
-bokning skall man få information över vilka operationer som går att genomföra i
-lokalen samt en inggreppbeskrivning.
+Det ska gå att välja namn på den lokal man vill boka och välja vilken typ av lokal det är. Man ska även kunna se 
+tillgängliga tider för salen. Vid bokning skall man få information över vilka operationer som går att genomföra i lokalen 
+samt en ingreppbeskrivning.
 
 Ingående data
 \begin{multicols}{2}
@@ -120,15 +106,15 @@ Ingående data
 \label{sec: Avboka sal}
 Det ska vara möjligt att avboka en tid som man sedan tidigare bokat.
 
--	Välja tid
+- Välja tid
 
 \subsection{Inloggning}
 \label{sec: Inloggning}
 I denna funktion ska följande uppfyllas:
 \begin{enumerate}
-	\item Krävas användarnamn och lösenord för att komma in i systemet.
-  \item En användare ska ha ett användarnamn och ett lösenord.
-  \item Det ska finnas en databas som kan hantera all ingående data.
+	\item Det ska krävas användarnamn och lösenord för att komma in i systemet.
+  	\item En användare ska ha ett användarnamn och ett lösenord.
+  	\item Det ska finnas en databas som kan hantera all ingående data.
 \end{enumerate}
 
 \subsection{Tidslinje för operation}
@@ -141,12 +127,13 @@ Ska presentera den beslutsdata som finns att tillgå.
 \label{sec: Översikt av beslutade operationer}
 Ska presentera beslutade operationer.
 
--	Visa beslutsdata
+-	Visa beslutade operationer
 \subsection{Schemaöversikt för planerade operationer}
 \label{sec: Schemaöversikt för planerade operationer}
-En överblick för de operationer som ej blivit beslutade men som är planerade, skall gå att filtrera efter önskemål angivna i kravspec.
+En överblick för de operationer som ej blivit beslutade men som är planerade, skall gå att filtrera efter önskemål angivna 
+i kravspec.
 
--	Filterfunktion för schemaöversikt
+- Filterfunktion för schemaöversikt
 
 \clearpage
 \subsection{Reservera material, lokal, kompetens och utrustning}
@@ -154,7 +141,7 @@ En överblick för de operationer som ej blivit beslutade men som är planerade,
 Databasfunktion som kan reservera de olika resurser som behövs för operation samt post- eller pre-operativa processer.
 \subsubsection{Material}
 \label{Material}
-Ingående data
+Ingående data:
 \begin{multicols}{2}
 \begin{itemize}
 	\item Material
@@ -191,111 +178,133 @@ Ingående data
 \end{multicols}
 
 \section{Tester}
-Den här sektionen redogör för de olika testningsprocedurerna som ska utföras för de olika testnivåer.
+Den här sektionen redogör för de olika testningsprocedurerna som ska utföras för de olika testnivåerna.
 
 \subsection{Enhetstest}
 \label{sec:Enhetstest}
-  \textbf{Syfte:} Efter det att en funktion har implementerats ska koden genomgå ett enhetstest. Testet ska utföras för att säkerställa att funktionen     	   fungerar enligt specifikationen \cite{kravspec}. Vidare används testet för att fastställa att funktionen är följer designkraven. Testerna kommer att 	   vara av typen black-box.
+\textbf{Syfte:} Efter det att en funktion har implementerats ska koden genomgå ett enhetstest. Testet ska utföras för att 
+säkerställa att funktionen fungerar enligt specifikationen \cite{kravspec}. Vidare används testet för att fastställa att 
+funktionen är följer designkraven. Testerna kommer att vara av typen black-box.
 
-  \textbf{Ingående data:}
-    \begin{enumerate}
-      \item Enheten som ska testas.
-      \item Testspecifikation-mall.
-      \emph{(Se appendix \ref{sec: Testspecifikationmall} Testspecifikationmall)}
-      \item Testprotokoll-mall. \emph{(Se appendix \ref{sec: Testprotokollmall} Testprotokollmall)}
-      \item Bugglista: Den här är listan ska innehålla alla kända problem som
-      systemet har vid testets start, listan kommer att finnas under
-      \emph{issues} på projektets gitlab. Det är sen upp till valfri person att lösa dem.
-    \end{enumerate}
+\textbf{Ingående data:}
+\begin{enumerate}
+    \item Enheten som ska testas.
+    \item Testspecifikation-mall. \emph{(Se appendix \ref{sec: Testspecifikationmall} Testspecifikationmall)}
+    \item Testprotokoll-mall. \emph{(Se appendix \ref{sec: Testprotokollmall} Testprotokollmall)}
+    \item Bugglista: Den här är listan ska innehålla alla kända problem som systemet har vid testets start, listan kommer 
+    att finnas under \emph{issues} på projektets gitlab. Det är sen upp till valfri person att lösa dem.
+\end{enumerate}
 
-  \textbf{Utförande:} Testet ska utföras av berörda parter samt en oberoende person. Personerna som 		utför testet ska först skapa testspecifikation utifrån beskrivningen i testspecifikationsmallen. 		När det här är klart så utför personerna testet enligt specifikationen \cite{kravspec}. Ett 			protokoll ska föras enligt mallen för testprotokoll, se appendix \ref{sec:Testprotokollmall} 			testprotokollmall. Om några problem uppstod som inte kunde lösas på plats ska dessa föras in under \emph{issues} i projektets gitlab.
+\textbf{Utförande:} Testet ska utföras av berörda parter samt en oberoende person. Personerna som utför testet ska först 
+skapa testspecifikation utifrån beskrivningen i testspecifikationsmallen. När det här är klart så utför personerna testet 
+enligt specifikationen \cite{kravspec}. Ett protokoll ska föras enligt mallen för testprotokoll, (se appendix \ref{sec: 
+Testprotokollmall} testprotokollmall). Om några problem uppstod som inte kunde lösas på plats ska dessa föras in under 
+\emph{issues} i projektets gitlab.
 
-  \textbf{Resultat:}
-    \begin{enumerate}
-      \item \label{itm:Testspecifikation-e} Testspecifikation-testtyp-komponent/modul (komponent/modul 			är namnet på komponenten eller modulen som specifikation är skriven för).
-      \item \label{itm:Testprotokoll-e} Testprotokoll-testtyp-komponent/modul (komponent/modul är 					namnet på komponenten eller modulen som specifikation
-       är skriven för)..
-      \item Bugglista: Listan ska vid behov uppdateras.
-    \end{enumerate}
+\textbf{Resultat:}
+\begin{enumerate}
+	\item \label{itm:Testspecifikation-e} Testspecifikation-testtyp-komponent/modul (komponent/modul är namnet på 		   
+	komponenten eller modulen som specifikation är skriven för).
+    \item \label{itm:Testprotokoll-e} Testprotokoll-testtyp-komponent/modul (komponent/modul är namnet på komponenten 
+    eller modulen som specifikation är skriven för).
+    
+    \item Bugglista: Listan ska vid behov uppdateras.
+\end{enumerate}
 
-   \textbf{Testkriterium:} Om resultatet från testprotokollet, se punkt \ref{itm:Testprotokoll-e} under      	\emph{resultat} i sektion \ref{sec:Enhetstest}
-   ovan, stämmer överens med det förväntade resultatet från testspecifikationen, punkt \ref{itm:Testspecifikation-e} under \emph{resultat} i sektion
-  \ref{sec:Enhetstest} ovan, så anses komponenten klarat testet.
+\textbf{Testkriterium:} Om resultatet från testprotokollet, se punkt \ref{itm:Testprotokoll-e} under \emph{resultat} i 	   
+sektion \ref{sec:Enhetstest} ovan, stämmer överens med det förväntade resultatet från testspecifikationen, punkt 
+\ref{itm:Testspecifikation-e} under \emph{resultat} i sektion \ref{sec:Enhetstest} ovan, så anses komponenten klarat 
+testet.
 
-  \textbf{Enhetstester under iteration 4 :}
-  \\  Under iteration 4 kommer följande enhetstester att genomföras. Tidpunkten kommer att bestämmas 
-  under nästa sprintplanning.
+\textbf{Enhetstester under iteration 4 :} 
+\\ Under iteration 4 kommer följande enhetstester att genomföras. Tidpunkten kommer att bestämmas under nästa 
+sprint planering.
 
-  \textbf{TestID:} \ref{sec:Boka Operation} \todo{added}
-  \\ \textbf{Tidpunkt:}
-  \\ \textbf{Syfte och funktion:} Säkerhetställa att det går att välja tid, se lediga bokningsbara 			 tider, bli informerad när kompetens, material eller utrustning saknas.
+\textbf{TestID:} \ref{sec:Boka Operation}
+\\ \textbf{Tidpunkt:}
+\\ \textbf{Syfte och funktion:} Säkerhetsställa att det går att välja tid, se lediga bokningsbara tider, bli informerad 
+när kompetens, material eller utrustning saknas.
   
+\textbf{TestID:} \ref{sec: Boka sal} 
+\\ \textbf{Tidpunkt:}
+\\ \textbf{Syfte och funktion:} Namn på lokal och typ av lokal ska kunna bokas. Det ska även gå att se tillgängliga tider 
+för lokalen.
 
-  \textbf{TestID:} \ref{sec: Boka sal} \todo{added}
-  \\ \textbf{Tidpunkt:}
-  \\ \textbf{Syfte och funktion:} Namn på lokal och typ av lokal ska kunna bokas. Det ska även gå att se tillgängliga tider för lokalen.
-
-  \textbf{TestID:} \ref{sec: Avboka sal} \todo{added}
-  \\ \textbf{Tidpunkt:}
-  \\ \textbf{Syfte och funktion:} Ska vara möjligt att avboka en bokad lokal.
+\textbf{TestID:} \ref{sec: Avboka sal}
+\\ \textbf{Tidpunkt:}
+\\ \textbf{Syfte och funktion:} Ska vara möjligt att avboka en bokad lokal.
   
-  \textbf{TestID:} \ref{sec: Inloggning} \todo{added}
-  \\ \textbf{Tidpunkt:}  
-  \\ \textbf{Syfte och funktion:} Det ska gå att logga in i systemet med ett giltigt lösenord.
+\textbf{TestID:} \ref{sec: Inloggning}
+\\ \textbf{Tidpunkt:}  
+\\ \textbf{Syfte och funktion:} Det ska gå att logga in i systemet med ett giltigt lösenord.
   
-  \textbf{TestID:} \ref{sec: Tidlinje för operation} \todo{added}
-  \\ \textbf{Tidpunkt:}
-  \\ \textbf{Syfte och funktion:} Visa tillgänglig beslutsdata
+\textbf{TestID:} \ref{sec: Tidlinje för operation}
+\\ \textbf{Tidpunkt:}
+\\ \textbf{Syfte och funktion:} Visa tillgänglig beslutsdata
 
-  \textbf{TestID:} \ref{sec: Översikt av beslutade operationer} \todo{added}
-  \\ \textbf{Tidpunkt:}  
-  \\ \textbf{Syfte och funktion:} Presentera belutade operationer.
+\textbf{TestID:} \ref{sec: Översikt av beslutade operationer}
+\\ \textbf{Tidpunkt:}  
+\\ \textbf{Syfte och funktion:} Presentera belutade operationer.
 
-  \textbf{TestID:} \ref{sec: Schemaöversikt för planerade operationer} \todo{added}
-  \\ \textbf{Tidpunkt:}  
-  \\ \textbf{Syfte och funktion:} Visa planerade men ej beslutade operationer som ska kunna filtreras.
+\textbf{TestID:} \ref{sec: Schemaöversikt för planerade operationer}
+\\ \textbf{Tidpunkt:}  
+\\ \textbf{Syfte och funktion:} Visa planerade men ej beslutade operationer som ska kunna filtreras.
   
-  \textbf{TestID:} \ref{sec: Resevera material, lokal, kompetens och utrustning} 
-  \\ \textbf{Tidpunkt:}
-  \\ \textbf{Syfte och funktion:} Reservera resurser som behövs för operation samt post- eller pre-					operativa processer.
+\textbf{TestID:} \ref{sec: Resevera material, lokal, kompetens och utrustning} 
+\\ \textbf{Tidpunkt:}
+\\ \textbf{Syfte och funktion:} Reservera resurser som behövs för operation samt post- eller pre-operativa processer.
 
 \subsection{Integrationstest}
 \label{sec:Integrationstest}
-\textbf{Syfte:} Ett integrationstest ska utföras för att säkerställa att en modul och dess komponenter fungerar enligt specifikationen \cite{kravspec}. Testet säkerställer också att modulen följer designkraven. När funktioner är klara och testade och ska sammanfogas ska de integrationstestas.
+\textbf{Syfte:} Ett integrationstest ska utföras för att säkerställa att en modul och dess komponenter fungerar enligt 
+specifikationen \cite{kravspec}. Testet säkerställer också att modulen följer designkraven. När funktioner är klara och 
+testade och ska sammanfogas ska de integrationstestas.
 
 \textbf{Ingående data:}
 \begin{enumerate}
 	\item Modulen som ska integrationstestas.
     \item Testprotokoll för alla enheter som finns i modulen som ska integrationstestas.
-    \item Testspecifikation-mall. \emph{(Se appendix \ref{sec: Testspecifikationmall} 				{Testspecifikationmall})}
+    \item Testspecifikation-mall. \emph{(Se appendix \ref{sec: Testspecifikationmall} {Testspecifikationmall})}
     \item Testprotokoll-mall. \emph{(Se appendix \ref{sec: Testprotokollmall} Testprotokollmall)}
-    \item Bugglista: Den här är listan ska innehålla alla kända problem som systemet har vid testets 			  start, listan kommer att finnas under \emph{issues} på projektets gitlab. Det är sen upp    			  till valfri person att lösa dem.
+    \item Bugglista: Den här är listan ska innehålla alla kända problem som systemet har vid testets start, listan kommer 
+    att finnas under \emph{issues} på projektets gitlab. Det är sen upp till valfri person att lösa dem.
 \end{enumerate}
 
 \textbf{Utförande:}
-Testet ska utföras av berörda parter, det bör max finnas en representant per komponent som ska integrationstestas. Personerna som utför testet ska börja med att skapa testspecifikation utifrån den beskrivning som finns i testspecifikationsmallen. När det är klart så utför personerna testet enligt specifikationen \cite{kravspec}. Ett protokoll ska föras enligt mallen för testprotokoll, se appendix \ref{sec: Testprotokollmall} Testprotokollmall. Om några problem uppstod som inte kunde lösas på plats ska dessa föras in under \emph{issues} i projektets gitlab.
+Testet ska utföras av berörda parter, det bör max finnas en representant per komponent som ska integrationstestas. 
+Personerna som utför testet ska börja med att skapa testspecifikation utifrån den beskrivning som finns i 
+testspecifikationsmallen. När det är klart så utför personerna testet enligt specifikationen \cite{kravspec}. Ett 
+protokoll ska föras enligt mallen för testprotokoll, se appendix \ref{sec: Testprotokollmall} Testprotokollmall. Om några 
+problem uppstod som inte kunde lösas på plats ska dessa föras in under \emph{issues} i projektets gitlab.
 
 \textbf{Resultat:}
 \begin{enumerate}
-	\item \label{itm:Testspecifikation-i} Testspecifikation-testtyp-komponent/modul (komponent/modul är namnet på komponenten eller modulen som 													  specifikation är skriven för).
-    \item \label{itm:Testprotokoll-i} Testprotokoll-testtyp-komponent/modul(komponent/modul är namnet på komponenten eller modulen som specifikation är 										  skriven för)..
-    \item Bugglista: Listan ska vid behov uppdateras.
+\item \label{itm:Testspecifikation-i} Testspecifikation-testtyp-komponent/modul (komponent/modul är namnet på komponenten 
+eller modulen som specifikation är skriven för).
+\item \label{itm:Testprotokoll-i} Testprotokoll-testtyp-komponent/modul(komponent/modul är namnet på komponenten eller 
+modulen som specifikation är skriven för).
+\item Bugglista: Listan ska vid behov uppdateras.
 \end{enumerate}
 
 \textbf{Testkriterium:}
-Om resultatet från testprotokollet, se punkt \ref{itm:Testprotokoll-i} under \emph{resultat} i sektion \ref{sec:Integrationstest} ovan, stämmer överens med det förväntade resultatet från testspecifikationen, punkt \ref{itm:Testspecifikation-i} under \emph{resultat} i sektion \ref{sec:Integrationstest} ovan, så anses komponenten klarat testet.
+Om resultatet från testprotokollet, se punkt \ref{itm:Testprotokoll-i} under \emph{resultat} i sektion
+\ref{sec:Integrationstest} ovan, stämmer överens med det förväntade resultatet från testspecifikationen, punkt 
+\ref{itm:Testspecifikation-i} under \emph{resultat} i sektion \ref{sec:Integrationstest} ovan, så anses komponenten klarat 
+testet.
 
 \textbf{Integrationstester under iteration 4}
-De integrationstester som kommer att genomföras under iteration 4. Tidpunkt tillkommer.
+De integrationstester som kommer att genomföras under iteration 4. Tidpunkt tillkommer. Mer information om testet kommer 
+att finnas i det testprotokoll som kommer att skrivas i samband med testet. 
 
 \textbf{TestID:} I.1
 \\ \textbf{Tidpunkt:}
-\\ \textbf{Syfte och funktion:} Säkerhetställa att funktioner fungerar då de är sammanfogade.  
+\\ \textbf{Syfte och funktion:} Säkerhetsställa att funktioner fungerar då de är sammanfogade.  
 
 
 \subsection{Systemtest}
 \label{sec:Systemtest}
-\textbf{Syfte:} Testet ska utföras för att säkerställa att systemet behandlar och utan problem kan utföra alla de funktioner som krävs av systemet enligt specifikationen \cite{kravspec}.
+\textbf{Syfte:} Testet ska utföras för att säkerställa att systemet behandlar och utan problem kan utföra alla de 
+funktioner som krävs av systemet enligt specifikationen \cite{kravspec}.
 
 \textbf{Ingående data:}
 \begin{enumerate}
@@ -303,35 +312,40 @@ De integrationstester som kommer att genomföras under iteration 4. Tidpunkt til
     \item Testprotokoll för alla systemets moduler
     \item Testspecifikation-mall. \emph{(Se appendix \ref{sec: Testspecifikationmall} Testspecifikationmall)}
     \item Testprotokoll-mall. \emph{(Se appendix \ref{sec: Testprotokollmall} Testprotokollmall)}
-    \item Bugglista: Den här är listan ska innehålla alla kända problem som systemet har vid testets start, listan kommer att finnas under \emph{issues} på 	 projektets gitlab. Det är sen upp till valfri person att lösa dem.
+    \item Bugglista: Den här är listan ska innehålla alla kända problem som systemet har vid testets start, listan kommer 
+    att finnas under \emph{issues} på projektets gitlab. Det är sen upp till valfri person att lösa dem.
 \end{enumerate}
 
-\textbf{Utförande:} Testet ska utföras av hela projektgruppen. Gruppen utser två till tre personer som skapar en testspecifikation utifrån beskrivningen i
-testspecifikationsmallen. När det är klart så utför personerna testet enligt specifikationen \cite{kravspec}. Ett protokoll ska föras enligt mallen för
-testprotokoll, se appendix \ref{sec: Testprotokollmall} Testprotokollmall. Om några problem uppstod som inte kunde lösas på plats ska dessa föras in under \emph{issues} i projektets gitlab.
+\textbf{Utförande:} Testet ska utföras av hela projektgruppen. Gruppen utser två till tre personer som skapar en 
+testspecifikation utifrån beskrivningen i testspecifikationsmallen. När det är klart så utför personerna testet enligt 
+specifikationen \cite{kravspec}. Ett protokoll ska föras enligt mallen för testprotokoll, se appendix \ref{sec: 
+Testprotokollmall} Testprotokollmall. Om några problem uppstod som inte kunde lösas på plats ska dessa föras in under 
+\emph{issues} i projektets gitlab.
 
 \textbf{Resultat:}
-    \begin{enumerate}
-        \item \label{itm:Testspecifikation-s}
-         Testspecifikation-testtyp-komponent/modul (komponent/modul är namnet på komponenten eller 				 modulen som specifikation är skriven för)
-        \item \label{itm:Testprotokoll-s} Testprotokoll-testtyp-komponent/modul(komponent/modul är 				 namnet på komponenten eller modulen som specifikation är skriven för)
-        \item Bugglista: Listan ska vid behov uppdateras
-    \end{enumerate}
+\begin{enumerate}
+	\item \label{itm:Testspecifikation-s} Testspecifikation-testtyp-komponent/modul (komponent/modul är namnet på 
+	komponenten eller modulen som specifikation är skriven för)
+    \item \label{itm:Testprotokoll-s} Testprotokoll-testtyp-komponent/modul(komponent/modul är namnet på komponenten 	
+    eller modulen som specifikation är skriven för)
+    \item Bugglista: Listan ska vid behov uppdateras
+\end{enumerate}
 
-\textbf{Testkriterium:} Om resultatet från testprotokollet, se punkt
-\ref{itm:Testprotokoll-s} under \emph{resultat} i sektion \ref{sec:Systemtest} ovan, stämmer överens med det förväntade resultatet från testspecifikationen, punkt \ref{itm:Testspecifikation-s} under \emph{resultat} i sektion
-\ref{sec:Systemtest} ovan, så anses komponenten klarat testet.
+\textbf{Testkriterium:} Om resultatet från testprotokollet, se punkt \ref{itm:Testprotokoll-s} under \emph{resultat} i 
+sektion \ref{sec:Systemtest} ovan, stämmer överens med det förväntade resultatet från testspecifikationen, punkt 
+\ref{itm:Testspecifikation-s} under \emph{resultat} i sektion \ref{sec:Systemtest} ovan, så anses komponenten klarat 
+testet.
 
 \textbf{Systemtester under iteration 4}
-\\ Under iteration 4 ska ett systemtest på hela systemet genomföras. Tidpunkt tillkommer under nästa
-   nästa sprint planning.
+\\ Under iteration 4 ska ett systemtest på hela systemet genomföras. Tidpunkt tillkommer under nästa sprint planning.
 
-       \textbf{TestID:} S.1
-    \\ \textbf{Tidpunkt:}
-	\\ \textbf{Syfte och funktion:}
+\textbf{TestID:} S.1
+\\ \textbf{Tidpunkt:}
+\\ \textbf{Syfte och funktion:}
 
 \subsection{Acceptanstest}
-\textbf{Syfte:} Två stycken acceptanstest ska genomföras. Ett test ska utföras på systemets grafiska gränssnitt.  Det andra testet ska utföras på hela systemet efter att systemtester blivit godkänt.
+\textbf{Syfte:} Två stycken acceptanstest ska genomföras. Ett test ska utföras på systemets grafiska gränssnitt.  Det 
+andra testet ska utföras på hela systemet efter att systemtester blivit godkänt.
 
 \textbf{Ingående data:}
 \begin{enumerate}
@@ -339,24 +353,27 @@ testprotokoll, se appendix \ref{sec: Testprotokollmall} Testprotokollmall. Om n�
     \item Modulen(a) som ska testas
     \item Testspecifikation-mall \emph{(Se appendix \ref{sec: Testspecifikationmall} Testspecifikationmall)}
     \item Testprotokoll-mall \emph{(appendix \ref{sec: Testprotokollmall} Testprotokollmall)}
-    \item Bugglista: Den här är listan ska innehålla alla kända problem som systemet har vid testets start, listan kommer att finnas under
-    \emph{issues} på projektets gitlab. Det är sen upp till valfri person att lösa dem.
+    \item Bugglista: Den här är listan ska innehålla alla kända problem som systemet har vid testets start, listan kommer 
+    att finnas under \emph{issues} på projektets gitlab. Det är sen upp till valfri person att lösa dem.
 \end{enumerate}
 
-\textbf{Utförande:} Testet ska utföras av hela projektgruppen. Gruppen utser två till tre personer som skapar en testspecifikation utifrån beskrivningen i
-testspecifikationsmallen. När det är klart så utför personerna testet enligt specifikationen \cite{kravspec}. Ett protokoll ska föras enligt mallen för
-testprotokoll, se testprotokoll-mall dokumentet. Om några problem uppstod som inte kunde lösas på plats ska dessa föras in under \emph{issues} i projektets
+\textbf{Utförande:} Testet ska utföras av hela projektgruppen. Gruppen utser två till tre personer som skapar en 
+testspecifikation utifrån beskrivningen i testspecifikationsmallen. När det är klart så utför personerna testet enligt 
+specifikationen \cite{kravspec}. Ett protokoll ska föras enligt mallen för testprotokoll, se testprotokoll-mall 
+dokumentet. Om några problem uppstod som inte kunde lösas på plats ska dessa föras in under \emph{issues} i projektets
 gitlab.
 
 \textbf{Resultat:}
 \begin{enumerate}
-	\item \label{itm:Testspecifikation-a} Testspecifikation-testtyp-komponent/modul (komponent/modul är namnet på komponenten eller modulen som 					specifikation är skriven för)
-    \item \label{itm:Testprotokoll-a} Testprotokoll-testtyp-komponent/modul(komponent/modul är namnet på komponenten eller modulen som
-        specifikation är skriven för)
+	\item \label{itm:Testspecifikation-a} Testspecifikation-testtyp-komponent/modul (komponent/modul är namnet på 			
+	 		  komponenten eller modulen som specifikation är skriven för)
+    \item \label{itm:Testprotokoll-a} Testprotokoll-testtyp-komponent/modul(komponent/modul är namnet på komponenten eller 
+    		  modulen som specifikation är skriven för)
     \item Bugglista: Lisan ska vid behov uppdateras
 \end{enumerate}
 
-\textbf{Testkriterium:} Testet anses vara godkänt om och endast om alla krav i specifikationen är behandlade och uppfyllda.
+\textbf{Testkriterium:} Testet anses vara godkänt om och endast om alla krav i specifikationen är behandlade och 
+uppfyllda.
 \clearpage
 
 \textbf{Acceptanstester under iteration 4}
@@ -378,25 +395,26 @@ gitlab.
 \section{Testspecifikationmall}
 \label{sec: Testspecifikationmall}
 
-   \textbf{TestID}
+\textbf{TestID}
 \\ \textbf{Typ av test:} \emph{[Vilket typ av test är det]}
-\\ \textbf{Genomförande:} \emph{[kort beskriving av sektion]}
+\\ \textbf{Genomförande:} \emph{[kort beskrivning av sektion]}
 \\ \textbf{Testscenarion:} \emph{[Vad är det som ska testas, kan vara flera saker]}
 \\ \textbf{Första saken att testa:}
 \\ \textbf{Design av komponent:} \emph{[Beskriv design av komponent och om den är uppfylld enligt Kravspec]}
-\\ \textbf{Förväntat resultat:} \emph{[Det förväntade resultat enligt kravspec eller beskrivning av enheten]}
+\\ \textbf{Förväntat resultat:} \emph{[Det förväntade resultatet enligt kravspec eller beskrivning av enheten]}
 
 \newpage
 
 \section{Testprotokollmall}
 \label{sec: Testprotokollmall}
 
-
- \textbf{TestID:}
+\textbf{TestID:}
 \\ \textbf{Testansvarig:\\Observatör:}
 \\ \textbf{Datum:}
 \\ \textbf{Resurser:} \emph{[Vilka resurser kommer att användas i testet, med Referenser om så behövs]}
-\\ \textbf{Test log:} \emph{[En detaljerad log över vad som skädde under testent gång]\\ T.ex. \\ 14:23 Testet startades \\ 14:39 Fann en bugg huxflux \\ 15:40 Åtgärdade buggen huxflux \\ 16:00 Testet slutfördes}\
+\\ \textbf{Test log:} \emph{[En detaljerad log över vad som skedde under testets gång]\\ T.ex. \\ 14:23 Testet startades \
+\ 14:39 Fann en bugg huxflux \\ 15:40 Åtgärdade buggen huxflux \\ 16:00 Testet slutfördes}\
 \\ \textbf{Resultat:} \emph{[Vad blev resultat och blev den godkänd]}
-\\ \textbf{Buggar:} \emph{[Här så ska alla olösta bugg som hittades under testet listas OBS! de ska också skrivas issues i gitlab]}
+\\ \textbf{Buggar:} \emph{[Här så ska alla olösta buggar som hittades under testet listas OBS! de ska också skrivas under 
+issues i gitlab]}
 \end{document}
