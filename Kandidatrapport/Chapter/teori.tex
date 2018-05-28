@@ -2,26 +2,26 @@
 Detta kapitel beskriver teorin bakom de olika metoder och verktyg som har använts för att utveckla och färdigställa projektet.
 
 \section{Scrum} \label{scrum}
-Scrum är en agil utvecklingsmetod som består av tre komponenter, produktägaren, scrummästaren och utvecklingsteamet.
+Scrum är en agil utvecklingsmetodik som innehåller tre parter: produktägaren, scrummästaren och utvecklingsteamet.
 Produktägaren är den person som kommer med en beställning till utvecklingsteamet.
-Scrummästaren arbetar för att scrum-metodiken ska upprätthållas och ser, tillsammans med produktägaren, till att underhålla backloggen så att utvecklingsteamet förstår vad som ska göras och så att arbetet kan fortgå.
+Scrummästaren arbetar för att Scrum-metodiken ska upprätthållas och ser, tillsammans med produktägaren, till att underhålla backloggen så att utvecklingsteamet förstår vad som ska göras och så att arbetet kan fortgå.
 
-Utvecklingsteamet är själva kärnan i scrum-metodiken, det är teamet som bestämmer vilka uppgifter som ska utföras under en sprint och hur de ska lösas.
-För en utförligare beskrivning av scrum-metodiken, se avsnitt \ref{adam_scrum}.
+Utvecklingsteamet är själva kärnan i Scrum-metodik, det är teamet som bestämmer vilka uppgifter som ska utföras under en sprint och hur de ska lösas.
+För en utförligare beskrivning av Scrum-metodik, se avsnitt \ref{adam_scrum}.
 
 \section{GitLab}
-GitLab är en webbtjänst för hantering av data som använder versionshanteringsprogrammet Git. Medlemmar i ett Gitlab-projekt kan lägga till och ändra i filer.
-Med Git arbetar varje medlem i ett projekt på en lokal kopia av data som finns på Gitlabservern för att sedan skicka upp de ändringar man gjort till servern. Git fungerar på så sätt att alla ändringar sparas. Det betyder att om någon skulle göra en ändring som har oönskad effekt kan man enkelt gå tillbaka till en tidigare version av den data som finns på servern.
+GitLab är en webbtjänst för hantering av data som använder versionshanteringsprogrammet Git. Medlemmar i ett GitLab-projekt kan lägga till och ändra i filer.
+Med Git arbetar varje medlem i ett projekt på en lokal kopia av data som finns på GitLabservern för att sedan skicka upp de ändringar man gjort till servern. Git fungerar på så sätt att alla ändringar sparas. Det betyder att om någon skulle göra en ändring som har oönskad effekt kan man enkelt gå tillbaka till en tidigare version av den data som finns på servern.
 
 Git har stöd för något som kallas grenar, en gren kan beskrivas som en kopia av projektets data, vanligtvis av den data som finns i projektets huvudgren. När en ny gren har skapats sker alla ändringar som görs på den nya grenen. Det finns flera fördelar med att arbeta i grenar. För det första möjliggör det parallellt och strukturerat arbete då man kan namnge en gren så att namnet motsvarar ändringarnas syfte. Till exempel kan det vara namnet på någon ny funktionalitet.
 
-Vidare gör det inget om en gren inte fungerar i sitt nuvarande tillstånd, om du sitter i en gren så kan kollegor fortfarande sitta i andra grenar när du testar nya saker.
-För det andra kan man genom Gitlab skapa sammanslagningsförfrågningar för att väva samman två grenar.
+Vidare gör det inget om en gren inte fungerar i sitt nuvarande tillstånd. Om du arbetar med en gren så kan kollegor fortfarande arbeta med andra grenar när du testar nya saker.
+För det andra kan man genom GitLab skapa sammanslagningsförfrågningar för att väva samman två grenar.
 Fördelen med det är att det på ett väldigt enkelt sätt går att se vilka ändringar som har gjorts på den nya grenen och vad som kommer att uppdateras.
 
 Det finns också möjlighet att ärendehantera med hjälp av Git.
-Då skapar en person ett ärende om att den t.ex. har hittat en bugg eller att den anser att en ny funktionalitet ska implementeras.
-Sedan finns dessa ärenden sparade på projektets sida på Gitlab så att medlemmar kan se och hantera dem. \cite{gitlab}
+Då skapar en person ett ärende om att personen t.ex. har hittat en bugg eller att personen anser att en ny funktionalitet ska implementeras.
+Sedan finns dessa ärenden sparade på projektets sida på GitLab så att medlemmar kan se och hantera dem. \cite{gitlab}
 
 \section{Webstorm}
 Webstorm är en utvecklingsmiljö skapad av programvaruutvecklaren JetBrains som är anpassad för JavaScript och webbutveckling. Den har även stöd och hjälp för relaterade språk som HTML, CSS och TypeScript. Till dessa språk finns smidiga hjälpfunktioner som kodkomplettering, kraftfull navigering, feldetektering i realtid och refaktorisering.
@@ -31,10 +31,10 @@ För populära miljöer och ramverk som Node.js, Angular och React finns det inb
 Node.js är en asynkron och händelsedriven miljö som tillåter körning av JavaScript utanför webbläsare. Node är designat för att skapa skalbara nätverksapplikationer men kan lika väl användas för att skapa andra typer av system och applikationer. \cite{nodejs}
 
 Node.js har även sin tillhörande pakethanterare, Node Package Manager (NPM), som är det största ekosystemet för bibliotek med öppen källkod. \cite{npm}
-I NPM finns det det bland annat paket för Angular, Sequelize och för hantering av HTTP och MySQL.
+I NPM finns det bland annat paket för Angular, Sequelize och för hantering av HTTP och MySQL.
 
 \section{Angular}
-Angular är ett ramverk för webbutveckling med en komponentbaserad arkitektur som använts på projektets front-end.
+Angular är ett ramverk för webbutveckling med en komponentbaserad arkitektur som använts till projektets front-end.
 
 Komponenterna i Angular består i huvudsak av tre delar:
 
@@ -65,7 +65,7 @@ Det system som tagits fram implementerar alltså designmönstret MVC utgående f
 
 \section{MySQL}
 MySQL är ett relationsdatabashanteringssystem för att skapa och behandla data. För att hålla reda på
-information förvarar MySQL data i tabeller. En tabell kan liknas vid en model av ett verkligt objekt.
+information lagrar MySQL data i tabeller. En tabell kan liknas vid en model av ett verkligt objekt.
 Exempel på detta är en patient, en bokning eller en sal. \cite{mysql} Tabellen innehåller en kolumn för varje
 attribut som objektet har, till exempel ett namn och ett personnummer. Detta innebär att varje rad i
 tabellen motsvarar en unik entitet av det modelerade objektet. Det vill säga en specifik patient eller
@@ -83,9 +83,9 @@ För att interagera med MySQL används språket Structured Query Language (SQL).
 \section{Sequelize}\label{sec:sequelize_teori}
 Sequelize är ett ORM-system för Node.js som stödjer dialekterna PostGreSQL, MySQL, SQLite och MSSQL. \cite{sequelize} ORM står för Object-relational mapping och är en teknik som tillåter hämtning och manipulering av data i en relationsdatabas med hjälp av objekt och objektorientering. Detta innebär att ingen användning av SQL krävs i Sequelize, dock möjliggör den fortfarande att köra normala SQL-frågor.
 
-I Sequelize används modeller och associationer för utformning eller beskrivning av databasen. Det går antingen att manuellt skapa modellerna och associationerna utifrån en existerande databas eller att låta Sequelize generera databasen utifrån den.
+I Sequelize används modeller och associationer för utformning eller beskrivning av databasen. Det går antingen att manuellt skapa modellerna och associationerna utifrån en existerande databas eller att låta Sequelize generera databasen utifrån dem.
 
-Modellerna definierar de objekt som används för att manipulera och läsa från databasen. Varje modell beskriver attributerna i sin motsvarande tabell och för att beskriva relationer mellan olika modeller används så kallade associationer. Med hjälp av associationerna kan en till en, en till många och många till många-relationer mellan tabeller beskrivas.
+Modellerna definierar de objekt som används för att manipulera och läsa från databasen. Varje modell beskriver attributen i sin motsvarande tabell och för att beskriva relationer mellan olika modeller används så kallade associationer. Med hjälp av associationerna kan en till en, en till många och många till många-relationer mellan tabeller beskrivas.
 
 Ändringar i databasens struktur kan hanteras genom att använda migrationer i Sequelize. Dessa beskriver dels hur ändringen utförs och dels hur den ångras. Genom att utföra dem i ordning kan man byta mellan alla tidigare versioner av databasen. \cite{migrations}
 
