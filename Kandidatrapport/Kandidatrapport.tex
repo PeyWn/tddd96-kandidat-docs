@@ -15,9 +15,10 @@
 \input{Chapter/aeon}
 \input{Chapter/tillkannagivanden}
 
-
-\part{Huvudrapport}
+\newpage\null\thispagestyle{empty}
 \pagenumbering{arabic}
+\addtocounter{page}{-1}
+\part{Huvudrapport}
 \input{Chapter/inledning}
 \input{Chapter/bakgrund}
 \input{Chapter/teori}
@@ -26,8 +27,8 @@
 \input{Chapter/diskussion}
 \input{Chapter/slutsatser}
 
+\newpage\null\thispagestyle{empty}
 \part{Individuella bidrag}
-\appendix
 \input{contributions/TL_kontra_scrum-adam}
 \input{contributions/pappersprototyp-niclas}
 \input{contributions/git-bjorn}
@@ -37,12 +38,13 @@
 \input{contributions/krav-christoffer}
 
 \printbibliography[title=Referenser]
-
+\appendix
 \part{Bilagor}
 \input{attatchments/bjorn}
 \input{attatchments/henrik}
 \input{attatchments/niclas}
 \input{attatchments/martin}
+\input{attatchments/adam}
 
 
 \end{document}
