@@ -5,21 +5,21 @@
 
 Det finns i dagsläget ett flertal olika verktyg och ramverk med syfte att underlätta arbete med webbutveckling. För en ovan utvecklare kan det vara svårt att orientera sig bland alla tillgängliga alternativ. Angular är ett exempel på ett sådant. Denna rapport kommer att undersöka det val som måste göras genom att granska ramverket Angular, som i Aeon-projektet använts till att utveckla front-end-delen av den schemaläggningsapplikation som tagits fram.
 
-Under Aeon-projektets gång kommer funktioner och beteenden hos Angular att utredas och utvärderas för att ta reda på om just Angular är ett bra val för projekt med liknande parametrar som Aeon.
+Under Aeon-projektets gång utreddes och utvärderades funktioner och beteenden hos Angular för att ta reda på om just Angular är ett bra val för projekt med liknande parametrar som Aeon.
 
 \section{Syfte}
 
-Syftet med studien är att undersöka vilka faktorer som behöver betraktas vid val av utvecklingsplattform till ett webbutvecklingsprojekt med samma dimensioner som Aeon och med projektdeltagare som har liknande förkunskaper. Studien ska även redogöra för vad valet av just utvecklingsplattformen Angular har kunnat tillföra det utförda projektet.
+Syftet med studien är att undersöka vilka faktorer som behöver betraktas vid val av utvecklingsplattform till ett webbutvecklingsprojekt med samma deltagarantal och tidsbudget som Aeon och med projektdeltagare som har liknande förkunskaper. Studien ska även redogöra för vad valet av just utvecklingsplattformen Angular har kunnat tillföra det utförda projektet.
 
 \subsection{Frågeställing}
 \begin{itemize}
-	\item Vilka faktorer bör man ta hänsyn till vid val av utvecklingsverktyg till ett projekt i webbutveckling med samma profil som Aeon?
+	\item Vilka faktorer bör man ta hänsyn till vid val av utvecklingsverktyg till ett mindre projekt i webbutveckling med samma profil som Aeon?
 	\item Vad har valet av utvecklingsplattformen Angular tillfört detta projekt? 
 \end{itemize}
 
 \subsection{Avgränsningar}
 
-Studien kommer begränsa sig till att undersöka just utvecklingsplattformen Angular. Andra alternativ kommer enbart behandlas översiktligt.
+Studien kommer att begränsa sig till att undersöka just utvecklingsplattformen Angular. Andra alternativ kommer enbart behandlas översiktligt.
 
 \section{Bakgrund}
 
@@ -36,19 +36,19 @@ Under denna rubrik får läsaren ta del av den teori som ligger till grund för 
 
 Angular är en utvecklingsplattform och ett ramverk för utveckling av webbapplikationer. Arkitekturen i Angular är komponentbaserad, där varje komponent innehåller en HTML-mall som beskriver vilket innehåll som ska visas upp för användaren och en TypeScript-klass som hanterar logik och funktionalitet kopplad till HTML-mallen. HTML-kod som skrivs i Angular är utökad med Angular-specifik funktionalitet som gör den kraftfullare. Bland annat tillkommer möjliheten att använda for-loopar och if-satser i HTML-koden.
 
-Komponenterna i Angular är modulärt uppbyggda. Enskilda komponenter kan ändras på utan att störa övriga komponenter. Det är även möjligt att återanvända komponenter i flera olika sammanhang, eller att behandla dem som klasser och instansiera dem med olika värden på sina parametrar. En applikation utvecklad i Angular bör följa den modulära komponentstruktur som förordas av ramverket. Då kommer den vara uppbyggd av hierarkiskt ordnade komponenter i en träd-struktur, där större komponenter kan fyllas ut med flera små.   
+Komponenterna i Angular är modulärt uppbyggda. Enskilda komponenter kan ändras utan att övriga komponenter störs. Det är även möjligt att återanvända komponenter i flera olika sammanhang, eller att behandla dem som klasser och instansiera dem med olika värden på sina parametrar. En applikation utvecklad i Angular bör följa den modulära komponentstruktur som förordas av ramverket. Då kommer den vara uppbyggd av hierarkiskt ordnade komponenter i en trädstruktur, där större komponenter kan fyllas ut med flera små.   
 
-Angular innehåller även tjänster, som också använder TypeScript. Tjänsterna tillhandahåller logik och funktionalitet som inte är direkt kopplad till någon specifik komponent. Angular rekommenderar starkt att utvecklare följer denna föreslagna uppdelning och strukturering av kod. I det projekt som studien behandlar har Angular 5 använts. Angular bör inte förväxlas med dess föregångare med liknande namn, AngularJS, som använder sig av vanlig JavaScript istället för TypeScript \cite{angularguide}.
+Angular innehåller även tjänster, som också använder TypeScript. Tjänsterna tillhandahåller logik och funktionalitet som inte är direkt kopplad till någon specifik komponent. Angular rekommenderar starkt att utvecklare följer denna föreslagna uppdelning och strukturering av kod. I det projekt som studien behandlar har Angular 5 använts. Angular bör inte förväxlas med dess föregångare med liknande namn, AngularJS, som använder sig av JavaScript istället för TypeScript \cite{angularguide}.
 
 
 \subsection{TypeScript}
 
-TypeScript är det programspråk Angular är skrivet i och det språk detta kandidatprojekt använt för att skriva klasser och tjänster i Angular. Språket är en påbyggnad av JavaScript som bland annat lägger till stöd för statisk typning och klasser \cite{henrik_ts1}.
+TypeScript är det programspråk Angular är skrivet i och det språk detta kandidatprojekt använt för att skriva klasser och tjänster i Angular. Språket är en utbyggnad av JavaScript som bland annat lägger till stöd för statisk typning och klasser \cite{henrik_ts1}.
 
 
 \section{Metod}
 
-Under denna rubrik kommer de arbetssätt som användes under studiens gång att redovisas. De metoder som använts är en litteraturstudie med flera källor och en empirisk undersökning i form av intervjuer rörande projektgruppens egna erfarenheter med Angular.
+Under denna rubrik kommer de arbetssätt som användes under studiens gång att redovisas. De metoder som använts är en litteraturstudie med flera källor och en empirisk undersökning i form av intervjuer rörande projektgruppens egna erfarenheter av Angular.
 
 \subsection{Litteraturstudie}
 
@@ -56,7 +56,7 @@ För att mer ingående kunna behandla frågan om vilka faktorer man behöver ta 
 
 \subsection{Empirisk undersökning} 
 
-Gruppens medlemmar intervjuades om de erfarenheter av Angular de förvärvat sig under projektets gång. Under intervjun fick projektgruppens medlemmar svara på frågor om vad som varit bra med Angular, vad som varit dåligt, vilken funktionalitet de haft störst nytta av och vilken funktionalitet de saknat. De har även fått svara på om de sammanfattningsvis varit nöjda med valet av Angular som utvecklingsplattform. Utifrån intervjuföremålens svar har sedan en slutsats om Angulars nytta dragits och frågan om vad Angular tillför ett projekt av Aeons karaktäristik har kunnat besvaras.
+Gruppens medlemmar intervjuades om de erfarenheter av Angular de förvärvat under projektets gång. Under intervjun fick projektgruppens medlemmar svara på frågor om vad som varit bra med Angular, vad som varit dåligt, vilken funktionalitet de haft störst nytta av och vilken funktionalitet de saknat. De har även fått svara på om de sammanfattningsvis varit nöjda med valet av Angular som utvecklingsplattform. Utifrån intervjuobjektens svar har sedan en slutsats om Angulars nytta dragits och frågan om vad Angular tillför ett projekt som liknar Aeon har kunnat besvaras. De frågor som ställdes och de svar som gavs går att finna i bilaga \ref{appendix:martin}.
 
 \section{Resultat}
 
@@ -64,9 +64,9 @@ Under denna rubrik presenteras de resultat som litteraturstudien och den empiris
 
 \subsection{Litteraturstudie}
 
-Daniel Graziotin och Pekka Abrahamsson menar i sin konferensartikel \textit{Making Sense Out of a Jungle of JavaScript Frameworks} \cite{making_sense} att det behövs ett organiserat tillvägagångssätt för JavaScript-ramverk till webbutveckling. I \textit{Factors and actors leading to the adoption of a JavaScript framework} \cite{js_framework} utförs en intervjuserie med beslutsfattare som behövt ta ställning till val av JavaScript-ramverk.
+Daniel Graziotin och Pekka Abrahamsson menar i sin konferensartikel \textit{Making Sense Out of a Jungle of JavaScript Frameworks} \cite{making_sense} att det behövs ett organiserat tillvägagångssätt för JavaScript-ramverk till webbutveckling. I \textit{Factors and actors leading to the adoption of a JavaScript framework} \cite{js_framework} utförs en intervjuserie med beslutsfattare som behövt ta ställning till val av JavaScriptramverk.
 
-Intervjuserien, som omfattade 18 beslutsfattare, komm fram till att följande faktorer är de viktigaste att ta hänsyn till vid val av ramverk: performance expectancy (prestanda), effort expectancy (svårighet att använda och förstå), social influence (sociala aspekter), facilitating conditions (underlättande faktorer) och price value (värde för pengar).
+Intervjuserien, som omfattade 18 beslutsfattare, kom fram till att följande faktorer är de viktigaste att ta hänsyn till vid val av ramverk: performance expectancy (prestanda), effort expectancy (svårighet att använda och förstå), social influence (sociala aspekter), facilitating conditions (underlättande faktorer) och price value (värde för pengar).
 
 
 
@@ -91,7 +91,7 @@ Under denna rubrik kommer de resultat som uppnåtts under studiens gång att dis
 
 \subsection{Val av ramverk}
 
-Av de faktorer som \textit{Factors and actors leading to the adoption of a JavaScript framework} nämner så är enbart några relevanta för ett projekt av Aeons dimensioner. Price value är inte applicerbart, då projektet inte är kommersiellt och inte har budget till att använda sig av någon betalversion av ett ramverk. Performance expectancy är inte heller det av jättestor vikt, då kunden inte avsett ta den applikation som skulle utvecklas i drift. Applikationen var heller inte stor eller krävande nog att tvinga gruppen optimera prestandan till någon högre grad.
+Av de faktorer som \textit{Factors and actors leading to the adoption of a JavaScript framework} nämner är enbart några relevanta för ett projekt av Aeons dimensioner. Price value är inte applicerbart, då projektet inte är kommersiellt och inte har budget till att använda sig av någon betalversion av ett ramverk. Performance expectancy är inte heller det av jättestor vikt, då kunden inte avsett ta den applikation som skulle utvecklas i drift. Applikationen var heller inte stor eller krävande nog att tvinga gruppen optimera prestandan i någon högre grad.
 
 De övriga faktorerna är däremot samtliga väl värda att ta hänsyn till när man behöver välja ramverk till ett projekt liknande Aeon. Av dessa är kanske effort expectancy den allra viktigaste. Har man ett utvecklingsteam med bristande erfarenheter inom webbutveckling så tar det lång tid att lära sig grunderna och om man utöver detta måste sitta länge med att lära sig den specifika strukturen hos något ramverk så försvinner mycket tid som annars kunde ha lagts på utveckling. Just inlärningskurva var det de flesta av projektmedlemmarna i Aeon ansåg vara nackdelen med Angular.
 
@@ -106,15 +106,15 @@ Facilitating conditions är en bred kategori och mycket av vad den innefattar ä
 
 Intervjuerna som sammanfattats i resultat-delen visade tydligt att gruppmedlemmarna tycke att Angular varit svårt att lära sig. Detta gällde både de två deltagare som uppgett sig ha tidigare erfarenheter av webbutveckling och de övriga som helt saknat sådan erfarenhet innan detta projekt. Att ramverket varit svårt för gruppen att lära in var onekligen en nackdel för projektets utförande. Mycket tid gick åt att sätta sig in i ramverket. Den tiden hade istället kunnat användas till att utveckla systemet. Utvecklingsfasen led ständigt av tidsbrist och med mer tid hade fler av kundens krav kunnat uppfyllas.
 
-Eftersom de flesta av gruppdeltagarna saknade tidigare erfarenheter av webbutveckling misstänker jag dock att inlärningsperioden varit lång i vilket fall. För de få projektmedlemmar som arbetat med webbutveckling tidigare hade kanske ett mer flexibelt ramverk med som inte strikt förordar någon särskilt applikationsuppbyggnad varit enklare att sätta sig in i. För resten av gruppen tror jag inte skillnaden i inlärningstid hade varit drastiskt annorlunda med något annat ramverk. De hade ändå behövt sätta sig in i webbutvecklingens grunder och att lära sig det på Angular-vis hade nog bara varit aningen svårare. Den mödan lönade sig också senare.
+Eftersom de flesta av gruppdeltagarna saknade tidigare erfarenheter av webbutveckling misstänker jag dock att inlärningsperioden varit lång oavsett vilket ramverk som valts. För de få projektmedlemmar som arbetat med webbutveckling tidigare hade kanske ett mer flexibelt ramverk som inte strikt förordar någon särskilt applikationsuppbyggnad varit enklare att sätta sig in i. För resten av gruppen tror jag inte skillnaden i inlärningstid hade varit drastiskt annorlunda med något annat ramverk. De hade ändå behövt sätta sig in i webbutvecklingens grunder och att lära sig det på Angular-vis hade nog bara varit aningen svårare. 
 
-Alla som intervjuats höll med om att Angular tillfört mycket till projektet. Det som särskilt framhölls var den komponentbaserade arkitekturen. Den gjorde det självklart och intuitivt att dela upp applikationen i modulära komponenter. Att komponenterna kan skapas i vilken ordning som helst och kopplas samman i efterhand underlättade verkligen utvecklingsarbetet. Komponenternas modulariteten var till stor gagn för gruppen under utvecklingsfasen. En oerfaren grupp som vår hade lätt kunnat missa att göra applikationen så modulär om inte ett ramverk påbjudit det.
+Alla som intervjuats höll med om att Angular tillfört mycket till projektet. Det som särskilt framhölls var den komponentbaserade arkitekturen. Den gjorde det självklart och intuitivt att dela upp applikationen i komponenter. Att komponenterna kan skapas i vilken ordning som helst och kopplas samman i efterhand underlättade verkligen utvecklingsarbetet. Komponenternas modularitet var till stor gagn för gruppen under utvecklingsfasen. En oerfaren grupp som vår hade lätt kunnat missa att göra applikationen så modulär om inte ett ramverk påbjudit det.
 
-Den komponentbaserade arkitekturen gjorde det också enkelt att översätta pappersprototypen till kod i Angular. Det var inga problem att i pappersprototypen identifiera grafiska enheter som sökrutor, menyer eller knappar och sedan bestämma komponenter åt dem i Angular. Angular hade alltså stor nytta av pappersprototypen. Den togs fram under designfasen för att visa kunden hur vi tänkt oss systemet, men kom av denna anledning till att vara väldigt användbar under utvecklingsfasen också.
+Den komponentbaserade arkitekturen gjorde det också enkelt att översätta pappersprototypen till kod i Angular. Det var inga problem att i pappersprototypen identifiera grafiska enheter som sökrutor, menyer eller knappar och sedan bestämma komponenter åt dem i Angular. Användningen av Angular drog alltså stor nytta av pappersprototypen. Den togs fram under designfasen för att visa kunden hur vi tänkt oss systemet, men kom av denna anledning att vara väldigt användbar under utvecklingsfasen också.
 
 Ett större problem för projektet än Angulars inlärningskurva var nog ett bristande inlärningsarbete. I början av utvecklingsfasen hölls en inledande föreläsning om Angular som väldigt överskådligt förklarade arkitekturen hos ramverket. I övrigt hölls inget gemensamt inlärningsarbete. Var och en av projektmedlemmarna fick istället ansvar för att lära sig om ramverket på egen hand. Det var ett arbetssätt som många var bekväma med, men det resulterade i att kunskaperna varierade stort när utvecklingsfasen började. 
 
-När man ska använda ett så omfångsrikt ramverk som Angular behöver man också se till att lära sig det ordentligt. Att åtminstone tillsammans tagit sig igenom den handledning som Angulars hemsida tillhandahåller, en handledning som enbert ett fåtal i gruppen ens kollat på, hade underlättat utvecklingsfasen rejält. Då ingen hade några tidigare erfarenheter av Angular hade en gemensam inlärning fört med sig möjligheter till diskussion om de oklarheter som fanns. Då hade alla i gruppen haft en genmensam bild av hur man arbetar med Angular. Som gruppen gjorde nu stannade arbetet ofta upp då gruppmedlemmar inte visste hur något skulle implementeras i Angular och var tvungna att söka hjälp på nätet. Ibland hände det att flera gruppmedlemmar stött på samma problem och hittat olika lösningar på det. Angular erbjuder nämligen flera implementationssätt. Detta gjorde koden mer förvirrande och hade kunnat undvikas med gemensam utbildning.     
+När man ska använda ett så omfångsrikt ramverk som Angular behöver man också se till att lära sig det ordentligt. Att åtminstone tillsammans tagit sig igenom den handledning som Angulars hemsida tillhandahåller, en handledning som enbert ett fåtal i gruppen ens tittat på, hade underlättat utvecklingsfasen rejält. Då ingen hade några tidigare erfarenheter av Angular hade en gemensam inlärning fört med sig möjligheter till diskussion om de oklarheter som fanns. Då hade alla i gruppen haft en genmensam bild av hur man arbetar med Angular. Som gruppen gjorde nu stannade arbetet ofta upp då gruppmedlemmar inte visste hur något skulle implementeras i Angular och var tvungna att söka hjälp på nätet. Ibland hände det att flera gruppmedlemmar stött på samma problem och hittat olika lösningar på det. Angular erbjuder nämligen flera implementationssätt. Detta gjorde koden mer förvirrande och hade kunnat undvikas med gemensam utbildning.     
 
      
 
@@ -129,6 +129,6 @@ Intervjuerna som hölls var begränsade till medlemmar av projektgruppen. Då de
 
 \section{Slutsats}
 
-Vid val av ramverk till ett webbutveccklingsprojekt av Aeons dimensioner är det i första hand viktigt att tänka på vilken teknisk kompetens gruppen besitter, och anpassa valet av ramverk tefter detta. Innehåller ramverktet mycket speciell funktionalitet kan det ta lång tid för den oerfarne att sätta sig in användandet av ramverket när man samtidigt måste lära sig webbutvecklingens grunder. Man bör också ta hänsyn till hur stor användarbas ramverket har. Är den stor blir det enklare för en användare att be om hjälp då ramverkets dokumentation inte räcker till.
+Vid val av ramverk till ett webbutvecklingsprojekt av Aeons dimensioner är det i första hand viktigt att tänka på vilken teknisk kompetens gruppen besitter, och anpassa valet av ramverk efter detta. Innehåller ramverket mycket speciell funktionalitet kan det ta lång tid för den oerfarne att sätta sig in användandet av det när man samtidigt måste lära sig webbutvecklingens grunder. Man bör också ta hänsyn till hur stor användarbas ramverket har. Är den stor blir det enklare för en användare att be om hjälp då ramverkets dokumentation inte räcker till.
 
-Valet av Angular som ramverk tillförde projektet en färdig komponentstruktur på applikationens arkitektur. Ett ramverk som själv står för grundstrukturen är utmärkt för projekt med mindre erfarna utvecklare som har svårt att på egen hand få en överblick om hur en större webbapplikation bör struktureras upp. Angular tar däremot mycket tid att sätta sig in i. Den tiden kan sparas in om applikationen som utvecklas är stor och mycket av Angulars egna funktionalitet kommer till användning. För projekt av Aeons storlek är den tid som läggs ned på inlärning värd den extra funktionalitet som Angular erbjuder.
+Valet av Angular som ramverk tillförde projektet en färdig komponentstruktur på applikationens arkitektur. Ett ramverk som själv står för grundstrukturen är utmärkt för projekt med mindre erfarna utvecklare som har svårt att på egen hand få en överblick om hur en större webbapplikation bör struktureras. Angular tar däremot mycket tid att sätta sig in i. Den tiden kan sparas in om applikationen som utvecklas är stor och mycket av Angulars egna funktionalitet kommer till användning. För projekt av Aeons storlek är den tid som läggs ned på inlärning värd den extra funktionalitet som Angular erbjuder.
