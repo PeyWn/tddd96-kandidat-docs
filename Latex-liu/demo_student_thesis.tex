@@ -1,33 +1,33 @@
-%%% demothesis.tex --- 
-%% 
+%%% demothesis.tex ---
+%%
 %% Filename: demothesis.tex
-%% Description: 
+%% Description:
 %% Author: Ola Leifler
-%% Maintainer: 
+%% Maintainer:
 %% Created: Thu Oct 14 12:52:20 2010 (CEST)
 %% Version: $Id$
-%% Version: 
+%% Version:
 %% Last-Updated: Wed Jun 28 10:57:24 2017 (+0200)
 %%           By: Ola Leifler
 %%     Update #: 169
-%% URL: 
-%% Keywords: 
-%% Compatibility: 
-%% 
+%% URL:
+%% Keywords:
+%% Compatibility:
+%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% 
-%%% Commentary: 
-%% 
-%% 
-%% 
+%%
+%%% Commentary:
+%%
+%%
+%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% 
+%%
 %%% Change log:
-%% 
-%% 
+%%
+%%
 %% RCS $Log$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% 
+%%
 %%% Code:
 
 \documentclass[bachelor,lith,swedish]{liuthesis}
@@ -56,7 +56,7 @@
 
 \publicationyear{2018}
 \currentyearthesisnumber{001}
-\dateofpublication{2015-05-08} 
+\dateofpublication{2015-05-08}
 
 \author{ \\Adam Andersson, Tor Utterborn, Björn Hvass, \\ Hendrik Lindström, Martin Persson, \\ Christoffer Sjöbergsson, Niclas Byrsten}
 
@@ -68,16 +68,34 @@
 
 \chapterstyle{VZ43}
 
-\include{intro}
-\include{theory}
-\include{method}
-\include{results}
-\include{discussion}
-\include{conclusion}
-\printbibliography
+\part{Huvudrapport}
+\include{Chapter/inledning}
+\include{Chapter/bakgrund}
+\include{Chapter/teori}
+\include{Chapter/metod}
+\include{Chapter/resultat}
+\include{Chapter/diskussion}
+\include{Chapter/slutsatser}
+
+\part{Individuella bidrag}
+\include{contributions/TL_kontra_scrum-adam}
+\include{contributions/pappersprototyp-niclas}
+\include{contributions/git-bjorn}
+\include{contributions/typescript-henrik}
+\include{contributions/angular-martin}
+\include{contributions/kvalite-tor}
+\include{contributions/krav-christoffer}
+
+\printbibliography[title=Referenser]
+\appendix
+\part{Bilagor}
+\include{attatchments/bjorn}
+\include{attatchments/henrik}
+\include{attatchments/niclas}
+\include{attatchments/martin}
+\include{attatchments/adam}
 
 \end{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% demothesis.tex ends here
-
